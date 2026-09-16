@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annual filing cadence sweeps lag accounting disclosures · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>Annual filing cadence sweeps lag accounting disclosures</h1>
+    <p class="def">Monitoring annual filing cadence breaches lags major accounting breakdowns by months, because companies disclose restatements via Form 8-K and Form 12b-25 before annual reports become overdue.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#the-distinction">The distinction</a><a href="#where-it-was-observed">Where it was observed</a><a href="#how-to-spot-it">How to spot it</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>Monitoring annual filing cadence breaches lags major accounting breakdowns by months, because companies disclose restatements via Form 8-K and Form 12b-25 before annual reports become overdue.</p></dd></div><div><dt>Where observed</dt><dd><p>hub-group, 08-pipeline/the source recordmissed-filing-sweep</p></dd></div></dl></section>
+<h2 id="the-distinction">The distinction</h2>
+<p>Screening corporate filing calendars detects distress when a public registrant breaches its historical filing month by more than four months.</p>
+<p>Cadence detectors suffer from a severe lag problem: they fire only after a company has already gone dark.</p>
+<p>Before an annual report is overdue, corporate reporting rules compel explicit disclosures:
+- Form 8-K Item 4.02 must be filed within four business days of an audit committee restatement decision.
+- Form 12b-25 (Notification of Late Filing) must be submitted on the statutory due date.</p>
+<p>Relying on cadence sweeps means learning about accounting failures months after market participants have priced them.</p>
+<h2 id="where-it-was-observed">Where it was observed</h2>
+<p>Documented in <code>08-pipeline/the source recordmissed-filing-sweep</code> (Detector performance).</p>
+<p>Across 134 SEC registrants, <a href="../companies/hub-group.html">Hub Group, Inc.</a> triggered the cadence detector in late March 2026 and appeared 6.3 months overdue by September 2026.</p>
+<p>However, Hub Group filed its initial Form 8-K Item 4.02 non-reliance disclosure on 2026-02-05, followed by Form NT 10-K on 2026-03-03. Monitoring Item 4.02 and Form NT surfaced the accounting failure nearly a month before the annual cadence detector fired.</p>
+<h2 id="how-to-spot-it">How to spot it</h2>
+<p>Do not rely on annual calendar sweeps as primary detection triggers across <a href="../sectors/index.html">all operating models</a>, as unannounced accounting restatements directly distort <span class="term" data-term="metric:operating-ratio-ltl" data-href="../reference/metrics.html#operating-ratio-ltl" tabindex="0"><span class="term" data-term="metric:operating-ratio-asset-carriage" data-href="../reference/metrics.html#operating-ratio-asset-carriage" tabindex="0">operating ratio</span></span> and violate purchased transportation accrual mechanisms like <span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span>.</p>
+<p>Configure ingestion pipelines to monitor Form 8-K Item 4.02 and Form 12b-25 directly, per source register. Use cadence sweeps as secondary backstops to catch unannounced corporate disappearances.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

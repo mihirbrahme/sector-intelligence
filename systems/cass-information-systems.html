@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cass Information Systems · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Cass Information Systems</h1>
+    <p class="def">Bank-chartered financial institution and enterprise software provider dominating North American freight audit, payment processing, and carrier disbursement.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Bank-chartered financial institution and enterprise software provider dominating North American freight audit, payment processing, and carrier disbursement</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:cass-information-systems" data-href="cass-information-systems.html" tabindex="0">Cass Information Systems</span> processes the carrier freight bill, rate schedule line, proof of delivery, and electronic disbursement remittance.</p>
+<p>The firm operates a federally chartered commercial bank (Cass Commercial Bank). This enables it to securely hold shipper freight funds and disburse payments directly to motor carriers, railroads, ocean shipping lines, and airlines.</p>
+<p>Cass ingests freight bills electronically (EDI 210, API, scanned PDF). Its audit engine matches invoices three-way against client bill-of-lading records and executed carrier contracts.</p>
+<p>The system validates mileage tables, fuel surcharge escalators, and accessorial fees. Discrepancies are flagged for automated adjustment or client review.</p>
+<p>Once approved, Cass issues consolidated billing to the shipper and executes daily payments to carriers via automated clearing house (ACH) transfers or checks.</p>
+<p>Cass compiles and publishes the monthly Cass Freight Index, an industry benchmark tracking North American shipment volumes and expenditures.</p>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../solutions/patterns/freight-audit-and-payment-automation.html" tabindex="0"><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../solutions/patterns/freight-audit-and-payment-automation.html" tabindex="0">Freight audit and payment automation</span></span>: Executing automated three-way document matching and contractual freight bill validation.</li>
+<li><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0"><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0">Detention and demurrage dispute recovery</span></span>: Verifying driver detention charges against signed electronic bills of lading.</li>
+<li><span class="term" data-term="solution:benchmarking-data-consortium" data-href="../solutions/structures/benchmarking-data-consortium.html" tabindex="0">Benchmarking data consortium</span>: Publishing aggregated macroeconomic freight expenditure indices.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models; secondarily enterprise 3PLs managing freight settlement.</li>
+<li><strong>Geographies</strong>: Concentrated in North America (United States, Canada, Mexico), with specialized cross-border audit capabilities.</li>
+<li><strong>Commercial model</strong>: Transaction processing fees ($0.50 to $1.50 per invoice), software portal subscription fees, and net interest margin earned on freight payment float balances held during settlement.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Cass enforces strict banking and audit controls. When client transportation contracts contain informal agreements or unratified accessorial rules, the audit engine rejects substantial invoice volume.</p>
+<p>Exception queues overwhelm the shipper's internal logistics analysts. If the shipper fails to resolve billing exceptions promptly, motor carriers place accounts on credit hold.</p>
+<p>The platform's user interfaces reflect conservative banking heritage, lacking the modular API flexibility of modern audit software.</p>
+<p>Its international footprint outside North America is smaller. Multinational shippers must integrate regional audit providers for European VAT or Asian billing.</p>
+<p>This exception bottleneck is documented in <a href="../insights/exception-resolution-requires-commercial-authority-not-workflow-software.html">exception resolution requires commercial authority not workflow software</a>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p><span class="term" data-term="system:cass-information-systems" data-href="cass-information-systems.html" tabindex="0">Cass Information Systems</span> explicitly refuses carrier contract renegotiation and rate sheet digitisation.</p>
+<p>Cass mandates that the client provide executed, structured rate schedules, fuel matrices, and carrier remit-to profiles.</p>
+<p>Cass will not resolve commercial disputes between a shipper and a carrier regarding service failures or contested accessorial charges.</p>
+<p>Shippers must either deploy internal transportation resources or engage third-party freight consultancies to establish clean contract baselines prior to onboarding.</p>
+<p>This dynamic reflects <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<ul>
+<li><strong>Fortune 500 Industrial &amp; CPG Shippers</strong>: Entrenched standard for large enterprise shippers with annual freight spend exceeding $100 million.</li>
+<li><strong>Heavy Rail and Multimodal Shippers</strong>: Market leader in complex North American Class I rail freight audit and contract administration.</li>
+<li><strong>Mid-Market Shippers (&lt;$50M spend)</strong>: Often underserved due to minimum transaction volume thresholds; mid-market clients favor regional audit bureaus.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Cass is the primary external firewall against <span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span> for enterprise shippers. By enforcing mathematical contract validation against rate schedules, it identifies overcharges, duplicate billings, and unauthorized accessorials before cash disbursement.</li>
+<li><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: Ingests hundreds of thousands of carrier bills, providing weekly unvouchered accrual files to corporate general ledgers to prevent transportation liability understatements.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Audits rail demurrage and driver detention invoices against contractual free-time thresholds and gate logs.</li>
+<li><strong><span class="term" data-term="mech:avoidable-working-capital-float-drag-and-carrier-settlement-financing-penalty" tabindex="0">avoidable working capital float drag and carrier settlement financing penalty</span></strong>: Cass sits on the enterprise shipper side of the working capital float, managing invoice audit and disbursement schedules while motor carriers seek accelerated settlement.</li>
+<li><strong><span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span> (Escalator and surcharge recovery lag)</strong>: Automatically recalculates carrier fuel surcharges weekly against the Department of Energy (DOE) diesel index, preventing inaccurate fuel billing.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Cass marketing claims total payment visibility, elimination of duplicate billing, and strict treasury compliance.</li>
+<li>Audited corporate filings: Cass Information Systems SEC Form 10-K filings disclose that the company processes approximately $40 billion in freight expenditures annually, with transportation invoice processing driving the core of corporate fee income.</li>
+<li>Financial industry benchmarks: Standard &amp; Poor's and banking equity research recognize Cass as the dominant institutional payment processor for North American corporate logistics spend.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>, <a href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html">Detention and demurrage dispute recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

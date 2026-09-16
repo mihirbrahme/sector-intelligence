@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event-driven visibility data pipeline · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Event-driven visibility data pipeline</h1>
+    <p class="def">Architecting transportation tracking as an API-first data ingestion pipeline that normalizes carrier telematics directly into core TMS/WMS execution databases, rejecting standalone portal dashboards.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#models-and-unit-of-work">Models and unit of work</a><a href="#unit-of-work-economics">Unit-of-work economics</a><a href="#preconditions">Preconditions</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#commercial-structures">Commercial structures</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Architecting transportation tracking as an API-first data ingestion pipeline that normalizes carrier telematics directly into core TMS/WMS execution databases, rejecting standalone portal dashboards</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Transportation tracking shifts from logging into third-party "control tower" software portals to consuming normalized event streams within core execution systems.</p>
+<p>Rather than buying an expensive standalone visibility platform subscription, the operator builds or configures lightweight API webhooks and EDI translators.</p>
+<p>An ingestion service cleans, validates, and normalizes the data, filtering out false anomalies (e.g., driver rest stops).</p>
+<p>Clean milestones write directly to the load record in the TMS or WMS.</p>
+<p>Critical status changes execute automated programmatic actions: updating warehouse dock appointment schedules, triggering customer webhook notifications, or starting detention claim timers.</p>
+<p>Staff never open a standalone visibility map. They work exclusively inside their primary TMS workflow.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Automatically captures verified terminal gate arrivals and chassis return timestamps to build admissible dispute packages before free time expires.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Feeds verified delivery timestamps and geofence exit proofs directly into billing queues to validate accessorial detention line items before customer invoicing.</li>
+</ul>
+<h2 id="models-and-unit-of-work">Models and unit of work</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../../sectors/index.html">Model 2 (Forwarding)</a>, <a href="../../sectors/index.html">Model 3 (Contract Logistics)</a>, <a href="../../sectors/index.html">Model 4 (Asset Carriage)</a>, <a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>, <a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a>, and <a href="../../sectors/index.html">Model 10 (International Container Liner)</a>.</li>
+<li><strong>Unit of work</strong>: The shipment milestone event / the load tracking status. For Model 3, this includes warehouse event streams. For Model 6, terminal events such as gate moves and vessel calls. For Model 10, AIS-based vessel tracking and container milestones.</li>
+</ul>
+<h2 id="unit-of-work-economics">Unit-of-work economics</h2>
+<p>Eliminates manual broker "check-calls," saving 3 to 5 minutes of rep time per transit update across long-haul freight.</p>
+<p>Reduces facility late-arrival fines ($150 to $300 per occurrence) by automatically updating destination warehouse receiving docks hours before physical truck arrival.</p>
+<ul>
+<li>Independent market research: Gartner Research studies on transportation execution indicate that shippers embedding tracking data directly into core TMS workflows achieve 3x higher exception resolution rates compared to shippers using standalone visibility portals.</li>
+<li>Vendor claims: Visibility platform vendors claim $2 million in annual labor savings per enterprise deployment, ignoring the high internal engineering cost of maintaining custom carrier data connections.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>An event pipeline cannot deliver value if upstream carriers fail to provide telemetry:</p>
+<ol>
+<li><strong>Carrier contract telematics mandates</strong>: Carrier rate confirmations must mandate continuous ELD or mobile tracking sharing as a condition of tender acceptance, paired with quick-pay incentives or non-tracking chargebacks ($50 penalty). Without contractual teeth, long-tail carrier compliance remains below 50%.</li>
+<li><strong>Direct TMS execution hooks</strong>: The TMS must possess active API endpoints capable of updating appointment times and recalculating transit schedules automatically. If the TMS cannot ingest dynamic ETAs, visibility data sits idle in database tables.</li>
+<li><strong>Data hygiene filters</strong>: The pipeline must filter out jittery GPS pings and batch EDI latency to prevent dirty data from corrupting downstream scheduling logic.</li>
+</ol>
+<p>Negotiating carrier compliance terms and building TMS execution webhooks dominates total project effort.</p>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Standalone <span class="term" data-term="system:visibility-platforms" data-href="../../systems/visibility-platforms.html" tabindex="0">visibility platforms</span> and control towers stalled because they treated tracking as a visual dashboard problem rather than an execution data pipeline.</p>
+<p>As documented in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span>, shippers spent millions on visibility SaaS only to discover that visual dots on a map produced massive alert fatigue without providing the contractual ability to clear delays.</p>
+<p>Furthermore, <a href="../../insights/visibility-platforms-fail-at-carrier-data-capture-not-software-layer.html">visibility platforms fail at carrier data capture not software layer</a> proves that implementations fail at the carrier ingestion layer rather than the algorithmic layer.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch emphasizes machine-learning predictive ETAs and unified global dashboards.</p>
+<p>The stubborn operational reality is long-tail carrier telematics resistance:
+- Small trucking fleets (1 to 5 tractors) resist sharing proprietary ELD credentials with third-party aggregators, and drivers routinely disable smartphone location permissions.
+- Ocean carrier EDI 315 milestone messages arrive in batch transmissions with 6- to 12-hour delays, rendering real-time quay tracking impossible without expensive terminal OCR integration.</p>
+<p>The engineering is straightforward; securing timely, compliant data from third-party motor carriers is the true bottleneck.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<p>Deployments follow technical architecture or transaction-based models:
+- <strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Per-shipment or per-active-asset license ($1.50 to $4.00 per tracked load, or $15 to $30 per power unit monthly) for ingestion and normalization APIs.
+- <strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: Initial pipeline integration sprint ($45,000 to $95,000) establishing webhook ingestion services, data hygiene filters, and TMS execution triggers.
+- <strong><span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">Forward-deployed engineer embedded</span></strong>: Dedicated integration engineering ($18,000 to $28,000 per engineer month) to onboard non-standard carrier telematics feeds.</p>
+<p>Direct pipeline architecture avoids ongoing per-seat dashboard licensing fees. It delivers events directly into execution systems.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>Visibility pipeline performance and economic payback vary based on telematics mandates, infrastructure connectivity, and labor wages:</p>
+<ul>
+<li><strong>North America</strong>: Fast payback (6 to 9 months). Mandatory Electronic Logging Devices (ELD) under FMCSA rules ensure near-universal GPS connectivity among commercial motor carriers. Class I railroads provide EDI 214 and Car Location Messages (CLM). High track-and-trace clerk wages ($22 to $34 per hour) make eliminating manual check-calls immediately profitable.</li>
+<li><strong>UK and Europe</strong>: High administrative wages (EUR 26 to EUR 42 per hour) support pipeline investment. Digital tachographs (Regulation (EC) 561/2006 and Smart Tachograph 2) supply statutory driver hours and GPS positioning. Cross-border mobile roaming works reliably across the EU, but GDPR imposes strict driver location consent controls. Dense rail and inland waterway networks require multi-modal AIS and rail telematics ingestion.</li>
+<li><strong>Australia</strong>: High logistics labor rates (AUD 35 to AUD 52 per hour) deliver rapid payback. Electronic Work Diaries (EWD) and widespread telematics support Chain of Responsibility tracking under the Heavy Vehicle National Law. Extreme transit distances across outback corridors require dual satellite-cellular telematics units to avoid transit data dead zones.</li>
+<li><strong>Southeast Asia (Singapore, Malaysia, Indonesia)</strong>: Divergent telematics maturity and low labor costs. Singapore features universal GPS tracking and automated port gates at Tuas, supported by high operations wages (SGD 22 to SGD 35 per hour). In Malaysia and Indonesia, telematics penetration among fragmented trucking sub-contractors remains low. Inter-island freight across Indonesia spans roll-on/roll-off ferries and coastal barges where AIS tracking is irregular. Low clerk wages ($3.00 to $5.50 per hour) lengthen labor-displacement payback beyond 30 months. The commercial value proposition shifts to eliminating cargo loss, hijacking, and fuel theft rather than reducing check-call headcount.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

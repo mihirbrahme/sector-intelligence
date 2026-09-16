@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anomaly detection in freight settlement · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Anomaly detection in freight settlement</h1>
+    <p class="def">Ingesting carrier freight invoices, billing documents, and delivery records to detect duplicate billings, unauthorized accessorials, and rate variance exceptions against contracted rating schedules.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Ingesting carrier freight invoices, billing documents, and delivery records to detect duplicate billings, unauthorized accessorials, and rate variance exceptions against contracted rating schedules</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Freight settlement anomaly detection inspects carrier payables before cash disbursement, replacing manual spot checks with automated transaction validation.</p>
+<p>Inbound carrier invoices arrive via EDI 210, electronic PDF files, or carrier billing portals. An ingestion engine extracts linehaul charges, fuel surcharges, detention, and accessorial fees.</p>
+<p>The system queries the transportation management system (TMS) to retrieve the original tender, electronic bill of lading (eBOL), and timestamped GPS geofence departure records.</p>
+<p>A rules engine and machine-learning classifier execute multi-stage validation checks:
+- Duplicate detection matches carrier tax identification numbers, origin-destination pairs, equipment numbers, and transit dates.
+- Contract rate verification calculates baseline linehaul mileage, compares fuel peg formulas against weekly indices, and checks contracted accessorial rate cards.
+- Operational milestone verification cross-references billed detention hours against recorded GPS geofence dwell times.</p>
+<p>Clean invoices matching contracted rates within tolerance thresholds clear for automated payment. Exceptions exceeding thresholds route to back-office queues with pre-assembled dispute packages.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 1 (Truckload Brokerage)</a></strong>: High spot-market reliance and carrier turnover create frequent billing errors. Brokers must catch duplicate factoring company submissions and unverified detention before issuing 2-day quick-pay disbursements.</li>
+<li><strong><a href="../../sectors/index.html">Model 2 (Freight Forwarding)</a></strong>: Multi-leg international shipments involve multi-currency payables. The engine reconciles ocean terminal handling charges (THC), container demurrage, and customs clearance outlays against original booking confirmations.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: Carriers apply anomaly detection to supplier invoices. It audits third-party repair shop work orders, toll charges, and commercial fuel card transactions to flag fuel volumes exceeding tractor tank capacity.</li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Reconciles Class I railroad ramp linehaul charges, chassis per-diem fees, and third-party drayage bills. Catches duplicate linehaul billings across rail interchange junctions and rail storage fees assessed during gate lockouts.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Unreconciled carrier charges and missing delivery documentation delay outbound shipper billing, inflating <span class="term" data-term="metric:days-sales-outstanding-all-logistics-models" data-href="../../reference/metrics.html#days-sales-outstanding-all-logistics-models" tabindex="0">Days Sales Outstanding</span> (DSO). Upstream anomaly detection validates billing data against operational delivery records, ensuring first-time-right customer invoicing.</li>
+<li><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: Unmatched carrier bills and unsupported adjustments distort purchased transportation liabilities. As documented in <a href="../../companies/hub-group.html">Hub Group</a>, unresolved billing variances cause massive multi-year accounts payable restatements. Continuous automated matching enforces accrual reconciliation before period close.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the freight invoice or carrier settlement voucher.</p>
+<p>Manual invoice auditing by accounts payable clerks costs $3.50 to $7.00 per bill. Clerks manually inspect only 10% to 20% of inbound invoices due to volume constraints.</p>
+<p>Automated anomaly scoring lowers processing cost to $0.35 to $0.85 per invoice at 100% audit coverage.</p>
+<p>Billing discrepancies occur on 8% to 14% of raw freight invoices. Duplicate submissions account for 0.8% to 2.0% of freight bill volume. Accessorial overcharges represent 3% to 6% of gross freight spend.</p>
+<p>Naive statistical detectors generate false-positive alarm rates of 25% to 40%, overwhelming accounts payable staff. Calibrated hybrid engines maintain false-positive rates below 4%, preserving clerk handling capacity.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Automated settlement detection fails without strict master data and operational prerequisites:</p>
+<ol>
+<li><strong>Machine-readable contract rating master</strong>: Carrier contracts, fuel escalator formulas, and accessorial schedules must be digitized into structured rating tables rather than static PDF side-agreements.</li>
+<li><strong>Contemporaneous operational telemetry</strong>: Timestamped geofence arrival and departure records, signed mobile eBOLs, and lumper receipts must be indexed to the TMS load identifier before invoice arrival.</li>
+<li><strong>Normalized carrier entity master</strong>: Carrier parent corporate entities, operating authorities (MC/DOT numbers), and factoring company remittance accounts must be reconciled into a golden record.</li>
+<li><strong>Defined financial tolerance thresholds</strong>: Finance leadership must establish binding variance tolerance bands (e.g. auto-pay variances under $10; require manager sign-off for variances exceeding $100).</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:recovery-fee-contingency" data-href="../structures/recovery-fee-contingency.html" tabindex="0">Recovery fee contingency</span></strong>: Provider captures 15% to 25% of audited and permanently recovered invoice overcharges and duplicate disbursements.</li>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Monthly software licensing charged per processed invoice ($0.20 to $0.60 per document) plus platform hosting fees ($2,500 to $6,000 monthly).</li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Base SaaS fee paired with a 10% gainshare bonus on sustained reductions in accounts payable leakage and payment cycle times.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Machine learning anomaly detectors trained on unscrubbed historical freight invoices collapse under alert fatigue.</p>
+<p>When detection algorithms flag every seasonal rate adjustment or legitimate fuel peg variance as an anomaly, accounts payable clerks face thousands of false alerts. Staff disable automated dispute rules and revert to manual spot checking.</p>
+<p>This failure mode is analyzed in <a href="../../insights/master-data-failures-present-as-erp-implementation-breakdowns.html">master-data failures present as ERP implementation breakdowns</a>.</p>
+<p>Furthermore, <span class="term" data-term="solution:digital-freight-brokerage-matching-algorithms" data-href="../failures/digital-freight-brokerage-matching-algorithms.html" tabindex="0">digital freight brokerage matching algorithms</span> proved that automated settlement cannot function without rigorous carrier identity verification. Fraudulent operators exploit automated payment pipelines by submitting duplicate invoices under altered factoring accounts.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch presents instantaneous automated invoice reconciliation. The operational friction sits in unstructured paper documentation:</p>
+<ul>
+<li>Carriers submit mobile phone photographs of crumpled, grease-stained lumper receipts and handwritten detention annotations that break standard OCR engines.</li>
+<li>Fuel surcharge formulas frequently use differing weekly Energy Information Administration (EIA) regional diesel averages, requiring multi-layered calculation engines.</li>
+<li>Notice of Assignment (NOA) conflicts between carriers and factoring companies create competing payment demands for identical shipments.</li>
+</ul>
+<p>Resolving these physical document exceptions consumes the vast majority of operational effort.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High accounts payable clerk wages ($20 to $32 per hour) and complex freight billing structures (EDI 210, complex accessorial schedules, factoring ubiquity) drive rapid payback under five months.</li>
+<li><strong>UK and Europe</strong>: High administrative labor costs (EUR 25 to EUR 42 per hour) and strict cross-border VAT reconciliation rules favor automation. Multiple languages, national currencies, and CMR consignment note rules increase data extraction complexity.</li>
+<li><strong>Australia</strong>: High clerical wages (AUD 35 to AUD 52 per hour) support deployment. Focus centers on National Heavy Vehicle Regulator (NHVR) compliance auditing, road toll reconciliations, and fuel tax credits.</li>
+<li><strong>Southeast Asia</strong>: Lower clerical wages ($3.50 to $6.00 per hour) reduce direct labor savings. Value derives from arresting cash leakage before disbursement and reconciling cross-border customs brokerage outlays.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

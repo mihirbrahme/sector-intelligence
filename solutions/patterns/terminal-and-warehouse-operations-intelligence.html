@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal and warehouse operations intelligence · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Terminal and warehouse operations intelligence</h1>
+    <p class="def">Real-time execution analytics over terminal operating systems and warehouse systems to synchronise equipment movements and cap unproductive rehandles.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Real-time execution analytics over terminal operating systems and warehouse systems to synchronise equipment movements and cap unproductive rehandles</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern deploys an analytical layer over a Terminal Operating System (TOS) or Warehouse Management System (WMS). It ingests telemetry from optical character recognition gates, spreader twist-locks, and gantry cranes.</p>
+<p>The engine reconciles physical movements against stowage plans and gate appointments.</p>
+<p>In the yard, the pattern models retrieval probabilities using dwell history and customs flags. It assigns incoming boxes to stacks dynamically, preventing buried containers. Supervisors monitor automated queues flagging equipment bottlenecks.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports)</a></strong>: Focuses on gross <span class="term" data-term="metric:crane-moves-per-hour-ports-and-terminals" data-href="../../reference/metrics.html#crane-moves-per-hour-ports-and-terminals" tabindex="0">crane moves per hour</span>. When yard density exceeds 75%, algorithms restrict ground slots to prevent exponential rehandles.</li>
+<li><strong><a href="../../sectors/index.html">Model 3 (3PL)</a></strong>: Focuses on pick lines per labour hour. Logic sequences wave picks and rebalances dock labour based on trailer cut-offs.</li>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Monitors vessel turnaround against berth windows, protecting schedule reliability.</li>
+<li><strong><a href="../../sectors/index.html">Model 9 (Protected Liner)</a></strong>: Tied to captive terminal ventures (Matson's 35% SSAT stake). Faster turns protect fixed departures.</li>
+<li><strong><a href="../../sectors/index.html">Model 8 (Liquid Marine)</a></strong>: Applies at dock interfaces, monitoring pumping rates to prevent uncompensated <span class="term" data-term="metric:delay-days-inland-marine" data-href="../../reference/metrics.html#delay-days-inland-marine" tabindex="0">delay days</span>.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Terminal density delay)</strong>: Yard congestion causes rehandles to compound above 75% utilisation. The pattern predicts retrieval timing, capping rehandles.</li>
+<li><strong><span class="term" data-term="mech:slot-under-utilisation-hidden-by-aggregate-teu-growth" tabindex="0">slot under-utilisation hidden by aggregate TEU growth</span> (Slot under-utilisation)</strong>: Sluggish crane rates cause vessel delays, forcing blank calls. The pattern stabilises berth productivity, protecting slot utilisation.
+The pattern automates exception triaging before queues paralyse operations.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the container move for terminals, and the pick line for warehouses.</p>
+<p>Gross crane moves cost $35 to $65 per lift under union agreements. An unproductive yard rehandle costs $15 to $30 in fuel, wear, and labour. Above 80% yard density, rehandle ratios rise from 0.25 to over 0.65 moves per import container, eroding EBITDA margins by 300 to 500 basis points.</p>
+<p>Union crane gangs cost $250 to $450 per gang-hour. Crane starvation from ITV delays costs $4.00 to $7.50 per minute of idle hook time.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Automated operations intelligence requires four prerequisites:</p>
+<ol>
+<li><strong>Equipment telemetry</strong>: Equipment transmits position, fuel burn, and twist-lock status via CAN-bus.</li>
+<li><strong>Standardised EDI</strong>: Terminals ingest clean BAPLIE stowage plans and gate appointments 24 hours prior to berthing.</li>
+<li><strong>Labour rule codification</strong>: Encoding contractual rest breaks and gang boundaries into dispatch logic.</li>
+<li><strong>Physical yard reconciliation</strong>: Reconciling container positions with digital TOS coordinates.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Annual licensing scaled by terminal throughput ($0.15 to $0.35 per lift) or warehouse area.</li>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: A 10-week diagnostic costing $120,000 to $250,000 auditing TOS data.</li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Fees tied to audited reductions in rehandle ratios or crane rate increases.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Monolithic system replacements failed repeatedly in marine terminals. As recorded in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip and replace</span>, port operators attempting to replace core TOS platforms with generic software triggered terminal gridlock (Ports of Auckland). Similarly, <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span> showed that dashboards lacking automated dispatch fail to reduce yard congestion.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch promises mathematical optimization of port assets.
+The operational friction sits on the terminal pavement:
+- Longshore drivers bypass automated dispatch screens, following radio instructions from dock foremen.
+- Salt air and vibration degrade spreader twist-lock sensors, corrupting live telemetry feeds.
+- Coastal feeder barges arrive with corrupted BAPLIE files, forcing supervisors into manual intervention.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High longshore wages ($40-$55/hr) make idle crane gang reduction valuable; union rules limit automated dispatch.</li>
+<li><strong>UK/Europe</strong>: Automated terminals (Rotterdam, Hamburg) deploy automated cranes; electricity costs demand eco-driving.</li>
+<li><strong>Singapore</strong>: Densest hub (PSA Singapore handled 44.5m TEU in 2025); land constraints make fast crane dispatch existential.</li>
+<li><strong>Malaysia</strong>: Port Klang and PTP balance high volume with lower labour costs, prioritising equipment turnover.</li>
+<li><strong>Indonesia</strong>: Tanjung Priok and Perak face high dwell (3.5-5.0 days); focus sits on customs clearance.</li>
+<li><strong>Australia</strong>: Stevedoring duopoly (Patrick, DP World) monitored by ACCC; berth moves per hour is the primary benchmark.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q88 (now Veson Nautical) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Q88 (now Veson Nautical)</h1>
+    <p class="def">Information management and compliance platform dominating commercial tanker questionnaires, oil major vetting, and crew matrix qualification.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Information management and compliance platform dominating commercial tanker questionnaires, oil major vetting, and crew matrix qualification</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Q88 executes operations against the vessel technical specification, tanker questionnaire (Intertanko Standard Form), officer experience matrix, statutory certificate, and oil major vetting inspection report.</p>
+<p>In wet bulk shipping (<a href="../sectors/index.html">Model 11</a>), a tanker cannot lift a cargo without passing rigorous commercial vetting by the oil company or commodity trader. Q88 digitizes this compliance gate:
+- <strong>Standardized Questionnaires</strong>: Maintains the global standard electronic questionnaire (Q88 for oil/chemical tankers, VPQ for gas carriers), managing over 1,000 vessel engineering parameters (manifold dimensions, pump capacities, segregated ballast layouts).
+- <strong>Officer Matrix Compliance</strong>: Tracks the sea-time experience of vessel masters, chief engineers, and senior watchkeepers to verify compliance with oil major minimum experience rules (e.g. combined officer experience with company and on vessel type).
+- <strong>Vetting and Inspection Tracking</strong>: Aggregates Port State Control (PSC) records, Ship Inspection Report Programme (SIRE) reports, and Chemical Distribution Institute (CDI) audit findings.
+- <strong>Certificate Governance</strong>: Monitors expiration and renewal milestones for statutory international maritime certificates (Class, SOLAS, MARPOL, ISM, ISPS).</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 11 (Tanker Shipping)</a>.</li>
+<li><strong>Sub-sectors</strong>: Crude oil tankers (VLCC, Suezmax, Aframax), clean product tankers (MR1, MR2, LR1, LR2), chemical parcel tankers, and LPG/LNG gas carriers.</li>
+<li><strong>Commercial model</strong>: Annual subscription fee per registered vessel paid by shipowners and technical managers, alongside subscription access fees for charterers, terminal operators, and shipbrokers.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Q88 holds an absolute global monopoly in liquid bulk questionnaire administration and commercial vetting preparation.</p>
+<ul>
+<li><strong>Market share</strong>: Over 75% of the world's commercial tanker fleet and more than 1,000 shipowners and technical managers use Q88.</li>
+<li><strong>Customer profile</strong>: Independent tanker owners (Euronav, Frontline, Teekay, Scorpio Tankers), oil majors (Shell, ExxonMobil, BP, Chevron, TotalEnergies), and global commodity trading houses.</li>
+<li><strong>Network standard</strong>: The Q88 format, developed in collaboration with INTERTANKO, is the universal questionnaire format across global wet freight chartering.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Q88 is a specialized compliance and technical specification repository, not an operational execution ERP:
+1. <strong>No technical maintenance engine</strong>: Q88 stores vessel specifications and certificates; it does not direct onboard planned maintenance systems (PMS), manage spare parts inventory, or handle dry-dock work orders (which require <span class="term" data-term="system:danaos" data-href="danaos.html" tabindex="0">Danaos</span> or <span class="term" data-term="system:abs-nautical-systems" data-href="abs-nautical-systems.html" tabindex="0">ABS Nautical Systems</span>).
+2. <strong>SIRE 2.0 transition challenges</strong>: The shift by OCIMF to SIRE 2.0—a risk-based, tablet-driven physical inspection model—has required extensive updates to questionnaire mapping and operator reporting routines.
+3. <strong>Manual officer matrix inputs</strong>: While integrating with some crew management systems, updates to officer sea-time matrices frequently require manual human resource validation, creating potential compliance gaps during crew changes.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Integration with Veson</strong>: Following the 2022 acquisition, Q88's vessel master database is natively integrated into the <span class="term" data-term="system:veson-nautical" data-href="veson-nautical.html" tabindex="0">Veson IMOS Platform</span>, allowing chartering desks to verify vetting status directly inside voyage estimation screens.</li>
+<li><strong>API framework</strong>: RESTful APIs allowing technical ship managers to sync certificate renewal dates and crew change data with internal ERPs.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2001 by Fritz Heidenreich in Norwalk, Connecticut.</li>
+<li>Maintained an exclusive software partnership with INTERTANKO to govern the standard questionnaire.</li>
+<li>Acquired in May 2022 by <strong>Veson Nautical</strong>, consolidating the dominant tanker compliance database with the dominant ocean chartering software.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span></strong>: In tanker shipping, an oil major vetting rejection (e.g. BP or Shell refusing a tanker due to an unresolved SIRE deficiency or lapsed certificate in Q88) immediately renders a vessel commercially unfixable. The vessel sits at anchor off-hire, incurring operating costs of $8,000–$12,000/day without revenue.</li>
+<li><strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span> (Carrier-selection liability)</strong>: Vetting in tanker carriage is the ultimate defense against casualty liability. Commodity traders and oil companies use Q88 to verify that a tanker has no open structural deficiencies or sanctions violations before executing a fixture.</li>
+<li><strong><span class="term" data-term="mech:charter-counterparty-default-interrupts-cash-and-voyage-control" tabindex="0">charter counterparty default interrupts cash and voyage control</span> (Charter counterparty default)</strong>: Ensures vessels maintain continuous class and statutory certifications required to keep charterparty contracts valid, preventing counterparty contract cancellations.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Q88 claims to eliminate vetting delays, streamline maritime compliance, and automate tanker marketing globally.</li>
+<li>Industry bodies and maritime standards: INTERTANKO and OCIMF guidelines identify the Q88 and VPQ standards as the indispensable operational protocols underpinning tanker chartering and port terminal clearance worldwide.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/carrier-onboarding-and-compliance-automation.html">Carrier onboarding and compliance automation</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/digital-twin-for-logistics-networks-and-assets.html">Digital twin for logistics networks and assets</a>, <a href="../solutions/patterns/freight-receivables-and-revenue-accounting.html">Freight receivables and revenue accounting</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

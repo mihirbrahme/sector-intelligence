@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blue Yonder (formerly JDA Software / Manugistics) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Blue Yonder (formerly JDA Software / Manugistics)</h1>
+    <p class="def">Enterprise supply chain planning, warehouse management, and transportation management platform dominating CPG, grocery, and retail distribution.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Enterprise supply chain planning, warehouse management, and transportation management platform dominating CPG, grocery, and retail distribution</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Blue Yonder Transportation Management executes operations against the enterprise shipment order, multi-stop route itinerary, carrier tender cascade, and freight audit line item.</p>
+<p>The platform is renowned for advanced mathematical network optimization:
+- <strong>Load Building &amp; Consolidation</strong>: Uses mathematical algorithms developed from Manugistics heritage to combine LTL orders into multi-stop full truckloads, respecting axle weight limits, pallet stackability, and dock appointment constraints.
+- <strong>Dynamic Routing &amp; Carrier Tendering</strong>: Evaluates contracted carrier routing guides, triggering automated tender cascades via EDI or API based on carrier commitments and pricing.
+- <strong>Network Design &amp; Continuous Moves</strong>: Identifies backhaul opportunities across private fleets and dedicated carriers to eliminate empty miles.
+- <strong>Freight Audit &amp; Settlement</strong>: Pre-rates shipments and reconciles carrier electronic freight bills (EDI 210) against contracted tariffs.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models, <a href="../sectors/index.html">Model 3 (Contract Logistics)</a>, and <a href="../sectors/index.html">Model 1 (3PL / Managed Transportation)</a>.</li>
+<li><strong>Sub-sectors</strong>: Consumer packaged goods (CPG), grocery wholesale, food and beverage, enterprise retail, and high-volume 3PLs.</li>
+<li><strong>Commercial model</strong>: Enterprise SaaS subscription model (Luminate platform) hosted on Microsoft Azure, based on freight spend tiers or shipment volumes, accompanied by heavy systems integration services.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Blue Yonder is a perennial "Leader" in enterprise supply chain software, competing directly with <span class="term" data-term="system:sap-tm" data-href="sap-tm.html" tabindex="0">SAP TM</span>, <span class="term" data-term="system:oracle-tms" data-href="oracle-tms.html" tabindex="0">Oracle OTM</span>, and <span class="term" data-term="system:manhattan-associates" data-href="manhattan-associates.html" tabindex="0"><span class="term" data-term="system:manhattan-associates" data-href="manhattan-associates.html" tabindex="0">Manhattan Associates</span></span>.</p>
+<ul>
+<li><strong>Market position</strong>: Installed across thousands of enterprise distribution networks globally.</li>
+<li><strong>Customer profile</strong>: Fortune 500 manufacturers, grocers, and 3PLs managing $100 million to several billion dollars in freight spend (e.g. Unilever, Kraft Heinz, Anheuser-Busch InBev, DHL Supply Chain, Ryder).</li>
+<li><strong>Core strength</strong>: Unrivaled depth in complex CPG and grocery distribution constraints (temperature zones, pallet configurations, delivery appointment windows).</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Blue Yonder's mathematical optimization creates acute operational sensitivities:
+1. <strong>Algorithm over-optimization</strong>: If physical site constraints (e.g. loading dock turn times, forklift staging capacity, driver rest rules) are miscalculated by even 5%, the optimizer creates unworkable route schedules that frontline dispatchers reject.
+2. <strong>Implementation duration and expense</strong>: Full enterprise deployments take 12 to 24 months and require specialized integration consultancies.
+3. <strong>Legacy upgrade friction</strong>: Migrating long-standing on-premise customers from legacy JDA/Manugistics installations to the cloud-native Luminate platform requires rewriting custom database interfaces.
+4. <strong>Complexity for non-asset brokers</strong>: Blue Yonder is over-engineered for transactional freight brokers; it lacks the fast spot-quoting flexibility of <span class="term" data-term="system:mcleod-loadmaster" data-href="mcleod-loadmaster.html" tabindex="0">McLeod</span> or <span class="term" data-term="system:revenova" data-href="revenova.html" tabindex="0"><span class="term" data-term="system:revenova" data-href="revenova.html" tabindex="0">Revenova</span></span>.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Cloud infrastructure</strong>: Runs primarily on Microsoft Azure under the Blue Yonder Luminate architecture.</li>
+<li><strong>Data foundation</strong>: Ingests enterprise demand signals, purchase orders, warehouse inventory, and transportation tariffs into a shared planning and execution schema.</li>
+<li><strong>Network integration</strong>: The 2024 acquisition of One Network Enterprises provides a real-time multi-enterprise network mesh, connecting trading partners without point-to-point EDI.</li>
+<li><strong>EDI / API integration</strong>: Supports all standard transportation EDI sets (204, 990, 214, 210) alongside modern REST APIs and real-time visibility feeds (<span class="term" data-term="system:project44" data-href="project44.html" tabindex="0"><span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span></span>, FourKites).</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Formed via successive mega-mergers: <strong>JDA Software</strong> acquired <strong>Manugistics</strong> (pioneer of transportation optimization) in 2006, then merged with <strong>RedPrairie</strong> (leading WMS) in 2012.</li>
+<li>Rebranded from JDA Software to <strong>Blue Yonder</strong> in 2020.</li>
+<li><strong>Panasonic Corporation</strong> acquired a 20% stake in 2020 and the remaining 80% in 2021. The commonly quoted $8.5 billion is the implied enterprise value of 100%; the 80% tranche itself was around $7.1 billion. Both figures circulate and describe different things — state which one is meant.</li>
+<li>Acquired <strong>One Network Enterprises</strong>: announced 2024-03-29, <strong>closed 2024-08-01</strong>, approximately $839 million enterprise value. It took Blue Yonder's M&amp;A spend past $1 billion since late 2023.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong>: In enterprise shipper operations, Blue Yonder enforces procurement routing guides. When spot market capacity tightens and primary carriers reject tenders, the system cascades down the routing guide to higher-cost secondary carriers, rapidly eroding transportation operating budgets.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Blue Yonder's freight audit engine matches carrier freight bills against rated movements. Unratified accessorial charges (detention, layover) trigger billing exceptions, which leak margin if coordinators auto-approve them without verification.</li>
+<li><strong><span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span> (Escalator and surcharge recovery lag)</strong>: Complex fuel surcharge formulas and indexation mechanisms must be loaded systematically into Blue Yonder; delays in updating weekly DOE fuel peg values result in systematic billing mismatches.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Blue Yonder claims autonomous supply chain execution, 10% to 15% freight spend reductions, and complete predictive visibility.</li>
+<li>Gartner TMS Magic Quadrant: Consistently evaluated as a "Leader" in Gartner's TMS Magic Quadrant, highlighted for industry-leading optimization capabilities and deep CPG/retail customer penetration, while noting deployment complexity and software integration costs as persistent buyer concerns.</li>
+<li>Panasonic financial disclosures: Panasonic filings report Blue Yonder annual recurring revenue (ARR) approaching $1 billion, alongside ongoing investments in cloud platform migration and One Network integration.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>, <a href="../solutions/patterns/data-orchestration-and-integration-layer.html">Data orchestration and integration layer</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunker procurement and emissions management · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Bunker procurement and emissions management</h1>
+    <p class="def">Coordinating marine fuel purchasing, mass flow meter custody transfer, fuel quality testing, and carbon compliance accounting to manage voyage energy costs and regulatory liabilities.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Coordinating marine fuel purchasing, mass flow meter custody transfer, fuel quality testing, and carbon compliance accounting to manage voyage energy costs and regulatory liabilities</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern automates the procurement lifecycle for marine fuel while integrating live carbon accounting under regulatory regimes including EU ETS and FuelEU Maritime.</p>
+<p>The system connects vessel telematics with procurement desks. When voyage planning generates bunker stems, software models landed energy costs across bunkering ports, factoring in fuel price, barge fees, port dues, deviations, and carbon surcharges.</p>
+<p>Mass flow meter data logs custody transfers, cross-referencing delivered volumes against bunker delivery notes to eliminate quantity shortages.</p>
+<p>Automated lab interfaces ingest ISO 8217 test results before fuel enters settling tanks, validating sulfur compliance, kinematic viscosity, flashpoint, and catalytic fines.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Large container strings consume 100 to 250 MT/day. Fixed schedules require contractual bunker adjustment factor (BAF) formulas and transparent EU ETS surcharges per TEU.</li>
+<li><strong><a href="../../sectors/index.html">Model 11 (Dry Bulk)</a></strong>: Voyage charterers bear bunker risk, while time charterers purchase fuel directly. Operators balance redelivery bunker quantities against charterparty allowances.</li>
+<li><strong><a href="../../sectors/index.html">Model 12 (Energy Shipping)</a></strong>: Tankers operate dual-fuel engines burning boil-off gas, requiring real-time dispatch optimization between LNG and VLSFO.</li>
+<li><strong><a href="../../sectors/index.html">Model 9 (Protected Liner)</a></strong>: Jones Act vessels operate within North American Emission Control Areas, burning 0.10% sulfur MGO or LNG.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span> (Fuel cost volatility exposure)</strong>: Fuel accounts for 40% to 60% of vessel voyage expenses. The system locks forward physical contracts and financial swaps.</li>
+<li><strong><span class="term" data-term="mech:environmental-compliance-capex-forces-retrofit-speed-or-scrap-decision" tabindex="0">environmental compliance capex forces retrofit, speed or scrap decision</span> (Environmental compliance capex)</strong>: Mandatory carbon caps force retrofit decisions. The pattern projects FuelEU Maritime penalties to determine scrubber or biofuel ROI.</li>
+<li><strong><span class="term" data-term="mech:bunker-and-carbon-pass-through-clause-mismatch" tabindex="0">bunker and carbon pass-through clause mismatch</span> (Bunker and carbon pass-through mismatch)</strong>: Shippers contest carbon surcharges. The platform calculates voyage emissions to align customer billing with actual fuel burn.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the metric tonne (MT) of bunker fuel or the executed bunker stem.</p>
+<p>Under EU ETS, each MT of VLSFO yields 3.114 tonnes of CO2. At allowance prices of EUR 60 to EUR 85 per tCO2, carbon adds EUR 180 to EUR 260 per MT.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Deployment requires four prerequisites:</p>
+<ol>
+<li><strong>Mass flow meter installation</strong>: Deploying Coriolis meters certified to SS 648 or ISO 22192 standards on delivery barges.</li>
+<li><strong>Automated telemetry</strong>: Integrating onboard flow meters and noon reports to ingest continuous consumption logs.</li>
+<li><strong>Lab testing integration</strong>: Electronic data links with testing laboratories for ISO 8217 reporting.</li>
+<li><strong>Carbon allowance registries</strong>: Connecting trading desks to Union Registry accounts for EU ETS tracking.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Digital reverse-auction bunker platforms selecting fuel solely on headline spot price have triggered operational disasters. As documented in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip and replace</span>, procurement tools uncoupling price from fuel stability caused engine seizures. Bunkers bought without pre-testing contaminated injectors with catalytic fines, causing dead-ship emergencies. Furthermore, passing generic carbon surcharges without voyage telematics provoked disputes and customer churn.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes automated energy procurement. The operational reality sits on bunker manifolds:
+- Barges aerate fuel during delivery (the cappuccino effect), inflating volumetric readings without Coriolis mass flow meters.
+- On-spec lab results take 48 to 72 hours, forcing vessels to sail before off-spec warnings arrive.
+- Carbon allowance volatility requires separate derivative trading desks that traditional bunker buyers cannot operate.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: Strict ECA 0.10% sulfur enforcement along US coastlines; high MGO price spreads penalise engine changeover delays.</li>
+<li><strong>UK/Europe</strong>: Mandates EU ETS compliance and FuelEU Maritime penalties; major hubs (Rotterdam, Antwerp) require mass flow meter bunkering.</li>
+<li><strong>Singapore</strong>: Largest bunkering hub; mandates MPA-approved mass flow meters and digital bunker delivery notes.</li>
+<li><strong>Malaysia/Indonesia</strong>: Anchorages (Tanjung Pelepas, Port Klang) offer lower prices but variable quality enforcement.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

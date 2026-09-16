@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master-data failures present as ERP implementation breakdowns · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>Master-data failures present as ERP implementation breakdowns</h1>
+    <p class="def">Enterprise supply chain software failures are routinely diagnosed as ERP or WMS software defects when the operational cause is corrupted or uncalibrated physical master data.</p>
+    <div class="unit"><span>Unit of work</span><b>the order line</b></div>
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#why-it-is-true">Why it is true</a><a href="#what-was-seen">What was seen</a><a href="#what-it-changes">What it changes</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>Enterprise supply chain software failures are routinely diagnosed as ERP or WMS software defects when the operational cause is corrupted or uncalibrated physical master data.</p></dd></div><div><dt>Operating models affected</dt><dd><p><a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a></p></dd></div><div><dt>Where observed</dt><dd><p>05-solutions/failure history/monolithic-erp-and-wms-rip-and-replace</p></dd></div></dl></section>
+<h2 id="why-it-is-true">Why it is true</h2>
+<p>Enterprise WMS and ERP replenishment engines rely on strict dimensional and inventory rules.</p>
+<p>They execute automated slotting, pallet putaway, and order allocation based on recorded carton dimensions, weights, unit-of-measure conversions, and vendor barcodes.</p>
+<p>If master data records carry errors (such as inches entered as centimeters or missing case-pack counts), the software logic executes flawlessly against corrupted parameters.</p>
+<p>Pallets are routed to undersized rack locations, sorters fault, and automated allocation logic freezes because recorded inventory fails physical validation.</p>
+<p>The breakdown presents at go-live as a system crash, but the failure sits entirely in the master data layer.</p>
+<h2 id="what-was-seen">What was seen</h2>
+<p>Documented in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../solutions/failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>.</p>
+<p>Target Canada’s 2015 CCAA bankruptcy records revealed that over 70% of SKU records in its newly launched SAP system carried inaccurate data, causing distribution centers to lock up while store shelves remained empty.</p>
+<p>Revlon's FY2018 Form 10-K reported $64.0 million in unfulfilled net sales following its Oxford, NC SAP rollout because the software could not allocate physically present inventory to customer pick tickets.</p>
+<h2 id="what-it-changes">What it changes</h2>
+<p>Never evaluate a failed WMS or ERP implementation purely as a software configuration problem.</p>
+<p>Before diagnosing software performance or scheduling a system migration, audit the physical master data:
+1. Verify SKU cube and weight accuracy against physical scans.
+2. Audit vendor pack-size conversions and barcode labeling compliance.
+3. Test physical dock-to-stock physical constraints before blaming the transaction ledger.</p>
+<p>This changes how <span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span> and <span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span> are assessed during post-merger systems integration.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>This insight governs operational analysis under <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>.</p><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

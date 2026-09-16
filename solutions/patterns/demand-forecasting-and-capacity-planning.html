@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demand forecasting and capacity planning · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Demand forecasting and capacity planning</h1>
+    <p class="def">Modeling multi-echelon freight volumes, customer order patterns, and external market signals to schedule driver rosters, position transport equipment, and commit warehouse labor against forward demand.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Modeling multi-echelon freight volumes, customer order patterns, and external market signals to schedule driver rosters, position transport equipment, and commit warehouse labor against forward demand</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p><span class="term" data-term="solution:demand-forecasting-and-capacity-planning" data-href="demand-forecasting-and-capacity-planning.html" tabindex="0">Demand forecasting and capacity planning</span> replaces static spreadsheet headcount schedules with probabilistic operational planning.</p>
+<p>The ingestion pipeline extracts order patterns from customer EDI 830 planning schedules, EDI 850 purchase orders, historical shipment tenders, and warehouse management system (WMS) pick queues.</p>
+<p>An algorithmic normalization engine reconciles customer demand signals against historical tender acceptance rates, filtering phantom order inflation and promotional noise.</p>
+<p>Machine learning and econometric models generate rolling volume forecasts across multiple planning horizons:
+- 7-day operational horizon for daily warehouse shift scheduling and linehaul driver dispatches.
+- 30-day tactical horizon for regional tractor repositioning, trailer pool balancing, and temporary labor requisitions.
+- 90-day network horizon for carrier procurement allocations and rail block commitments.</p>
+<p>The engine translates projected volume into operational capacity units: driver shift hours, tractor counts, and warehouse order-picker headcounts.</p>
+<p>Network models identify forward lane imbalances, generating proactive empty trailer repositioning moves to prevent equipment shortages in high-yield outbound origins.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Facility operating margins depend directly on labor scheduling. Overstaffing inflates direct labor expense, while understaffing triggers customer delivery SLA penalties. Forecasting translates retail sales promotions into daily dock receiving hours and pick shifts.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: Fleets must balance tractors, trailers, and driver Hours of Service (HOS). Forecasting predicts origin-destination freight density 7 to 14 days forward, enabling dispatchers to reject unprofitable spot freight and steer tractors toward high-yield headhaul corridors.</li>
+<li><strong><a href="../../sectors/index.html">Model 5 (LTL)</a></strong>: LTL carriers operate fixed terminal networks with high facility overhead. Forecasting models cross-dock pallet throughput and linehaul trailer lane density, scheduling linehaul runs to maintain network velocity without dispatching half-empty trailers.</li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Intermodal operators balance 53-foot container fleets against Class I railroad minimum volume commitments (MVCs). Forecasting matches rail block reservations to shipper surge volumes, avoiding railroad under-utilization penalty fees.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong>: In contract warehousing, fixed-price contracts suffer margin collapse when operational hours per unit of work drift upward. Predictive capacity planning aligns staffing rosters directly to daily volume profiles, preventing unutilized paid labor hours from eroding facility margins.</li>
+<li><strong><span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span></strong>: Intermodal and logistics operators face contractual minimum volume commitments where volume shortfalls trigger penalty rate tiers. Forward demand forecasting enables operators to proactively re-route freight and fulfill contracted rail allocations before shortfall penalties apply.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the forecasted facility shift, dispatched linehaul lane, or planned driver-day.</p>
+<p>Manual capacity planning by terminal managers and warehouse supervisors consumes 8 to 15 hours weekly per facility. It yields 18% to 28% forecast variance, causing chronic labor over-scheduling.</p>
+<p>Algorithmic demand modeling reduces forecast variance to 8% to 12% at the facility level, reducing supervisor planning time to under one hour weekly.</p>
+<p>In contract logistics, matching warehouse labor rosters to predictive order flow cuts overtime and agency staffing spend by 12% to 22%, saving $150,000 to $400,000 annually per large distribution center.</p>
+<p>In asset trucking, reducing empty deadhead miles by 2.5 percentage points through forward capacity positioning saves $0.05 to $0.08 per fleet mile in fuel and driver compensation.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Predictive capacity planning fails without operational data pipelines and labor flexibility:</p>
+<ol>
+<li><strong>Electronic customer order pipeline</strong>: Key shippers must provide automated electronic order projections (EDI 830) or ERP order release feeds at least 5 to 7 days prior to physical pickup.</li>
+<li><strong>Clean historical volume telemetry</strong>: Minimum 24 to 36 months of scrubbed shipment files, line-item pick volumes, and time-card punch records, segmented by account and SKU family.</li>
+<li><strong>Flexible operational scheduling agreements</strong>: Predictive planning delivers zero financial savings if union work rules or inflexible employment contracts prohibit adjusting shift durations and staggered start times.</li>
+<li><strong>Calibrated network transit standards</strong>: Transit lane run-times, dock dwell averages, and mandatory driver rest rules must be maintained accurately within the planning model.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Software subscription priced per distribution facility ($1,500 to $4,500 monthly) or per active tractor ($15 to $35 per tractor per month).</li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Gainshare contracts tied to verified reductions in empty deadhead miles or warehouse overtime hours below agreed historical baselines.</li>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed price diagnostic then build</span></strong>: Initial forecasting diagnostic ($50,000 to $120,000) auditing historical schedule variance and configuring machine-learning models against site-specific data.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Pure statistical forecasting algorithms deployed without binding customer volume commitments collapse at freight cycle turning points.</p>
+<p>During the 2021–2023 freight cycle, predictive models trained on pandemic volume spikes extrapolated permanent double-digit growth. Carriers and 3PLs signed expensive multi-year warehouse leases and purchased Class 8 tractors at peak-cycle prices right before demand plummeted, forcing multi-million-dollar asset write-downs.</p>
+<p>As documented in <span class="term" data-term="solution:digital-freight-brokerage-matching-algorithms" data-href="../failures/digital-freight-brokerage-matching-algorithms.html" tabindex="0">digital freight brokerage matching algorithms</span>, forecasting capacity without contractual volume protection exposes operators to balance sheet distress. When freight volumes soften, shippers re-tender contract freight to the spot market, invalidating predictive models.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch promises predictive clarity. The operational friction sits in behavioral distortion:</p>
+<ul>
+<li>Enterprise shippers tender phantom volumes during capacity crunches to protect dock space, cancelling 30% to 40% of bookings once capacity secures.</li>
+<li>Unplanned macro disruptions—such as sudden port strikes, factory retooling delays, and severe weather shutdowns—cannot be captured by historical time-series algorithms.</li>
+<li>Facility dispatchers and warehouse floor managers routinely override algorithmic schedules, returning to informal headcount buffers to avoid the personal stress of being under-staffed.</li>
+</ul>
+<p>Aligning frontline operational behavior with algorithmic recommendations presents the primary implementation hurdle.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High driver mileage rates ($0.65 to $0.85 per mile) and warehouse wages ($18 to $26 per hour) create high returns on capacity planning. Long geographic transit corridors make trailer repositioning expensive.</li>
+<li><strong>UK and Europe</strong>: Strict driver working time directives (EU Regulation 561/2006) and elevated warehouse wages (EUR 22 to EUR 38 per hour) mandate strict scheduling compliance. Shorter haul distances reduce empty equipment repositioning costs.</li>
+<li><strong>Australia</strong>: Extreme linehaul transit distances (such as Melbourne to Perth, over 3,400 km) and high driver wages make capacity imbalance forecasting essential; uncompensated empty return hauls destroy fleet margins.</li>
+<li><strong>Southeast Asia</strong>: Lower warehouse wages ($3.00 to $5.50 per hour) reduce direct labor optimization returns. However, high capital equipment costs and severe urban traffic congestion make vehicle asset planning vital.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

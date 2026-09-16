@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet scheduling and dry dock planning · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Fleet scheduling and dry dock planning</h1>
+    <p class="def">Integrating statutory surveys, shipyard bookings, and charter commitments to eliminate docking bunching, hedge charter-in exposure, and protect vessel revenue.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Integrating statutory surveys, shipyard bookings, and charter commitments to eliminate docking bunching, hedge charter-in exposure, and protect vessel revenue</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern synchronises marine technical management with commercial chartering desks. It ingests statutory class survey cycles alongside shipyard bookings and voyage schedules.</p>
+<p>The system staggers yard entries across cohorts, preventing vessels from clustering in dry dock. When vessels dock, planners model replacement tonnage. Desks execute index-linked fixtures tied to Baltic Exchange indices with collar options.</p>
+<p>Technical modules pre-scope steel renewals via ultrasonic thickness gauging 12 months prior to docking to prevent off-hire overruns.</p>
+<p>Commercial desks vet counterparties against Baltic Exchange records. If a charterer defaults, automated workflows prepare lien-on-subfreight notices under standard charterparty terms to intercept revenues before vessel arrests occur.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 11 (Dry Bulk)</a></strong>: Staggering Capesize dockings avoids charter-in exposure (<span class="term" data-term="mech:charter-in-rate-exposure-locked-at-the-wrong-point-in-the-cycle" tabindex="0">charter-in rate exposure locked at the wrong point in the cycle</span>); Baltic vetting mitigates counterparty default (<span class="term" data-term="mech:charter-counterparty-default-interrupts-cash-and-voyage-control" tabindex="0">charter counterparty default interrupts cash and voyage control</span>).</li>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Scheduled strings require fixed weekly departures, inserting replacement feeder tonnage or sliding rotations.</li>
+<li><strong><a href="../../sectors/index.html">Model 13 (Great Lakes Bulk)</a></strong>: Dockings compress into the 80-to-90 day winter freeze when the St. Lawrence Seaway closes.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:dry-docking-bunching-removes-revenue-days" tabindex="0">dry-docking bunching removes revenue days</span> (Dry-docking bunching)</strong>: Scheduled dockings cluster, stripping <span class="term" data-term="metric:revenue-days-great-lakes-marine" data-href="../../reference/metrics.html#revenue-days-great-lakes-marine" tabindex="0">revenue days</span>. Algorithmic scheduling spreads survey deadlines, preserving fleet capacity.</li>
+<li><strong><span class="term" data-term="mech:charter-in-rate-exposure-locked-at-the-wrong-point-in-the-cycle" tabindex="0">charter-in rate exposure locked at the wrong point in the cycle</span> (Charter-in rate exposure)</strong>: Chartering replacement ships during dockings traps operators if spot rates fall. Index-linked fixtures hedge rate exposure.</li>
+<li><strong><span class="term" data-term="mech:charter-counterparty-default-interrupts-cash-and-voyage-control" tabindex="0">charter counterparty default interrupts cash and voyage control</span> (Charter counterparty default)</strong>: Counterparties default during freight downturns. The system monitors Baltic credit alerts and executes liens on subfreight.</li>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span> (Off-hire downtime)</strong>: Unplanned yard extensions convert vessels into idle capital. Pre-docking ultrasonic surveys minimise unforeseen renewals.</li>
+<li><strong><span class="term" data-term="mech:fleet-age-capex-cliff-raises-maintenance-before-replacement-is-funded" tabindex="0">fleet age capex cliff raises maintenance before replacement is funded</span> (Fleet age capex cliff)</strong>: Aging vessels face sudden steel renewals. The pattern models dry-dock capex before yard arrival.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the vessel revenue-day or dry-docking event.</p>
+<p>Unforeseen steel renewal adds.50 to.00 per kilogram of installed plate. Counterparty default causes.0M to.5M in stranded hire and legal costs.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Execution requires four prerequisites:</p>
+<ol>
+<li><strong>Class survey integration</strong>: Ingesting survey cycles from classification societies.</li>
+<li><strong>Ultrasonic thickness gauging</strong>: Executing scans to quantify steel renewals before arrival.</li>
+<li><strong>Advance yard slot contracts</strong>: Securing reservations 12 to 18 months in advance with liquidated damages.</li>
+<li><strong>Counterparty credit vetting</strong>: Integrating Baltic Exchange fixture databases and credit feeds.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Bonuses tied to verified cuts in fleet off-hire days.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Algorithmic dry-dock platforms omitting physical shipyard constraints fail repeatedly. As recorded in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip and replace</span>, owners managing dry-docking through general enterprise ERPs suffered schedule overruns when software assumed uniform yard labour capacity. When yards suffered steel shortages, rigid schedules collapsed.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes automated fleet optimization. The operational reality sits in shipyard basins:
+- Ballast tank inspections reveal unexpected plate corrosion, doubling planned steel renewal.
+- Shipyards exploit schedule pressure through high change-order rates for unbudgeted emergency repairs.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>UK/Europe</strong>: Yards comply with EU Ship Recycling rules; desks balance Baltic and Mediterranean repair slots.</li>
+<li><strong>Singapore</strong>: Central hub for technical management, afloat repairs, and Baltic fixture arbitration.</li>
+<li><strong>Malaysia/Indonesia</strong>: Regional yards like MMHE Pasir Gudang offer lower steel rates but face equipment import delays.</li>
+<li><strong>Australia</strong>: Remote routes require planning around long positioning voyages to Asian yards.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

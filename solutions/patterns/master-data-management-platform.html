@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master data management platform · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Master data management platform</h1>
+    <p class="def">Technical platform architecture and automated data governance pipelines for enterprise logistics master entities: carriers, shippers, facilities, equipment, and contract tariffs.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Technical platform architecture and automated data governance pipelines for enterprise logistics master entities: carriers, shippers, facilities, equipment, and contract tariffs</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Transportation and logistics enterprises suffer from rampant master data decay. Following acquisitions, branch expansions, or years of uncontrolled data entry, carrier databases fill with duplicate records, outdated insurance certificates, and mismatched remit-to addresses. Customer databases contain fragmented corporate hierarchies, while facility databases have overlapping geofences that fail to trigger arrival events.</p>
+<p>This pattern implements an enterprise Master Data Management (MDM) platform architecture specifically tailored to multi-party logistics data entities.</p>
+<p>First, the platform deploys automated entity resolution and deduplication pipelines. Using deterministic rules and probabilistic matching algorithms (e.g. Levenshtein distance, address standardization, tax ID / EIN verification), the engine identifies duplicate carrier and customer records across disparate operational databases and merges them into authoritative "golden records."</p>
+<p>Second, the system establishes continuous external master data enrichment. The carrier master continuously polls regulatory databases (e.g. FMCSA SAFER, insurance clearinghouses) to update operating authority, safety ratings, and insurance coverage. Location masters enrich physical addresses with precise polygon geofences, dock door counts, and operating hours.</p>
+<p>Third, the platform enforces upstream data governance. New entity creation across operational TMS, WMS, and ERP systems must route through automated validation APIs. If a dispatcher attempts to create a duplicate carrier record or enter an invalid facility address, the platform intercepts the request and forces linkage to the existing golden record.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 1 (Truckload Brokerage)</a></strong>: Focuses on carrier master integrity: linking multiple DOT/MC numbers to parent legal entities, validating factoring company assignments, and managing banking remit-to profiles to prevent payment fraud.</li>
+<li><strong><a href="../../sectors/index.html">Model 2 (Freight Forwarding)</a></strong>: Manages global customer and consignee hierarchies across dozens of international country stations, ensuring multinational corporate accounts link to correct regional billing and credit terms.</li>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Focuses on SKU and item master data: physical dimensions, weight, pallet tier-heights (TI/HI), hazardous material classifications, and temperature range requirements.</li>
+<li><strong><a href="../../sectors/index.html">Model 4</a> &amp; <a href="../../sectors/index.html">Model 5 (Asset Truckload &amp; LTL)</a></strong>: Focuses on precise facility geofencing (dock polygons vs property boundaries), driver profiles, and equipment asset registers (tractors, trailers, chassis).</li>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a></strong>: Manages vessel registers (IMO numbers, gross tonnage, TEU capacity), shipping line agent hierarchies, and container chassis fleet inventories.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong>: Directly resolves carrier master fragmentation following mergers and acquisitions, consolidating duplicate carrier records and unifying compliance histories.</li>
+<li><strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span> (Carrier-selection liability repricing cost of cheap capacity)</strong>: Ensures compliance revocations or safety downgrades immediately propagate across all operating branches, preventing dispatchers from booking unauthorized carriers.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Ensures billing addresses, credit terms, and customer contract codes are harmonized, eliminating billing rejections caused by invalid entity codes.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<ul>
+<li><strong>Unit of work</strong>: Master entity golden record under active governance (carrier, customer, facility, item) or automated deduplication event.</li>
+<li><strong>Platform implementation economics</strong>: Enterprise logistics MDM platform design and deployment runs $320,000 to $1.1M over 6 to 12 months.</li>
+<li><strong>Software licensing</strong>: Cloud-based MDM software licenses cost $55,000 to $180,000 annually depending on managed record volume.</li>
+<li><strong>Operational savings</strong>: Eliminating duplicate carrier records (typically 20% to 35% of an unmanaged database) reduces onboarding cycle times by 40% and cuts misrouted freight payments by over 80%.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>MDM platform implementations fail when treated as purely technical database projects:</p>
+<ol>
+<li><strong>Authoritative data governance charter</strong>: Executive establishment of a data governance council with authority to overrule branch managers on entity naming and creation standards.</li>
+<li><strong>Standardized matching heuristics</strong>: Formal definition of deterministic and probabilistic matching rules agreed upon by dispatch, safety, and accounting leadership.</li>
+<li><strong>Data cleanup audit</strong>: Comprehensive baseline data profiling to quantify duplicate rates, missing mandatory fields, and corrupted records across legacy databases.</li>
+</ol>
+<p>Data profiling, matching logic definition, and organizational alignment consume 70% of MDM program effort.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li>Data audit, architecture design, and initial entity resolution rule modeling utilize <span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">fixed-price-diagnostic-then-build</span>.</li>
+<li>Core platform software licenses via <span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">subscription-saas</span> (e.g. Semarchy, Informatica, Reltio, or custom cloud-native data stacks).</li>
+<li>Integration engineering into operational TMS/WMS execution systems contracts via <span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">forward-deployed-engineer-embedded</span> or time-and-materials.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>The logistics sector has seen numerous failed MDM initiatives where companies deployed expensive enterprise MDM suites that became shelfware.</p>
+<p>The classic failure mode is the "passive data catalog" that lacks operational enforcement. 3PLs invest hundreds of thousands in master data cleansing, produce pristine golden records in an external data warehouse, but leave operational dispatchers with unfettered access to create free-form carrier profiles in their local TMS. Under dispatch time pressure, reps create shorthand carrier names ("ABC Fast QuickPay", "ABC Express LLC") to bypass compliance checks. Within nine months, the operational database degrades back into complete fragmentation. Governance must be hardcoded into the transactional workflow.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The vendor pitch promises automated machine-learning deduplication that cleans all master data automatically.</p>
+<p>The true operational difficulty lies in resolving complex freight entity hierarchies and legal structures. A single motor carrier may operate under a parent holding company, maintain three separate DBA names, lease equipment to owner-operators with separate authorities, and assign factoring rights to an external financial institution. Determining whether two records represent the same legal risk entity or distinct operational divisions requires deep transportation regulatory logic that generic MDM algorithms cannot resolve without manual stewardship.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>US</strong>: FMCSA DOT/MC numbers and Federal Employer Identification Numbers (FEIN) provide reliable entity resolution anchors, although factoring company assignment changes require continuous monitoring.</li>
+<li><strong>UK/Europe</strong>: Economic Operators Registration and Identification (EORI) numbers, national VAT IDs, and commercial court registries vary across jurisdictions, requiring multi-country validation adapters.</li>
+<li><strong>Southeast Asia</strong>: Corporate registration databases and tax identifiers are highly fragmented. Facility addresses frequently lack standardized street numbering, requiring precise GPS polygon geocoding for facility master records.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

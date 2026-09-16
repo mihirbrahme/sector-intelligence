@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slot allocation and liner yield management · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Slot allocation and liner yield management</h1>
+    <p class="def">Algorithmic container vessel slot allocation and dynamic cargo pricing that optimizes network contribution margins by balancing freight rates, deadweight limits, and empty box repositioning.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Algorithmic container vessel slot allocation and dynamic cargo pricing that optimizes network contribution margins by balancing freight rates, deadweight limits, and empty box repositioning</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern applies mathematical revenue management to container liner strings. It replaces static branch allocation quotas with algorithmic slot valuation engines connected directly to booking desks.</p>
+<p>The software models multidimensional capacity constraints per voyage leg: nominal TEU slots, deadweight tonnage (DWT), reefer plug availability, and dangerous goods segregation rules. Cargo that weighs out a vessel before filling slots is penalised unless freight rates compensate for displaced capacity.</p>
+<p>Algorithms calculate network contribution margin rather than gross leg revenue.</p>
+<p>Commercial interfaces adjust spot rates dynamically. Booking requests from forwarders and BCOs are screened against historical show-up probabilities, applying booking fees to deter ghost bookings.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Global carriers optimize multi-port strings, balancing high-rate headhaul cargo against low-rate backhaul cargo and empty repositioning slots.</li>
+<li><strong><a href="../../sectors/index.html">Model 9 (Protected Liner)</a></strong>: Jones Act carriers face captive trade lanes with structural volume imbalances, requiring strict allocation for high-paying retail freight.</li>
+<li><strong><a href="../../sectors/index.html">Model 2 (Forwarding/NVOCC)</a></strong>: NVOCCs act as slot buyers, optimizing co-loading margins across contracted minimum quantity commitments and carrier spot market space.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:slot-under-utilisation-hidden-by-aggregate-teu-growth" tabindex="0">slot under-utilisation hidden by aggregate TEU growth</span></strong>: High headline TEU volumes hide poor slot yield. Algorithmic pricing optimizes net contribution margin per TEU.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span> (Empty miles / repositioning deadweight)</strong>: Accepting heavy import containers into equipment-deficit zones triggers empty repositioning. The engine prices repositioning into original bookings.</li>
+<li><strong><span class="term" data-term="mech:port-congestion-breaks-liner-rotation-integrity" tabindex="0">port congestion breaks liner rotation integrity</span> (Port congestion breaks rotation integrity)</strong>: Congestion cuts effective vessel capacity. Algorithmic slot managers dynamically shift allocations to unblocked ports of call.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the twenty-foot equivalent unit (TEU) slot on a specific voyage leg.</p>
+<p>Empty container repositioning costs to per move between surplus import hubs and Asian manufacturing bases.</p>
+<p>Accepting a 24-tonne container of scrap paper at displaces two light retail containers paying,800 each if the vessel drafts out, losing,200 on that single slot choice. No-show rates without commitment fees run between 15% and 30%.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Deployment requires four prerequisites:</p>
+<ol>
+<li><strong>Booking and manifest integration</strong>: EDI integration with booking platforms and stowage tools.</li>
+<li><strong>Equipment imbalance visibility</strong>: Real-time tracking of empty container inventory and depot capacity.</li>
+<li><strong>Weight verification compliance</strong>: Ingesting verified gross mass certificates under SOLAS rules.</li>
+<li><strong>Historical show-up rate tracking</strong>: Compiling shipper no-show records to calibrate overbooking parameters.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Bonuses tied to verified increases in average net yield per TEU-mile.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Transposing passenger airline yield management directly to ocean shipping has failed repeatedly. As documented in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip and replace</span>, early revenue tools treated slots like airplane seats.</p>
+<p>Airline seats do not impose empty return costs after passengers disembark. Systems optimizing spot bookings solely on leg margin caused severe empty box deficits in Asian export hubs, forcing carriers to charter expensive extra-loader vessels to reposition empty equipment.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes algorithmic dynamic pricing. The operational reality sits in physical maritime constraints:
+- Shippers declare inaccurate container weights at booking, causing vessels to reach deadweight draft limits before slots are full.
+- Customer relationships with beneficial cargo owners restrict aggressive dynamic pricing on annual service contracts.
+- Port omissions and sudden blank sailings invalidate calculated slot allocations across subsequent network legs.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High-volume import gateways (LA/Long Beach) generate empty container surpluses requiring systematic evacuation allocations.</li>
+<li><strong>UK/Europe</strong>: Intermodal rail connectivity constraints dictate inland slot handoffs at Rotterdam and Hamburg.</li>
+<li><strong>Singapore</strong>: World\'s largest transshipment hub; algorithms balance connecting feeder slots against mainline vessel stowage.</li>
+<li><strong>Malaysia/Indonesia</strong>: High export volumes from Port Klang and Tanjung Pelepas require strict feeder slot allocation.</li>
+<li><strong>Australia</strong>: Severe trade imbalances on southbound goods require aggressive backhaul pricing to encourage agri-bulk exports.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

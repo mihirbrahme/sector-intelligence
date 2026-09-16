@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navis N4 · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Navis N4</h1>
+    <p class="def">Enterprise terminal operating system (TOS) dominating global marine container terminals and automated port facilities.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Enterprise terminal operating system (TOS) dominating global marine container terminals and automated port facilities</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span> executes operations against the container lift, yard slot move, vessel bay stowage, crane work instruction, and truck gate transaction.</p>
+<p>The platform functions as the central operating engine of a marine container terminal.</p>
+<p>When an inbound vessel approaches, N4 ingests stowage plans via EDIFACT (BAPLIE).</p>
+<p>In the container yard, N4's Expert Decking module assigns slot coordinates (block, bay, row, tier) to incoming containers. The goal is minimising unproductive re-handling moves when containers are retrieved.</p>
+<p>At the landside gate, N4 verifies driver appointments, validates container booking numbers via EDI (CODECO/COARRI), and dispatches terminal tractors or automated guided vehicles (AGVs).</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>; secondarily <a href="../sectors/index.html">Model 7 (Rail Intermodal)</a>.</li>
+<li><strong>Sub-sectors</strong>: Deep-sea container gateway terminals, high-density transhipment hubs, automated container terminals, and large rail intermodal ramps.</li>
+<li><strong>Commercial model</strong>: Upfront software license fees, annual maintenance contracts (typically 18% to 22% of license value), and heavy professional services fees for implementation, configuration, and go-live support. Cloud SaaS deployments exist for smaller terminals through Kaleris.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p><span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span> is the global enterprise standard for large-scale container terminals.</p>
+<ul>
+<li><strong>Market share</strong>: Independent industry assessments estimate Navis controls over 40% of global automated and semi-automated terminal operating deployments and more than 350 commercial container terminals worldwide.</li>
+<li><strong>Customer profile</strong>: Global terminal operators (DP World, APM Terminals, Hutchison Ports, PSA International) and major port authorities. Typical customer throughput ranges from 500,000 TEU to over 10 million TEU annually.</li>
+<li><strong>Mid-market penetration</strong>: Limited. Small terminals (&lt;200,000 TEU) avoid N4 due to multi-million-dollar implementation costs and server infrastructure requirements.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Navis N4 implementations are notorious for extreme duration, multi-million-dollar cost overruns, and severe go-live disruption.</p>
+<p>Implementations average 18 to 36 months for brownfield facilities. Cutover weekends frequently trigger severe operational bottlenecks:
+1. <strong>Custom code fragility</strong>: N4 relies on Java "groovy scripts" for site-specific business logic. Upgrading N4 versions routinely breaks custom extensions, requiring extensive regression testing.
+3. <strong>Rigid user interface</strong>: The desktop client is dense and unforgiving. Stevedoring superintendents accustomed to manual radio dispatch resist automated work queues.
+4. <strong>Catastrophic cutover paralysis</strong>: When gate appointment rules or crane dispatch logic fail at cutover, truck turn times jump from 30 minutes to several hours, queuing trucks onto public highways.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>N4's data model is centered on the container equipment record, physical yard coordinates, vessel voyage visit, and work instruction (WI).</p>
+<ul>
+<li><strong>Database</strong>: Relational database architecture (Oracle or Microsoft SQL Server) supporting high-frequency transactional writes from gantry cranes and gate OCR.</li>
+<li><strong>External integration</strong>: Interfaces with Optical Character Recognition (OCR) gate portals, Weigh-in-Motion scales (SOLAS VGM verification), Truck Appointment Systems (TAS), and equipment automation platforms via the Navis Equipment Controller (XLS/TLS).</li>
+<li><strong>API limitations</strong>: Modern REST APIs exist in newer versions, but legacy message-queuing protocols and SOAP interfaces still dominate older terminal deployments.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 1988 in Oakland, California.</li>
+<li>Acquired by Zebra Technologies in 2007 for $145 million.</li>
+<li>Acquired by Finnish cargo-handling equipment manufacturer Cargotec (<span class="term" data-term="system:kalmar" data-href="kalmar.html" tabindex="0">Kalmar</span>) in 2011 for approximately $190 million (€140 million).</li>
+<li>Sold by Cargotec to private equity firm Accel-KKR in July 2021 for an enterprise value of €380 million (~$450 million).</li>
+<li>Accel-KKR merged Navis into <strong>Kaleris</strong>, an asset-management software holding company spanning rail, yard, and ocean logistics software.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<p>Navis N4 is the primary digital operating system where several core vault mechanisms materialize:</p>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Berth, yard and landside constraints)</strong>: This is where <span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> executes. When yard utilization crosses 75% to 80%, N4's automated stacking logic degrades. Cranes must execute "housekeeping" or "reshuffle" moves to uncover buried import boxes. N4 crane productivity metrics (Gross Crane Rate) collapse from 30+ moves/hour to under 18 moves/hour, turning density into demurrage and vessel dwell.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: N4's gate timestamps and storage fee clocks serve as the legal audit record for container dwell and demurrage billing. Discrepancies between N4 gate event logs and carrier records cause persistent commercial disputes.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Kaleris marketing claims Navis N4 drives 30% crane productivity gains, eliminates container re-handling, and enables continuous automated terminal optimization.</li>
+<li>Trade press and industry post-mortems: Port strategy case studies and maritime press (Journal of Commerce, Port Technology International) record extended terminal gridlock during major N4 cutovers (e.g. Ports of Auckland, Port of Felixstowe), where manual intervention was required for weeks to clear yard backlogs.</li>
+<li>Audited corporate records: Cargotec's 2021 financial divestment filings disclose Navis 2020 sales of €107 million with operating profit margins near 17%, confirming high maintenance contract stickiness.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>, <a href="../solutions/patterns/data-orchestration-and-integration-layer.html">Data orchestration and integration layer</a>, <a href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html">Detention and demurrage dispute recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

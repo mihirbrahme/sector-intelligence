@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trimble Transportation (TMW.Suite &amp; TruckMate) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Trimble Transportation (TMW.Suite &amp; TruckMate)</h1>
+    <p class="def">Enterprise fleet management, dispatch, and transportation management systems vendor with the largest historical installed base in North American trucking.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Enterprise fleet management, dispatch, and transportation management systems vendor with the largest historical installed base in North American trucking</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Trimble Transportation executes operations against the truckload movement, tractor-trailer asset-hour, LTL cross-dock pro-bill, driver settlement slip, and shop repair order.</p>
+<p>The software suite spans three core platforms:
+- <strong>TMW.Suite</strong>: Enterprise dispatch, operations, and financial accounting platform for large truckload carriers and brokerages.
+- <strong>TruckMate</strong>: Multi-modal dispatch, linehaul planning, and LTL cross-dock management, holding dominant market share among Canadian and cross-border carriers.
+- <strong>Innovative (IES)</strong>: Legacy IBM AS/400 (iSeries) ERP running dispatch and accounting for large, conservative truckload fleets.
+- <strong>TMT Fleet Maintenance</strong>: Heavy vehicle shop management tracking work orders, part inventories, warranty recoveries, and preventative maintenance schedules.
+- <strong>PCMILER</strong>: Trimble's proprietary commercial routing and mileage engine, representing the contractual billing standard for North American linehaul freight.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 4 (Asset Carriage)</a>, <a href="../sectors/index.html">Model 5 (LTL)</a>, and <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a>.</li>
+<li><strong>Sub-sectors</strong>: Irregular-route truckload, dedicated contract carriage, LTL networks, bulk liquid, intermodal drayage, and commercial repair shops.</li>
+<li><strong>Commercial model</strong>: Perpetual licenses with annual maintenance contracts (18% to 22%), or hosted enterprise SaaS subscriptions. Large fleets pay substantial annual support contracts and per-seat fees.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Trimble holds the largest historical installed base across Tier 1 and large enterprise North American motor carriers.</p>
+<ul>
+<li><strong>Market position</strong>: Installed across hundreds of North America's largest trucking fleets, including multi-thousand tractor operations.</li>
+<li><strong>Customer profile</strong>: Mega-carriers (Werner Enterprises, Heartland Express, Penske Logistics, large operating companies of Knight-Swift) and dominant Canadian carriers (Bison Transport, Day &amp; Ross).</li>
+<li><strong>Core lock-in</strong>: PCMILER is universally embedded across North American shipper contracts as the official tariff rating mileage engine.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Trimble suffers from deep technical debt and post-acquisition fragmentation:
+1. <strong>Acquisition fragmentation</strong>: Assembling TMW Systems, Maddocks (TruckMate), Innovative, Appian, and Transporeon created overlapping, incompatible codebases. Customers face confusion regarding product roadmaps.
+2. <strong>Prolonged enterprise migrations</strong>: Migrating an enterprise carrier from legacy Innovative AS/400 to TMW.Suite or modern cloud architectures frequently runs 18 to 36 months, with severe budget overruns.
+3. <strong>Legacy client-server architecture</strong>: TMW.Suite and TruckMate rely on heavy desktop clients connected to Microsoft SQL Server databases. Custom triggers and stored procedures make version upgrades slow and risky.
+4. <strong>Customer service strain</strong>: Motor carrier user forums and conference feedback consistently cite delayed tier-2 support resolution and high consultant billing rates.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Database</strong>: Complex relational SQL Server databases (TMW.Suite, TruckMate) and DB2/400 (Innovative). Schemas feature thousands of legacy tables and stored procedures developed over three decades.</li>
+<li><strong>Integration middleware</strong>: Trimble's TotalMail provides mobile communications integration, routing EDI 214 status updates and driver macro messages between cab telematics and dispatch tables.</li>
+<li><strong>Telematics transition</strong>: historically tied to PeopleNet telematics. Since the Platform Science sale completed on 2025-02-08, Trimble no longer owns the in-cab hardware business, so its software integrates with open telematics platforms via APIs rather than assuming its own devices. A buyer evaluating TMW.Suite is now buying software from a vendor that does not control the hardware under the dashboard.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li><strong>TMW Systems</strong> was founded in 1983 in Cleveland, Ohio.</li>
+<li>Acquired by industrial technology conglomerate <strong>Trimble Inc.</strong> in 2012 for $335 million in cash.</li>
+<li>Trimble subsequently acquired ALK Technologies (PCMILER) in 2012 and Transporeon (European cloud freight network) in 2023 for €1.88 billion.</li>
+<li>Announced 2024-09-15 and <strong>completed 2025-02-08</strong>: Trimble sold its global transportation telematics ("Mobility") business to Platform Science in exchange for equity interests valued at <strong>$253.9 million</strong>, giving Trimble a <strong>32.5% stake</strong> in the enlarged Platform Science. The transferred units carried roughly $300m trailing revenue and ~$200m ARR.</li>
+<li><strong>What Trimble kept matters more than what it sold.</strong> Enterprise (TMW.Suite, TruckMate), Maps (PCMILER), Vusion and Transporeon all stayed inside Trimble's Transportation &amp; Logistics segment. The systems this file is about were <strong>not</strong> part of the Platform Science transaction — only the in-cab telematics hardware business was.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong>: When large carriers acquire peers (e.g. Knight acquiring Swift, Heartland acquiring Smith Transport), they frequently inherit separate TMW.Suite, TruckMate, or Innovative databases. Consolidating carrier masters, driver records, and customer tables across disparate Trimble instances takes years, leaving duplicate records active.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: TMW rating engines rely on complex tariff tables. If an accessorial code (detention, driver assist, redelivery) is not mapped identically between dispatch and billing modules, the system fails to generate the invoice line item.</li>
+<li><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: In brokerage operations run on TMW, unvouchered carrier loads create accrual gaps if rate adjustments are made via manual notes rather than structured pay records.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Trimble claims unified end-to-end supply chain orchestration, automated freight procurement, and frictionless fleet workflows.</li>
+<li>Audited public filings: Trimble Inc. (NASDAQ: TRMB) SEC filings report Transportation segment revenues exceeding $400 million annually, alongside disclosures of restructuring costs and asset impairments during telematics realignments.</li>
+<li>Industry implementation reviews: Fleet management executives report that while TMW/TruckMate accounting and operational depth is unmatched for complex multi-terminal fleets, software customization creates severe multi-year vendor lock-in.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visibility platforms · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Visibility platforms</h1>
+    <p class="def">Software and sensor platforms that aggregate carrier telematics, port milestones, and container events to generate shipment milestone tracking and predictive arrival estimates.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Software and sensor platforms that aggregate carrier telematics, port milestones, and container events to generate shipment milestone tracking and predictive arrival estimates</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Real-Time Transportation <span class="term" data-term="system:visibility-platforms" data-href="visibility-platforms.html" tabindex="0">Visibility Platforms</span> (RTTVPs) process the carrier telematics ping, ELD location update, ocean vessel AIS event, and geofence timestamp.</p>
+<p>The software ingests raw location feeds from electronic logging devices (ELD), mobile driver apps, ocean EDI 314 messages, and railway CLM records.</p>
+<p>The core engine matches tracking feeds to active TMS load records. It applies predictive algorithms to estimate destination arrival times and flags transit delay exceptions.</p>
+<p>Tive combines software with physical cellular and GPS sensor hardware. These single-use or multi-use trackers log location, cargo temperature, shock, and humidity for pharmaceutical and perishables freight.</p>
+<p>Primary enterprise vendors include <span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span>, FourKites, Shippeo, and Tive.</p>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../solutions/patterns/event-driven-visibility-data-pipeline.html" tabindex="0"><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../solutions/patterns/event-driven-visibility-data-pipeline.html" tabindex="0">Event-driven visibility data pipeline</span></span>: Ingesting, filtering, and standardising raw carrier telematics data.</li>
+<li><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0"><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0">Detention and demurrage dispute recovery</span></span>: Providing objective facility arrival and departure timestamps.</li>
+<li><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0"><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0">Exception triage and resolution workflow</span></span>: Routing predicted late deliveries to customer service teams.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../sectors/index.html">Model 2 (Forwarding)</a>, <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Geographies</strong>:</li>
+<li>Global &amp; North America: <span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span> and FourKites dominate enterprise shipper tracking programs across North America and ocean freight.</li>
+<li>Europe: Shippeo is the leading platform across European road freight networks due to integrations with European telematics hardware.</li>
+<li>Multimodal Sensor: Tive operates globally across cold-chain air, ocean, and road shipments.</li>
+<li><strong>Commercial model</strong>: Enterprise <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span> priced on annual tracked load bands or container moves. Hardware vendors (Tive) charge tracker purchase or lease fees alongside per-shipment data connectivity charges.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Implementations stall on carrier network compliance. While platforms possess pre-built API connectors to major trucking carriers, spot carriers and small fleets frequently fail to connect.</p>
+<p>Without strict commercial mandates, road freight tracking compliance stalls between 40% and 60%. Unmonitored loads force staff back to manual phone calls.</p>
+<p>Geofencing accuracy is a severe operational weak point. If customer facility master data contains inaccurate coordinates, circular geofences trigger false dwell alerts.</p>
+<p>Massive volumes of false ETA alerts create operator fatigue. Dispatchers begin ignoring platform notifications.</p>
+<p>These failures are analyzed in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../solutions/failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility and control towers</span> and <a href="../insights/visibility-platforms-fail-at-carrier-data-capture-not-software-layer.html">visibility platforms fail at carrier data capture</a>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p>Visibility vendors refuse carrier onboarding enforcement and customer facility master data cleansing.</p>
+<p>Software vendors provide automated onboarding portals. They do not assign operational personnel to call thousands of independent owner-operators who refuse ELD tracking consent.</p>
+<p>Vendors assume the customer possesses precise polygon geofences for all distribution centers, ocean terminals, and customer delivery sites.</p>
+<p>Shippers must either assign internal transportation staff or hire third-party <span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../solutions/structures/per-transaction-managed-service-or-bpo.html" tabindex="0">BPO providers</span> to pursue carrier compliance and refine geofence coordinates.</p>
+<p>Software cannot overcome absent carrier compliance, as established in <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<table>
+<thead>
+<tr>
+<th>Buyer segment</th>
+<th>Dominant <span class="term" data-term="system:visibility-platforms" data-href="visibility-platforms.html" tabindex="0">visibility platforms</span></th>
+<th>Integration layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Shippers (Fortune 500 CPG, Retail)</td>
+<td>project44, FourKites</td>
+<td>Direct TMS integration (SAP, Oracle)</td>
+</tr>
+<tr>
+<td>European Enterprise Shippers</td>
+<td>Shippeo, project44</td>
+<td>Direct TMS and telematics integration</td>
+</tr>
+<tr>
+<td>North American Freight Brokers</td>
+<td>project44, FourKites, Trucker Tools, MacroPoint</td>
+<td>McLeod and <span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span> TMS plug-ins</td>
+</tr>
+<tr>
+<td>High-Value Cold Chain / Pharma Shippers</td>
+<td>Tive, Overhaul</td>
+<td>Standalone cloud portals with TMS webhooks</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Platform marketing claims 95% real-time tracking coverage, 50% dwell time reduction, and 80% fewer track-and-trace phone calls.</li>
+<li>Gartner research: Gartner Magic Quadrant for Real-Time Transportation Visibility Platforms notes that customer satisfaction scores correlate directly with carrier network coverage rather than analytical software features.</li>
+<li>Supply chain surveys: Independent shipper benchmarking shows that unassisted carrier tracking compliance rarely exceeds 65% in spot-heavy truckload freight without financial carrier penalties.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>, <a href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html">Detention and demurrage dispute recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predictive maintenance for transport assets · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Predictive maintenance for transport assets</h1>
+    <p class="def">Ingesting high-frequency IoT telematics, engine sensor telemetry, and vibration diagnostics to predict mechanical component failures and schedule preventative shop repairs before in-service breakdowns occur.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Ingesting high-frequency IoT telematics, engine sensor telemetry, and vibration diagnostics to predict mechanical component failures and schedule preventative shop repairs before in-service breakdowns occur</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Predictive maintenance shifts fleet upkeep from reactive roadside firefighting and arbitrary calendar intervals to condition-based intervention.</p>
+<p>Onboard Electronic Control Units (ECUs), J1939 CAN-bus interfaces, and external IoT sensors continuously capture operating metrics: oil pressure, coolant temperatures, exhaust backpressure, vibration harmonics, and battery voltage.</p>
+<p>Edge processing hardware filters transient electrical noise and transmits anomalous sensor streams to a centralized diagnostics engine.</p>
+<p>Machine-learning classifiers match anomalous sensor profiles against verified component failure signatures, such as turbocharger bearing play, diesel particulate filter (DPF) soot accumulation, or marine cylinder liner wear.</p>
+<p>The engine estimates the component's Remaining Useful Life (RUL) in operating hours or transit miles.</p>
+<p>When RUL drops below safety thresholds, the system automatically opens a maintenance work order in the fleet Maintenance Information System (MIS). It reserves bay capacity, stages required replacement parts, and schedules the asset into the next scheduled terminal stop.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: Class 8 tractors run continuous interstate linehaul. Roadside breakdowns trigger expensive towing ($1,200 to $2,500), mobile mechanic premiums, and missed delivery fines. Predictive models monitor cooling systems, alternators, and emissions aftertreatment to capture failures before tractors leave terminals.</li>
+<li><strong><a href="../../sectors/index.html">Model 8 (Inland Liquid Bulk Marine)</a></strong>: Operates push towboats and tank barges on the Mississippi river system. Main propulsion failure creates immediate navigational hazards, risking bridge collisions or groundings. Predictive sensors monitor main marine diesels and reduction gears, scheduling repairs during planned fleeting stops.</li>
+<li><strong><a href="../../sectors/index.html">Model 12 (Energy Shipping)</a></strong>: Deep-sea crude and LNG tankers incur off-hire penalties of $40,000 to $120,000 daily under commercial charter contracts. Predictive condition monitoring targets two-stroke main engines, cryogenic cargo boil-off compressors, and auxiliary power plants between scheduled voyages.</li>
+<li><strong><a href="../../sectors/index.html">Model 13 (Great Lakes Bulk Shipping)</a></strong>: Operates self-unloading bulkers on strict seasonal schedules constrained by winter lock closures. Unscheduled mid-season breakdowns forfeit irreplaceable <span class="term" data-term="metric:revenue-days-great-lakes-marine" data-href="../../reference/metrics.html#revenue-days-great-lakes-marine" tabindex="0">revenue days</span>. Predictive vibration diagnostics monitor self-unloader boom conveyors, loop belts, and ballast pumps.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span></strong>: Capital equipment produces zero revenue while undergoing emergency mechanical repairs, yet crew wages, depreciation, and debt service continue unabated. Predictive maintenance detects component wear early, converting unscheduled breakdowns into scheduled shop visits and preserving operating <span class="term" data-term="metric:revenue-days-great-lakes-marine" data-href="../../reference/metrics.html#revenue-days-great-lakes-marine" tabindex="0">revenue days</span>.</li>
+<li><strong><span class="term" data-term="mech:fleet-age-capex-cliff-raises-maintenance-before-replacement-is-funded" tabindex="0">fleet age capex cliff raises maintenance before replacement is funded</span></strong>: Aging fleets suffer escalating repair expenses and frequent technical downtime before replacement capital is funded. Condition monitoring isolates specific failing subsystems, extending economic asset life while avoiding catastrophic mid-life mechanical failures.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the maintenance work order, monitored asset-hour, or power-unit mile.</p>
+<p>In Class 8 trucking, an in-service roadside emergency repair averages $1,400 to $3,200, including emergency towing, mobile mechanic labor premiums, and driver layover compensation.</p>
+<p>The identical repair completed preventatively in a fleet terminal shop costs $350 to $650 in parts and standard technician labor.</p>
+<p>In commercial shipping, unscheduled technical off-hire destroys $15,000 to $85,000 daily in lost charter hire, excluding emergency shipyard dockage fees.</p>
+<p>Effective predictive maintenance shifts shop workflow from 60% corrective to over 80% planned maintenance, reducing total annual fleet maintenance spend by 18% to 25%.</p>
+<p>Raw telematics feeds generate 50 to 100 non-critical Diagnostic Trouble Codes (DTCs) per power unit weekly. Calibrated predictive models filter transient fault codes, surfacing fewer than two high-confidence failure alerts per asset monthly.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Predictive maintenance programs fail without comprehensive digital and physical maintenance foundations:</p>
+<ol>
+<li><strong>Standardized CAN-bus and telemetry integration</strong>: Fleets must install standardized telematics gateways capable of extracting J1939 or Modbus parameters across mixed OEM engine brands and model vintages.</li>
+<li><strong>Enterprise Maintenance Information System (MIS)</strong>: Work orders, technician labor logs, and inventory records must be digitized; algorithmic alerts cannot drive action if maintenance shops operate on paper clipboards.</li>
+<li><strong>Structured spare parts inventory SLAs</strong>: Predictive alerts require immediate availability of replacement components; if replacement turbochargers or injectors are backordered, predicted failures still strand assets.</li>
+<li><strong>Technician operational change management</strong>: Shop mechanics must be trained and rewarded for replacing degrading components before complete physical failure occurs.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Platform software subscription charged per asset monthly ($25 to $65 per truck/trailer; $800 to $2,500 per marine vessel) covering telematics ingestion and diagnostic model retraining.</li>
+<li><strong><span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">Forward-deployed engineer embedded</span></strong>: Embedded reliability engineers ($30,000 to $50,000 monthly) over six months to integrate mixed-fleet telematics APIs and configure OEM-specific failure thresholds.</li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Gainshare contracts tying software fees to verified reductions in roadside breakdown frequency or recovered commercial available days.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Multi-OEM predictive maintenance telematics deployments across mixed commercial fleets routinely collapse under severe alert fatigue.</p>
+<p>When sensor platforms ingest telemetry across diverse tractor brands (Freightliner, Peterbilt, Volvo, Kenworth), they flood dashboards with thousands of minor Diagnostic Trouble Codes (DTCs). Shop supervisors quickly learn to mute notifications. Impending catastrophic failures are missed, resulting in the same roadside breakdown rates as uninstrumented fleets.</p>
+<p>As documented in <span class="term" data-term="solution:autonomous-long-haul-trucking-commercialisation" data-href="../failures/autonomous-long-haul-trucking-commercialisation.html" tabindex="0">autonomous long-haul trucking commercialisation</span>, complex electronic sensor suites degrade rapidly in harsh highway environments. Road salt, stone strikes, and chassis vibration induce continuous sensor failures, generating high replacement overhead that erodes software savings.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch presents automated failure prediction. The practical reality presents severe operational and cultural friction:</p>
+<ul>
+<li>Engine manufacturers (Cummins, Detroit Diesel, Caterpillar) utilize proprietary, encrypted CAN-bus parameters, complicating unified multi-brand failure analysis.</li>
+<li>Harsh road conditions, moisture intrusion, and thermal cycling degrade external IoT sensors, generating false readings that mislead maintenance planners.</li>
+<li>Senior shop mechanics routinely resist algorithmic guidance, refusing to pull an expensive component when the engine "sounds fine" to human inspection.</li>
+</ul>
+<p>Overcoming technician skepticism and maintaining physical sensor reliability consumes the majority of deployment effort.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High roadside towing expenses ($1,200+) and expensive diesel technician hourly rates ($110 to $180 per shop hour) yield rapid payback under six months.</li>
+<li><strong>UK and Europe</strong>: Stringent roadside commercial vehicle inspection regimes (DVSA in UK, TÜV in Germany) impose immediate vehicle prohibitions for mechanical defects, strongly incentivizing predictive compliance.</li>
+<li><strong>Australia</strong>: Long transit distances across remote desert corridors (such as the Nullarbor Plain) make roadside breakdowns catastrophic, with emergency recovery towing exceeding AUD 5,000 to AUD 10,000.</li>
+<li><strong>Southeast Asia</strong>: Lower mechanic wages ($5.00 to $12.00 per hour) reduce direct labor savings. However, high capital replacement costs for imported engines and scarce marine spare parts make failure prevention critical.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detention and demurrage dispute recovery · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Detention and demurrage dispute recovery</h1>
+    <p class="def">Automating the capture and assembly of terminal appointment blackout logs, interchange receipts, and statutory dispute filings to contest carrier per-diem charges within regulatory windows.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#models-and-unit-of-work">Models and unit of work</a><a href="#unit-of-work-economics">Unit-of-work economics</a><a href="#preconditions">Preconditions</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#commercial-structures">Commercial structures</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Automating the capture and assembly of terminal appointment blackout logs, interchange receipts, and statutory dispute filings to contest carrier per-diem charges within regulatory windows</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Forwarders and drayage operators shift from manually negotiating ocean carrier per-diem invoices to automated, evidence-backed legal dispute submissions.</p>
+<p>If the container cannot be retrieved due to terminal appointment shortages, closed gates, or dual-transaction restrictions, the system automatically captures time-stamped screenshots of the terminal booking portal.</p>
+<p>When the ocean liner subsequently issues a detention or demurrage invoice, the system cross-checks the invoice against 46 CFR Part 541 statutory requirements (e.g., verifying mandatory invoice data elements, proper dispute windows, and container availability dates).</p>
+<p>If invalid, the system auto-generates a compliant FMC dispute package and submits it to the carrier's claims portal inside the mandatory 30-day window.</p>
+<p>Staff stop writing ad-hoc dispute emails. They review carrier dispute responses.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Directly arrests the leakage where forwarders absorb ocean carrier and rail per-diem penalties because ops teams lack the time or assembled evidence to contest invoices before dispute windows lapse.</li>
+</ul>
+<h2 id="models-and-unit-of-work">Models and unit of work</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../../sectors/index.html">Model 2 (Forwarding)</a>, <a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>, <a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a>, <a href="../../sectors/index.html">Model 8 (Inland Liquid Bulk)</a>, <a href="../../sectors/index.html">Model 10 (International Container Liner)</a>, and <a href="../../sectors/index.html">Model 11 (Dry Bulk)</a>.</li>
+<li><em>Does not apply to</em>: Standard truckload brokerage, where demurrage is a different operational concept (driver detention) with distinct legal mechanisms.</li>
+<li><strong>Unit of work</strong>: The ocean container / dispute claim file. For Models 8 and 11, vessel demurrage and laytime dispute files are the equivalent. For Model 10, container demurrage on import represents a massive cost recovery operation.</li>
+</ul>
+<h2 id="unit-of-work-economics">Unit-of-work economics</h2>
+<p>On imports through congested port gateways (e.g., Los Angeles/Long Beach, New York/New Jersey), detention and demurrage charges average $150 to $350 per container per day.</p>
+<p>Automated dispute evidence assembly raises successful charge mitigation from under 20% to between 50% and 75% of contested fees, protecting $200 to $600 of gross profit per delayed shipment file.</p>
+<ul>
+<li>Regulatory docket records: FMC charge complaints and small claims under OSRA 22 demonstrate multi-million dollar charge waivers for cargo interests that provide contemporaneous terminal appointment unavailability logs.</li>
+<li>Vendor claims: Drayage tech platforms claim 90%+ reductions in demurrage expenses, ignoring charges arising from valid commercial delays (e.g., customs holds or consignee warehouse closures).</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Automated claim generation fails without real-time operational data feeds:</p>
+<ol>
+<li><strong>Automated terminal portal scraping</strong>: The operator must capture and store immutable, time-stamped records showing that terminal gate appointments were unavailable while the container was on the dock. If records are not captured contemporaneously, retroactive proof is impossible.</li>
+<li><strong>Drayage driver interchange discipline</strong>: Drayage drivers must scan and upload physical Equipment Interchange Receipts (EIR) immediately upon gate departure to document turn times and chassis return rejections.</li>
+<li><strong>Strict calendar dispute tracking</strong>: Invoices must be logged within 24 hours of receipt to ensure dispute filings are submitted prior to the 30-day statutory deadline under 46 CFR Part 541.</li>
+</ol>
+<p>Establishing the automated terminal scraping and gate-receipt mobile pipeline dominates total project effort. As detailed in <a href="../../insights/accessorial-dispute-recovery-requires-contemporaneous-operational-evidence.html">accessorial dispute recovery requires contemporaneous operational evidence</a>, fee recovery fails unless operational unavailability proof is captured contemporaneously at the physical terminal interface.</p>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Neither distributed ledgers nor generic tracking platforms eliminated detention and demurrage losses.</p>
+<p>As recorded in <span class="term" data-term="solution:consortium-blockchain-trade-documentation" data-href="../failures/consortium-blockchain-trade-documentation.html" tabindex="0">consortium blockchain trade documentation</span>, TradeLens attempted to use blockchain timestamps to eliminate D&amp;D disputes, but failed because carrier per-diem billing is a legal and regulatory enforcement battle, not a timestamp tracking exercise.</p>
+<p>Similarly, <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span> proved that knowing a container is dwelling on a quay provides zero financial recovery unless paired with formal evidentiary dispute packages.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes automated FMC dispute generation.</p>
+<p>The physical difficulty is uncooperative ocean carrier and terminal infrastructure:
+- Marine terminals frequently change portal interfaces to block automated scraping of appointment reservation screens.
+- Ocean liners routinely reject valid dispute filings on minor technicalities, forcing cargo interests to escalate to formal FMC Part 502 small claims proceedings.</p>
+<p>The software generates the letter; the operator must maintain the legal persistence to enforce statutory remedies against liner cartels.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<p>Commercial models reflect cash recovery velocity and dispute complexity:
+- <strong><span class="term" data-term="solution:recovery-fee-contingency" data-href="../structures/recovery-fee-contingency.html" tabindex="0">Recovery fee contingency</span></strong>: Pure success-based fee taking 15% to 25% of audited and permanently waived detention or demurrage invoice amounts.
+- <strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Platform fee ($3.00 to $7.00 per container move) covering automated terminal appointment scraping, milestone ingestion, and free-time expiration alerts.
+- <strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based gainshare</span></strong>: Base SaaS fee ($2,500 monthly per terminal gateway) paired with a 10% gainshare bonus on all per-diem spend reductions below historical run-rates.</p>
+<p>Contingency structures dominate because forwarders and drayage carriers operate on thin operating margins. They avoid upfront cash commitments for disputed payables.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>Demurrage dispute economics reflect stark differences in regulatory protection, port infrastructure, and local labor costs:</p>
+<ul>
+<li><strong>North America</strong>: High dispute recovery payback (under four months). Driven by statutory enforcement under the Ocean Shipping Reform Act of 2022 (OSRA 22) and FMC 46 CFR Part 541. The federal rule establishes 13 mandatory billing data elements and strict 30-day dispute windows. Shippers file formal FMC Part 502 Charge Complaints. Marine terminal congestion at Los Angeles, Long Beach, and New York/New Jersey, combined with chassis pool shortages, generates heavy daily per-diem fees ($150 to $350 per day). High legal and dispute clerk wages ($32 to $48 per hour) justify automation.</li>
+<li><strong>UK and Europe</strong>: Governed by commercial contract terms and national maritime codes rather than federal billing caps. Demurrage and detention disputes at Rotterdam, Antwerp, and Hamburg require bilateral arbitration under English or local commercial law. High administrative wages (EUR 28 to EUR 44 per hour) support software deployment. Shorter inland container transit via Rhine barge and electrified rail reduces chassis detention exposure compared to North America.</li>
+<li><strong>Australia</strong>: Governed by standard liner contract terms under the Competition and Consumer Act. High stevedoring wages (AUD 42 to AUD 60 per hour) and terminal access charges (TACs) impose severe cost pressures. Vehicle Booking Systems (1-Stop VBS) at Port Botany and Port of Melbourne penalize missed slots. Liner demurrage disputes depend on commercial negotiation because Australia lacks an FMC equivalent.</li>
+<li><strong>Southeast Asia (Singapore, Malaysia, Indonesia)</strong>: Divergent port dynamics and weak statutory shipper protections. Singapore operates efficient PSA transshipment terminals with rapid container dwell cycles and minimal fee disputes. In Malaysia (Port Klang, Tanjung Pelepas) and Indonesia (Tanjung Priok, Tanjung Perak), ocean liners hold absolute commercial leverage. Liners withhold cargo delivery orders until demurrage is paid in full, with zero statutory dispute rights akin to FMC Part 541. Low documentation clerk wages ($3.00 to $5.50 per hour) mean software payback does not rely on labor reduction. Value derives from preventing container delivery holds that stop factory assembly lines. Regional cabotage laws (Indonesian Cabotage Law No. 17/2008) limit feeder repositioning, stranding empty containers at outer islands and triggering demurrage bills.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>.</p><p>Systems implementing this include <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>, <a href="../../systems/freight-audit-and-payment-providers.html">Freight audit and payment providers</a>, <a href="../../systems/navis-n4.html">Navis N4</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

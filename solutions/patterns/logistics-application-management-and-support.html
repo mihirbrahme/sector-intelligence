@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logistics application management and support · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Logistics application management and support</h1>
+    <p class="def">Multi-tier application support, 24/7 cutover desks, and incident triage tailored to mission-critical freight execution systems.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Multi-tier application support, 24/7 cutover desks, and incident triage tailored to mission-critical freight execution systems</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Freight execution runs across continuous shifts. When an EDI parser fails at 02:00, freight cannot depart cross-dock facilities.</p>
+<p>This pattern replaces corporate IT helpdesks with dedicated logistics support. Support aligns across three operational tiers keyed to dispatch cutoffs.</p>
+<p>Level 1 operators monitor queue health. They reset locked RF scanner sessions, clear print spoolers, and resolve portal credentials.</p>
+<p>Level 2 engineers investigate data defects. They troubleshoot stuck EDI 204 tenders, unallocated WMS pick waves, and rating faults.</p>
+<p>Level 3 engineers resolve core defects. They patch database deadlocks, update broken carrier API webhooks, and deploy emergency hotfixes.</p>
+<p>Engineers join operational bridge calls during peak linehaul departures. They clear database blocks before scheduled departures.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 1 (Truckload Brokerage)</a></strong>: Focuses on carrier portal uptime and EDI pipelines. Morning downtime (07:00 to 10:00) strands spot freight and compresses margins.</li>
+<li><strong><a href="../../sectors/index.html">Model 2 (Freight Forwarding)</a></strong>: Manages customs interfaces and booking APIs. Incidents center on locked declaration files before vessel cutoffs.</li>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Handles RF scanner latency, conveyor PLC interfaces, and pick waves. A short WMS outage idles warehouse labor and congests yards.</li>
+<li><strong><a href="../../sectors/index.html">Model 4</a> &amp; <a href="../../sectors/index.html">Model 5 (Asset Truckload &amp; LTL)</a></strong>: Manages telematics, ELD sync, and dispatch boards. Midnight linehaul cutoffs require immediate failover if sortation stalls.</li>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a></strong>: Operates inside terminal operating systems. Gate OCR outages stall truck queues onto highways within twenty minutes.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<p>It cleans database bloat, updates deprecated API endpoints, and clears dead-letter queues before bad data pollutes execution tables.
+- <strong><span class="term" data-term="mech:post-restructuring-capability-gap" tabindex="0">post-restructuring capability gap</span></strong>: When carriers cut IT headcount, knowledge of custom scripts vanishes. Codified runbooks prevent service drops when freight volume rebounds.
+- <strong><span class="term" data-term="mech:systems-programme-trailing-the-forwarding-process-it-was-bought-to-fix" tabindex="0">systems programme trailing the forwarding process it was bought to fix</span></strong>: Keeps implemented forwarding workflows aligned to the operating tasks they were meant to remove.</p>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<ul>
+<li><strong>Unit of work</strong>: The resolved operational incident ticket or maintained application instance per month.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Specialized application support fails without disciplined operational foundations:</p>
+<ol>
+<li><strong>Standardized production runbooks</strong>: Documenting batch schedules, EDI partner specifications, and interface failover procedures across every facility.</li>
+<li><strong>Configuration management database (CMDB)</strong>: Complete inventory of application endpoints, API keys, database instances, and warehouse devices.</li>
+<li><strong>Logistics-aligned severity matrix</strong>: Defining Sev-1 around physical operational impacts (e.g. gate stoppage) rather than IT ticket counts.</li>
+</ol>
+<p>Capturing tribal knowledge from undocumented legacy scripts consumes 75% of support transition effort.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li>Managed support desks contract via <span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0"><span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0">per-transaction managed service or BPO</span></span> for baseline monthly support fees.</li>
+<li>Engineering hours for defect patching utilize <span class="term" data-term="solution:time-and-materials" data-href="../structures/time-and-materials.html" tabindex="0">time-and-materials</span> with fixed rate cards.</li>
+<li>Contracts include financial SLA penalties tied directly to physical freight cutoff windows.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Generic corporate IT service desks fail when deployed into transport networks.</p>
+<p>As recorded in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>, enterprise ITIL desks treat warehouse outages like desktop spreadsheet bugs. In the 2018 Revlon Oxford facility breakdown, offshore IT desks logged stalled inventory allocation jobs as routine low-priority tickets. Warehouse pickers stood idle across shifts while tickets sat in offshore queues.</p>
+<p>Similarly, <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span> demonstrated that IT support lacking operational execution authority cannot prevent transportation delays.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The vendor pitch promises automated ticket deflection and seamless 24/7 coverage.</p>
+<p>The real difficulty is dirty carrier data and brittle custom scripts. Motor carriers alter EDI field separators without warning, crashing ingress parsers. Support engineers spend hours deciphering legacy stored procedures under intense operational pressure from terminal dispatchers.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>US</strong>: High engineering rates ( to per hour) drive operators toward offshore support hubs. ELD mandates and FMCSA rules make night-shift system availability critical.</li>
+<li><strong>UK/Europe</strong>: Stricter data protection regulations (GDPR) limit offshore access to production databases containing driver records. Support structures require regional data boundaries and hardened bastion access hosts.</li>
+<li><strong>Southeast Asia</strong>: Cross-dock and port facilities face intermittent fiber stability and power fluctuations. Support runbooks must handle split-brain database synchronization and offline edge caching at provincial depots.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>, <a href="../../systems/manhattan-associates.html">Manhattan Associates</a>, <a href="../../systems/octopi.html">Octopi (by Navis / Kaleris)</a>, <a href="../../systems/oracle-tms.html">Oracle Transportation Management (OTM)</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

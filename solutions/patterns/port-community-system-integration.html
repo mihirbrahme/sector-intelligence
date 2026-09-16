@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Port community system integration · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Port community system integration</h1>
+    <p class="def">Automating bidirectional electronic data interchange between enterprise systems and neutral port community platforms to accelerate customs clearance, cargo release, and gate appointments.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Automating bidirectional electronic data interchange between enterprise systems and neutral port community platforms to accelerate customs clearance, cargo release, and gate appointments</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern links freight forwarder TMS platforms, carrier booking engines, and terminal operating systems directly with neutral national Port Community Systems (PCS). Examples include Portbase, DAKOSY, CrimsonLogic TradeNet, and 1-Stop.</p>
+<p>The software replaces manual web portal entries with structured API and EDIFACT messages. Inbound import flows trigger automated pre-arrival declarations, electronic customs manifests, and veterinary inspection releases before vessels berth.</p>
+<p>Outbound export workflows automate customs export declarations, verified gross mass (VGM) transmissions, and digital release orders. The system cross-references terminal cargo availability flags against inland truck dispatch schedules.</p>
+<p>Commercial release replaces insecure email PIN codes with encrypted digital token handoffs. Drivers receive authorized terminal gate appointments tied to specific container release tokens.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports)</a></strong>: Terminals ingest pre-arrival gate appointments, smoothing truck arrival peaks and maintaining yard velocity.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Berth, yard and landside constraints turn density into delay)</strong>: Landside congestion stalls terminal gates. PCS gate integration spreads truck arrivals across time windows.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span> (Empty miles / repositioning deadweight)</strong>: Delayed customs release traps containers in port yards. Automated release cuts <span class="term" data-term="metric:container-dwell-time-ports-and-terminals" data-href="../../reference/metrics.html#container-dwell-time-ports-and-terminals" tabindex="0">container dwell time</span> by 1.5 to 2.5 days.
+Synced PCS event timestamps provide an auditable source of truth.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the electronic customs manifest, terminal release token, or gate transaction.</p>
+<p>Terminal container demurrage and detention charges range from to per TEU per day after free-time expiry. Automated customs pre-clearance cuts yard dwell from 5.5 days to 3.2 days, avoiding to in detention fees per delayed box.</p>
+<p>Manual document re-entry costs to in freight forwarding clerk labour per bill of lading. In addition, insecure PIN codes expose high-value cargo to fraudulent terminal collection, creating cargo theft claims exceeding,000 per incident.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Deployment requires four prerequisites:</p>
+<ol>
+<li><strong>PCS API credentialing</strong>: Registration and security clearance with relevant port platforms.</li>
+<li><strong>Standardised EDI mapping</strong>: Harmonising internal shipment records into UN/EDIFACT or JSON schemas.</li>
+<li><strong>Customs broker power of attorney</strong>: Integration with customs authority interfaces for bond debiting.</li>
+<li><strong>Drayage identity management</strong>: Enrolling approved trucking carriers into identity validation schemes.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Annual licensing from middleware providers (- per port ecosystem).</li>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: A - project mapping legacy TMS data fields to local port schemas.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Consortium blockchain platforms attempting to replace municipal port systems have failed completely. As documented in <span class="term" data-term="solution:consortium-blockchain-trade-documentation" data-href="../failures/consortium-blockchain-trade-documentation.html" tabindex="0">consortium blockchain trade documentation</span>, solutions like TradeLens collapsed after spending hundreds of millions.</p>
+<p>Carriers refused to join a blockchain ledger controlled by a direct competitor (Maersk/IBM). In contrast, national Port Community Systems succeed because they operate as neutral, regulated public-private utilities.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes unified port connectivity. The operational reality sits in fragmented municipal bureaucracy:
+- Every national port authority operates proprietary data schemas, preventing a single global integration layer.
+- Customs physical inspection holds override electronic release signals without explaining root inspection causes.
+- Independent drayage operators resist adopting secure token apps, defaulting to unannounced gate arrivals.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: Port community adoption is fragmented; terminal portals lack a unified national customs interface.</li>
+<li><strong>UK/Europe</strong>: Mature ecosystems; Portbase (Rotterdam) and DAKOSY (Hamburg) mandate electronic customs and Secure Chain release.</li>
+<li><strong>Singapore</strong>: Centralised single window (TradeNet, Portnet); regulatory enforcement guarantees 100% electronic participation.</li>
+<li><strong>Malaysia/Indonesia</strong>: Port Klang Net and Inaportnet face varying compliance rates across secondary feeder ports.</li>
+<li><strong>Australia</strong>: 1-Stop platform dominates major container terminals, mandating vehicle booking system appointments.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

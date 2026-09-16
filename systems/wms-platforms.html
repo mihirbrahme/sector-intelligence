@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WMS platforms · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>WMS platforms</h1>
+    <p class="def">Software platforms that manage warehouse inventory storage, order picking, putaway slotting, labor tracking, and facility dispatch.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Software platforms that manage warehouse inventory storage, order picking, putaway slotting, labor tracking, and facility dispatch</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Warehouse Management Systems (WMS) execute operations against the item SKU, license plate number (LPN), pallet move, order pick line, and labor hour.</p>
+<p>The software records inventory arrival at inbound dock doors, directs putaway to specific racking bins, manages cycle counting, and orchestrates order picking waves.</p>
+<p>In automated facilities, the WMS coordinates with Warehouse Execution Systems (WES) to instruct automated guided vehicles, conveyors, and automated storage and retrieval systems (AS/RS).</p>
+<p>Advanced platforms incorporate Labor Management Systems (LMS). These engines compare individual picker cycle times against engineered labor standards.</p>
+<p>Primary enterprise vendors include <span class="term" data-term="system:manhattan-associates" data-href="manhattan-associates.html" tabindex="0">Manhattan Associates</span>, Blue Yonder, Körber Supply Chain, SAP (SAP EWM), and Infor.</p>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:warehouse-labour-productivity-instrumentation" data-href="../solutions/patterns/warehouse-labour-productivity-instrumentation.html" tabindex="0"><span class="term" data-term="solution:warehouse-labour-productivity-instrumentation" data-href="../solutions/patterns/warehouse-labour-productivity-instrumentation.html" tabindex="0">Warehouse labour productivity instrumentation</span></span>: Measuring direct versus indirect labor hours and tracking pick-line velocity.</li>
+<li><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0"><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0">Carrier and customer master data consolidation</span></span>: Governing item master attributes, packaging dimensions, and barcode cross-references.</li>
+<li><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0"><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0">Exception triage and resolution workflow</span></span>: Managing short-picks, damaged inbound goods, and inventory discrepancies.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 3 (Contract Logistics / 3PL)</a>, <strong>shipper / BCO in-house transportation management</strong> (Warehousing) — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Geographies</strong>:</li>
+<li>Global: <span class="term" data-term="system:manhattan-associates" data-href="manhattan-associates.html" tabindex="0">Manhattan Associates</span>, Blue Yonder, and SAP EWM dominate large enterprise distributions networks worldwide.</li>
+<li>North America &amp; Europe: Körber Supply Chain and Infor hold strong positions in complex multi-client 3PL facilities.</li>
+<li>Regional &amp; Mid-Market: Softeon, Deposco, and Logiwa serve mid-market e-commerce fulfillment and regional contract warehouses.</li>
+<li><strong>Commercial model</strong>: Enterprise <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span> based on facility square footage, active user tiers, or annual transaction volume. Legacy on-premise deployments charge annual software maintenance (typically 20% to 22%).</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>WMS implementations carry severe operational cutover risk. A failure at go-live physically halts outbound shipping, stranding inventory and generating immediate customer penalties.</p>
+<p>Deployments routinely stall on item master profiling. If SKU physical dimensions, case pack weights, or pallet configurations are inaccurate, directed putaway algorithms overflow storage bins.</p>
+<p>Extensive software customisation creates technical debt. Custom scripts written for legacy picking workflows break during version upgrades.</p>
+<p>Integration between the WMS and automated material handling hardware frequently suffers from latency and messaging dropouts.</p>
+<p>Historical failures are cataloged in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../solutions/failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p>WMS vendors refuse physical warehouse slotting audits, SKU cubing, and item master data cleansing.</p>
+<p>The software vendor expects the customer to deliver complete, validated item master files containing exact dimensions, weights, and unit-of-measure conversions.</p>
+<p>Vendors assume the client has verified physical rack labeling, barcode scanner RF coverage, and inventory location mappings before configuration.</p>
+<p>When clients fail to perform physical data preparation, implementations freeze or suffer disastrous go-lives. Global systems integrators bill extensive <span class="term" data-term="solution:time-and-materials" data-href="../solutions/structures/time-and-materials.html" tabindex="0"><span class="term" data-term="solution:time-and-materials" data-href="../solutions/structures/time-and-materials.html" tabindex="0">time and materials</span></span> contracts to clean master data.</p>
+<p>This dynamic demonstrates <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<table>
+<thead>
+<tr>
+<th>Segment &amp; buyer profile</th>
+<th>Dominant WMS vendors</th>
+<th>Implementation model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Retailers &amp; Contract Logistics (Tier 1)</td>
+<td>Manhattan Active WM, Blue Yonder, SAP EWM</td>
+<td>Systems integrators (Accenture, Deloitte) or vendor services</td>
+</tr>
+<tr>
+<td>Mid-Market Multi-Client 3PLs ($50M–$500M rev)</td>
+<td>Körber Supply Chain, Infor WMS, Softeon</td>
+<td>Vendor direct professional services</td>
+</tr>
+<tr>
+<td>Industrial / Manufacturing Facilities</td>
+<td>SAP EWM, Oracle WMS Cloud, Infor</td>
+<td>Enterprise ERP integrators</td>
+</tr>
+<tr>
+<td>E-commerce Fulfillment (&lt;$50M rev)</td>
+<td>Deposco, Logiwa, ShipHero</td>
+<td>Self-guided onboarding or regional consultants</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Vendors claim 25% to 40% labor productivity increases and 99.9% inventory inventory accuracy.</li>
+<li>Gartner research: Gartner Magic Quadrant for Warehouse Management Systems notes that Tier 1 WMS rollouts average 12 to 18 months, with labor standard calibration and master data cleansing representing the primary delay drivers.</li>
+<li>Public operator disclosures: GXO Logistics and DHL Supply Chain annual reports show multi-million dollar capital expenditure allowances per automated distribution campus, where systems integration exceeds pure software licensing costs.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/event-driven-visibility-data-pipeline.html">Event-driven visibility data pipeline</a>, <a href="../solutions/patterns/freight-audit-and-payment-automation.html">Freight audit and payment automation</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

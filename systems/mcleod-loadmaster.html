@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McLeod Software (LoadMaster &amp; PowerBroker) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>McLeod Software (LoadMaster &amp; PowerBroker)</h1>
+    <p class="def">Enterprise trucking dispatch, fleet management, and freight brokerage software dominating North American motor carrier operations.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Enterprise trucking dispatch, fleet management, and freight brokerage software dominating North American motor carrier operations</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>McLeod Software executes operations against the truckload load, tractor-trailer dispatch record, driver payroll settlement, carrier rate confirmation, and freight invoice.</p>
+<p>The company provides two tightly integrated operational engines:
+- <strong>LoadMaster</strong>: Dedicated to asset carriers (<a href="../sectors/index.html">Model 4</a>). It manages tractor and trailer assignment, electronic logging device (ELD) hours of service, driver dispatch, maintenance tracking, fuel tax (IFTA) accounting, and complex driver pay settlement.
+- <strong>PowerBroker</strong>: Dedicated to non-asset freight brokerages (<a href="../sectors/index.html">Model 1</a>). It handles spot quote generation, customer load entry, digital freight matching, carrier compliance verification, and purchased transportation settlement.</p>
+<p>When a dispatcher books a load, McLeod validates driver available hours via telematics integration, checks customer credit, generates automated rate confirmations, and tracks tractor position via geofences.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 4 (Asset Carriage)</a>, <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a>, and <a href="../sectors/index.html">Model 5 (LTL)</a>.</li>
+<li><strong>Sub-sectors</strong>: Dry van, refrigerated carriage, flatbed/specialized, bulk liquid tanker, dedicated contract carriage, and logistics intermediaries.</li>
+<li><strong>Commercial model</strong>: Perpetual licenses with annual maintenance contracts, or hosted private-cloud subscriptions. Additional modular licensing per tractor, broker seat, and third-party software integration.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>McLeod is the dominant operational software vendor across mid-sized and large North American truckload carriers.</p>
+<ul>
+<li><strong>Market position</strong>: Powers over 1,200 asset carriers and freight brokerages in North America. Viewed as the operational backbone of the American trucking industry.</li>
+<li><strong>Customer profile</strong>: Mid-market to large motor carriers operating from 50 to 5,000+ power units, and freight brokerages managing $20 million to over $1 billion in gross freight volume.</li>
+<li><strong>Representative customers</strong>: Prime Inc., Paschall Truck Lines, Mercer Transportation, Melton Truck Lines, Roehl Transport, and thousands of private fleet operators.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>McLeod's deep functionality is offset by architectural conservatism and heavy configuration overhead:
+1. <strong>Legacy client-server desktop architecture</strong>: The core system is a heavy Windows desktop application running against Microsoft SQL Server. Web and mobile interfaces are secondary portal layers.
+2. <strong>Prolonged accounting implementation</strong>: Implementations routinely take 9 to 18 months. Stalls typically center on driver payroll rules (per-diem splits, stop pay, sliding mileage bands, detention thresholds) and chart-of-accounts cutover.
+3. <strong>Integration fragility</strong>: While supporting hundreds of third-party add-ons, connections rely on transactional database polling, intermediate staging tables, or batch exports rather than event-driven webhooks.
+4. <strong>UI complexity</strong>: Dispatch screens are dense with hundreds of data fields, requiring significant formal training before dispatchers achieve speed.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>McLeod runs on a mature, highly normalized relational Microsoft SQL Server schema.</p>
+<ul>
+<li><strong>Data core</strong>: Built around the Order, Movement, Stop, Asset (Tractor/Trailer), Driver, and Pay/Bill settlement records.</li>
+<li><strong>Telematics integration</strong>: Deep bi-directional integrations with all major fleet ELD platforms: Samsara, Omnitracs, Platform Science, Trimble/PeopleNet, and Isaac Instruments.</li>
+<li><strong>Compliance &amp; vetting</strong>: Direct API connectors to RMIS (Registry Monitoring Insurance Services) and Highway for carrier fraud prevention and insurance verification.</li>
+<li><strong>Financial clearing</strong>: Standard integrations with fuel card networks (Comdata, EFS/WEX) and carrier settlement networks like <span class="term" data-term="system:triumphpay" data-href="triumphpay.html" tabindex="0">TriumphPay</span>.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 1985 by Tom McLeod in Birmingham, Alabama.</li>
+<li>Uniquely independent: Remains privately held and employee-owned.</li>
+<li>Has avoided private equity acquisitions, rollups, or debt-heavy recapitalizations, providing exceptional corporate and software stability compared to PE-backed competitors.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span></strong>: In PowerBroker, carrier sales reps match loads against historical lane carrier lists. If brokers fail to utilize dynamic pricing algorithms, they buy high in spot rate inflections, compressing <span class="term" data-term="metric:net-revenue-per-load" data-href="../reference/metrics.html#net-revenue-per-load" tabindex="0">net revenue per load</span>.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: LoadMaster dispatch logs accessorial detention, driver layover, and lumper receipts. If drivers fail to upload receipts or dispatchers fail to trigger billable accessorial flags, the carrier absorbs the cost while paying the driver.</li>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: PowerBroker's quoting module requires clerical re-entry if shipper emails and spot bids are not automated, consuming coordinator minutes per quote.</li>
+<li><strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span> (Carrier-selection liability)</strong>: PowerBroker is the primary gatekeeper against negligent hiring liability. If its compliance rules fail to verify carrier insurance certificates or let a flagged carrier slip through, the broker inherits catastrophic casualty liability post-<em>Miller</em>.</li>
+<li><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: Carrier settlements in PowerBroker establish the purchased transportation liability. Discrepancies between rated rate confirmations and carrier freight bills generate accrual misstatements.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: McLeod claims complete automation of fleet dispatch, zero manual payroll intervention, and dramatic improvements in tractor utilization.</li>
+<li>Industry user group and technician reports: Fleet maintenance directors and carrier controllers praise McLeod's bulletproof accounting and driver payroll reliability, while consistently criticizing its steep learning curve and legacy desktop interface design.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/carrier-onboarding-and-compliance-automation.html">Carrier onboarding and compliance automation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

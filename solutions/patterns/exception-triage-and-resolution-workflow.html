@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exception triage and resolution workflow · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Exception triage and resolution workflow</h1>
+    <p class="def">Structuring transit deviations into categorized, priority-scored exception queues governed by resolution playbooks, removing unstructured email chains from operations desks.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#models-and-unit-of-work">Models and unit of work</a><a href="#unit-of-work-economics">Unit-of-work economics</a><a href="#preconditions">Preconditions</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#commercial-structures">Commercial structures</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Structuring transit deviations into categorized, priority-scored exception queues governed by resolution playbooks, removing unstructured email chains from operations desks</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Operational deviations stop landing as unread messages in individual dispatcher inboxes.</p>
+<p>When a transit milestone fails (e.g., missed pickup appointment, customs inspection hold, temperature deviation, or equipment breakdown), the event triggers an electronic exception ticket.</p>
+<p>The ticket classifies the failure according to a standard taxonomy, calculates severity based on cargo value and service-level agreements, and assigns the task to a dedicated resolution desk.</p>
+<p>Standard resolution playbooks execute automatically: the system drafts pre-formatted customer delay notifications, checks carrier contracts for recovery terms, and triggers dock appointment rescheduling requests.</p>
+<p>Staff stop investigating root causes from scratch. They execute established operational remedies.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Prevents exception recovery from pulling frontline commercial reps away from quoting and booking revenue freight.</li>
+</ul>
+<h2 id="models-and-unit-of-work">Models and unit of work</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../../sectors/index.html">Model 2 (Forwarding)</a>, <a href="../../sectors/index.html">Model 3 (Contract Logistics)</a>, <a href="../../sectors/index.html">Model 4 (Asset Carriage)</a>, <a href="../../sectors/index.html">Model 5 (LTL)</a>, <a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a>, and <a href="../../sectors/index.html">Model 10 (International Container Liner)</a>.</li>
+<li><strong>Unit of work</strong>: The deviating transaction / exception ticket. For ocean models, mechanism <span class="term" data-term="mech:port-congestion-breaks-liner-rotation-integrity" tabindex="0">port congestion breaks liner rotation integrity</span> (port congestion breaks rotation) is a form of exception requiring distinct network-level resolution workflows rather than unit-level commercial recovery.</li>
+</ul>
+<h2 id="unit-of-work-economics">Unit-of-work economics</h2>
+<p>Standardizes exception resolution time, reducing manual handling from 35–50 minutes of unstructured phone and email chasing down to 10–15 minutes of structured workflow execution.</p>
+<p>Stops the "rebound effect" where an exception returns to the same operations desk three to five times over a 48-hour period.</p>
+<ul>
+<li>Audited operator disclosures: <a href="../../companies/ch-robinson.html">C.H. Robinson</a>'s 2026-Q1 and 2026-Q2 financial calls credited automated appointment scheduling and automated exception resolution with driving a &gt;60% cumulative productivity gain in NAST operations, enabling a 10.8% headcount reduction while load volumes expanded.</li>
+<li>Vendor claims: Exception-management platform vendors claim 70% automated resolution rates and 50% drops in customer service staffing requirements.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>An exception engine cannot route work without operational rules:</p>
+<ol>
+<li><strong>Codified exception taxonomy</strong>: Management must define and categorize deviations (e.g., Tier 1 minor appointment delay versus Tier 3 reefer breakdown). Most operators hold no standard classification.</li>
+<li><strong>Pre-authorized commercial resolution limits</strong>: Frontline triage staff must hold clear authority to spend money to resolve an exception (e.g., authorization to spend up to $250 for roadside cross-docking without branch manager sign-off). Without pre-cleared spending limits, automation stalls at the approval step.</li>
+<li><strong>Dedicated resolution roles</strong>: Operational exception handling must be separated from commercial booking desks. If commercial account reps handle exceptions, customer disputes compete directly with revenue-generating quoting.</li>
+</ol>
+<p>Building the playbook rules and governance structure dominates total implementation time. As explored in <a href="../../insights/exception-resolution-requires-commercial-authority-not-workflow-software.html">exception resolution requires commercial authority not workflow software</a>, software cannot clear deviations unless frontline teams hold pre-authorized commercial spending limits.</p>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Visibility software failed precisely because it identified exceptions without providing execution mechanisms to resolve them.</p>
+<p>As documented in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span>, tracking platforms flooded dispatchers with thousands of raw delay alerts, generating catastrophic alert fatigue where teams muted notifications.</p>
+<p>Furthermore, <a href="../../insights/happy-path-automation-leaves-unit-costs-scaling-with-exceptions.html">happy path automation leaves unit costs scaling with exceptions</a> proves that automating standard booking while neglecting exceptions leaves operating unit costs scaling directly with the deviation rate.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch focuses on automated anomaly detection and AI triage.</p>
+<p>The true operational barrier is commercial execution authority:
+- A load is delayed, threatening a factory production shutdown. The carrier cannot provide a replacement tractor. The resolution requires paying a competitor $1,500 for hot-shot recovery.
+- No software workflow can automate the commercial decision of whether to absorb that loss or pass it to the customer.</p>
+<p>Triage software organizes the queue; human managers must establish the commercial willingness to spend money to resolve deviations.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<p>Deployments follow operational workflow licensing:
+- <strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Per-seat user license ($125 to $275 per operations coordinator monthly) or per-resolved-exception fee ($1.50 to $3.50 per handled exception ticket).
+- <strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: Milestone engagement ($35,000 to $75,000) establishing exception taxonomies, resolution playbooks, escalation matrices, and frontline spending thresholds.
+- <strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based gainshare</span></strong>: Performance bonus tied to measured reductions in customer On-Time In-Full (OTIF) penalty deductions and claims write-offs.</p>
+<p>Pre-configuring decision thresholds through fixed-price diagnostics prevents software ticketing queues from stalling at managerial approval gates.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>Exception management returns reflect regional labor wage levels, retail penalty structures, and transit disruption frequencies:</p>
+<ul>
+<li><strong>North America</strong>: Fast commercial payback (under eight months). Driven by high customer service wages ($25 to $38 per hour) and harsh retail delivery penalties (e.g., Walmart OTIF fines of 3% of invoice cost). Strict detention clocks under FMC 46 CFR Part 541 require immediate operational intervention when containers face terminal holds.</li>
+<li><strong>UK and Europe</strong>: High administrative labor rates (EUR 28 to EUR 44 per hour) support structured exception workflows. Strict driver hours limits under Regulation (EC) 561/2006 turn minor highway delays into service failures requiring prompt tractor relays. Cross-border transit post-Brexit creates customs clearance exceptions requiring rapid documentation fixes.</li>
+<li><strong>Australia</strong>: High logistics coordinator wages (AUD 38 to AUD 55 per hour) deliver rapid payback. Massive linehaul distances across continental routes mean transit disruptions (rail washouts, highway closures) strand freight thousands of kilometers from relief depots. Heavy Vehicle National Law Chain of Responsibility rules mandate immediate exception escalation for driver fatigue risks.</li>
+<li><strong>Southeast Asia (Singapore, Malaysia, Indonesia)</strong>: High exception rates contrasted with lower clerical wages. Singapore operates high-cost operations desks (SGD 22 to SGD 36 per hour) where rapid slot recovery delivers quick payback. In Malaysia and Indonesia, operations desk wages are low ($3.00 to $5.50 per hour), extending pure labor-displacement payback beyond 30 months. However, chronic infrastructure friction (Port Klang container gate congestion, Tanjung Priok customs bottlenecks, and Java Sea inter-island ferry weather delays) pushes deviation rates to 20% to 35% of all shipments. Value centers on mitigating cargo damage, perishable spoilage, and plant shutdown penalties rather than cutting clerical staff.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p><p>Systems implementing this include <a href="../../systems/mcleod-loadmaster.html">McLeod Software (LoadMaster &amp; PowerBroker)</a>, <a href="../../systems/mercurygate.html">MercuryGate</a>, <a href="../../systems/navis-n4.html">Navis N4</a>, <a href="../../systems/revenova.html">Revenova</a>, <a href="../../systems/tms-platforms.html">TMS platforms (brokerage and shipper-side)</a>, <a href="../../systems/turvo.html">Turvo</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
