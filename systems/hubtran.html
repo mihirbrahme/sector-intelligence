@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HubTran (now TriumphPay) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>HubTran (now TriumphPay)</h1>
+    <p class="def">Back-office document processing and automated freight bill audit platform for freight brokerages and 3PLs.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Back-office document processing and automated freight bill audit platform for freight brokerages and 3PLs</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>HubTran executes operations against the carrier billing packet, scanned proof of delivery (POD), bill of lading (BOL), lumper receipt, and carrier pay line item.</p>
+<p>The software automates the accounts payable workflow for freight intermediaries:
+- <strong>Document Classification</strong>: Ingests multi-page PDF email attachments and automatically separates invoices, bills of lading, rate confirmations, and accessorial receipts.
+- <strong>Data Extraction</strong>: Uses optical character recognition (OCR) and machine-learning models to extract load numbers, invoice amounts, carrier remit-to addresses, and line-item charges.
+- <strong>Three-Way Document Matching</strong>: Matches carrier billing packets against active load records in the broker's TMS.
+- <strong>Exception Routing</strong>: Flags billing discrepancies (unapproved detention, missing signed delivery receipts, rate mismatches) directly to carrier pay coordinators for exception resolution.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a> and <strong>shipper / BCO in-house transportation management</strong> (3PL) — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Sub-sectors</strong>: Non-asset freight brokers, freight forwarders, and managed transportation service providers.</li>
+<li><strong>Commercial model</strong>: Transaction-based SaaS pricing per processed freight invoice ($0.50 to $1.50 per invoice packet), with setup fees.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Prior to its acquisition, HubTran was the undisputed pioneer and market leader in document-processing automation for North American freight brokers.</p>
+<ul>
+<li><strong>Market footprint</strong>: Processed millions of freight invoices monthly across more than 300 brokerage customers.</li>
+<li><strong>Customer profile</strong>: Mid-market freight brokerages and enterprise 3PLs managing 5,000 to over 100,000 loads annually.</li>
+<li><strong>Strategic acquisition</strong>: Acquired by Triumph Financial in 2021 to provide the OCR and data ingestion foundation for the TriumphPay carrier payments network.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>HubTran's automation rates degrade when documents deviate from clean electronic formats:
+1. <strong>Handwritten and degraded documents</strong>: Blurry smartphone photos of bills of lading, handwritten lumper slips, and faded carbon copies fail OCR extraction, dropping into manual review queues.
+2. <strong>Accessorial reconciliation friction</strong>: When carriers invoice for detention or driver layover without prior TMS authorization, HubTran cannot auto-approve the invoice, generating clerk backlog.
+3. <strong>TMS master data dependency</strong>: If the broker's TMS contains inconsistent carrier profiles or inaccurate load numbers, HubTran's matching engine fails to link documents to open payables.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Architecture</strong>: Multi-tenant cloud application with browser-based exception processing queues.</li>
+<li><strong>Machine learning pipeline</strong>: Trained on hundreds of millions of historical transportation documents to recognize diverse carrier invoice layouts and bill-of-lading templates.</li>
+<li><strong>TMS Integrations</strong>: Pre-built API connectors to major brokerage management platforms: <span class="term" data-term="system:mcleod-loadmaster" data-href="mcleod-loadmaster.html" tabindex="0">McLeod PowerBroker</span>, <span class="term" data-term="system:trimble-tmw" data-href="trimble-tmw.html" tabindex="0">Trimble TMW</span>, <span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0"><span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span></span>, and custom TMS databases.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2014 in Chicago, Illinois by Matt Bernstein.</li>
+<li>Acquired in May 2021 by <strong>Triumph Financial, Inc.</strong> (NASDAQ: TFIN) for $204 million in cash.</li>
+<li>Fully integrated into Triumph Financial's payments segment, powering the document capture layer for <strong>TriumphPay</strong>.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<p>HubTran automates standard packets in seconds, cutting AP personnel cost per load.
+- <strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: By verifying that carrier lumper receipts and detention claims match what the broker billed the shipper, HubTran prevents the broker from paying unrecovered carrier accessorials.
+- <strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: Accelerates the recognition of carrier payables and catches discrepancies between booked rate confirmations and actual billed amounts, preventing aged unvouchered accruals.</p>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: HubTran claimed a 400% increase in AP clerk productivity, 95% data extraction accuracy, and instant document turnaround.</li>
+<li>Audited corporate records: Triumph Financial SEC filings for the HubTran acquisition confirmed annual recurring revenue of approximately $12 million at the time of purchase, backed by high renewal rates among top-100 North American freight brokerages.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/computer-vision-for-yards-and-warehouses.html">Computer vision for yards and warehouses</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
