@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal yard and berth optimisation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Terminal yard and berth optimisation</h1>
+    <p class="def">Algorithmic co-optimisation of vessel berth allocation, quay crane assignment, and container yard stacking logic to eliminate ship idle time and unproductive box rehandles.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Algorithmic co-optimisation of vessel berth allocation, quay crane assignment, and container yard stacking logic to eliminate ship idle time and unproductive box rehandles</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a></p></dd></div></dl></section>
+<p>Algorithmic co-optimisation of vessel berth allocation, quay crane assignment, and container yard stacking logic to eliminate ship idle time and unproductive box rehandles.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern coordinates seaside and yard operations within maritime container terminals. It links the berth allocation problem (BAP) with the quay crane scheduling problem (QCSP) and yard stacking logic.</p>
+<p>Dynamic planning engines ingest automated vessel arrival forecasts via AIS telematics. The system dynamically assigns quay frontage and crane splits, matching vessel draft and outreach requirements against physical berth capabilities.</p>
+<p>Yard stacking modules calculate container placement in real time. Rather than stacking boxes purely by physical convenience, algorithms ingest export stowage plans, booking data, and expected truck arrival windows.</p>
+<p>Containers are marshalled into yard blocks to match ship crane work sequences. This sequencing minimises unburying moves, where cranes must shift top containers to retrieve buried target boxes.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports)</a></strong>: Terminal operators maximize berth moves per hour (BMPH) and crane productivity (GMPH), preventing yard congestion above 75% utilization. </li>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Liner carriers require guaranteed berth windows. Turnaround delays force vessels to speed up between ports, burning millions in compensatory bunker fuel.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Berth, yard and landside constraints turn density into delay)</strong>: Yard density above 75% causes exponential reshuffling. Predictive stacking logic maintains yard velocity. </li>
+<li><strong><span class="term" data-term="mech:port-congestion-breaks-liner-rotation-integrity" tabindex="0">port congestion breaks liner rotation integrity</span></strong>: Off-window vessel arrivals trigger berth queues. Dynamic reallocation absorbs schedule disruptions.</li>
+<li><strong>Unproductive rehandles — already covered by <span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> above, not a separate mechanism.</strong> Misplaced empty boxes create unproductive shifts; automated yard blocks segregate empties by carrier release order. <em>(This bullet previously linked <span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span> under the label "Empty miles / repositioning deadweight" — a mechanism title that does not exist, pointing at an entry about detention and demurrage. Corrected 2026-09-16.)</em></li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the container crane move, yard rehandle, or vessel port call.</p>
+<p>A large container ship idle at anchor burns capital depreciation and crew cost every day it waits; the daily figure this line once carried was destroyed, and restoring it needs a vessel operating-cost series by class rather than a single number. Terminal quay cranes target <strong>28 to 35 gross <span class="term" data-term="metric:crane-moves-per-hour-ports-and-terminals" data-href="../../reference/metrics.html#crane-moves-per-hour-ports-and-terminals" tabindex="0">crane moves per hour</span></strong>, delivering 80 to 140 berth moves per hour across multi-crane gangs.</p>
+<p>Every unproductive yard rehandle burns diesel, equipment life and operator labour. <strong>The ratio is the number that matters, not the unit cost</strong>: a terminal handling 1.5 million TEU at a 1.8 rehandle ratio is performing roughly 1.2 million moves nobody is paying for. Yard density above the 75% to 80% threshold is what drives it — above that line, crane productivity collapses from 30+ moves an hour to under 18. The per-rehandle cost this line once carried was destroyed; the ratio and the threshold survive and are the usable part.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Deployment requires four prerequisites:</p>
+<ol>
+<li><strong>Terminal Operating System digitisation</strong>: Real-time TOS data feeds from platforms like <span class="term" data-term="system:navis-n4" data-href="../../systems/navis-n4.html" tabindex="0">Navis N4</span>, Tideworks, or CyberLogitec.</li>
+<li><strong>Equipment telematics connectivity</strong>: Position detection systems (DGPS) mounted on RTGs, straddle carriers, and terminal tractors.</li>
+<li><strong>Gate appointment integration</strong>: Synchronised truck appointment systems smoothing landside collection and drop-off spikes.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Annual licensing scaled by terminal annual TEU throughput per handled container. <em>(the rate this line carried was destroyed at generation and is not restated — it was our own commercial estimate, so it needs re-deriving, not researching)</em></li>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: A diagnostic auditing crane interference and yard rehandle ratios. <em>(the rate this line carried was destroyed at generation and is not restated — it was our own commercial estimate, so it needs re-deriving, not researching)</em></li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Bonuses tied to verified gains in gross <span class="term" data-term="metric:crane-moves-per-hour-ports-and-terminals" data-href="../../reference/metrics.html#crane-moves-per-hour-ports-and-terminals" tabindex="0">crane moves per hour</span> and reduced truck dwell.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Automated stacking algorithms designed in academic simulations collapse when physical yard density exceeds 75%. As documented in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip and replace</span>, early automation suites assumed uniform yard operations. </p>
+<p>When terminal occupancy surpassed 80%, automated stacking cranes spent their operating cycles reshuffling containers to unbury buried boxes. This generated severe quay crane starvation, ground gridlock, and vessel berth overruns. </p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes automated yard sequencing. The operational reality sits in physical port volatility:
+- Vessels arrive 24 to 48 hours off-window, forcing planners to scrap pre-marshalled yard blocks and re-stow entire vessel bays.
+- Truck turn times surge when drayage drivers arrive unannounced with incorrect documentation, blocking yard transfer points.
+- High winds force quay crane shut-downs, invalidating calculated crane split schedules across all berthed tonnage.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: West Coast ports (Los Angeles, Long Beach) face severe landside chassis shortages and strict ILWU work rules.</li>
+<li><strong>UK/Europe</strong>: Automated hubs (Rotterdam, Hamburg) deploy automated guided vehicles (AGVs) requiring millimetre-precise container sequencing.</li>
+<li><strong>Singapore</strong>: World\'s largest transshipment gateway (PSA Tuas); operations require massive multi-vessel yard-to-berth connection optimisation.</li>
+<li><strong>Malaysia/Indonesia</strong>: Mega-terminals (Tanjung Pelepas, Port Klang) manage high transshipment densities alongside intermodal rail corridors.</li>
+<li><strong>Australia</strong>: Ports (Melbourne, Botany) operate under strict environmental noise caps and tight terminal land footprint boundaries.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>.</p><p>Systems implementing this include <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>, <a href="../../systems/freight-audit-and-payment-providers.html">Freight audit and payment providers</a>, <a href="../../systems/kalmar.html">Kalmar</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

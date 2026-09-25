@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MercuryGate · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>MercuryGate</h1>
+    <p class="def">Multi-modal transportation management system (TMS) deployed widely across freight brokerages, 3PLs, and mid-market to enterprise shippers.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Multi-modal transportation management system (TMS) deployed widely across freight brokerages, 3PLs, and mid-market to enterprise shippers</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span> TMS executes operations against the multi-modal shipment order, carrier tender, consolidated route manifest, and freight audit bill.</p>
+<p>The platform coordinates transportation execution across parcel, LTL, truckload, intermodal, ocean, and air:
+- <strong>Rating Engine (Carma)</strong>: Central repository managing complex contract tariffs, SMC3 CzarLite base rate tables, mileage scales, and tiered fuel surcharge matrices.
+- <strong>Route Optimization (Mojo)</strong>: Mathematical engine executing multi-stop truckload consolidation, continuous moves, and cross-dock pool distribution planning.
+- <strong>Brokerage Dispatch &amp; Execution</strong>: Ingests customer freight orders, executes digital tender cascades against contracted routing guides, and manages spot bid auctions.
+- <strong>Freight Settlement</strong>: Matches electronic freight invoices (EDI 210) three-way against bills of lading and contracted rate authorizations.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a>, <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models, and <a href="../sectors/index.html">Model 2 (Freight Forwarding / 3PL)</a>.</li>
+<li><strong>Sub-sectors</strong>: Mid-market retail, consumer packaged goods (CPG), industrial manufacturing, cold chain logistics, and non-asset freight intermediaries.</li>
+<li><strong>Commercial model</strong>: Subscription SaaS model based on annual freight spend tiers, shipment transaction counts, or per-user monthly licenses, accompanied by implementation services fees.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p><span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span> is one of the most widely deployed commercial TMS platforms in North America, occupying the space between mid-market tools and mega-enterprise platforms like SAP TM and Oracle OTM.</p>
+<ul>
+<li><strong>Market position</strong>: Serves over 400 3PLs, freight brokerages, and corporate shippers. Highly respected for multi-modal rating flexibility.</li>
+<li><strong>Customer profile</strong>: 3PLs managing $50 million to $2 billion in freight; enterprise shippers with annual freight spend between $30 million and $500 million.</li>
+<li><strong>Representative users</strong>: Prominent 3PLs, managed transportation providers, and distributors (e.g. decorative brands, food distributors, retail suppliers).</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>MercuryGate's functional depth is countered by configuration complexity and user interface challenges:
+1. <strong>Steep configuration complexity</strong>: Configuring tariffs, complex accessorial rules, and tender waterfall logic in the Carma rating engine requires specialized knowledge. Misconfigurations cause rating failures during live dispatch.
+2. <strong>Dated legacy UI elements</strong>: While the modern "Edge" UI is rolling out, core administrative screens still feature dense, nested tables and complex dropdown menus, increasing operator keystrokes.
+3. <strong>Implementation bottlenecks on rate digitisation</strong>: Implementations average 6 to 12 months, frequently stalling when loading dirty carrier contract rate sheets and accessorial schedules.
+4. <strong>Performance latency during bulk batch runs</strong>: Large shippers running massive multi-stop route optimization runs in Mojo report processing latency during peak dispatch hours.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>MercuryGate operates as a multi-tenant cloud application.</p>
+<ul>
+<li><strong>Architecture</strong>: Hosted web application with role-based enterprise portals for shippers, carriers, and brokers.</li>
+<li><strong>EDI engine</strong>: Robust native EDI integration supporting standard logistics transaction sets: EDI 204 (Load Tender), EDI 990 (Tender Response), EDI 214 (Shipment Status), and EDI 210 (Freight Invoice).</li>
+<li><strong>APIs</strong>: Provides RESTful APIs and webhooks for real-time rating, tracking status injection, and ERP integration (NetSuite, Microsoft Dynamics, SAP).</li>
+<li><strong>External data feeds</strong>: Standard connectors to SMC3 (CzarLite LTL rating), PCMILER, DAT Freight &amp; Analytics, and visibility aggregators (<span class="term" data-term="system:project44" data-href="project44.html" tabindex="0"><span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span></span>, FourKites).</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2000 in Cary, North Carolina by Monica Wooden and Steve Blough.</li>
+<li>Acquired in August 2018 by private equity firm <strong>Summit Partners</strong> in a majority recapitalization.</li>
+<li>Followed with tuck-in acquisitions, including Cheetah Software Systems in 2021 (fleet and final-mile dispatch).</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span></strong>: In brokerage operations, MercuryGate's automated tender cascade breaks down when spot market rates drop below contract routing guides. Coordinators bypass system waterfalls to manually negotiate spot rates, reducing automated booking rates.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: When carrier freight bills contain accessorials (liftgate fees, detention, redelivery) not explicitly structured in MercuryGate's Carma engine, the system rejects the line item or absorbs the cost without billing the customer.</li>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Shipper spot quotes received via email require manual entry into MercuryGate if automated parsing is absent, creating coordinator handling delay.</li>
+<li><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong>: Multi-year shipper contract rates stored in MercuryGate lose margin when spot buy costs surge faster than agreed contractual fuel and linehaul escalators.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: MercuryGate marketing claims rapid deployment, 100% routing guide compliance, and up to 15% freight cost reduction via route optimization.</li>
+<li>Gartner TMS Magic Quadrant: Consistently evaluated as a "Challenger" in Gartner's TMS Magic Quadrant, recognized for multi-modal breadth and 3PL suitability, while noting user interface usability and customer support responsiveness as areas requiring improvement.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/bunker-procurement-and-emissions-management.html">Bunker procurement and emissions management</a>, <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

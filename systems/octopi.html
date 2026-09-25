@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Octopi (by Navis / Kaleris) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Octopi (by Navis / Kaleris)</h1>
+    <p class="def">Cloud-native terminal operating system (TOS) designed for small to mid-sized container, bulk, and mixed-cargo maritime terminals.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Cloud-native terminal operating system (TOS) designed for small to mid-sized container, bulk, and mixed-cargo maritime terminals</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Octopi executes operations against the container lift, reachstacker move, breakbulk tally, vessel hatch sequence, and gate ticket.</p>
+<p>The platform was built as a lightweight, cloud-hosted alternative to legacy on-premise TOS platforms:
+- <strong>Vessel Planning</strong>: Ingests ocean carrier EDIFACT (BAPLIE) stowage files, allowing vessel planners to drag-and-drop container sequences via a web browser.
+- <strong>Yard Management</strong>: Provides 3D yard graphical mapping. Reachstacker and top-pick operators use mobile tablets mounted in vehicle cabs to confirm container moves in real time.
+- <strong>Gate Operations</strong>: Replaces manual paper gate passes with mobile gate inspection apps that record container numbers, seal integrity, and chassis damage photos.
+- <strong>Mixed Cargo Tracking</strong>: Manages non-containerized breakbulk, bulk commodities, and project cargo alongside container inventories in a unified ledger.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>.</li>
+<li><strong>Sub-sectors</strong>: Regional feeder ports, river terminals, Caribbean/Pacific island ports, mixed-cargo breakbulk terminals, and private industrial wharves.</li>
+<li><strong>Commercial model</strong>: Subscription SaaS model based on annual container and cargo throughput volume. Deployment involves low upfront setup fees and remote onboarding completed in 8 to 16 weeks.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Octopi targets the vast tier of regional terminals historically priced out of enterprise systems like <span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0"><span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span></span>.</p>
+<ul>
+<li><strong>Market position</strong>: Leading modern cloud-native TOS for regional and mid-market terminal operations.</li>
+<li><strong>Customer profile</strong>: Terminals handling between 20,000 TEU and 300,000 TEU annually (with upper limits around 500,000 TEU). Deployed across terminals in the Caribbean (Port of Kingston feeder berths, Bahamas), Latin America, Southeast Asian river ports, and regional European wharves.</li>
+<li><strong>Competitive alternatives</strong>: Terminals at this tier typically run Microsoft Excel spreadsheets, paper tally sheets, or aging in-house legacy software.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Octopi is deliberately scoped for smaller facilities and hits hard boundaries when operational complexity escalates:
+1. <strong>No equipment automation support</strong>: Octopi cannot orchestrate automated stacking cranes (ASCs) or automated guided vehicles (AGVs). It lacks a low-level equipment control layer (TLS).
+2. <strong>Simplified decking algorithms</strong>: Stacking logic is primarily manual or semi-automated. It lacks the mathematical yard-reshuffle optimization algorithms of N4 Expert Decking.
+4. <strong>National customs integrations</strong>: Regional ports require custom electronic data interfaces with national customs administrations (e.g. ASYCUDA World, Ceisa 4.0). Building custom EDI links extends deployment timelines.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>Octopi runs on a modern SaaS stack built on Amazon Web Services (AWS).</p>
+<ul>
+<li><strong>Architecture</strong>: Multi-tenant cloud application accessed via modern web browsers and iOS/Android tablet applications.</li>
+<li><strong>API framework</strong>: RESTful APIs allowing direct integration with third-party truck appointment systems, accounting software (QuickBooks, SAP), and smart gate cameras.</li>
+<li><strong>EDI engine</strong>: Pre-configured parsers for maritime EDI standards: BAPLIE, MOVINS, COARRI, CODECO, and EDI 315 status messages.</li>
+<li><strong>Hardware footprint</strong>: Requires zero on-site servers, database administrators, or local IT infrastructure; relies on standard commercial cellular tablets and ruggedized vehicle mounts.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2015 in Miami, Florida by software entrepreneur Luc Castera.</li>
+<li>Acquired by <strong>Navis</strong> (then part of Cargotec) in March 2019 to capture the underserved mid-market and small-port segment.</li>
+<li>Transferred to private equity firm <strong>Accel-KKR</strong> in 2021 as part of the Navis sale, operating as a cloud product line within <strong>Kaleris</strong>.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Berth, yard and landside constraints)</strong>: In regional terminals, container yards easily choke when dwell exceeds 10 days. Octopi provides visual heat maps of dwell time, helping planners quarantine aged import containers before they block active loading lanes.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Mid-market terminals lose significant revenue failing to bill container storage demurrage. Octopi automates demurrage invoicing by locking gate release permissions until accumulated storage fees are paid.</li>
+<li><strong><span class="term" data-term="mech:systems-programme-trailing-the-forwarding-process-it-was-bought-to-fix" tabindex="0">systems programme trailing the forwarding process it was bought to fix</span> (Systems programme trailing operational process)</strong>: Octopi was engineered to prevent <span class="term" data-term="mech:systems-programme-trailing-the-forwarding-process-it-was-bought-to-fix" tabindex="0">systems programme trailing the forwarding process it was bought to fix</span> in terminal operations. By deploying in 8 to 12 weeks via SaaS, it avoids the multi-year IT implementation failures typical of legacy enterprise TOS migrations.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Kaleris marketing claims Octopi can be deployed in under 90 days, increases <span class="term" data-term="metric:crane-moves-per-hour-ports-and-terminals" data-href="../reference/metrics.html#crane-moves-per-hour-ports-and-terminals" tabindex="0">crane moves per hour</span> by 25%, and eliminates paperwork completely.</li>
+<li>Port operator case studies: Deployments at regional Caribbean and African ports confirm rapid cutover times (2 to 3 months) and dramatic reductions in lost container incidents, balanced against limitations when handling high-density container volumes over 500,000 TEU.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/computer-vision-for-yards-and-warehouses.html">Computer vision for yards and warehouses</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>, <a href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html">Detention and demurrage dispute recovery</a>, <a href="../solutions/patterns/digital-twin-for-logistics-networks-and-assets.html">Digital twin for logistics networks and assets</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

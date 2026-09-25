@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Value Trees &amp; Diagnostic Lenses · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="index.html" class="on">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Reference</div>
+    <h1>Value Trees &amp; Diagnostic Lenses</h1>
+    <p class="def">Mathematical operational drivers from gross profit down to asset-hour transactions.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#the-exception-lens">The exception lens</a><a href="#the-unit-of-work-substitution-anti-pattern">The unit-of-work substitution anti-pattern</a><a href="#the-volume-rejection-anti-pattern">The volume-rejection anti-pattern</a><a href="#the-releverage-asymmetry-in-fixed-network-models">The releverage asymmetry in fixed-network models</a><a href="#the-cyclicality-lens">The cyclicality lens</a><a href="#standard-value-trees-by-operating-model">Standard value trees by operating model</a></nav></aside>
+<main>
+<p class="lead">Operational decomposition of financial performance across transport and logistics. Financial metrics are the downstream consequence of repeating unit-of-work transactions. These five lenses break financial results into verifiable physical drivers.</p>
+<div class="filter-bar" style="margin: 0 0 32px; gap: 8px;"><a href="#the-exception-lens" class="filter-chip">The exception lens</a><a href="#the-unit-of-work-substitution-anti-pattern" class="filter-chip">The unit-of-work substitution anti-pattern</a><a href="#the-volume-rejection-anti-pattern" class="filter-chip">The volume-rejection anti-pattern</a><a href="#the-releverage-asymmetry-in-fixed-network-models" class="filter-chip">The releverage asymmetry in fixed-network models</a><a href="#the-cyclicality-lens" class="filter-chip">The cyclicality lens</a><a href="#standard-value-trees-by-operating-model" class="filter-chip">Standard value trees by operating model</a></div>
+<h2 id="the-exception-lens">The exception lens</h2>
+<p><strong>The question: where does the deviation go?</strong></p>
+<p>Apply this when diagnosing any mechanism, not only the ones about exceptions.</p>
+<p>A value tree decomposes a metric into drivers, and each driver into a cost per unit of work times a volume of work. The lens splits that unit of work one level further, into the transactions that went to plan and the transactions that deviated, and then follows the deviation:</p>
+<ul>
+<li><strong>Who touches it?</strong> Which function picks up a load that missed its
+appointment, a file with a document mismatch, an invoice the customer
+rejected. Name the function, not the system.</li>
+<li><strong>How many times is it touched?</strong> A deviation that returns to the same desk
+three times is three units of cost, not one.</li>
+<li><strong>Does the cost scale with volume, or with the deviation rate?</strong> This is the
+test that matters. A cost that scales with the deviation rate does not fall
+when volume grows, and it does not fall when the happy path is automated.</li>
+</ul>
+<p><strong>Why it matters for reading a mechanism.</strong> Automation is usually applied to the path that goes to plan, because that path is specifiable. The deviating transactions keep their manual handling, so unit cost stops falling even though throughput rises. In the financials this reads as cost per unit of work resistant to volume scaling, and productivity metrics that plateau after an automation programme rather than during one. That plateau is the signature to look for — it is what separates a company that automated the transaction from one that automated the exception.</p>
+<p><strong>What must be sourced, never assumed.</strong> The share of transactions that deviate and the share of operational attention they consume are company-specific and vary by operating model, lane, and customer. They are diagnostic questions, not constants. Ask them; do not carry a ratio into a note.</p>
+<p><strong>Diagnostic question:</strong> "What share of your operations team's day goes to loads that did not go to plan?"</p>
+<p>named failure.</p>
+<hr>
+<h2 id="the-unit-of-work-substitution-anti-pattern">The unit-of-work substitution anti-pattern</h2>
+<p><strong>The claim: "the value is worth X% of this cost line."</strong></p>
+<p>Treat a value pool sized as a percentage of a revenue or cost <strong>ratio</strong> as an anti-pattern, and go looking for the unit of work it replaced.</p>
+<p>A value tree ends in a cost per unit of work times a volume of work. When the unit of work is not established, the arithmetic has nowhere to land. The sizing then falls back on the only quantity available: a disclosed cost line multiplied by an estimated addressable share. The result looks like a value tree and carries a defensible-sounding baseline. It also cannot be reconstructed by the company from its own operating data, which is the test it fails.</p>
+<p>The signature is a sentence of the form <em>"Group G&amp;A of $294.1m x 45% — our estimated transactional share"</em>, or <em>"1.5 to 3.0 margin points on 43% of segment revenue"</em>. Two things are true of every instance:</p>
+<ol>
+<li><strong>The estimated share carries most of the value and none of the evidence.</strong>
+It is the number a CFO attacks first, correctly, because it is the only one
+in the chain that was not observed.</li>
+<li><strong>A computable unit-of-work figure usually existed and was not used.</strong> This
+is the part that matters. The substitution is rarely necessary.</li>
+</ol>
+<h5>The test: compute the unit cost and see which way it moved</h5>
+<p>Before accepting a cost-ratio pool, take the disclosed cost line, divide it by
+the disclosed volume of work, and compare two periods. Three outcomes:</p>
+<ul>
+<li><strong>Unit cost rose while the ratio fell.</strong> The ratio was tracking revenue, not
+work. The pool is real but is probably on a different line than the one
+proposed.</li>
+<li><strong>Unit cost was flat.</strong> There is no unit-cost problem on that line, whatever
+the ratio did. Sizing a pool there is sizing a number that did not move.</li>
+<li><strong>Unit cost fell.</strong> The line is improving and the ratio is a mix artefact.</li>
+</ul>
+<p>A pursuit document sized its largest pool as 45% of <a href="../companies/matson.html">Matson, Inc.</a>'s $294.1m general and administrative line. It named that share as its own estimate, and as the assumption worth testing first. The volume of work — containers carried, in FEU — is disclosed, as is every major cost line. Computing them:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>2025 per FEU</th>
+<th>2024 per FEU</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General and administrative</td>
+<td>$753</td>
+<td>$757</td>
+<td>−0.5%</td>
+</tr>
+<tr>
+<td>Vessel operating expense</td>
+<td>$1,521</td>
+<td>$1,522</td>
+<td>−0.1%</td>
+</tr>
+<tr>
+<td>Operating overhead</td>
+<td>$843</td>
+<td>$820</td>
+<td>+2.7%</td>
+</tr>
+<tr>
+<td><strong>Direct cargo expense</strong></td>
+<td><strong>$2,559</strong></td>
+<td><strong>$2,444</strong></td>
+<td><strong>+4.7%</strong></td>
+</tr>
+<tr>
+<td>— of which the terminal JV</td>
+<td>$875</td>
+<td>$800</td>
+<td><strong>+9.4%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Overhead as a ratio to revenue had risen from 5.8% to 8.5% since FY2021, which is what the document observed. Cost per unit of work on that same line was flat. The line that deteriorated was terminal handling, and within it the joint-venture terminal operator — the one the document explicitly declined to build on, on the correct ground that the company does not control it.</p>
+<p><strong>The finding is not that the document was careless.</strong> It reasoned from the ratio it could see to the conclusion the ratio supported. The unit cost was one division away and inverts the answer.</p>
+<h5>Why this is not the exception lens</h5>
+<p>The exception lens asks <em>where the deviation goes</em> once the unit of work is
+established. This anti-pattern is upstream of it: the unit of work was never
+established, so there is nothing to split. Run this test first; the exception
+lens is what you apply to whatever the unit turns out to be.</p>
+<h5>How to write it</h5>
+<p>Where a unit of work is disclosed, size on it. Where it is not, say the pool
+cannot be sized from outside, and name it as the first thing a diagnostic
+measures. <a href="../companies/matson.html">Matson, Inc.</a> does not publish deployed slot capacity, so load factor is
+not computable at all. That is a stronger position than a number resting on an
+estimated share, because it survives being checked.</p>
+<p>Per, our inability to compute a unit cost is an observation of the disclosure, not a finding about the company. And per, a stated assumption does not license a figure the evidence cannot carry: the figure is what gets copied into the deck.</p>
+<p><strong>Diagnostic question:</strong> "What does it cost you to produce one of these today, and is that a number anyone here reports?"</p>
+<p><em>Origin: review of the <a href="../companies/kirby.html">Kirby Corporation</a> and <a href="../companies/matson.html">Matson, Inc.</a> pursuit deliverables, 2026-09-08. See <a href="../insights/cost-ratios-and-cost-per-unit-of-work-move-in-opposite-directions.html">cost ratios and cost per unit of work move in opposite directions</a>.</em></p>
+<hr>
+<h2 id="the-volume-rejection-anti-pattern">The volume-rejection anti-pattern</h2>
+<p><strong>The claim: "we walked away from unprofitable freight."</strong></p>
+<p>Treat this as an anti-pattern, not an observation. <strong>An operator losing share and an operator deliberately shedding low-margin freight produce identical disclosure.</strong> Both report volume down. Both report margin up or holding. Both attribute the volume decline to a choice. Nothing in the volume line, the margin line, or the commentary separates them, and the commentary is in every instance — it is the operator's account of their own decision, which is precisely the account they have the strongest reason to shape.</p>
+<p>It is the standard management explanation for lost volume. Its frequency is a reason for suspicion, not for confidence.</p>
+<h5>What separates them</h5>
+<p>The decomposition is the same in both cases — revenue equals volume times
+yield — but the two stories make different predictions about the freight
+that stayed. Test the retained book, not the lost volume.</p>
+<ol>
+<li>Yield on retained freight, and whether it rose enough to pay for the
+volume given up. This is the arithmetic test and it comes first.
+Deliberate shedding is a trade: margin dollars per unit of work rise by more
+than the units lost. Compute total contribution — yield per unit times
+retained units — across the period. If total contribution fell, no volume
+was deliberately shed; freight was lost and the yield improvement is a mix
+artefact of losing the cheapest freight first. A company that chose this
+will show contribution flat or up. A company that lost will show
+contribution down and yield up, which is what losing your lowest-priced
+business looks like from the outside.</li>
+<li><strong>Whether yield rose on freight the company <em>kept</em>, or only on the average.</strong>
+Shedding raises the average by removing the bottom of the distribution
+without any retained account repricing. Deliberate shedding paired with
+commercial strength shows <strong>repricing within retained accounts</strong> — same
+customers, same lanes, higher rate. Observable where rate per unit is
+disclosed by lane, segment or customer cohort rather than only in aggregate.
+Where only the aggregate is disclosed, say so; do not infer.</li>
+<li><strong>Which freight left.</strong> Shedding is selective and its selection has a stated
+basis — a margin threshold, a service cost, a customer's payment behaviour.
+Losing share is not selective. If the volume decline is broadly proportional
+across lanes, segments and customer sizes, the selection story is not
+supported by the shape of the decline.</li>
+<li><strong>Whether capacity was released with the volume.</strong> An operator who chose to
+shed sizes the network down, or redeploys the capacity, or holds it
+deliberately and says why. An operator losing share carries the capacity and
+the deleverage shows up as overhead per unit rising. <a href="../companies/old-dominion.html">Old Dominion Freight Line, Inc.</a> is the
+instructive case in the sample: it held approximately 30% reserve door
+capacity across 257 service centres through the decline and said it was
+holding it as an option, then recovered 450bp of <span class="term" data-term="metric:operating-ratio-asset-carriage" data-href="metrics.html#operating-ratio-asset-carriage" tabindex="0">operating ratio</span> on a 4.0%
+sequential tonnage move in 2026-Q2. That is a stated, priced choice with a
+later observable payoff — a different thing from a claim of choice with no
+capacity decision behind it.</li>
+<li><strong>Whether the freight came back, and at what price.</strong> The strongest test and
+the slowest. Shed freight that returns at the operator's price confirms the
+shedding was a pricing decision. Lost freight returns at the market's price
+or does not return.</li>
+</ol>
+<h5>How to write it</h5>
+<p>Never repeat the operator's claim as a finding. Write what the retained book
+did. If the tests are not runnable on the available disclosure — most often
+because yield is disclosed only in aggregate — say the claim is untestable on
+this disclosure and leave it as a diagnostic question. Per, our
+inability to test it is an observation of our evidence, not a finding about the
+company.</p>
+<p><strong>Diagnostic question:</strong> "Take the freight you turned down last year — what was the margin on it, and what did the accounts you kept reprice at?"</p>
+<p>See <a href="../insights/management-claims-of-deliberate-volume-rejection-require-yield-proof.html">management claims of deliberate volume rejection require yield proof</a>.</p>
+<hr>
+<h2 id="the-releverage-asymmetry-in-fixed-network-models">The releverage asymmetry in fixed-network models</h2>
+<p><strong>The question: what is held reserve capacity worth?</strong></p>
+<p>Not a lens applied to a mechanism — a decomposition to reach for when reading any operator whose cost base is a fixed network of terminals, doors and fleet. See <a href="../insights/held-reserve-doors-create-operating-releverage-asymmetry.html">held reserve doors create operating releverage asymmetry</a>.</p>
+<p>Overhead as a share of revenue rises on falling volume over a fixed base, then falls <strong>faster than it rose</strong> when volume returns. The asymmetry is the point. <a href="../companies/old-dominion.html">Old Dominion Freight Line, Inc.</a> across 2025-Q4 to 2026-Q2: <span class="term" data-term="metric:operating-ratio-asset-carriage" data-href="metrics.html#operating-ratio-asset-carriage" tabindex="0">operating ratio</span> +80bp to 76.7%, then +80bp to 76.2%, then <strong>−450bp to 70.1%</strong> — decomposed as 230bp of direct cost and 220bp of overhead — on daily tonnage still −4.1% YoY but +4.0% sequentially. Labour fell from 49.2% of revenue to 43.1% on headcount −7.1%, managed through attrition and overtime rather than layoffs. Capex was then raised $115 million to $380.0 million once volume turned.</p>
+<p><strong>What the decomposition gives you.</strong> 450bp of margin recovered on a 4% sequential volume move sizes the option value of the reserve capacity that was held through the trough. That is the number to put against the cost of holding it. An operator who cut the network to protect the trough margin bought a lower trough cost and sold this option; an operator who held it did the reverse. Both are defensible; they are different bets and the disclosure shows which was made.</p>
+<p>Do not open an M-number on it. What it changes is how to read a trough: overhead deleverage in a fixed-network operator is arithmetic, and asserting an operational failure from it requires showing the deleverage exceeded what the volume decline and the held capacity explain.</p>
+<hr>
+<h2 id="the-cyclicality-lens">The cyclicality lens</h2>
+<p><strong>The question: is this margin movement the market cycle or the operator?</strong></p>
+<p>Logistics earnings move violently with macro freight cycles. A rising tide conceals operational deterioration; a cyclical trough masquerades as execution failure. Applying a value tree without first separating market rate cycles from operator performance produces false mechanism attributions.</p>
+<p>Cross-reference all rate observations against <a href="benchmarks.html">benchmark register</a> before diagnosing.</p>
+<h5>The five tests to separate cycle from operator</h5>
+<ol>
+<li>
+<p><strong>Spread vs. benchmark index across equivalent vintage.</strong>
+Compare the operator's realized yield (revenue per loaded mile, net revenue
+per load, or tariff per lift) against the appropriate benchmark index in
+<a href="benchmarks.html">benchmark register</a>: DAT dry van spot/contract for truckload, Cass for
+aggregate volume/spend, Drewry WCI or Xeneta XSI for ocean, SCFI for spot
+export.
+- <em>Cycle:</em> The operator's yield moves in lockstep with the benchmark index.
+- <em>Operator outperformance:</em> Realized yield spread widens positively against
+the benchmark, confirming contract retention or pricing discipline.
+- <em>Operator failure:</em> Spread narrows faster than the market index, indicating
+panic discounting or unbilled accessorial leakage (<span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span>).</p>
+</li>
+<li>
+<p><strong>Deadhead / empty mile ratio vs. corridor imbalance.</strong>
+Corridor directional imbalance fluctuates with macro trade flows (e.g. West
+Coast US import swings or Midwest agricultural harvest cycles).
+- <em>Cycle:</em> Empty miles increase across all regional peers due to macro freight
+flow imbalances.
+- <em>Operator failure:</em> Empty mile percentage rises significantly faster than
+peer averages, signaling poor fleet dispatch or local sales imbalance.</p>
+</li>
+<li>
+<p><strong>Customer-level contract rate retention vs. lane-level market drift.</strong>
+When market rates drop, shippers demand contract renegotiations or tender
+compliance falls.
+- <em>Cycle:</em> Widespread tender rejection across the sector as shippers tender
+into the falling spot market.
+- <em>Operator failure:</em> Loss of contracted rate integrity driven by account-level
+service failures, billing disputes (<span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span>), or
+unmanaged freight classification drift.</p>
+</li>
+<li>
+<p><strong>Capacity utilisation vs. deliberate fleet sizing.</strong>
+In a freight downturn, asset operators face falling equipment utilisation.
+- <em>Cycle:</em> Broad industry decline in loaded miles per seated tractor per week.
+- <em>Operator failure:</em> High unseated tractor ratio (&gt;8–10%) caused by driver
+turnover following compensation cuts (<span class="term" data-term="mech:post-restructuring-capability-gap" tabindex="0">post-restructuring capability gap</span>), or
+delayed fleet disposal creating unabsorbed depreciation.</p>
+</li>
+<li>
+<p><strong>Purchased transportation cost flex and lag.</strong>
+Non-asset brokers and intermodal marketing companies purchase capacity from
+underlying asset carriers.
+- <em>Cycle:</em> In falling markets, purchased transportation cost drops faster than
+contract shipper pricing, mechanically expanding gross margins (the broker
+windfall). In rising markets, purchased transportation spikes immediately,
+squeezing margins.
+- <em>Operator failure:</em> Inability to capture buy-side drops during a loose market
+due to manual carrier sourcing (<span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span>), or severe
+margin compression caused by contractual minimum volume commitments on rail
+linehaul agreements.</p>
+</li>
+</ol>
+<h5>Ocean and Marine Addendum</h5>
+<p>Ocean rates move far enough that a weak mechanism can look proved by the cycle.
+Run these tests before using <span class="term" data-term="mech:charter-in-rate-exposure-locked-at-the-wrong-point-in-the-cycle" tabindex="0">charter-in rate exposure locked at the wrong point in the cycle</span> through <span class="term" data-term="mech:bunker-and-carbon-pass-through-clause-mismatch" tabindex="0">bunker and carbon pass-through clause mismatch</span>.</p>
+<ol>
+<li>
+<p><strong>Yield versus market index.</strong>
+Compare <span class="term" data-term="metric:revenue-per-teu-container-liner" data-href="metrics.html#revenue-per-teu-container-liner" tabindex="0">revenue per TEU</span>, TCE, day-rate renewal or <span class="term" data-term="metric:revenue-per-feu-liner" data-href="metrics.html#revenue-per-feu-liner" tabindex="0">revenue per FEU</span> with the
+specific lane or vessel-class index. Use SCFI, Drewry WCI, FBX, Baltic dry
+bulk or tanker indices from <a href="benchmarks.html">benchmark register</a>.
+- <em>Cycle:</em> company yield moves with the index.
+- <em>Mechanism:</em> company yield underperforms the index, or unit cost rises
+while index-adjusted yield is stable.</p>
+</li>
+<li>
+<p><strong>Rate effect versus denominator effect.</strong>
+Split the change into price, volume and days. Dry-docking, off-hire and
+port congestion remove days or rotations; the freight cycle changes price.
+- <em>Cycle:</em> TCE, freight rate or day rate moves, while available days hold.
+- <em>Mechanism:</em> available days, <span class="term" data-term="metric:revenue-days-great-lakes-marine" data-href="metrics.html#revenue-days-great-lakes-marine" tabindex="0">revenue days</span>, ship-days or schedule rotations
+fall faster than the market volume indicator.</p>
+</li>
+<li>
+<p><strong>Owned cost versus chartered-in cost.</strong>
+Owned ships create depreciation, dry-docking and debt service. Chartered-in
+ships create hire or lease expense.
+- <em>Cycle:</em> both revenue and market charter rates move together.
+- <em>Mechanism:</em> charter hire per day or per TEU stays high after revenue yield
+falls. That is <span class="term" data-term="mech:charter-in-rate-exposure-locked-at-the-wrong-point-in-the-cycle" tabindex="0">charter-in rate exposure locked at the wrong point in the cycle</span>.</p>
+</li>
+<li>
+<p><strong>Bunker and carbon cost versus freight rate.</strong>
+Fuel and carbon cost need their own index. Do not infer pass-through failure
+from a margin move.
+- <em>Cycle:</em> yield follows the freight-rate index.
+- <em>Mechanism:</em> realised surcharge or yield lags bunker, diesel or EUA cost
+after controlling for freight-rate indices. That is
+<span class="term" data-term="mech:bunker-and-carbon-pass-through-clause-mismatch" tabindex="0">bunker and carbon pass-through clause mismatch</span> or <span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span>.</p>
+</li>
+<li>
+<p><strong>Schedule reliability versus price.</strong>
+A liner can have high revenue because the market is tight while its schedule
+is deteriorating. Those facts can coexist.
+- <em>Cycle:</em> rates rise with sector congestion, and the operator's schedule
+reliability is in line with peers.
+- <em>Mechanism:</em> the operator underperforms trade-lane schedule reliability,
+adds vessels to preserve weekly service, skips ports, or shows cost per TEU
+rising from delay. That is <span class="term" data-term="mech:port-congestion-breaks-liner-rotation-integrity" tabindex="0">port congestion breaks liner rotation integrity</span>.</p>
+</li>
+<li>
+<p><strong>Regulatory deadline versus yard-price cycle.</strong>
+Environmental compliance capex needs a rule date, vessel class and affected
+asset list.
+- <em>Cycle:</em> vessel values or yard prices move without a rule-linked fleet
+action.
+- <em>Mechanism:</em> retrofit, sale, speed limitation or scrapping lines up with
+EEXI, CII, EU ETS or other rule timing. That is
+<span class="term" data-term="mech:environmental-compliance-capex-forces-retrofit-speed-or-scrap-decision" tabindex="0">environmental compliance capex forces retrofit, speed or scrap decision</span>.</p>
+</li>
+</ol>
+<p><strong>Diagnostic question:</strong> "Did your gross margin change because market buy rates moved, or did your team beat the DAT/Drewry benchmark on the lanes you bought?"</p>
+<hr>
+<h2 id="standard-value-trees-by-operating-model">Standard value trees by operating model</h2>
+<p>One tree per operating model, decomposing that model's primary profitability metric into the operational drivers that move it.</p>
+<p>A gap is not an invitation to write a mechanism — it is a place to look. Several of them are gaps for good reason: mix, cyclicality and fixed-network deleverage move these trees without any operational failure behind them, and a mechanism written over one of them would be an arithmetic identity dressed as a diagnosis.</p>
+<p>exception lens above and <span class="term" data-term="mech:avoidable-working-capital-float-drag-and-carrier-settlement-financing-penalty" tabindex="0">avoidable working capital float drag and carrier settlement financing penalty</span> into the releverage asymmetry. Where a terminal node is about exception handling or about overhead deleverage, the tree says <em>no library entry</em> and points at the lens. Applying the lens is the work; it does not close the gap.</p>
+<hr>
+<h5>1. Truckload brokerage</h5>
+<p>Primary metric: <span class="term" data-term="metric:adjusted-operating-margin-brokerage" data-href="metrics.html#adjusted-operating-margin-brokerage" tabindex="0">adjusted operating margin</span> = operating income ÷ adjusted
+gross profit. The company's own disclosed measure (C.H. Robinson, 10-K).
+Net revenue is both the denominator and the thing the model converts, so it
+appears on both sides of the tree.</p>
+<p><strong>L1 — the two sides</strong></p>
+<p><code>Adjusted operating margin ├── A. Net revenue (the denominator) └── B. SG&amp;A as % of net revenue (the cost structure)</code></p>
+<p><strong>L2/L3 — A. Net revenue = loads × <span class="term" data-term="metric:net-revenue-per-load" data-href="metrics.html#net-revenue-per-load" tabindex="0">net revenue per load</span></strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 <span class="term" data-term="metric:net-revenue-per-load" data-href="metrics.html#net-revenue-per-load" tabindex="0">Net revenue per load</span></td>
+<td>A1a Buy-side spread captured on cover — the price bought against the price sold</td>
+<td><strong><span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span></strong> manual carrier sourcing under rate volatility</td>
+</tr>
+<tr>
+<td></td>
+<td>A1b Breadth of the approved carrier pool, and the qualification standard applied to it</td>
+<td><strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span></strong> <span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span></td>
+</tr>
+<tr>
+<td></td>
+<td>A1c Lane and freight mix</td>
+<td><em>no library entry.</em> The metric dictionary names mix as the primary misread on this metric; nothing in the library names a mix-drift failure, and it is not obvious one exists — mix moves with the customer book, not with execution</td>
+</tr>
+<tr>
+<td></td>
+<td>A1d Accuracy of purchased transportation booked against the load</td>
+<td><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong> <span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span>. Understated PT overstates net revenue per load with no cash movement — that divergence is the tell</td>
+</tr>
+<tr>
+<td>A2 Loads</td>
+<td>A2a <span class="term" data-term="metric:loads-per-rep-per-day" data-href="metrics.html#loads-per-rep-per-day" tabindex="0">Loads per rep per day</span></td>
+<td><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong> <span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></td>
+</tr>
+<tr>
+<td></td>
+<td>A2b Customer-facing headcount, and its capability after a reduction</td>
+<td><strong><span class="term" data-term="mech:post-restructuring-capability-gap" tabindex="0">post-restructuring capability gap</span></strong> post-restructuring capability gap</td>
+</tr>
+<tr>
+<td>A3 Realisation</td>
+<td>A3a Net revenue collected against net revenue booked — credit notes, write-offs, disputed loads</td>
+<td><strong>billing exception leakage</strong> billing exception leakage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L2/L3 — B. SG&amp;A as % of net revenue = SG&amp;A per load ÷ net revenue per load</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1 SG&amp;A per load</td>
+<td>B1a Rep minutes per load on the path that goes to plan — the three re-keys</td>
+<td><strong>quote-to-book manual handoff</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Duplicate back office and carrier master per acquired brand</td>
+<td><strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong> <span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></td>
+</tr>
+<tr>
+<td></td>
+<td>B1d Overtime and contractor spend replacing removed headcount</td>
+<td><strong>post-restructuring capability gap</strong></td>
+</tr>
+<tr>
+<td>B2 Net revenue per load</td>
+<td>—</td>
+<td>Shared with A1. A rise in SG&amp;A as % of net revenue can originate on either side, and the two are diagnosed differently. Decompose before attributing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note on working capital.</strong> DSO does not enter this tree — the cash conversion cycle sits below operating income. billing exception leakage appears here through credit notes and write-offs only.</p>
+<hr>
+<h5>2. Freight forwarding / NVOCC</h5>
+<p><strong>Primary metric: gross profit (net revenue).</strong> The metric dictionary carries
+no operating-margin entry for forwarding, so the tree stops at gross profit
+and treats operations cost per file as a separate branch — the thing that
+decides whether gross profit converts. Do not coin a forwarding operating
+margin to close that; it is recorded in Gaps.</p>
+<p><strong>L1 — gross profit = files × <span class="term" data-term="metric:gross-profit-per-shipment-file" data-href="metrics.html#gross-profit-per-shipment-file" tabindex="0">gross profit per shipment file</span></strong></p>
+<p><code>Gross profit ├── A. Gross profit per shipment file ├── B. Shipment files handled └── C. Operations cost per file (converts A into margin)</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 Yield per file</td>
+<td>A1a Space bought below the price sold; contracted allocation held against spot buys</td>
+<td><em>no library entry.</em> manual carrier sourcing under rate volatility is scoped to truckload brokerage. The ocean spread-compression observation in the library's prevalence section is an untested sampling note (two of the two forwarders in the sample), not a numbered mechanism</td>
+</tr>
+<tr>
+<td></td>
+<td>A1b Detention and demurrage absorbed rather than contested or passed through</td>
+<td><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong> <span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></td>
+</tr>
+<tr>
+<td></td>
+<td>A1c Mix toward customs brokerage and value-added services attached to the same file</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B1 File count</td>
+<td>B1a Volume</td>
+<td><em>no library entry.</em> Market, not mechanism</td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Fragmentation — the same volume arriving as more, smaller files</td>
+<td><em>no library entry.</em> The dictionary names this as the standard misread on gross profit per file (yield per TEU holds while yield per file collapses) and the library has nothing on it. <strong>The clearest genuine gap in the forwarding tree</strong></td>
+</tr>
+<tr>
+<td>C1 <span class="term" data-term="metric:files-per-operations-fte-per-month" data-href="metrics.html#files-per-operations-fte-per-month" tabindex="0">Files per operations FTE per month</span></td>
+<td>C1a <span class="term" data-term="metric:touches-per-file" data-href="metrics.html#touches-per-file" tabindex="0">Touches per file</span> on a compliant file — rekeying between customer, carrier and customs systems</td>
+<td><strong>quote-to-book manual handoff</strong> quote-to-book manual handoff</td>
+</tr>
+<tr>
+<td></td>
+<td>C1b Multiple TMS instances and carrier masters after acquisition</td>
+<td><strong>fragmented carrier master after acquisition</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>C1c <span class="term" data-term="metric:touches-per-file" data-href="metrics.html#touches-per-file" tabindex="0">Touches per file</span> on a file carrying a document discrepancy</td>
+<td><em>no library entry.</em> Exception lens</td>
+</tr>
+<tr>
+<td></td>
+<td>C1d Operations headcount after a reduction</td>
+<td><strong>post-restructuring capability gap</strong></td>
+</tr>
+<tr>
+<td>C2 Realisation</td>
+<td>C2a Disputed and re-issued invoices</td>
+<td><strong>billing exception leakage</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5>3. Contract logistics / 3PL warehousing</h5>
+<p>Primary metric: margin per order line = contracted rate per order line
+− <span class="term" data-term="metric:cost-per-order-line" data-href="metrics.html#cost-per-order-line" tabindex="0">cost per order line</span>. This is the dictionary's own framing of cost per
+order line ("margin lives in the gap between contracted rate per line and
+actual cost per line"), and it is the right primary because margin in this
+model is set at signature and then defended, not earned afresh each period.</p>
+<p><strong>L1 — the two sides of the gap</strong></p>
+<p><code>Margin per order line ├── A. Contracted rate per order line (set at signature, reset at renewal) └── B. Cost per order line (moves every period)</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 Rate set at signature</td>
+<td>A1a Contract vintage — the cost environment the price was struck in, and whether it is indexed</td>
+<td><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong> <span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span>. Note the narrowed scope: applies only where the book lacks indexation <em>and</em> lacks a productivity offset</td>
+</tr>
+<tr>
+<td>A2 Rate reset at renewal</td>
+<td>A2a <span class="term" data-term="metric:contract-renewal-rate-contract-logistics-and-dedicated-carriage" data-href="metrics.html#contract-renewal-rate-contract-logistics-and-dedicated-carriage" tabindex="0">Contract renewal rate</span>, read on value not site count</td>
+<td><strong>contract vintage margin decay</strong> on the cost-drift route</td>
+</tr>
+<tr>
+<td></td>
+<td>A2b Renewal repriced down after service failures inside the measured term</td>
+<td><strong>post-restructuring capability gap</strong> where the service failure follows a headcount reduction; otherwise <em>no library entry</em></td>
+</tr>
+<tr>
+<td>B1 Labour cost per line</td>
+<td>B1a <span class="term" data-term="metric:units-per-labour-hour-contract-logistics" data-href="metrics.html#units-per-labour-hour-contract-logistics" tabindex="0">Units per labour hour</span> — slotting, pick path, automation</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Agency labour and churn</td>
+<td><em>no library entry.</em> post-restructuring capability gap covers headcount removed, not headcount that will not stay</td>
+</tr>
+<tr>
+<td></td>
+<td>B1c Peak staffing carried into non-peak volume</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B2 Fixed cost absorption</td>
+<td>B2a Volume against the profile the site was designed and staffed for</td>
+<td><em>no library entry.</em> The dictionary is explicit that a rising cost per line is usually this and not execution — diagnose the denominator first</td>
+</tr>
+<tr>
+<td></td>
+<td>B2b <span class="term" data-term="metric:revenue-per-square-foot-contract-logistics" data-href="metrics.html#revenue-per-square-foot-contract-logistics" tabindex="0">Revenue per square foot</span>: contracted space held with no volume behind it, inside a lease term</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B3 Rework</td>
+<td>B3a Rework from inventory accuracy failures</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B4 Realisation</td>
+<td>B4a Open-book cost pass-through queried or rejected</td>
+<td><strong>billing exception leakage</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The contract logistics tree is the thinnest.</strong> Seven of eleven terminal nodes have no entry, and they are not nodes where a gap is expected — B1a, B1b and B3a are named operational failures with financial signatures, which is the definition of a mechanism. The library has one contract logistics entry and it is scoped to pricing, not to operations.</p>
+<hr>
+<h5>4. LTL</h5>
+<p><strong>Primary metric: operating ratio = operating expenses ÷ revenue.</strong> The
+dictionary's operating ratio entry is written for asset carriage; the drivers
+below are the LTL ones, from the LTL metric entries and
+Read the whole tree against the
+fixed-network deleverage description in that section before attributing
+anything to operations.</p>
+<p><strong>L1</strong></p>
+<p><code>Operating ratio ├── A. Revenue = tonnage × revenue per hundredweight └── B. Operating expense per unit of work</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 <span class="term" data-term="metric:revenue-per-hundredweight-ltl" data-href="metrics.html#revenue-per-hundredweight-ltl" tabindex="0">Revenue per hundredweight</span></td>
+<td>A1a General rate increases holding in contract renewals; discount creep on large national accounts</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>A1b <span class="term" data-term="metric:weight-per-shipment-ltl" data-href="metrics.html#weight-per-shipment-ltl" tabindex="0">Weight per shipment</span> and class mix</td>
+<td><em>no library entry</em> for the mix itself — freight profile, not performance</td>
+</tr>
+<tr>
+<td></td>
+<td>A1c Rating accuracy — the gap between booked weight and class and the reweighed figure</td>
+<td><strong>billing exception leakage</strong> billing exception leakage. The dictionary states this gap is a data quality mechanism surfacing as revenue adjustments, which is billing exception leakage's signature on the revenue side</td>
+</tr>
+<tr>
+<td></td>
+<td>A1d Accessorial capture</td>
+<td><em>no library entry</em>, and deliberately so: detention and demurrage under-recovery explicitly excludes the failure-to-bill-on side and records it in its own Gaps as unwritten. The LTL instance is that same unwritten mechanism</td>
+</tr>
+<tr>
+<td>A2 Tonnage</td>
+<td>A2a Volume</td>
+<td><em>no library entry.</em> Before reading a tonnage decline as anything, apply the volume-rejection anti-pattern above</td>
+</tr>
+<tr>
+<td>B1 Network cost per shipment</td>
+<td>B1a <span class="term" data-term="metric:shipments-per-terminal-per-day-ltl" data-href="metrics.html#shipments-per-terminal-per-day-ltl" tabindex="0">Shipments per terminal per day</span> — density against a fixed door base</td>
+<td><em>no library entry, and none should be opened.</em> This is the fixed-network arithmetic (retired <span class="term" data-term="mech:avoidable-working-capital-float-drag-and-carrier-settlement-financing-penalty" tabindex="0">avoidable working capital float drag and carrier settlement financing penalty</span>, now the releverage asymmetry). A failure claim here requires showing the deleverage exceeded what the volume decline and the held capacity explain</td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Terminals opened ahead of the volume that pays for them</td>
+<td><em>no library entry.</em> Distinct from B1a — a capital allocation decision with a published plan to test it against, not arithmetic</td>
+</tr>
+<tr>
+<td></td>
+<td>B1c Overlapping coverage after acquisition</td>
+<td><em>no library entry.</em> fragmented carrier master after acquisition is the same shape — duplicated infrastructure per acquired brand — but is scoped to carrier master and back office, not terminals</td>
+</tr>
+<tr>
+<td>B2 Purchased transportation</td>
+<td>B2a Line-haul bought from outside carriers — accrual accuracy</td>
+<td><strong>purchased-transportation accrual failure</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>B2b Qualification standard applied to outside line-haul capacity</td>
+<td><strong>carrier-selection liability repricing the cost of cheap capacity</strong>, where the carrier is broker-adjacent and runs a purchased-transportation book</td>
+</tr>
+<tr>
+<td>B3 Claims and insurance</td>
+<td>B3a Self-insured retention and adverse reserve development</td>
+<td><em>no library entry.</em> carrier-selection liability repricing the cost of cheap capacity covers claims rising from carrier selection on a purchased book; nothing covers reserve development on own operations, which the dictionary's own Gaps flag as missing</td>
+</tr>
+<tr>
+<td>B4 Labour</td>
+<td>B4a Dock and P&amp;D headcount after a reduction, and the overtime that follows</td>
+<td><strong>post-restructuring capability gap</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5>5. Asset Carriage (Truckload)</h5>
+<p><strong>Primary metric: operating ratio = operating expenses ÷ operating revenue.</strong>
+Examine ex-fuel-surcharge. Evaluates tractor and trailer fleet efficiency, driver
+productivity, and lane balance.</p>
+<p><strong>L1</strong></p>
+<p><code>Operating ratio ├── A. Revenue = (Loaded miles × Base rate per loaded mile) + Fuel surcharge + Accessorials └── B. Operating expenses per total mile (loaded + deadhead miles)</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 Base rate per loaded mile</td>
+<td>A1a Contract rate retention and lane pricing discipline vs. DAT benchmark</td>
+<td><em>no library entry</em> (apply cyclicality lens)</td>
+</tr>
+<tr>
+<td></td>
+<td>A1b Spot freight exposure and load-board pricing</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>A2 Accessorial &amp; surcharge revenue</td>
+<td>A2a Detention and layover capture at customer docks</td>
+<td><strong>billing exception leakage</strong> billing exception leakage (failure to track and invoice driver detention)</td>
+</tr>
+<tr>
+<td></td>
+<td>A2b Fuel surcharge recovery percentage</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>A3 Tonnage and volume</td>
+<td>A3a Loaded miles per seated tractor per week</td>
+<td><em>no library entry</em> (apply cyclicality lens)</td>
+</tr>
+<tr>
+<td>B1 Equipment ownership</td>
+<td>B1a Depreciation and tractor lease expense per total mile</td>
+<td><em>no library entry</em> (fleet age and capex cycle)</td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Unseated tractor ratio (parked power generating depreciation without revenue)</td>
+<td><strong>post-restructuring capability gap</strong> where unseated trucks follow driver compensation cuts</td>
+</tr>
+<tr>
+<td>B2 Driver labour</td>
+<td>B2a Driver cost per mile (wages, benefits, per diem)</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>B2b <span class="term" data-term="metric:driver-turnover-dedicated-versus-otr" data-href="metrics.html#driver-turnover-dedicated-versus-otr" tabindex="0">Driver turnover</span> and recruiting/training cost</td>
+<td><strong>post-restructuring capability gap</strong></td>
+</tr>
+<tr>
+<td>B3 Network efficiency</td>
+<td>B3a Empty mile (deadhead) percentage</td>
+<td><em>no library entry</em> (lane balance / dispatch planning)</td>
+</tr>
+<tr>
+<td></td>
+<td>B3b Fuel efficiency and idle time management</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B4 Maintenance and safety</td>
+<td>B4a Out-of-service equipment and emergency road repairs</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>B4b Collision claims and insurance reserve development</td>
+<td><em>no library entry</em> (self-insured retention)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5>6. Ports and Terminals</h5>
+<p><strong>Primary metric: operating margin = operating profit ÷ terminal operating revenue.</strong>
+Also evaluated on EBITDA margin. Decomposes berth productivity, yard dwell, and
+stevedoring labor.</p>
+<p><strong>L1</strong></p>
+<p><code>Terminal operating margin ├── A. Operating revenue = (Lifts handled × Tariff per lift) + Storage &amp; demurrage + Ancillary marine services └── B. Operating expenses per lift</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 Stevedoring &amp; lift revenue</td>
+<td>A1a Liner volume commitments and terminal concession calls</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>A1b Tariff yield per lift (laden vs. empty, transhipment vs. gateway)</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>A2 Landside storage &amp; dwell revenue</td>
+<td>A2a Import/export container dwell beyond free time</td>
+<td><strong>billing exception leakage</strong> consignee demurrage dispute and uncollected storage</td>
+</tr>
+<tr>
+<td>B1 Quay and yard labour</td>
+<td>B1a Gang productivity and crane moves per gross hour</td>
+<td><em>no library entry</em> (automation / TOS dispatch)</td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Overtime and standby hours during vessel bunching</td>
+<td><strong>post-restructuring capability gap</strong> where headcount cuts create bottleneck staffing shortages</td>
+</tr>
+<tr>
+<td>B2 Equipment &amp; power</td>
+<td>B2a Energy cost per move (diesel straddles vs. electric AGVs/ASC)</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>B2b Quay crane maintenance and spreader breakdown</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B3 Concession &amp; civil infrastructure</td>
+<td>B3a Concession fee structure (fixed royalty vs. variable throughput tariff)</td>
+<td><em>no library entry</em> (port authority concession terms)</td>
+</tr>
+<tr>
+<td></td>
+<td>B3b Yard ground slot utilisation and rehandle ratio</td>
+<td><em>no library entry</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5>7. Domestic Intermodal</h5>
+<p><strong>Primary metric: segment operating margin = segment operating income ÷ segment gross revenue.</strong>
+In practice, public peers never disclose net revenue. Decomposes rail linehaul
+commitments, drayage execution, and container fleet velocity.</p>
+<p><strong>L1</strong></p>
+<p><code>Segment operating margin ├── A. Gross revenue = (Intermodal loads × Revenue per load) + Accessorials └── B. Operating expenses = Rail linehaul + Drayage + Equipment depreciation + Repositioning + SG&amp;A</code></p>
+<p><strong>L2/L3</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Driver</th>
+<th>Mechanism at the terminal node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 Intermodal revenue per load</td>
+<td>A1a Base freight rate per container move</td>
+<td><em>no library entry</em> (apply cyclicality lens)</td>
+</tr>
+<tr>
+<td></td>
+<td>A1b Fuel surcharge pass-through</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>A1c Accessorial recovery (chassis split, street detention)</td>
+<td><strong>billing exception leakage</strong> unbilled per diem and drop detention leakage</td>
+</tr>
+<tr>
+<td>A2 Load volume</td>
+<td>A2a <span class="term" data-term="metric:container-turns-per-year-intermodal" data-href="metrics.html#container-turns-per-year-intermodal" tabindex="0">Container turns per year</span> (velocity of box fleet)</td>
+<td><em>no library entry</em> (rail schedule reliability / customer dwell)</td>
+</tr>
+<tr>
+<td>B1 Purchased rail linehaul</td>
+<td>B1a Class I rail contractual minimum volume commitments (MVCs) and rate tier escalators</td>
+<td><em>no library entry</em> (contractual operating leverage)</td>
+</tr>
+<tr>
+<td></td>
+<td>B1b Rail trip plan compliance and ramp dwell penalties</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B2 Drayage operations</td>
+<td>B2a <span class="term" data-term="metric:dray-cost-per-load-intermodal" data-href="metrics.html#dray-cost-per-load-intermodal" tabindex="0">Dray cost per load</span> (owned fleet productivity vs. outside dray)</td>
+<td><strong>purchased-transportation accrual failure</strong> carrier accrual mismatch on outside drayage</td>
+</tr>
+<tr>
+<td></td>
+<td>B2b Driver detention at customer docks and rail ramp gates</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td>B3 Equipment &amp; fleet ownership</td>
+<td>B3a Container and chassis depreciation / lease cost per move</td>
+<td><em>no library entry</em></td>
+</tr>
+<tr>
+<td></td>
+<td>B3b Unbilled empty container repositioning (directional corridor deadhead)</td>
+<td><em>no library entry</em> (network imbalance)</td>
+</tr>
+<tr>
+<td>B4 Claims and safety</td>
+<td>B4a Intermodal cargo damage during rail hump/transit</td>
+<td><strong>carrier-selection liability repricing the cost of cheap capacity</strong> outside drayage vetting / rail liability dispute</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5>8. Inland liquid-bulk marine / tank barge</h5>
+<p><strong>Metric at the top:</strong> segment operating income, read together with return on
+segment assets. Margin alone is not sufficient in a model running at 0.4x asset
+turnover.</p>
+<p><code>Marine operating income ├── Revenue │ ├── Delay-exposed revenue = inland revenue x (1 − term% x time-charter%) │ │ ├── Available barge-days ← fleet size, dry-dock and inspection days out │ │ ├── Utilisation ← demand: refinery and petrochemical volumes │ │ └── Rate per movement ← term renewal % and spot %, quarterly │ └── Delay-insulated revenue = inland term x time-charter%, plus coastal │ └── Day rate x days on hire ← delay does not reduce this line ├── Vessel operating cost │ ├── Crew ← billets by rotation pattern, licensed mariner supply │ ├── Fuel ← gallons x price, less escalator capture at 30-120 day lag │ ├── Chartered horsepower ← the flex lever, ~25% of requirement historically │ └── Maintenance and USCG inspection ← expensed inland, deferred coastal ├── Depreciation ~11% of segment revenue, and capex runs at ~11-12% └── SG&amp;A ~7.5% of segment revenue</code></p>
+<p><strong>Where the tree bites.</strong> Three of these branches are demand or weather, and one is contractual. Four things the operator actually chooses: how much horsepower to charter; which vessel to which yard in which slot; how work is bundled into a visit; and the term/spot and affreightment/time-charter mix. Everything else in the tree is a price or a volume it does not set.</p>
+<p><strong>The mistake this tree is built to prevent.</strong> Applying a delay-day improvement to total segment revenue. Split the revenue line by contract form first; on <a href="../companies/kirby.html">Kirby Corporation</a> FY2025 that halves the base. See model 8 in <a href="../sectors/index.html">operating models</a> and <a href="../insights/time-charters-make-delay-a-cost-event-not-a-revenue-loss.html">time charters make delay a cost event, not a revenue loss</a>.</p>
+<p><strong>Quantities that must be sourced, not assumed:</strong> the term and time-charter mix (disclosed), the delay-day count and its causes (disclosed, and scoped to external causes by definition), yard slot availability (not disclosed), and the split of maintenance capital between planning-governed and price-governed components (not disclosed anywhere located).</p>
+<hr>
+<h5>9. Protected liner shipping / Jones Act non-contiguous trades</h5>
+<p><strong>Metric at the top:</strong> segment operating income, and cost per FEU by line.
+It is not computable
+by segment where segment assets are not disclosed, which is the common case.
+Say so.</p>
+<p><code>Ocean operating income ├── Revenue = FEU carried x revenue per FEU, by lane │ ├── FEU carried │ │ ├── Slot capacity deployed ← strings x sailings x slots [not disclosed] │ │ └── Load factor ← headhaul / backhaul balance [not disclosed] │ └── Revenue per FEU ← lane mix; protected lanes and premium lanes differ ├── Direct cargo expense per FEU ← the line that moves; split related-party out │ ├── Terminal and stevedoring ← JV or third-party operated; labour agreement │ └── Outside purchased transportation ├── Vessel operating expense per ship-day │ ├── Crew ← billets x rotation multiplier; a schedule output, not a lever │ ├── Fuel ← burn per ship-day x price, less surcharge capture and lag │ └── Repairs, stores, insurance ├── Operating overhead ← includes dry-docking amortisation, not the cash ├── Depreciation ← rises by design as newbuild tonnage delivers └── Equity income from terminal JV ← sits inside costs; strip it before reading margin</code></p>
+<p><strong>Where the tree bites.</strong> The top two branches are the return-on-capital question and neither is disclosed. The third is the line that actually deteriorated at <a href="../companies/matson.html">Matson, Inc.</a> and is the one the carrier least controls. The branches that are disclosed and controllable — overhead and G&amp;A — are the ones whose unit cost did not move.</p>
+<p><strong>Two arithmetic requirements before reading margin.</strong></p>
+<ol>
+<li>Strip the terminal joint-venture equity income out of segment operating
+income. <a href="../companies/matson.html">Matson, Inc.</a> records its share of SSAT income inside costs and
+expenses in the Ocean Transportation segment. FY2025 segment operating
+income of $455.6m includes +$32.5m of it; FY2024's $500.9m includes −$1.0m,
+itself carrying an $18.4m impairment share. Ex-JV: $423.1m against $501.9m, a
+15.7% decline against the 9.0% headline. A joint venture recovering from a
+write-down absorbed 43% of the reported fall.</li>
+<li>Do not compute a broker-style net revenue for the logistics segment unless
+purchased transportation is disclosed separately. At <a href="../companies/matson.html">Matson, Inc.</a> it is not:
+the $494.0m "direct operating costs" line bundles purchased transportation
+with agency commissions, warehouse and cross-dock leases and facility
+operating costs. Deducting it gives $115.0m, which is not net revenue and
+understates it by the facility component. The honest output is that the
+segment's margin <strong>cannot be placed in a frame with C.H. Robinson or RXO</strong>,
+because requires net revenue and the disclosure does not support
+computing it. State that; do not produce the comparison and caveat it.</li>
+</ol>
+<p><strong>Quantities that must be sourced, not assumed:</strong> slot capacity and load factor (not disclosed by any operator located), lane-level yield (not disclosed), purchased transportation within logistics direct costs (not disclosed), and schedule reliability (published as a commitment, not as performance).</p>
+<hr>
+<h5>What the gaps say about the library</h5>
+<p>Counting terminal nodes across all seven trees:</p>
+<ul>
+<li><strong>Brokerage:</strong> 6 of 9 carry a mechanism.</li>
+<li><strong>Forwarding:</strong> 5 of 10.</li>
+<li><strong>Contract logistics:</strong> 4 of 11.</li>
+<li><strong>LTL:</strong> 4 of 13.</li>
+<li><strong>Asset carriage (truckload):</strong> 3 of 13. Uncovered nodes are fleet capex,
+fuel efficiency, deadhead, and self-insurance reserves.</li>
+<li><strong>Ports and terminals:</strong> 2 of 9. Uncovered nodes are concession structure,
+crane maintenance, and yard slot rehandling.</li>
+<li><strong>Domestic intermodal:</strong> 3 of 11. Uncovered nodes are rail contractual MVCs,
+container turn velocity, and unbilled empty repositioning.</li>
+</ul>
+<p>The pattern: across all seven operating models, the library is concentrated in commercial pricing exceptions (manual carrier sourcing under rate volatility, billing exception leakage, detention and demurrage under-recovery), carrier settlement/accrual mismatches (carrier-selection liability repricing the cost of cheap capacity, purchased-transportation accrual failure), and headcount-cut consequences (post-restructuring capability gap). Physical network drivers (empty miles, berth congestion, container turns, rail MVCs) remain largely unwritten as formal mechanisms.</p>
+<hr>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

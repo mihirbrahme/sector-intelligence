@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIC codes fail to distinguish transport operating models · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>SIC codes fail to distinguish transport operating models</h1>
+    <p class="def">Standard Industrial Classification (SIC) codes bundle fundamentally different transport operating models under identical numbers, making code-derived peer sets invalid.</p>
+    <div class="unit"><span>Unit of work</span><b>the load</b></div>
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#the-trap">The trap</a><a href="#where-it-was-observed">Where it was observed</a><a href="#how-to-spot-it">How to spot it</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>Standard Industrial Classification (SIC) codes bundle fundamentally different transport operating models under identical numbers, making code-derived peer sets invalid.</p></dd></div><div><dt>Operating models affected</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a></p></dd></div><div><dt>Where observed</dt><dd><p>the source recordsource-register, the source recordfiling-universe-us, the source recordfiling-universe-uk</p></dd></div></dl></section>
+<h2 id="the-trap">The trap</h2>
+<p>Industry classification taxonomies (US SIC, UK SIC 2007, and EU NACE) group companies by broad activity lines rather than financial operating structure.</p>
+<p>In transport and logistics, this creates peer-group collisions:
+- Asset-heavy carriers with heavy capex and fleet debt share codes with asset-light brokers and non-asset forwarders.
+- US SIC 4412 (deep sea foreign transportation of freight) contains non-asset freight forwarders alongside capital-intensive ocean tanker owners.
+- US SIC 4512 contains passenger airlines alongside all-cargo air operators.
+- UK SIC 52290 (transportation support) contains non-asset forwarders alongside port operators and relocation contractors.</p>
+<p>Screeners grouping companies by SIC code evaluate asset carriers and brokers in single cohorts, directly violating peer discipline.</p>
+<h2 id="where-it-was-observed">Where it was observed</h2>
+<h2 id="how-to-spot-it">How to spot it</h2>
+<p>Use SIC codes solely as discovery filters, never as analytical classifications.</p>
+<p>Before running financial comparisons or calculating ratios from <a href="../reference/metrics.html">the metric dictionary</a>, manually verify each target's <a href="../sectors/index.html">operating model</a>:
+1. Identify the unit of work (load, shipment file, or asset-hour).
+2. Check balance-sheet tangible fixed assets (PP&amp;E) to separate asset fleets from non-asset intermediaries.
+3. Establish whether cost of sales represents purchased capacity or direct equipment operating expenses.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>This insight governs operational analysis under <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>.</p><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

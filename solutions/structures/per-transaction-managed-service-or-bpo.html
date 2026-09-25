@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per-transaction managed service or BPO · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Commercial structure</div>
+    <h1>Per-transaction managed service or BPO</h1>
+    <p class="def">A commercial model where the provider takes operational ownership of a discrete process, charging a fixed fee per completed unit of work rather than selling software licenses or consulting hours.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#how-it-works-mechanically">How it works mechanically</a><a href="#what-it-suits">What it suits</a><a href="#risk-allocation">Risk allocation</a><a href="#what-has-to-be-measurable">What has to be measurable</a><a href="#where-it-fails">Where it fails</a><a href="#buyer-size-and-maturity">Buyer size and maturity</a><a href="#does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</a><a href="#boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>A commercial model where the provider takes operational ownership of a discrete process, charging a fixed fee per completed unit of work rather than selling software licenses or consulting hours</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a></p></dd></div></dl></section>
+<h2 id="how-it-works-mechanically">How it works mechanically</h2>
+<p>The provider contracts to deliver an end-to-end operational function (e.g., customs entry creation, freight audit clearing, or carrier safety verification).</p>
+<p>The contract sets a fixed price per processed unit of work:
+- $18 per completed import customs entry.
+- $1.75 per audited and reconciled carrier freight invoice.
+- $5 per fully verified carrier onboarding record.</p>
+<p>The provider furnishes all software tooling, integration connectors, and operational personnel required to clear the workflow.</p>
+<p>The buyer passes raw transaction inputs (scanned commercial invoices, EDI 210 feeds, or carrier applications) to the provider.</p>
+<p>The provider resolves exceptions and returns completed, compliant transactions to the client's TMS.</p>
+<p>Contracts include minimum monthly transaction commitments and strict Service Level Agreements (SLAs) on turnaround speed and error rates.</p>
+<h2 id="what-it-suits">What it suits</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:document-processing-and-customs-entry-automation" data-href="../patterns/document-processing-and-customs-entry-automation.html" tabindex="0"><span class="term" data-term="solution:document-processing-and-customs-entry-automation" data-href="../patterns/document-processing-and-customs-entry-automation.html" tabindex="0">Document processing and customs entry automation</span></span></strong> addressing <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Managing customs declarations for freight forwarders.</li>
+<li><strong><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../patterns/freight-audit-and-payment-automation.html" tabindex="0"><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../patterns/freight-audit-and-payment-automation.html" tabindex="0">Freight audit and payment automation</span></span></strong> addressing <strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Processing complex carrier freight bills.</li>
+<li><strong><span class="term" data-term="solution:carrier-onboarding-and-compliance-automation" data-href="../patterns/carrier-onboarding-and-compliance-automation.html" tabindex="0"><span class="term" data-term="solution:carrier-onboarding-and-compliance-automation" data-href="../patterns/carrier-onboarding-and-compliance-automation.html" tabindex="0">Carrier onboarding and compliance automation</span></span></strong> addressing <strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span></strong>: Running 24/7 carrier safety vetting and insurance verification.</li>
+</ul>
+<h2 id="risk-allocation">Risk allocation</h2>
+<ul>
+<li><strong>Buyer risk: Low.</strong> The buyer converts fixed overhead (back-office salaries) into variable cost that flexes with shipment volume. If freight volume declines, costs decline proportionally.</li>
+<li><strong>Provider risk: High.</strong> The provider absorbs all technical and operational execution risk. If the provider's automation fails and human clerks must manually process transactions, the provider's profit margin turns negative.</li>
+</ul>
+<h2 id="what-has-to-be-measurable">What has to be measurable</h2>
+<ul>
+<li>Unambiguous transaction unit counts (cleared customs entries, settled invoices).</li>
+<li>Turnaround time metrics (e.g., 98% of customs filings completed within 2 hours of document receipt).</li>
+<li>Quality/accuracy thresholds (e.g., invoice error dispute rate below 0.5%).</li>
+</ul>
+<p>Because the unit of work matches the invoice line, commercial disputes over billing are rare.</p>
+<h2 id="where-it-fails">Where it fails</h2>
+<ol>
+<li><strong>Volume collapse below minimums</strong>: If market freight volumes decline sharply, the buyer attempts to terminate the contract or renegotiate minimum fee commitments.</li>
+<li><strong>Extreme input fragmentation</strong>: If the buyer passes corrupted, unreadable documents or non-standard freight that requires extensive manual research, provider operational costs explode.</li>
+</ol>
+<h2 id="buyer-size-and-maturity">Buyer size and maturity</h2>
+<ul>
+<li><strong>Best fit</strong>: Mid-market freight forwarders and brokers ($50M to $300M revenue) struggling to recruit and retain specialized back-office staff (e.g., customs entry clerks).</li>
+<li><strong>Poor fit</strong>: Mega-forwarders (<a href="../../companies/expeditors.html">Expeditors International of Washington, Inc.</a>, Kuehne+Nagel) that operate massive in-house offshore shared service centers.</li>
+</ul>
+<h2 id="does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</h2>
+<p><strong>Yes. It absorbs and internalizes the precondition work completely.</strong></p>
+<p>In a managed service, the provider does not ask the buyer to pay an upfront fee for master data cleansing or tariff digitization.</p>
+<p>Instead, the provider performs the prerequisite data cleansing as an internal capital investment:
+- The provider cleans the client's SKU catalog and builds custom HTS cross-reference tables during onboarding.
+- The provider absorbs this upfront cost because its long-term gross margin depends on driving automation up to 80%+.
+- Once automated, the provider earns software gross margins (70%+) on a fixed per-transaction fee, rapidly recovering the initial data investment.</p>
+<p>The buyer experiences zero friction because they never see a line item for "data cleaning."</p>
+<h2 id="boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</h2>
+<p>Boutiques use per-transaction managed services to displace legacy Business Process Outsourcing (BPO) conglomerates:</p>
+<ul>
+<li><strong>Technology-enabled unit pricing vs FTE "body-shop" leasing</strong>: Legacy BPOs (Genpact, Wipro, Infosys) sell FTE staffing models ("10 offshore clerks at $2,500/month each"). When volume drops, the client still pays. A boutique charges strictly per transaction, using modern intelligent document processing to run the workflow with two engineers rather than ten clerks.</li>
+<li><strong>Guaranteed turnaround SLAs with financial penalties</strong>: Boutiques win contracts by putting skin in the game, offering 15-minute customs entry turnaround SLAs backed by fee rebates, which legacy BPOs refuse to match.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

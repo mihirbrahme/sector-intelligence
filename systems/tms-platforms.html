@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TMS platforms (brokerage and shipper-side) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>TMS platforms (brokerage and shipper-side)</h1>
+    <p class="def">Software platforms that manage load tendering, carrier dispatch, contract rating, and transportation settlement.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Software platforms that manage load tendering, carrier dispatch, contract rating, and transportation settlement</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Transportation Management Systems (TMS) process the shipment order and the carrier load tender.</p>
+<p>In brokerage, the platform records customer load tenders, checks credit, matches loads to carriers, and produces rate confirmations.</p>
+<p>In shipper operations, the platform ingests purchase orders, applies routing guides, tenders loads sequentially to contracted carriers, and logs proof of delivery.</p>
+<p>The core asset is the contract rating engine. The engine calculates base freight rates, fuel surcharges, and accessorial fees per lane.</p>
+<p>TMS architectures divide sharply into two categories:</p>
+<ul>
+<li>
+<p><strong>Brokerage dispatch systems</strong>: McLeod PowerBroker, <span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span>, Trimble TMW.Suite. These systems optimise load matching, spot quoting, and fast carrier settlement.</p>
+</li>
+<li>
+<p><strong>Shipper enterprise systems</strong>: Oracle Transportation Management (OTM), Blue Yonder, e2open (<strong>WiseTech-owned since 2025-08-03</strong>), Alpega. These systems enforce procurement contracts, multi-stop consolidation, and ERP integration.</p>
+</li>
+</ul>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../solutions/patterns/quote-to-book-workflow-automation.html" tabindex="0"><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../solutions/patterns/quote-to-book-workflow-automation.html" tabindex="0">Quote-to-book workflow automation</span></span>: Automating inbound spot quote conversion into active TMS shipments.</li>
+<li><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0"><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0">Carrier and customer master data consolidation</span></span>: Governing carrier legal identities, tax records, and operating authorities.</li>
+<li><span class="term" data-term="solution:carrier-onboarding-and-compliance-automation" data-href="../solutions/patterns/carrier-onboarding-and-compliance-automation.html" tabindex="0"><span class="term" data-term="solution:carrier-onboarding-and-compliance-automation" data-href="../solutions/patterns/carrier-onboarding-and-compliance-automation.html" tabindex="0">Carrier onboarding and compliance automation</span></span>: Verifying FMCSA safety and insurance before dispatch.</li>
+<li><span class="term" data-term="solution:dynamic-pricing-and-buy-rate-guidance" data-href="../solutions/patterns/dynamic-pricing-and-buy-rate-guidance.html" tabindex="0">Dynamic pricing and buy rate guidance</span>: Injecting lane cost benchmarks directly into brokerage quoting screens.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../sectors/index.html">Model 4 (Dedicated Carriage)</a>, <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Geographies</strong>:</li>
+<li>North America: McLeod, <span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span>, and Trimble dominate domestic truckload and brokerage.</li>
+<li>Global: Oracle OTM and Blue Yonder dominate multinational shippers.</li>
+<li>Europe: Alpega (Transwide, Inet) and Transporeon (Trimble) hold dense European carrier networks.</li>
+<li><strong>Commercial model</strong>: Enterprise <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span> based on annual freight volume, user seats, or flat annual licenses. Legacy on-premise installations pay annual maintenance fees (typically 18% to 22% of software license).</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>TMS platforms struggle when operational reality departs from clean contract tables.</p>
+<p>Implementations stall on tariff digitisation. Carriers quote complex fuel escalators, regional accessorials, and minimum charge rules that break rigid system schemas.</p>
+<p>When rates fail to rate mechanically, staff calculate costs in external spreadsheets. The TMS reverts to a slow recording tool.</p>
+<p>Legacy architectures suffer from database bloat and brittle integrations. Trimble and e2open both expanded by acquisition, leaving clients on disparate codebases with slow feature updates. e2open's own acquisition by WiseTech on 2025-08-03 adds another integration layer on top of that history.</p>
+<p>For historical implementation failures, see <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../solutions/failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p>TMS vendors explicitly refuse carrier master data cleansing and contract tariff rationalisation.</p>
+<p>Software vendors provide an empty schema. They mandate that the client deliver clean, formatted master records prior to configuration.</p>
+<p>Vendors assume the customer possesses validated address books, standardised lane definitions, and unambiguous carrier contracts.</p>
+<p>When data is dirty, the vendor either halts deployment or relies on systems integrators who bill substantial <span class="term" data-term="solution:time-and-materials" data-href="../solutions/structures/time-and-materials.html" tabindex="0"><span class="term" data-term="solution:time-and-materials" data-href="../solutions/structures/time-and-materials.html" tabindex="0">time and materials</span></span> fees.</p>
+<p>As established in <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>, master data preparation requires far more effort than software installation.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<table>
+<thead>
+<tr>
+<th>Operating model &amp; segment</th>
+<th>Dominant TMS vendors</th>
+<th>Implementation layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Shippers (&gt;$1B freight)</td>
+<td>Oracle OTM, Blue Yonder</td>
+<td>Systems integrators (Accenture, Deloitte)</td>
+</tr>
+<tr>
+<td>Mid-Market Shippers ($50M–$500M freight)</td>
+<td>MercuryGate, Alpega, e2open</td>
+<td>Direct vendor professional services or regional boutiques</td>
+</tr>
+<tr>
+<td>Large Brokers (&gt;$100M net revenue)</td>
+<td>McLeod PowerBroker, proprietary builds</td>
+<td>Internal software engineering teams</td>
+</tr>
+<tr>
+<td>Mid/Small Brokers (&lt;$50M net revenue)</td>
+<td>McLeod PowerBroker, MercuryGate, Tai</td>
+<td>Direct vendor onboarding</td>
+</tr>
+<tr>
+<td>Asset Truckload Carriers</td>
+<td>McLeod LoadMaster, Trimble TMW</td>
+<td>Direct vendor professional services</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: TMS vendors market 8% to 15% freight spend reductions and 90% auto-tendering rates.</li>
+<li>Gartner research: Gartner Magic Quadrant for Transportation Management Systems highlights that 40% of TMS implementations exceed budget or scheduled go-live dates due to tariff complexity.</li>
+<li>Public filings: Trimble (NASDAQ: TRMB) filings, and e2open's filings <strong>up to its delisting on 2025-08-03</strong>, document multi-quarter churn driven by customers resisting multi-year lock-in during cloud migration cycles. e2open no longer files separately — its disclosure now sits inside WiseTech Global (ASX: WTC) half-yearly reporting, which is less granular. <strong>The churn series this evidence rests on ends in 2025.</strong></li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
