@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legacy logistics system modernisation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Legacy logistics system modernisation</h1>
+    <p class="def">Non-invasive modernization of green-screen AS/400 (IBM iSeries), legacy COBOL/RPG freight rating systems, and mainframe TMS suites via API wrappers, Change Data Capture (CDC), and modern web interfaces.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Non-invasive modernization of green-screen AS/400 (IBM iSeries), legacy COBOL/RPG freight rating systems, and mainframe TMS suites via API wrappers, Change Data Capture (CDC), and modern web interfaces</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a></p></dd></div></dl></section>
+<p>Non-invasive modernization of green-screen AS/400 (IBM iSeries), legacy COBOL/RPG freight rating systems, and mainframe TMS suites via API wrappers, Change Data Capture (CDC), and modern web interfaces.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>A vast proportion of the world's ground transportation, LTL networks, and bulk maritime shipping runs on legacy IBM AS/400 (iSeries) platforms, RPG/COBOL programs, and custom mainframe databases. While these systems are stable and process high-volume transactions with near-zero downtime, their green-screen terminal interfaces (5250/3270) and lack of native REST APIs make it nearly impossible to connect to modern shipper APIs, mobile apps, or digital freight networks.</p>
+<p>This pattern executes non-invasive legacy modernization without undertaking high-risk core system replacements.</p>
+<p>First, engineers implement real-time Change Data Capture (CDC) pipelines (using tools such as Debezium, Qlik Replicate, or IBM InfoSphere). The CDC engine monitors underlying AS/400 database transaction journals in real time, capturing new loads, status changes, and billing updates without imposing query locks or performance overhead on operational dispatch tables.</p>
+<p>Second, teams build modern REST/JSON and GraphQL API wrappers around legacy business logic. By wrapping legacy RPG and COBOL programs with containerized microservices, external trading partners can tender freight, receive status pings, and pull rates programmatically.</p>
+<p>Third, the solution deploys modern web and mobile user interfaces that replace 5250 green screens. Dispatchers and billing specialists interact with modern web frontends that streamline multi-screen terminal workflows into unified single-page views while submitting validated transactions back into the legacy core.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 1 (Truckload Brokerage)</a></strong>: Modernizes legacy brokerage databases (e.g. legacy McLeod or TMW installs) with modern digital booking APIs, allowing programmatic integration with external carrier networks and digital load boards.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Truckload)</a></strong>: Wraps legacy fleet management and dispatch systems to connect seamlessly with modern electronic logging devices (ELDs), cab telematics tablets, and automated maintenance tracking tools.</li>
+<li><strong><a href="../../sectors/index.html">Model 5 (LTL Network)</a></strong>: Protects proprietary LTL rating and linehaul dispatch engines that represent 30+ years of accumulated contractual tariff rules. API wrappers expose these complex rating calculations to customer web portals without altering core RPG algorithms.</li>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a></strong>: Modernizes legacy terminal inventory and rail booking mainframes with web-based truck appointment systems and real-time gate OCR interfaces.</li>
+<li><strong><a href="../../sectors/index.html">Model 8</a> &amp; <a href="../../sectors/index.html">Model 13 (Bulk Marine)</a></strong>: Modernizes custom barge voyage accounting and contract management systems without disrupting proven vessel accounting and laytime calculation logic.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<p>What follows is kept as the record of what was originally argued. It is not a mechanism this pattern addresses and must not be cited as one: Liberates locked legacy data. Streaming transaction journals into modern cloud data warehouses creates the real-time event feeds required for modern analytics and automation.
+- <strong><span class="term" data-term="mech:post-restructuring-capability-gap" tabindex="0">post-restructuring capability gap</span></strong>: Eliminates dependency on retiring RPG/COBOL programmers. Modern API wrappers allow younger software engineers to build features using standard modern programming languages.
+- <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Enables automated digital booking on top of legacy green-screen dispatch systems that previously required manual keyboard entry.</p>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<ul>
+<li><strong>Unit of work</strong>: Modernized legacy API endpoint, wrapped green-screen workflow, or deployed CDC event streaming pipeline.</li>
+<li><strong>Modernization economics</strong>: Comprehensive API wrapper and CDC modernization projects cost $220,000 to $650,000 over 4 to 8 months. </li>
+<li><strong>Capital preservation</strong>: Avoids a full core ERP/TMS replacement, which typically costs $8M to $35M and carries a 50%+ catastrophic failure or abandonment risk. </li>
+<li><strong>Operational speed</strong>: Deploys customer-facing digital booking and automated visibility in months rather than the 2 to 4 years required for a complete core platform replacement.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Non-invasive modernization requires thorough technical discovery:</p>
+<ol>
+<li><strong>Access to underlying database schemas and copybooks</strong>: Source DDS/DDL definitions, RPG/COBOL data structures, and transaction journal configurations.</li>
+<li><strong>Transaction journal activation</strong>: Enabling IBM i journal receivers without exhausting disk storage or slowing down high-volume batch runs.</li>
+<li><strong>Documented green-screen navigation flows</strong>: Mapping complex 5250 function key sequences (F3 exit, F6 add, F12 cancel) and input validation rules.</li>
+</ol>
+<p>Schema discovery, journal configuration, and terminal workflow mapping consume 65% of initial project effort. </p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li>Technical discovery, proof-of-concept API wrappers, and CDC pipeline setup utilize <span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">fixed-price-diagnostic-then-build</span>.</li>
+<li>Continuous wrapper engineering, frontend development, and microservice expansion utilize <span class="term" data-term="solution:time-and-materials" data-href="../structures/time-and-materials.html" tabindex="0">time-and-materials</span>.</li>
+<li>Embedding specialized legacy integration engineers alongside in-house IT teams utilizes <span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">forward-deployed-engineer-embedded</span>.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>The history of enterprise logistics is littered with catastrophic failures where operators attempted to rip and replace working AS/400 systems with off-the-shelf enterprise software.</p>
+<p>As analyzed in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>, the most prominent example is Deutsche Post DHL Group's 2015 cancellation of its "New Forwarding Environment" (NFE) project. DHL attempted to replace its disparate legacy forwarding systems with a unified SAP suite; after spending €345 million, the project collapsed, paralyzing billing and forcing a complete write-off. Similarly, major US truckload carriers that attempted full rip-and-replace TMS projects suffered severe operational chaos and lost significant enterprise value. </p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The vendor pitch promises effortless API wrapping that magically transforms legacy green screens into modern web apps overnight.</p>
+<p>The operational reality is batch window contention and database locks. Legacy transport applications rely on massive overnight batch jobs for driver pay, billing consolidation, and ledger balancing. If modern API wrappers execute poorly designed real-time SQL queries against operational DB2/400 tables during batch processing, they cause record locks that crash overnight billing. Modernization must utilize decoupled streaming architectures (Kafka + CDC) to prevent read-query contention on operational tables.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>US</strong>: Exceptionally high prevalence of AS/400 (IBM iSeries) in trucking; hundreds of mid-sized and large asset carriers operate on legacy TMW, McLeod, or custom iSeries platforms.</li>
+<li><strong>UK/Europe</strong>: Legacy road freight operators frequently run proprietary UNIX-based freight rating systems that require POSIX-compliant API wrappers and EDIFACT gateways.</li>
+<li><strong>Southeast Asia</strong>: Major state-owned port terminals, railway networks, and legacy shipping agencies run legacy mainframe systems requiring terminal emulation wrapping and screen-scraping pipelines.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/manhattan-associates.html">Manhattan Associates</a>, <a href="../../systems/mcleod-loadmaster.html">McLeod Software (LoadMaster &amp; PowerBroker)</a>, <a href="../../systems/mercurygate.html">MercuryGate</a>, <a href="../../systems/oracle-tms.html">Oracle Transportation Management (OTM)</a>, <a href="../../systems/rate-and-market-data-providers.html">Rate and market data providers</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

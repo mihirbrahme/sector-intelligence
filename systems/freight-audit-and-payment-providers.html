@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freight audit and payment providers · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Freight audit and payment providers</h1>
+    <p class="def">Service providers and software vendors that validate carrier freight invoices against contract tariffs, reconcile shipping documents, and execute disbursement.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Service providers and software vendors that validate carrier freight invoices against contract tariffs, reconcile shipping documents, and execute disbursement</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Freight Audit and Payment (FAP) providers process the carrier freight invoice, bill of lading (BOL), delivery receipt (POD), and remittance disbursement.</p>
+<p>The provider ingests carrier bills through EDI 210, APIs, and document parsing engines.</p>
+<p>The audit engine executes a three-way match between the carrier invoice, the client's rated shipment record, and the proof of delivery.</p>
+<p>The engine audits lane rates, fuel surcharge tables, currency exchange conversions, and accessorial fees against executed transportation contracts.</p>
+<p>Discrepancies trigger automated adjustments, short-pays, or rejection workflows. Approved invoices are scheduled for consolidated disbursement to carriers.</p>
+<p>The sector divides into two core operating models:</p>
+<ul>
+<li>
+<p><strong>Bank-chartered disbursement institutions</strong>: <span class="term" data-term="system:cass-information-systems" data-href="cass-information-systems.html" tabindex="0">Cass Information Systems</span>, U.S. Bank Corporate Payment Systems. These institutions combine audit software with FDIC-regulated banking charters, processing tens of billions in carrier payments.</p>
+</li>
+<li>
+<p><strong>Specialist audit and technology platforms</strong>: Trax Technologies, enVista, Loop Logistics. These providers focus on complex global multimodal audit, AI invoice extraction, and supply chain network analytics.</p>
+</li>
+</ul>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../solutions/patterns/freight-audit-and-payment-automation.html" tabindex="0"><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../solutions/patterns/freight-audit-and-payment-automation.html" tabindex="0">Freight audit and payment automation</span></span>: Systematic invoice line validation and three-way document reconciliation.</li>
+<li><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0"><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0">Detention and demurrage dispute recovery</span></span>: Verifying detention invoice lines against facility gate logs.</li>
+<li><span class="term" data-term="solution:document-processing-and-customs-entry-automation" data-href="../solutions/patterns/document-processing-and-customs-entry-automation.html" tabindex="0"><span class="term" data-term="solution:document-processing-and-customs-entry-automation" data-href="../solutions/patterns/document-processing-and-customs-entry-automation.html" tabindex="0">Document processing and customs entry automation</span></span>: Converting unstructured PDF freight bills into machine-readable data.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models; secondarily managed transportation 3PLs managing freight spend.</li>
+<li><strong>Geographies</strong>:</li>
+<li>North America: <span class="term" data-term="system:cass-information-systems" data-href="cass-information-systems.html" tabindex="0">Cass Information Systems</span> and U.S. Bank lead domestic truckload, LTL, and rail freight audit.</li>
+<li>Global &amp; Multimodal: Trax Technologies and enVista specialise in cross-border ocean, air, and European freight with complex value-added tax (VAT) handling.</li>
+<li>Modern Omnichannel: Loop Logistics targets venture-backed and omnichannel consumer brands with complex parcel and freight contracts.</li>
+<li><strong>Commercial model</strong>: Transaction processing fees ($0.50 to $2.00 per processed freight bill), percentage of recovered overcharges (<span class="term" data-term="solution:recovery-fee-contingency" data-href="../solutions/structures/recovery-fee-contingency.html" tabindex="0">recovery fee or contingency</span> of 15% to 30%), or enterprise <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span>. Bank-chartered processors also generate net interest margin on freight payment float.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>FAP implementations stall when shipper transportation contracts are poorly documented.</p>
+<p>If carrier agreements rely on informal rate emails or unratified accessorial schedules, the audit engine rejects up to 25% of invoices.</p>
+<p>Massive exception queues overwhelm the shipper's internal transportation team. When staff fail to approve disputed lines, carriers place shipper freight on credit hold.</p>
+<p>Global rollouts stall on international tax and currency validation. Local statutory VAT regulations across Europe and APAC require country-specific invoicing logic that generic audit rules cannot handle.</p>
+<p>This breakdown is documented in <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">contractual alignment</a> and <a href="../insights/exception-resolution-requires-commercial-authority-not-workflow-software.html">exception resolution requires commercial authority not workflow software</a>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p>Freight audit providers refuse contract negotiation and rate schedule digitisation.</p>
+<p>The vendor requires the shipper to deliver executed carrier rate sheets, fuel index schedules, and signed contract amendments in structured formats.</p>
+<p>Vendors do not arbitrate commercial disputes between the shipper and its carriers. They identify variance and route the exception back to the client.</p>
+<p>Shippers must either dedicate internal logistics analysts or hire specialized consultancies to standardize carrier master agreements before automated audit succeeds.</p>
+<p>This dynamic illustrates <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<table>
+<thead>
+<tr>
+<th>Shipper spend tier</th>
+<th>Dominant FAP providers</th>
+<th>Service delivery model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enterprise Shippers (&gt;$250M freight spend)</td>
+<td>Cass Information Systems, U.S. Bank</td>
+<td>Bank-regulated disbursement &amp; managed audit</td>
+</tr>
+<tr>
+<td>Global Multimodal Shippers ($100M–$1B)</td>
+<td>Trax Technologies, enVista</td>
+<td>Global enterprise audit SaaS &amp; managed services</td>
+</tr>
+<tr>
+<td>Mid-Market Shippers ($20M–$100M)</td>
+<td>enVista, AFS Logistics, Fortigo</td>
+<td>Hybrid managed audit service</td>
+</tr>
+<tr>
+<td>Omnichannel / Modern Brands</td>
+<td>Loop Logistics</td>
+<td>Modern API-first audit SaaS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Providers claim 2% to 6% direct freight spend reduction and 98% straight-through invoice processing.</li>
+<li>Audited operator disclosures: Cass Information Systems (NASDAQ: CASS) SEC filings report annual freight spend processing of approximately $40 billion, confirming deep market concentration among enterprise industrial shippers.</li>
+<li>Industry benchmarking: Peer data indicates that straight-through processing rates for multimodal shippers average 70% to 80%, with the remainder requiring manual dispute intervention due to ambiguous accessorial terms.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consortium blockchain for global trade documentation and shipping · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Failure history</div>
+    <h1>Consortium blockchain for global trade documentation and shipping</h1>
+    <p class="def">Centralized consortium blockchains failed in global container shipping because trade document friction is caused by maritime jurisdiction law and commercial carrier distrust, not by the absence of cryptographic ledgers.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-promise-was">What the promise was</a><a href="#who-made-it">Who made it</a><a href="#what-actually-happened">What actually happened</a><a href="#why-it-failed-in-operational-rather-than-narrative-terms">Why it failed in operational rather than narrative terms</a><a href="#why-the-mechanisms-are-harder-to-fix-than-they-look">Why the mechanisms are harder to fix than they look</a><a href="#what-the-sector-learned">What the sector learned</a><a href="#how-a-credible-adviser-opens-a-conversation">How a credible adviser opens a conversation</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Centralized consortium blockchains failed in global container shipping because trade document friction is caused by maritime jurisdiction law and commercial carrier distrust, not by the absence of cryptographic ledgers</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a></p></dd></div></dl></section>
+<h2 id="what-the-promise-was">What the promise was</h2>
+<p>TradeLens promised to digitize international trade documentation through a permissioned blockchain platform built on Hyperledger Fabric.</p>
+<p>Sponsors claimed the shared distributed ledger would eliminate paper Bills of Lading (eBLs), automate customs clearance, provide real-time container tracking, and eliminate billions of dollars in administrative costs across ocean supply chains.</p>
+<h2 id="who-made-it">Who made it</h2>
+<ul>
+<li><strong>A.P. Moller – Maersk and IBM</strong>: Formed a joint collaboration in January 2018; later restructured as a commercial cooperation agreement following competitor antitrust and governance concerns.</li>
+<li>Associated initiatives: Global Shipping Business Network (GSBN), formed by Cosco, CMA CGM, and port operators as an Asian counter-consortium.</li>
+</ul>
+<h2 id="what-actually-happened">What actually happened</h2>
+<ul>
+<li><strong>Platform shutdown announced on 2022-11-29</strong>: Maersk and IBM publicly announced the discontinuation of the TradeLens platform.</li>
+<li><strong>Full decommissioning on 2023-03-31</strong>: IBM terminated commercial platform access and backend infrastructure.</li>
+<li><strong>Commercial failure</strong>: Despite onboarding major carriers (MSC, CMA CGM joined in 2019–2020) and capturing millions of container event records, the platform failed to achieve financial viability or develop a sustainable commercial subscription model.</li>
+</ul>
+<h2 id="why-it-failed-in-operational-rather-than-narrative-terms">Why it failed in operational rather than narrative terms</h2>
+<h3 id="1-competitor-governance-and-data-sensitivity-deadlock">1. Competitor governance and data sensitivity deadlock</h3>
+<p>Ocean container shipping is an oligopoly dominated by three vessel-sharing alliances. Carriers compete intensely on freight rates, customer lists, and equipment positioning.</p>
+<p>Competitors (such as MSC, Hapag-Lloyd, and Cosco) refused to route commercial cargo manifest data through a platform co-owned and technologically directed by Maersk.</p>
+<p>Even after governance was opened, participants restricted data sharing to public milestone pings rather than proprietary commercial documentation. As explored in <a href="../../insights/consortium-governance-deadlocks-inter-competitor-data-sharing.html">consortium governance deadlocks inter-competitor data sharing</a>, industry data platforms fail when sponsored by dominant market participants whose motives competitors mistrust.</p>
+<h3 id="2-legal-title-transfer-vs-cryptographic-verification">2. Legal title transfer vs cryptographic verification</h3>
+<p>A Bill of Lading is not merely a tracking update; it is an internationally recognized document of title conferring legal ownership of cargo.</p>
+<p>Transferring title electronically requires statutory recognition across every maritime jurisdiction through which a vessel sails.</p>
+<p>Most maritime nations had not enacted the UNCITRAL Model Law on Electronic Transferable Records (MLETR). Banks financing trade under documentary credits (UCP 600 rules) continued to demand physical, wet-ink paper bills.</p>
+<p>Cryptographic hashes could not overcome legal unenforceability in foreign courts.</p>
+<h3 id="3-asymmetric-integration-cost-in-thin-margin-models">3. Asymmetric integration cost in thin-margin models</h3>
+<p>Under <a href="../../sectors/index.html">operating model 2</a>, freight forwarders operate on gross margins of 10% to 15%.</p>
+<p>Integrating heterogeneous enterprise TMS and port community systems into IBM’s Hyperledger architecture required substantial custom engineering spend.</p>
+<p>Because banks and customs authorities still required paper documents, forwarders had to maintain parallel paper workflows. Operating costs increased while billing velocity remained unchanged.</p>
+<h2 id="why-the-mechanisms-are-harder-to-fix-than-they-look">Why the mechanisms are harder to fix than they look</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: TradeLens promised immutable container gate timestamps to eliminate detention and demurrage disputes. However, D&amp;D charges do not stem from missing timestamps. They stem from lack of terminal gate appointments, rail chassis shortages, and carrier billing practices. An immutable record of a container sitting in a yard does not clear the gate or force an ocean liner to waive per-diem fees.</li>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Document handling in international forwarding requires coordination across customs agencies, phytosanitary authorities, and port health inspectors. Automating one node via blockchain leaves the human operations clerk re-keying identical data into domestic customs portals.</li>
+</ul>
+<h2 id="what-the-sector-learned">What the sector learned</h2>
+<ol>
+<li><strong>Open standards defeat proprietary consortia</strong>: Industry adoption shifted to lightweight, open API standards established by the Digital Container Shipping Association (DCSA) rather than proprietary shared ledgers.</li>
+<li><strong>Legal reform precedes technology replacement</strong>: Electronic documentation requires statutory recognition (such as the UK Electronic Trade Documents Act 2023) before software systems can replace paper originals.</li>
+</ol>
+<h2 id="how-a-credible-adviser-opens-a-conversation">How a credible adviser opens a conversation</h2>
+<p>Never mention "blockchain," "distributed ledgers," or "trustless trade."</p>
+<p>Open on the specific legal and operational bottlenecks of trade documentation:
+- "How many days does your customs clearance desk lose waiting for original paper title documents to arrive by courier?"
+- "What proportion of your container shipments incur terminal demurrage while customs broker documentation clears?"
+- "How are you adopting DCSA open standards for electronic Bills of Lading across your primary ocean carriers?"</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>.</p><p>Systems implementing this include <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>, <a href="../../systems/freight-audit-and-payment-providers.html">Freight audit and payment providers</a>, <a href="../../systems/mcleod-loadmaster.html">McLeod Software (LoadMaster &amp; PowerBroker)</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

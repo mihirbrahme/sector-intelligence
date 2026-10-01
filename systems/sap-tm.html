@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAP Transportation Management (SAP TM) · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>SAP Transportation Management (SAP TM)</h1>
+    <p class="def">Enterprise tier-1 transportation planning, carrier tendering, and freight settlement platform embedded within the SAP S/4HANA ERP ecosystem.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Enterprise tier-1 transportation planning, carrier tendering, and freight settlement platform embedded within the SAP S/4HANA ERP ecosystem</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>SAP TM executes operations against the enterprise sales order freight unit, multi-stop transport order, carrier freight tender, and Freight Settlement Document (FSD).</p>
+<p>The software manages complex global transportation networks across road, rail, ocean, and air:
+- <strong>Freight Unit Building</strong>: Automatically converts upstream SAP Sales &amp; Distribution (SD) orders and purchase orders into optimizable freight units based on weight, volume, and packaging rules.
+- <strong>Transportation Cockpit</strong>: Algorithmic engine that optimizes multi-stop truckload routing, vehicle scheduling, carrier selection, and load consolidation.
+- <strong>Carrier Collaboration</strong>: Broadcasts electronic load tenders (EDI 204 / SAP Business Network for Logistics) to contracted carriers based on procurement routing guides.
+- <strong>Transportation Charge Management (TCM)</strong>: Calculates complex freight costs, accessorial surcharges, and fuel formulas, generating automated Freight Settlement Documents for automated invoice verification in SAP Finance (FI-AP).</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models, <a href="../sectors/index.html">Model 3 (Contract Logistics / 4PL)</a>, and <a href="../sectors/index.html">Model 2 (Freight Forwarding)</a>.</li>
+<li><strong>Sub-sectors</strong>: Automotive OEMs, chemical manufacturing, consumer packaged goods (CPG), heavy industrial machinery, and enterprise retail.</li>
+<li><strong>Commercial model</strong>: Large enterprise software licenses based on annual freight spend, user tiers, or embedded S/4HANA core licenses, accompanied by multi-million-dollar systems integration contracts.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>SAP TM is the dominant enterprise TMS alongside <span class="term" data-term="system:oracle-tms" data-href="oracle-tms.html" tabindex="0">Oracle OTM</span> for Fortune 500 and Global 2000 industrial conglomerates.</p>
+<ul>
+<li><strong>Market position</strong>: Installed across thousands of multinational enterprises, holding an entrenched position wherever SAP ERP runs corporate manufacturing and finance.</li>
+<li><strong>Customer profile</strong>: Global enterprises with annual freight spend exceeding $100 million to several billion dollars (e.g. BMW, BASF, Dow Chemical, Nestlé).</li>
+<li><strong>Logistics provider adoption</strong>: Large logistics service providers (e.g. DB Schenker) deploy SAP TM as an enterprise forwarding and managed transportation engine.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>SAP TM projects are infamous for immense implementation duration, high consultant dependency, and operational rigidity:
+1. <strong>Multi-year implementation cycles</strong>: Standard enterprise rollouts run 18 to 36 months, demanding extensive support from global systems integrators (<span class="term" data-term="system:global-systems-integrators-and-big-4" data-href="global-systems-integrators-and-big-4.html" tabindex="0">Deloitte, Accenture, PwC</span>).
+2. <strong>Master data prerequisite burden</strong>: SAP TM requires pristine business partner master data, accurate geocoding coordinates, loading zone definitions, and freight charge schemas. If upstream ERP master data is dirty, route optimization fails.
+3. <strong>Rigid user experience for spot dispatch</strong>: The SAP Fiori web interface is heavily structured for transactional compliance; it is too slow and clicks-intensive for fast-paced domestic spot freight brokerage.
+4. <strong>Implementation post-mortems in forwarding</strong>: Historic attempts by freight forwarders to replace specialized forwarding systems with SAP TM have resulted in catastrophic write-offs (e.g. Panalpina's multi-million-dollar SAP TM project failure).</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Architecture</strong>: Available as "Embedded TM" inside the core SAP S/4HANA database instance, or "Standalone TM" on a dedicated SAP HANA server.</li>
+<li><strong>Native ERP linkage</strong>: Zero-latency database integration with SAP S/4HANA Sales &amp; Distribution (SD), Materials Management (MM), Extended Warehouse Management (EWM), and Financial Accounting (FI/CO).</li>
+<li><strong>Technology foundation</strong>: Built on the SAP ABAP programming language and Business Object Processing Framework (BOPF) / Core Data Services (CDS).</li>
+<li><strong>External connectivity</strong>: Connects to motor carriers and ocean lines via the SAP Business Network for Logistics, electronic data interchange (EDI 204, 214, 210), and RESTful APIs.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Developed by <strong>SAP SE</strong> (Walldorf, Germany; NYSE: SAP), the world's largest enterprise resource planning (ERP) software company.</li>
+<li>Replaced SAP LE-TRA (Logistics Execution Transportation) as the designated go-forward transportation engine for S/4HANA.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:systems-programme-trailing-the-forwarding-process-it-was-bought-to-fix" tabindex="0">systems programme trailing the forwarding process it was bought to fix</span> (Systems programme trailing operational process)</strong>: SAP TM is the classic corporate venue for <span class="term" data-term="mech:systems-programme-trailing-the-forwarding-process-it-was-bought-to-fix" tabindex="0">systems programme trailing the forwarding process it was bought to fix</span>. Multi-year S/4HANA TM rollouts frequently lag evolving supply chain realities. While waiting for corporate SAP TM templates to go live, regional logistics teams build external Excel workarounds to manage carrier tendering and rating.</li>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: SAP TM's Transportation Charge Management engine creates Freight Settlement Documents (FSD). If carrier freight bills diverge from FSD line items due to unratified detention or fuel discrepancies, invoices freeze in FI-AP exception queues, straining carrier relationships.</li>
+<li><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span> &amp; <span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span> (Escalator and surcharge lag)</strong>: Complex enterprise carrier procurement contracts stored in SAP TM must be continuously maintained; delayed loading of revised index-linked fuel matrices causes massive freight accrual misstatements.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: SAP marketing claims total end-to-end supply chain visibility, automated freight billing matching, and double-digit transportation spend reductions.</li>
+<li>Audited corporate filings: SAP SE financial reports disclose cloud revenue growth and S/4HANA migration momentum, while annual disclosures from global enterprise customers routinely record capitalized software costs in the tens of millions of dollars for global TM implementations.</li>
+<li>Gartner TMS Magic Quadrant: Gartner consistently ranks SAP as a "Leader" in its Magic Quadrant for Transportation Management Systems, praising unmatched ERP integration while noting high total cost of ownership (TCO) and dependency on external integration consultants.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/bunker-procurement-and-emissions-management.html">Bunker procurement and emissions management</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

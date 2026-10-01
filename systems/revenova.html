@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revenova · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Revenova</h1>
+    <p class="def">Cloud-native transportation management system built natively on the Salesforce platform, combining CRM with multi-modal freight brokerage dispatch.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Cloud-native transportation management system built natively on the Salesforce platform, combining CRM with multi-modal freight brokerage dispatch</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:revenova" data-href="revenova.html" tabindex="0">Revenova</span> executes operations against the customer sales opportunity, freight quote, load tender, carrier rate confirmation, and settlement invoice.</p>
+<p>Its core architectural differentiator is that it runs 100% natively on Salesforce (Force.com):
+- <strong>Unified CRM and TMS</strong>: Broker sales reps and carrier dispatchers operate inside the same object database. There is no API handoff between the customer relationship record and the dispatch record.
+- <strong>Quote-to-Load Execution</strong>: Inbound spot quotes generate instantaneous rating calculations, converting into active loads with a single click.
+- <strong>Carrier Vetting and Matching</strong>: Integrates compliance databases (RMIS, Highway) directly into the carrier selection workflow, blocking dispatch on unverified carriers.
+- <strong>Multi-Modal Management</strong>: Supports full truckload (FTL), LTL, intermodal, and international ocean/air forwarding shipments.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a>, <a href="../sectors/index.html">Model 2 (Freight Forwarding / 3PL)</a>, and <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Sub-sectors</strong>: Non-asset freight brokerages, freight forwarders, managed transportation services (4PL), and sales-driven logistics intermediaries.</li>
+<li><strong>Commercial model</strong>: Monthly or annual per-user subscription SaaS licenses. Note that customers must maintain underlying Salesforce platform or CRM user licenses, making total user seat costs higher than standalone TMS competitors.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p><span class="term" data-term="system:revenova" data-href="revenova.html" tabindex="0">Revenova</span> is the leading native Salesforce TMS in the North American market, positioned as the modern cloud alternative to legacy client-server systems like <span class="term" data-term="system:mcleod-loadmaster" data-href="mcleod-loadmaster.html" tabindex="0">McLeod</span> and <span class="term" data-term="system:trimble-tmw" data-href="trimble-tmw.html" tabindex="0">Trimble</span>.</p>
+<ul>
+<li><strong>Market position</strong>: Widely adopted by fast-scaling freight brokerages and logistics intermediaries seeking rapid customization without building proprietary software.</li>
+<li><strong>Customer profile</strong>: Mid-market freight brokerages and 3PLs generating between $10 million and $500 million in gross freight revenue.</li>
+<li><strong>User base</strong>: Highly popular with brokerages whose operational model depends on aggressive outbound phone and email sales, where CRM integration is critical.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>While Revenova offers immense CRM flexibility, it encounters technical and operational limitations:
+1. <strong>Salesforce platform tax</strong>: Compounding software licensing. Paying both Salesforce and Revenova user fees results in substantial monthly software expenses ($150 to $350+ per user/month).
+2. <strong>Salesforce governor limits</strong>: Salesforce enforces strict database query and API execution limits across its multi-tenant infrastructure. Ultra-high-frequency algorithmic trading or sub-second automated load matching can trip these thresholds.
+3. <strong>No asset fleet maintenance</strong>: Revenova is not engineered for asset-heavy carriers (<a href="../sectors/index.html">Model 4</a>). It lacks tractor maintenance modules, parts inventory tracking, and complex driver mileage payroll engines.
+4. <strong>Implementation drift</strong>: Because Salesforce is easily customizable, implementations often suffer from scope creep, with brokers over-engineering custom fields and validation rules that slow user adoption.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>Revenova's data model utilizes Salesforce custom objects and flows.</p>
+<ul>
+<li><strong>Data structure</strong>: Core entities (Load, Stop, Rate, Carrier, Commodity, Accessorial) inherit standard Salesforce security, auditing, and reporting infrastructure.</li>
+<li><strong>AppExchange ecosystem</strong>: Leverages pre-built integrations from the Salesforce AppExchange, including DocuSign, Conga Composer, and financial packages (Accounting Seed, QuickBooks).</li>
+<li><strong>Logistics APIs</strong>: Native pre-built API connectors to load boards (DAT, Truckstop.com), visibility aggregators (<span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span>, FourKites), carrier compliance platforms (RMIS, Highway), and settlement clearinghouses (<span class="term" data-term="system:triumphpay" data-href="triumphpay.html" tabindex="0">TriumphPay</span>).</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2013 by Michael Horvath and John Cowhey in Chicago, Illinois.</li>
+<li>Remains privately held, independent, and organically grown, avoiding private equity consolidation rollups.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Revenova directly targets <span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span>. Because customer sales quotes and operational dispatch share the identical Salesforce database, the manual handoff between sales reps and carrier dispatchers is eliminated, protecting net revenue margins on spot freight.</li>
+<li><strong><span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span></strong>: Provides automated buy-rate guidance inside the quoting screen. If carrier reps ignore system guidance and source manually, the resulting buy-rate variance is immediately visible on executive dashboards.</li>
+<li><strong><span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span> (Carrier-selection liability)</strong>: Revenova enforces carrier compliance rules at the point of dispatch. Automated integration with Highway and RMIS prevents dispatchers from tendering loads to carriers with expired certificates or fraudulent reincarnated DOT authorities.</li>
+<li><strong><span class="term" data-term="mech:avoidable-working-capital-float-drag-and-carrier-settlement-financing-penalty" tabindex="0">avoidable working capital float drag and carrier settlement financing penalty</span> (Working capital gap in brokerage)</strong>: Built-in cash-flow tracking links accounts receivable aging directly to carrier accounts payable, highlighting working capital exposure during rate spikes.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Revenova claims 40% improvements in broker productivity, 100% CRM alignment, and instant quote conversion.</li>
+<li>AppExchange reviews and user feedback: Salesforce AppExchange reviews from brokerage operators confirm high marks for CRM integration and workflow automation, while highlighting high total seat licensing costs as the primary commercial barrier.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/carrier-onboarding-and-compliance-automation.html">Carrier onboarding and compliance automation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

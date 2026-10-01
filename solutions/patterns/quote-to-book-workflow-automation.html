@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote-to-book workflow automation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Quote-to-book workflow automation</h1>
+    <p class="def">Automating the data pipeline from customer rate request to confirmed carrier tender via EDI and REST APIs, eliminating manual re-keying touches on standardized transactional freight.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#models-and-unit-of-work">Models and unit of work</a><a href="#unit-of-work-economics">Unit-of-work economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Automating the data pipeline from customer rate request to confirmed carrier tender via EDI and REST APIs, eliminating manual re-keying touches on standardized transactional freight</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a></p></dd></div></dl></section>
+<p>Automating the data pipeline from customer rate request to confirmed carrier tender via EDI and REST APIs, eliminating manual re-keying touches on standardized transactional freight.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Frontline broker and forwarder reps stop manually typing freight details across multiple internal and external software applications.</p>
+<p>When a customer submits a rate request or load tender via EDI 204, API, or structured portal, the system ingests the lane parameters automatically.</p>
+<p>A pricing engine applies contracted rate rules or dynamic margin guidance.</p>
+<p>The tender is accepted (EDI 990) without human touch if it meets pricing and credit thresholds.</p>
+<p>The TMS immediately generates matching carrier tenders on load boards or direct carrier dispatch portals.</p>
+<p>Reps do not key data from emails into the TMS, and do not re-key TMS data into carrier portals. They monitor automated exceptions.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Directly eliminates the three manual re-keying handoffs between the priced quote, the booked load, and the carrier dispatch confirmation.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<strong>Scope narrowed 2026-09-16.</strong> This file claimed models <strong>1, 2, 3, 10</strong>. The mechanisms it cites (<span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span>) reach only models <strong>1, 2</strong>, so the <code>models</code> field was cut to that. <strong>Models 3, 10 were dropped</strong>, not because the work is impossible there but because nothing in the library evidences the failure it would be fixing.</p>
+<p>To claim a dropped model back, open a mechanism for it and evidence it. Do not widen an existing mechanism's scope to fit this pattern.</p>
+</blockquote>
+<h2 id="models-and-unit-of-work">Models and unit of work</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../../sectors/index.html">Model 2 (Forwarding)</a>, <a href="../../sectors/index.html">Model 3 (Contract Logistics)</a>, and <a href="../../sectors/index.html">Model 10 (International Container Liner)</a>.</li>
+<li><strong>Unit of work</strong>: The load tender / shipment file booking. The workflow differs substantially by model: for Model 3, this is the warehouse quote-to-contract and onboarding sequence; for Model 10, it involves liner booking integrations via industry portals like INTTRA or CargoSmart rather than point-to-point EDI.</li>
+</ul>
+<h2 id="unit-of-work-economics">Unit-of-work economics</h2>
+<p>On standardized, repeat truckload freight, automated quote-to-book reduces manual handling time from 8–12 minutes per load down to under 2 minutes of oversight.</p>
+<p>This expands rep capacity, allowing operational reps to scale from 12–15 loads per day up to 25–35 loads per day on contracted freight, lowering personnel expense per load.</p>
+<ul>
+<li>Audited operator disclosures: <a href="../../companies/ch-robinson.html">C.H. Robinson</a> reported that automating order entry, carrier dispatch, tracking, and carrier invoicing enabled NAST to reduce personnel headcount by 10.8% YoY while expanding load volume (+1.5%), driving <span class="term" data-term="metric:adjusted-operating-margin-brokerage" data-href="../../reference/metrics.html#adjusted-operating-margin-brokerage" tabindex="0">adjusted operating margin</span> from 26.6% to 34.7% (2026-Q2).</li>
+<li>Audited operator disclosures: <a href="../../companies/rxo.html">RXO</a> reduced SG&amp;A from 15.1% of revenue (2025-Q2) to 11.9% (2026-Q2) through continuous automation of digital brokerage booking.</li>
+<li>Vendor claims: TMS vendors claim "100% zero-touch automated booking," which ignores the manual intervention required on non-standard spot tenders.</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Automated booking cannot operate over unstructured communication channels:</p>
+<ol>
+<li><strong>Direct shipper integration connectivity</strong>: The shipper must transmit tenders via EDI 204 or modern REST APIs. If shippers send freight tenders via unstructured emails with attached PDFs, an OCR/LLM document extraction pipeline must precede the TMS.</li>
+<li><strong>Pre-configured rating logic</strong>: Lane contracts, fuel surcharges, and mileage calculation engines (e.g., PCMiler, Rand McNally) must be synchronized between shipper and broker systems to prevent pricing mismatches.</li>
+<li><strong>Automated carrier credit and safety gates</strong>: The booking system must integrate real-time safety vetting (<span class="term" data-term="mech:carrier-selection-liability-repricing-the-cost-of-cheap-capacity" tabindex="0">carrier-selection liability repricing the cost of cheap capacity</span>) to block unvetted carriers from automatically binding loads.</li>
+</ol>
+<p>Establishing clean EDI/API customer connections dominates implementation effort and cost.</p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<p>Typically priced as <span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">subscription SaaS</span> tiered by monthly quote volume ($1,500 to $8,000 per month) or a per-quote transaction fee ($1.50 to $3.50 per automated quote generated). Enterprise forwarders often combine software licenses with <span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">fixed-price diagnostic then build</span></span> engagements for custom TMS/CRM integration. </p>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Digital freight brokerages proved that automating the initial booking handoff is relatively simple, but insufficient to ensure financial viability.</p>
+<p>As recorded in <span class="term" data-term="solution:digital-freight-brokerage-matching-algorithms" data-href="../failures/digital-freight-brokerage-matching-algorithms.html" tabindex="0">digital freight brokerage matching algorithms</span>, Convoy achieved over 80% automated digital matching, yet collapsed because manual exception handling, transit delays, and carrier fraud absorbed the operational labor that booking automation saved. </p>
+<p>Furthermore, <a href="../../insights/venture-subsidised-pricing-masks-negative-broker-unit-economics.html">venture-subsidised pricing masks negative broker unit economics</a> emphasizes that booking velocity cannot compensate for negative gross spreads.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch describes effortless API connectivity.</p>
+<p>The operational barrier is shipper technical fragmentation:
+- Enterprise shippers frequently refuse to build direct APIs to mid-market brokers, requiring reps to log into proprietary customer portals (e.g., Coupa, OTM) to manually accept tenders.
+- Shippers alter load details (pickup windows, commodity weights) post-tender via informal emails without updating the EDI feed, breaking the automated booking sequence.</p>
+<p>The software functions cleanly; the customer's operational behavior introduces manual intervention.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>Adoption is highest in North American truckload brokerage and European freight forwarding where shippers demand instant API spot pricing. In Southeast Asia (Indonesia archipelagic shipping, Malaysia cross-border trucking), relationship-driven phone negotiations and volatile backhaul availability limit pure API quote acceptance, requiring hybrid automated-intake with manual broker confirmation.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>.</p><p>Systems implementing this include <a href="../../systems/mcleod-loadmaster.html">McLeod Software (LoadMaster &amp; PowerBroker)</a>, <a href="../../systems/mercurygate.html">MercuryGate</a>, <a href="../../systems/revenova.html">Revenova</a>, <a href="../../systems/tms-platforms.html">TMS platforms (brokerage and shipper-side)</a>, <a href="../../systems/turvo.html">Turvo</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tag priority ladders can return stale EDGAR data · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>Tag priority ladders can return stale EDGAR data</h1>
+    <p class="def">Omitting modern revenue concepts in SEC EDGAR XBRL fallback ladders causes extraction scripts to return decade-old historical figures rather than reporting missing data.</p>
+    <div class="unit"><span>Unit of work</span><b>the load</b></div>
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#the-trap">The trap</a><a href="#where-it-was-observed">Where it was observed</a><a href="#how-to-spot-it">How to spot it</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>Omitting modern revenue concepts in SEC EDGAR XBRL fallback ladders causes extraction scripts to return decade-old historical figures rather than reporting missing data.</p></dd></div><div><dt>Operating models affected</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div><div><dt>Where observed</dt><dd><p>hub-group, old-dominion, the source recordsource-register</p></dd></div></dl></section>
+<h2 id="the-trap">The trap</h2>
+<p>US-GAAP financial reporting taxonomies evolve over time. Following ASC 606 adoption in 2018, most transport filers transitioned primary top-line disclosures from legacy concepts (like <code>SalesRevenueNet</code>) to modern revenue concepts (such as <code>RevenueFromContractWithCustomerIncludingAssessedTax</code>).</p>
+<p>When automated scrapers query the SEC <code>companyfacts</code> API, they traverse an ordered list of fallback tags.</p>
+<p>If the primary modern tag is missing from the script's priority list, the parser steps down to older legacy tags. Because historical SEC filings remain permanently stored in the company fact cache, the API returns the last recorded figure under the legacy tag — often from 2017 or 2018.</p>
+<p>The script treats this as a valid current retrieval. A stale number wearing an authentic source is far harder to detect than an empty field.</p>
+<h2 id="where-it-was-observed">Where it was observed</h2>
+<p>Documented in source register during programmatic financial extraction across the US filing cohort.</p>
+<p>Omitting <code>RevenueFromContractWithCustomerIncludingAssessedTax</code> from the priority sequence caused extraction routines to pull FY2017 and FY2018 revenues for <a href="../companies/hub-group.html">Hub Group, Inc.</a>, <a href="../companies/old-dominion.html">Old Dominion Freight Line, Inc.</a>, J.B. Hunt (JBHT), Marten Transport (MRTN), Covenant Logistics (CVLG), and P.A.M. Transportation (PAMT).</p>
+<p>The pipeline extracted figures nearly a decade out of date without triggering an error.</p>
+<h2 id="how-to-spot-it">How to spot it</h2>
+<p>Never accept an extracted XBRL fact without checking the <code>fy</code>, <code>fp</code>, and <code>end</code> fields in the returned JSON unit.</p>
+<p>Structure tag priority ladders to query modern ASC 606 revenue concepts first. Validate extracted years against expected fiscal periods before computing metrics in <a href="../reference/metrics.html">the metric dictionary</a> or evaluating peer models in <a href="../sectors/index.html">operating models</a>.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>This insight governs operational analysis under <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../sectors/05-ltl.html">LTL</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

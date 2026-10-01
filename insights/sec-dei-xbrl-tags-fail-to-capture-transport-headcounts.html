@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEC DEI XBRL tags fail to capture transport headcounts · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>SEC DEI XBRL tags fail to capture transport headcounts</h1>
+    <p class="def">SEC Document and Entity Information (DEI) XBRL taxonomy tags omit employee headcount for transport and logistics filers, who report human capital narratively in Item 1 text.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#the-trap">The trap</a><a href="#where-it-was-observed">Where it was observed</a><a href="#how-to-spot-it">How to spot it</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>SEC Document and Entity Information (DEI) XBRL taxonomy tags omit employee headcount for transport and logistics filers, who report human capital narratively in Item 1 text.</p></dd></div><div><dt>Where observed</dt><dd><p>the source recordsource-register, the source recordfiling-universe-us</p></dd></div></dl></section>
+<h2 id="the-trap">The trap</h2>
+<p>Programmatic financial pipelines querying the SEC EDGAR API attempt to extract full-time employee counts via standard XBRL taxonomy concepts (such as <code>dei/EntityNumberOfEmployees</code>).</p>
+<p>In US corporate reporting, tagging the employee headcount tag in the DEI schema is optional for most non-accelerated and commercial filers.</p>
+<p>While passenger airlines and retail conglomerates sometimes populate the tag, transport and logistics operators overwhelmingly disclose workforce figures in narrative tables within Form 10-K Item 1 (Human Capital Resources).</p>
+<p>Automated pipelines relying exclusively on <code>dei/EntityNumberOfEmployees</code> return null or obsolete figures for transport registrants, leading algorithms to flag public logistics companies as missing staffing data.</p>
+<h2 id="where-it-was-observed">Where it was observed</h2>
+<p>Out of 131 transport and logistics public filers, only 7 companies populated the <code>dei/EntityNumberOfEmployees</code> XBRL tag. Most of those 7 represented legacy, unmaintained data from passenger airlines.</p>
+<p>Major transport operators — including truckload carriers, brokers, and logistics intermediaries — returned null, despite disclosing full employee decompositions (such as driver counts, terminal staff, and back-office headcount) in the text of Item 1.</p>
+<h2 id="how-to-spot-it">How to spot it</h2>
+<p>Never rely on XBRL taxonomy tags to extract workforce numbers for US logistics filers across <a href="../sectors/index.html">all operating models</a>.</p>
+<p>Route headcount extraction to regular-expression parsing or LLM extraction of Form 10-K Item 1 / Item 1A text. Verify extracted figures before calculating productivity metrics in <a href="../reference/metrics.html">the metric dictionary</a> (such as <span class="term" data-term="metric:loads-per-rep-per-day" data-href="../reference/metrics.html#loads-per-rep-per-day" tabindex="0">loads per rep per day</span> or net revenue per employee).</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

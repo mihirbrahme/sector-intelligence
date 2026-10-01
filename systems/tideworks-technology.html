@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tideworks Technology · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Tideworks Technology</h1>
+    <p class="def">Terminal operating system provider dominating North American marine terminals and Class I railroad intermodal ramps.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Terminal operating system provider dominating North American marine terminals and Class I railroad intermodal ramps</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:tideworks-technology" data-href="tideworks-technology.html" tabindex="0">Tideworks Technology</span> executes operations against the container lift, railcar well-car slot move, vessel bay plan, and gate interchange transaction.</p>
+<p>Its core software suite spans marine and rail intermodal operations:
+- <strong>Spinnaker</strong>: Graphical planning system for vessel stowage planning and container yard slotting.
+- <strong>Intermodal Pro</strong>: Specialized rail TOS managing intermodal train loading, track capacity, and hostler truck dispatch.
+- <strong>Traffic Control</strong>: Real-time equipment dispatch directing yard hostlers, top picks, and reachstackers.
+- <strong>GateVision</strong>: Optical gate system logging driver interchange receipts and container condition inspections.</p>
+<p>When a container train arrives at an intermodal ramp, Intermodal Pro maps train geometry, validates railcar weight limits, and sequences crane work lists to maximize ramp throughput.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>, <a href="../sectors/index.html">Model 7 (Rail Intermodal)</a>.</li>
+<li><strong>Sub-sectors</strong>: Marine container terminals, river ports, breakbulk facilities, and North American Class I rail ramps.</li>
+<li><strong>Commercial model</strong>: Perpetual licenses with annual maintenance contracts, or hosted SaaS subscriptions. Deployments include substantial professional services for EDI mapping and terminal configuration.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Tideworks is the primary North American competitor to <span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span> in marine terminals and the leading commercial TOS in Class I rail ramps.</p>
+<ul>
+<li><strong>Market share</strong>: Powers over 120 marine terminals and intermodal rail ramps globally. Highly entrenched across the United States, Central America, and the Caribbean.</li>
+<li><strong>Customer profile</strong>: Major terminal operator SSA Marine, Crowley Maritime, and Class I railroad networks. Terminal throughput ranges from 100,000 TEU regional ports to facilities exceeding 2 million TEU.</li>
+<li><strong>Rail presence</strong>: Dominates US rail intermodal ramp operations alongside proprietary railroad systems.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Tideworks faces structural constraints outside the Americas and in ultra-automated mega-terminals:
+1. <strong>Limited mega-terminal automation</strong>: Tideworks has fewer reference deployments managing fully automated stacking cranes (ASCs) or automated guided vehicles (AGVs) compared to Navis or <span class="term" data-term="system:kalmar" data-href="kalmar.html" tabindex="0">Kalmar</span> TLS.
+2. <strong>International footprint gap</strong>: Presence across Asia and Northern Europe is minimal, where Navis, CyberLogitec, and proprietary terminal software dominate.
+3. <strong>Legacy client migrations</strong>: Older terminals run legacy desktop client installations. Migrating customers to the web-native Mainsail 10 platform requires multi-year project cycles and data schema upgrades.
+4. <strong>Mixed cargo complexity</strong>: Custom billing rules for non-containerized cargo (breakbulk, steel, project cargo) require manual workarounds outside standard container tables.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>The Tideworks data architecture reflects rail and marine container operations.</p>
+<ul>
+<li><strong>Database</strong>: Relational Microsoft SQL Server architecture supporting transactional gate and yard updates.</li>
+<li><strong>Messaging standards</strong>: Full support for marine EDIFACT (BAPLIE, COARRI, CODECO) and North American rail EDI standards (EDI 322, 417, 421).</li>
+<li><strong>Hardware interfacing</strong>: Deep integration with Gate Operating Systems (GOS), Optical Character Recognition (OCR) systems (Certus, CAMCO), differential GPS equipment tracking, and Weigh-in-Motion scales.</li>
+<li><strong>APIs</strong>: Mainsail 10 provides RESTful API endpoints for gate appointment scheduling, ocean carrier tracking, and rail inventory queries.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 1998 in Seattle, Washington.</li>
+<li>Created by <strong>Carrix, Inc.</strong>, the parent company of <strong>SSA Marine</strong> (the largest privately held marine terminal operator in the United States).</li>
+<li>Operates as an independent commercial technology subsidiary, selling both to SSA Marine terminals and competing third-party terminal operators.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span> (Berth, yard and landside constraints)</strong>: Tideworks Spinnaker and Intermodal Pro direct container stacking. When rail ramp or yard dwell extends, ground slot availability shrinks. Equipment operators must execute secondary shuffles to extract designated boxes, collapsing crane lifts per hour.</li>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Tideworks Mainsail maintains storage clocks and calculates terminal demurrage / rail storage fees. Accurate calculation depends on continuous gate interchange (EDI 322) reconciliation.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Tideworks claims rapid deployment times, seamless turnkey rail and marine integration, and up to 40% reduction in gate transaction dwell.</li>
+<li>Industry case studies and port authority records: Deployments across Port of Gulfport, Crowley San Juan, and SSA Marine terminals demonstrate lower total cost of ownership and faster deployment cycles than <span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span>, offset by a narrower automated equipment control footprint.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/computer-vision-for-yards-and-warehouses.html">Computer vision for yards and warehouses</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

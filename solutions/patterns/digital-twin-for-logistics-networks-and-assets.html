@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital twin for logistics networks and assets · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Digital twin for logistics networks and assets</h1>
+    <p class="def">Discrete-event simulation and physics-informed digital twin models replicating physical logistics nodes, container terminals, automated warehouses, and fleet voyage rotations to stress-test capacity and de-risk capex.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Discrete-event simulation and physics-informed digital twin models replicating physical logistics nodes, container terminals, automated warehouses, and fleet voyage rotations to stress-test capacity and de-risk capex</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a></p></dd></div></dl></section>
+<p>Discrete-event simulation and physics-informed digital twin models replicating physical logistics nodes, container terminals, automated warehouses, and fleet voyage rotations to stress-test capacity and de-risk capex.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Logistics infrastructure investments—such as automated container terminal cranes, high-speed warehouse sortation systems, or multi-vessel fleet acquisitions—require tens or hundreds of millions in capital. Traditional planning relies on static spreadsheets and nominal manufacturer throughput ratings that fail to account for stochastic operational reality: equipment breakdowns, human fatigue, weather slowdowns, and peak volume bunching.</p>
+<p>This pattern builds dynamic, discrete-event simulation models and physics-informed digital twins that replicate the operational dynamics of physical logistics systems.</p>
+<p>First, engineers ingest high-resolution historical time-series data: equipment cycle times, crane acceleration curves, truck arrival distributions, conveyor speeds, and mean-time-between-failures (MTBF).</p>
+<p>Second, the platform constructs an interactive, virtual replication of the physical facility or fleet network (using simulation frameworks such as AnyLogic, FlexSim, or Siemens Plant Simulation). The digital twin models every kinematic interaction: automated guided vehicle (AGV) routing contention, quay crane container moves, yard block stacking constraints, and forklift travel paths.</p>
+<p>Third, operations and engineering teams use the digital twin to stress-test scenarios before deploying physical changes. Operators simulate peak holiday surges, vessel bunching events, or equipment breakdowns to identify hidden bottlenecks, optimize dispatch algorithms, and evaluate capital investment proposals before contracts are signed.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Models automated distribution centers: automated storage and retrieval systems (AS/RS), autonomous mobile robot (AMR) fleets, conveyor merge logic, and dynamic SKU slotting reallocation under shifting retail order profiles.</li>
+<li><strong><a href="../../sectors/index.html">Model 5 (LTL Network)</a></strong>: Simulates central breakbulk cross-dock terminals, modeling forklift travel times, inbound trailer unload scheduling, sortation conveyor capacity, and linehaul dispatch cutoffs under freight arrival volatility.</li>
+<li><strong><a href="../../sectors/index.html">Model 6 (Ports &amp; Terminals)</a></strong>: Builds comprehensive container terminal digital twins: simulating ship-to-shore (STS) crane productivity, quay wall berth allocation, yard stacking crane kinematics, and truck appointment gate queues under heavy vessel bunching.</li>
+<li><strong><a href="../../sectors/index.html">Model 8</a> &amp; <a href="../../sectors/index.html">Model 13 (Inland &amp; Coastal Bulk)</a></strong>: Simulates river lock congestion, seasonal waterway draft restrictions, and tug/barge fleet rotations to optimize asset utilization.</li>
+<li><strong><a href="../../sectors/index.html">Model 10</a>, <a href="../../sectors/index.html">11</a>, <a href="../../sectors/index.html">12 (Ocean Shipping)</a></strong>: Simulates multi-vessel fleet deployment, weather routing, dry-dock scheduling rotations, and EU ETS carbon compliance costs under varying speed profiles.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span></strong>: Identifies container yard bottlenecks and gate congestion points before they paralyze terminal throughput, optimizing yard block allocation strategies.</li>
+<li><strong><span class="term" data-term="mech:dry-docking-bunching-removes-revenue-days" tabindex="0">dry-docking bunching removes revenue days</span></strong>: Simulates fleet maintenance schedules across multi-year horizons to prevent dry-dock bunching that idles earning capacity during market rate peaks.</li>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span></strong>: Models equipment wear and component fatigue to optimize preventative maintenance scheduling before catastrophic failures occur.</li>
+<li><strong><span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span> (Uncontrolled purchased input behaving as fixed cost)</strong>: Simulates terminal and warehouse operating schedules to align purchased contractor labor and auxiliary equipment leasing with empirical demand curves.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<strong>Scope narrowed 2026-09-16.</strong> This file claimed models <strong>3, 5, 6, 8, 9, 10, 11, 12, 13</strong>. The mechanisms it cites (<span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span>, <span class="term" data-term="mech:dry-docking-bunching-removes-revenue-days" tabindex="0">dry-docking bunching removes revenue days</span>, <span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span>, <span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span>) reach only models <strong>6, 8, 9, 10, 11, 12, 13</strong>, so the <code>models</code> field was cut to that. <strong>Models 3, 5 were dropped</strong>, not because the work is impossible there but because nothing in the library evidences the failure it would be fixing.</p>
+<p>To claim a dropped model back, open a mechanism for it and evidence it. Do not widen an existing mechanism's scope to fit this pattern.</p>
+</blockquote>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<ul>
+<li><strong>Unit of work</strong>: Simulated facility model, digital asset twin instance, or completed scenario analysis project run.</li>
+<li><strong>Simulation project economics</strong>: Building and calibrating a discrete-event digital twin for a terminal or major warehouse runs $140,000 to $480,000. </li>
+<li><strong>Software licensing</strong>: Enterprise discrete-event simulation software licenses run $20,000 to $75,000 annually. </li>
+<li><strong>Capex risk mitigation</strong>: De-risks multi-million dollar capital allocations; identifying a crane or conveyor bottleneck before procurement prevents $5M to $50M in stranded automation capex. </li>
+<li><strong>Operational throughput lift</strong>: Optimizing terminal yard stacking rules or warehouse picking wave logic via simulation lifts physical throughput by 8% to 18% without adding physical assets. </li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Digital twins fail when treated as 3D visualization exercises rather than rigorous analytical tools:</p>
+<ol>
+<li><strong>High-resolution empirical time-series data</strong>: Extracting real equipment cycle times, operator travel speeds, and arrival distributions rather than relying on manufacturer catalog ratings.</li>
+<li><strong>Detailed physical CAD/BIM specifications</strong>: Precise 3D structural blueprints, conveyor curve radii, crane acceleration limits, and aisle widths.</li>
+<li><strong>Rigorous statistical calibration</strong>: Comparing simulation model outputs against actual historical production data to achieve &lt;5% variance across all operational metrics. </li>
+</ol>
+<p>Empirical data collection, physical mapping, and statistical calibration consume 75% of digital twin development timelines. </p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li>Initial facility model construction, data calibration, and baseline scenario testing utilize <span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">fixed-price-diagnostic-then-build</span>.</li>
+<li>Simulation software engines and cloud compute instances license via <span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">subscription-saas</span>.</li>
+<li>Ongoing quarterly scenario modeling, capex advisory, and layout redesign runs contract via <span class="term" data-term="solution:time-and-materials" data-href="../structures/time-and-materials.html" tabindex="0">time-and-materials</span>.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>The industrial technology failure history is filled with expensive, photorealistic 3D simulation models that were abandoned within months of completion.</p>
+<p>The predominant failure mode is the "one-off consultant model." Logistics engineering firms frequently pay external simulation consultancies hundreds of thousands of dollars to model a new distribution center or port terminal during initial capital planning. Once the facility opens, real-world operating conditions change (SKU velocity shifts, container dwell times increase, truck arrival patterns alter). Because the simulation model was built as a static one-off file with hardcoded data inputs rather than an ongoing digital twin connected to live operational feeds, it becomes obsolete and is permanently shelved.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The vendor pitch promises effortless digital twin creation from CAD drawings that continuously mirrors operations in real time.</p>
+<p>The operational reality is the extreme difficulty of calibrating stochastic human and machine interactions. Modeling a conveyor belt running at a constant speed is trivial; modeling how equipment operators alter work pacing when congested, how truck drivers arrive in unpredictable bunches on Friday afternoons, or how weather slows quay crane operations requires sophisticated statistical modeling. Without rigorous empirical calibration, digital twins produce overly optimistic throughput numbers that collapse upon physical deployment.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>US</strong>: Extensive use in mega-fulfillment centers (1M+ sq ft) and Class I intermodal rail ramp automation planning. Heavy focus on optimizing labor productivity under high wage rates.</li>
+<li><strong>UK/Europe</strong>: Widespread adoption across highly automated container hubs (Rotterdam, Hamburg, Antwerp) and cold-chain grocery networks. Strict environmental noise and energy optimization modeling.</li>
+<li><strong>Southeast Asia</strong>: Rapid deployment in mega-transshipment container ports (e.g. PSA Singapore Tuas Mega Port, Port of Tanjung Pelepas) to optimize automated guided vehicle (AGV) traffic flow and yard crane block stacking under high transshipment density.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>, <a href="../../sectors/09-protected-liner-shipping-jones-act-non-contiguous-trades.html">Protected liner shipping / Jones Act non-contiguous trades</a>, <a href="../../sectors/10-international-container-liner-and-feeder-shipping.html">International container liner and feeder shipping</a>, <a href="../../sectors/11-dry-bulk-ocean-logistics-and-chartering.html">Dry bulk ocean logistics and chartering</a>, <a href="../../sectors/12-energy-shipping-lng-crude-product-offshore-fpso-fso.html">Energy shipping: LNG, crude, product, offshore FPSO/FSO</a>, <a href="../../sectors/13-great-lakes-and-coastal-bulk-shipping.html">Great Lakes and coastal bulk shipping</a>.</p><p>Systems implementing this include <a href="../../systems/abs-nautical-systems.html">ABS Nautical Systems (ABS Wavesight)</a>, <a href="../../systems/danaos.html">Danaos Management Consultants (Danaos Software)</a>, <a href="../../systems/kalmar.html">Kalmar</a>, <a href="../../systems/navis-n4.html">Navis N4</a>, <a href="../../systems/octopi.html">Octopi (by Navis / Kaleris)</a>, <a href="../../systems/q88.html">Q88 (now Veson Nautical)</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
