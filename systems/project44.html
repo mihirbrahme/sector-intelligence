@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>project44 · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>project44</h1>
+    <p class="def">Venture-backed real-time transportation visibility platform operating a global multimodal carrier network for shipment tracking and arrival prediction.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Venture-backed real-time transportation visibility platform operating a global multimodal carrier network for shipment tracking and arrival prediction</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span> processes the carrier telematics ping, ELD location record, ocean container milestone, and predictive arrival estimate (ETA).</p>
+<p>Its flagship platform, Movement, aggregates data feeds across road freight, ocean container shipping, air cargo, and rail networks.</p>
+<p>The platform connects to enterprise TMS systems (SAP, Oracle, Blue Yonder, <span class="term" data-term="system:mercurygate" data-href="mercurygate.html" tabindex="0">MercuryGate</span>). It ingests active shipment orders and links them to assigned motor carriers and ocean container numbers.</p>
+<p>The engine normalises disparate carrier telematics feeds, applies machine learning models to calculate destination arrival times, and issues automated transit exception alerts.</p>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../solutions/patterns/event-driven-visibility-data-pipeline.html" tabindex="0"><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../solutions/patterns/event-driven-visibility-data-pipeline.html" tabindex="0">Event-driven visibility data pipeline</span></span>: Ingesting, cleaning, and standardising carrier telematics and container milestone feeds.</li>
+<li><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0"><span class="term" data-term="solution:detention-and-demurrage-dispute-recovery" data-href="../solutions/patterns/detention-and-demurrage-dispute-recovery.html" tabindex="0">Detention and demurrage dispute recovery</span></span>: Logging objective facility arrival, gate-in, and gate-out timestamps.</li>
+<li><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0"><span class="term" data-term="solution:exception-triage-and-resolution-workflow" data-href="../solutions/patterns/exception-triage-and-resolution-workflow.html" tabindex="0">Exception triage and resolution workflow</span></span>: Flagging delayed shipments to customer service teams before arrival failure.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../sectors/index.html">Model 2 (Forwarding)</a>, <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Geographies</strong>: Global carrier coverage across North America, Europe, Latin America, and Asia-Pacific container lanes.</li>
+<li><strong>Commercial model</strong>: Enterprise <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span> contracts based on annual tracked shipment volume bands. Contracts require multi-year enterprise commitments with substantial annual licensing minimums.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Platform effectiveness is constrained by carrier network compliance. While integration is automated for major asset carriers, small motor carriers and spot owner-operators frequently fail to connect.</p>
+<p>Without aggressive shipper contract enforcement, road freight tracking coverage regularly stalls at 50% to 65%. Gaps force staff back to manual tracking calls.</p>
+<p>Geofencing configuration remains an ongoing failure point. Inaccurate customer distribution center coordinates generate false dwell time records and trigger excessive delay notifications.</p>
+<p>Venture capital contraction post-2022 forced headcount rationalisation and tighter operational expenditure, shifting focus from aggressive land-grab expansion to operational profitability.</p>
+<p>This operational ceiling is analyzed in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../solutions/failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility and control towers</span> and <a href="../insights/visibility-platforms-fail-at-carrier-data-capture-not-software-layer.html">visibility platforms fail at carrier data capture</a>.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p><span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span> refuses manual carrier compliance chasing and customer facility geofence auditing.</p>
+<p>The vendor provides automated carrier invitation workflows and API documentation. It does not deploy personnel to call thousands of non-compliant independent owner-operators.</p>
+<p>project44 assumes the customer possesses accurate polygon geofences for all physical warehouse docks, rail heads, and customer receiving yards.</p>
+<p>Shippers must either commit internal transportation coordinators or contract external <span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../solutions/structures/per-transaction-managed-service-or-bpo.html" tabindex="0">BPO services</span> to manage carrier compliance and maintain geofence boundaries.</p>
+<p>This reality reflects <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<ul>
+<li><strong>Global Enterprise Shippers</strong>: The leading visibility provider for Fortune 500 multinationals (including Unilever, Amazon, Lenovo, and Mondelēz).</li>
+<li><strong>North American Freight Brokers</strong>: Integrated into major freight brokerage TMS platforms to automate load tracking.</li>
+<li><strong>Mid-Market Shippers</strong>: Adoption is tempered by enterprise pricing thresholds and high carrier onboarding effort.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Marketing claims 80% reduction in manual tracking calls, carrier connectivity across 170+ countries, and 95%+ tracking coverage.</li>
+<li>Gartner research: Ranked as a Leader in the Gartner Magic Quadrant for Real-Time Transportation <span class="term" data-term="system:visibility-platforms" data-href="visibility-platforms.html" tabindex="0">Visibility Platforms</span>, commended for global data scale while noting enterprise implementation friction in spot carrier onboarding.</li>
+<li>Financial reporting: Venture disclosures (PitchBook, Wall Street Journal) report over $800M in cumulative capital raised, followed by post-2022 corporate restructuring to achieve cash-flow positive operations amid tighter enterprise software budgets.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>, <a href="../solutions/patterns/control-tower-platform-build.html">Control tower platform build</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Airline crew pairing and fatigue management · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Airline crew pairing and fatigue management</h1>
+    <p class="def">Mathematical combinatorial optimization generating compliant, cost-effective flight crew pairings and monthly rosters under FAA Part 117 / EASA FTL regulations and union collective bargaining agreements.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Mathematical combinatorial optimization generating compliant, cost-effective flight crew pairings and monthly rosters under FAA Part 117 / EASA FTL regulations and union collective bargaining agreements</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/14-passenger-network-legacy-carrier.html">Passenger Network Legacy Carrier</a>, <a href="../../sectors/15-point-to-point-low-cost-carrier.html">Point-to-Point Low-Cost Carrier</a>, <a href="../../sectors/16-regional-capacity-purchase-agreement-carrier.html">Regional Capacity Purchase Agreement Carrier</a></p></dd></div></dl></section>
+<p>Mathematical combinatorial optimization generating compliant, cost-effective flight crew pairings and monthly rosters under FAA Part 117 / EASA FTL regulations and union collective bargaining agreements.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Flight crew salaries and benefits represent the largest controllable operating cost for commercial airlines, typically consuming 25% to 35% of total CASM ex-fuel. Poorly planned crew rotations generate deadhead repositioning flights, non-flying duty rig pay guarantees, and hotel expenses.</p>
+<p>This pattern executes end-to-end mathematical crew planning and fatigue risk management across three operational horizons:</p>
+<ol>
+<li>
+<p><strong>Pairing generation (planning horizon)</strong>:
+- Formulates the flight network as a large-scale set-partitioning problem.
+- Links scheduled flight legs into multi-day work sequences ("pairings") that originate and terminate at the same crew base.
+- Optimizes against legal Flight Duty Periods (FDP), duty rigs (e.g. minimum 1 hour of pay per 2 hours of on-duty time), and trip rigs (e.g. 1 hour of pay per 3.5 hours away from base).
+- Minimizes non-revenue deadhead flights where crew members travel as passengers to position for duty.</p>
+</li>
+<li>
+<p><strong>Rostering and preferential bidding (PBS)</strong>:
+- Assigns generated pairings, training events, and reserve duty days to individual pilots and flight attendants.
+- Solves monthly bid lines according to contractual employee seniority while respecting vacation blocks and recurrent simulator training schedules.</p>
+</li>
+<li>
+<p><strong>Fatigue risk management &amp; real-time monitoring (day-of-ops)</strong>:
+- Evaluates crew alertness using bio-mathematical fatigue models (such as SAFTE or FAST).
+- Tracks operations through the Window of Circadian Low (WOCL: 02:00 to 05:59) and multi-leg short-haul schedules.
+- Enforces rolling cumulative flight time limits (FAA Part 117 caps: 100 flight hours per 672 consecutive hours; 1,000 flight hours per 365 calendar days).</p>
+</li>
+</ol>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 14 (Passenger Network Legacy Carrier)</a></strong>: Hub carriers operate diverse aircraft fleets (Boeing 737, 777, 787; Airbus A321, A330, A350) with segregated pilot seniority lists. Pairings range from single-day turns to 4-day domestic rotations and augmented 3-to-4 pilot crews on 16-hour ultra-long-haul intercontinental routes.</li>
+<li><strong><a href="../../sectors/index.html">Model 15 (Point-to-Point LCC/ULCC)</a></strong>: Operates single-fleet types (Boeing 737 or Airbus A320) with high aircraft utilization. Solvers focus on "day-turn" pairings where crews fly 3 to 5 legs daily and return to base nightly, eliminating hotel room costs and per diem expenses.</li>
+<li><strong><a href="../../sectors/index.html">Model 16 (Regional CPA Feeder)</a></strong>: Regional operators experience high captain attrition to mainline carriers (<span class="term" data-term="mech:regional-carrier-captain-attrition-drain" tabindex="0">regional carrier captain attrition drain</span>). Pairings must be built around a constrained pool of qualified captains and high volumes of newly upgraded first officers, balancing mainline partner flight schedules with simulator training pipelines.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:crew-legality-cascade-under-irregular-operations" tabindex="0">crew legality cascade under irregular operations</span></strong>: Replaces brittle, zero-buffer crew pairings with robust scheduling. Generates pairings with strategic turn buffers at congestion-prone hubs, preventing single flight delays from triggering downstream Part 117 legality expirations.</li>
+<li><strong><span class="term" data-term="mech:regional-carrier-captain-attrition-drain" tabindex="0">regional carrier captain attrition drain</span></strong>: Optimizes simulator training schedules and line checks alongside operational flying, maximizing the productive block hours of available captains during severe pilot pipeline shortages.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the crew pairing, duty period, or monthly bid line.</p>
+<ul>
+<li>Mainline airline pilot compensation ranges from $150 to $450+ per block hour.</li>
+<li>For a 200-aircraft mainline fleet operating 800 daily flights, uncredited pay (duty rigs, excess layovers, and deadheads) can exceed $50 million annually. </li>
+<li>Advanced combinatorial pairing solvers that reduce uncredited pay by 1.5% to 3.0% yield $10M to $25M in annual operating cost reductions for a major carrier. </li>
+<li>Enterprise crew optimization suites cost $1.0M to $3.5M in implementation and software licenses, plus $400,000 to $1.2M in annual maintenance. </li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Crew pairing optimization projects stall without rigorous contract and schedule foundations:</p>
+<ol>
+<li><strong>Exhaustive collective bargaining agreement (CBA) parameterization</strong>: Every union contractual rule—deadhead pay formulas, duty rig guarantees, minimum layover rest requirements, international per diems—must be translated into deterministic mathematical constraints.</li>
+<li><strong>Schedule stability freeze</strong>: OCC and network planning flight schedules must be locked 45 to 60 days before the operating month to allow multi-day pairing solver runs and union bidding windows.</li>
+<li><strong>Union-approved Preferential Bidding System (PBS)</strong>: Pilot and flight attendant labor unions must validate and certify the bidding algorithm's fairness and seniority integrity before implementation.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Core engines (e.g. Boeing / Jeppesen Crew Pairing, CAE Crew Management, IBS iFlight Crew) licensed on annual recurring contracts based on total active crew headcounts ($15 to $40 per crew member monthly). </li>
+<li><strong><span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">Forward-deployed engineer embedded</span></strong>: Specialized operations research consultants ($35,000 to $65,000 monthly) configuring column-generation algorithms and calibrating airline-specific fatigue rules. </li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Airlines that deploy theoretical mathematical models without frontline operational buffers create fragile flight schedules.</p>
+<p>In the late 2010s, multiple carriers tuned crew pairing solvers purely to minimize paper cost, stripping connection buffers between flights. While scheduled payroll expense appeared lower on paper, the slightest ground delay or summer convective thunderstorm shattered the schedule, leaving thousands of flight crews stranded away from base and triggering massive IROPS overtime payouts.</p>
+<p>Automated Preferential Bidding Systems (PBS) that fail to provide transparent scoring rules frequently face immediate union rejection, triggering formal labor grievances and forced reversion to manual paper line bidding.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>Crew pairing is among the most computationally difficult NP-hard problems in industrial operations research:</p>
+<ul>
+<li>Large carrier networks generate billions of legally valid pairing combinations across thousands of monthly flight segments.</li>
+<li>Labor union agreements contain hundreds of interlocking clauses with regional exceptions, grandfathered pay guarantees, and complex duty rigs.</li>
+<li>Optimizing for nominal cost often works directly against schedule resilience; the cheapest pairing schedule on paper is typically the most vulnerable to weather disruption.</li>
+</ul>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: FAA Part 117 (14 CFR Part 117) dictates strict, non-linear flight duty periods based on report time and segment count, accompanied by powerful pilot unions (ALPA, APA, SWAPA).</li>
+<li><strong>Europe</strong>: Governed by EASA Flight Time Limitations (FTL - Regulation (EU) No 83/2014), mandating strict cumulative duty caps and fatigue management systems.</li>
+<li><strong>Middle East &amp; Asia-Pacific</strong>: Long-haul hub carriers rely heavily on augmented crew operations (3 to 4 pilots per flight) navigating diverse airspace jurisdictions.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/14-passenger-network-legacy-carrier.html">Passenger Network Legacy Carrier</a>, <a href="../../sectors/15-point-to-point-low-cost-carrier.html">Point-to-Point Low-Cost Carrier</a>, <a href="../../sectors/16-regional-capacity-purchase-agreement-carrier.html">Regional Capacity Purchase Agreement Carrier</a>.</p><p>Systems implementing this include <a href="../../systems/airline-core-operating-systems.html">Airline core operating systems (PSS, OCC, Crew)</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

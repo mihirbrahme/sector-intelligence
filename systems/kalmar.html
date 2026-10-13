@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalmar · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Kalmar</h1>
+    <p class="def">Heavy port equipment manufacturer and terminal automation software provider dominating container crane automation and equipment telemetry.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Heavy port equipment manufacturer and terminal automation software provider dominating container crane automation and equipment telemetry</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:kalmar" data-href="kalmar.html" tabindex="0">Kalmar</span> executes operations against the container lift, spreader twistlock cycle, automated crane move, and equipment machine-hour.</p>
+<p>The firm spans heavy container-handling hardware and terminal control software:
+- <strong>Automation Software (<span class="term" data-term="system:kalmar" data-href="kalmar.html" tabindex="0">Kalmar</span> One &amp; TLS)</strong>: The Terminal Logistics System (TLS) acts as the equipment control layer. It sits between the central Terminal Operating System (e.g. <span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0"><span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span></span>) and the programmable logic controllers (PLCs) of automated stacking cranes (ASCs) or automated guided vehicles (AGVs).
+- <strong>Process Automation (Kalmar SmartPort)</strong>: Sensor and software suites for manual and semi-automated terminals:
+- <em>SmartStack</em>: Uses differential GPS and load sensors to track container positions in real time, preventing "lost container" records.
+- <em>SmartLift</em>: Automates job dispatch between yard cranes and internal terminal tractors.
+- <strong>Equipment Telematics (Kalmar Insight)</strong>: Ingests CAN bus telemetry across terminal tractors, reachstackers, and straddle carriers to track fuel burn, idling, and maintenance diagnostic trouble codes.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 6 (Ports &amp; Terminals)</a>.</li>
+<li><strong>Sub-sectors</strong>: Automated container terminals, semi-automated straddle-carrier yards, intermodal rail hubs, and heavy industrial cargo facilities.</li>
+<li><strong>Commercial model</strong>: Large capital expenditure (heavy equipment sales), multi-year automation software integration contracts, equipment maintenance service agreements, and subscription SaaS for telematics (Kalmar Insight).</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Kalmar shares a global duopoly in automated port handling equipment and software with Finnish competitor Konecranes, competing with China's ZPMC in heavy quay cranes.</p>
+<ul>
+<li><strong>Market share</strong>: Kalmar equipment and automation systems operate in over 140 countries and hundreds of marine terminals.</li>
+<li><strong>Customer profile</strong>: Global terminal operators (DP World, APM Terminals, Hutchison Ports), port authorities, and rail operators. Flagship automated projects include Port of Melbourne (Victoria International Container Terminal), TraPac Los Angeles, and London Gateway.</li>
+<li><strong>Fleet scale</strong>: Customers operate fleets ranging from 20 terminal tractors to complexes with 60+ automated stacking cranes and 100+ automated shuttles.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Full terminal automation projects involving Kalmar hardware and software are notorious for multi-year delays and capital cost blowouts:
+1. <strong>Automation cutover friction</strong>: Integrating Kalmar TLS with third-party TOS platforms (such as <span class="term" data-term="system:navis-n4" data-href="navis-n4.html" tabindex="0">Navis N4</span> or proprietary terminal code) frequently generates messaging race conditions and dispatch latency.
+2. <strong>Sensor sensitivity in dirty environments</strong>: SmartPort optical sensors, laser scanners, and DGPS units suffer accuracy degradation from maritime salt spray, fog, heavy rain, and physical shock during container landings.
+3. <strong>Safety exclusion zone trips</strong>: Automated stacking blocks automatically shut down when unauthorized personnel or stray equipment breach infrared perimeter safety fences, paralyzing an entire yard stack.
+4. <strong>Union resistance and labor agreements</strong>: Terminal automation projects face intense opposition from port labor unions (e.g. ILA on the US East Coast, ILWU on the US West Coast), restricting automated crane deployments.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>Kalmar's software operates in real-time execution environments governed by millisecond response latencies.</p>
+<ul>
+<li><strong>Protocols</strong>: Industrial Ethernet, CAN bus (J1939), OPC Unified Architecture (OPC UA), and Modbus protocols interfacing crane PLCs.</li>
+<li><strong>TOS Interface</strong>: Communicates with the TOS via standardized protocols such as CHE-TOS (Container Handling Equipment to Terminal Operating System) and REST/SOAP APIs.</li>
+<li><strong>Data entities</strong>: Crane job lists, spreader landing timestamps, GPS coordinates (northing, easting, altitude), tire pressure sensor feeds, engine temperature, and error fault codes.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Previously the mobile container handling and terminal automation arm of <strong>Cargotec Corporation</strong> (Helsinki, Finland).</li>
+<li>Cargotec previously owned Navis (2011 to 2021) before selling Navis to private equity firm Accel-KKR.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span> / Equipment downtime</strong>: In automated blocks, a mechanical failure on a single Kalmar ASC spreader or an emergency stop sensor fault immobilizes an entire container block, halting landside truck pickups and vessel loading.</li>
+<li><strong><span class="term" data-term="mech:fleet-age-capex-cliff-raises-maintenance-before-replacement-is-funded" tabindex="0">fleet age capex cliff raises maintenance before replacement is funded</span> (Fleet age capex cliff)</strong>: Diesel-powered terminal tractor and reachstacker fleets face steep maintenance cost inflation past year 7 of operation. Terminal operators face massive capital reinvestment decisions to replace aging diesel fleets with electric (battery) or hydrogen equipment.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Kalmar claims terminal automation reduces operational expenditure by up to 40%, increases yard capacity by 30%, and eliminates equipment-related safety incidents.</li>
+<li>Audited corporate filings: Kalmar Corporation financial filings (2024 demerger prospectus) report annual sales exceeding €1.7 billion with operating margins around 12% to 13%, demonstrating a massive installed equipment base driven by long-term spare parts and service agreements.</li>
+<li>Industry implementation studies: Analysis of automated terminal deployments (e.g. TraPac Los Angeles and Auckland Council reviews of Ports of Auckland automation) revealed that automated ASC systems took over three years longer than scheduled to achieve commercial crane move targets.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/charter-portfolio-and-voyage-management.html">Charter portfolio and voyage management</a>, <a href="../solutions/patterns/computer-vision-for-yards-and-warehouses.html">Computer vision for yards and warehouses</a>, <a href="../solutions/patterns/digital-twin-for-logistics-networks-and-assets.html">Digital twin for logistics networks and assets</a>, <a href="../solutions/patterns/distributed-container-and-equipment-asset-management.html">Distributed container and equipment asset management</a>, <a href="../solutions/patterns/fleet-scheduling-and-dry-dock-planning.html">Fleet scheduling and dry dock planning</a>, <a href="../solutions/patterns/heavy-equipment-and-terminal-fleet-optimisation.html">Heavy equipment and terminal fleet optimisation</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

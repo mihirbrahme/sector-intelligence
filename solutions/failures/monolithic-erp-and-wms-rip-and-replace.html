@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monolithic ERP and WMS rip-and-replace in logistics and retail supply chains · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Failure history</div>
+    <h1>Monolithic ERP and WMS rip-and-replace in logistics and retail supply chains</h1>
+    <p class="def">Multi-year enterprise ERP and WMS &quot;rip-and-replace&quot; programs consistently failed because enterprise financial software cannot model physical warehouse and retail execution constraints without catastrophic operational disruption.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-promise-was">What the promise was</a><a href="#who-made-it">Who made it</a><a href="#what-actually-happened">What actually happened</a><a href="#why-it-failed-in-operational-rather-than-narrative-terms">Why it failed in operational rather than narrative terms</a><a href="#why-the-mechanisms-are-harder-to-fix-than-they-look">Why the mechanisms are harder to fix than they look</a><a href="#what-the-sector-learned">What the sector learned</a><a href="#how-a-credible-adviser-opens-a-conversation">How a credible adviser opens a conversation</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Multi-year enterprise ERP and WMS &quot;rip-and-replace&quot; programs consistently failed because enterprise financial software cannot model physical warehouse and retail execution constraints without catastrophic operational disruption</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a></p></dd></div></dl></section>
+<h2 id="what-the-promise-was">What the promise was</h2>
+<p>Enterprise software vendors and systems integrators promised unified global ERP/<span class="term" data-term="system:wms-platforms" data-href="../../systems/wms-platforms.html" tabindex="0">WMS platforms</span>.</p>
+<p>They asserted that replacing heterogeneous legacy systems with a single platform (such as SAP ERP or SAP for Retail) would standardize workflows, establish real-time inventory visibility, eliminate data silos, and cut administrative overhead.</p>
+<h2 id="who-made-it">Who made it</h2>
+<ul>
+<li>Enterprise ERP and WMS software vendors (SAP, Oracle, <span class="term" data-term="system:manhattan-associates" data-href="../../systems/manhattan-associates.html" tabindex="0">Manhattan Associates</span>).</li>
+<li>Global systems integration practices (Accenture, IBM Global Services, Big 4 consultancies).</li>
+<li>Enterprise buyers across retail and logistics (Lidl, Revlon, Target Canada).</li>
+</ul>
+<h2 id="what-actually-happened">What actually happened</h2>
+<ul>
+<li><strong>Lidl cancelled its €500M SAP project (2018)</strong>: After seven years of development, Lidl terminated its "eLWIS" SAP merchandise management system, writing off approximately €500 million ($580 million) in sunk costs and reverting entirely to its legacy in-house inventory system.</li>
+<li><strong>Revlon suffered an SAP go-live collapse (2018)</strong>: Following an SAP deployment at its Oxford, North Carolina manufacturing and distribution facility in February 2018, Revlon reported in SEC filings that it lost $64 million in net sales and incurred $53.6 million in direct remediation expenses due to severe fulfillment failures.</li>
+<li><strong>Target Canada liquidated following an SAP/WMS breakdown (2015)</strong>: Target rushed a fresh SAP and WMS implementation across 124 retail stores and three distribution centers. Master data corruption caused distribution centers to overflow with unslotted freight while store shelves remained empty. The operation filed for bankruptcy in January 2015 under the Companies' Creditors Arrangement Act (CCAA), writing off $5.4 billion.</li>
+</ul>
+<h2 id="why-it-failed-in-operational-rather-than-narrative-terms">Why it failed in operational rather than narrative terms</h2>
+<h3 id="1-cost-accounting-vs-retail-valuation-mismatch">1. Cost accounting vs retail valuation mismatch</h3>
+<p>Lidl's core operating model operated strictly on <strong>purchase prices</strong> to control margins and optimize store purchasing.</p>
+<p>Standard SAP for Retail was architected around the <strong>retail inventory method</strong> (calculating inventory value at retail price minus markup).</p>
+<p>Customizing SAP to calculate at cost required millions of lines of custom code, creating an unmaintainable system architecture. Attempting to force the business process into the software logic threatened Lidl's core competitive advantage.</p>
+<h3 id="2-physical-execution-vs-ledger-reconciliation">2. Physical execution vs ledger reconciliation</h3>
+<p>Under <a href="../../sectors/index.html">operating model 3</a>, warehouse execution depends on millisecond physical constraints: barcode scanner latency, conveyor divert speeds, forklift travel paths, and pallet racking tolerances.</p>
+<p>In Revlon’s Oxford facility, the newly implemented ERP treated inventory as financial ledger debits and credits rather than physical bin locations.</p>
+<p>Inventory physically present in the warehouse could not be allocated to pick tasks by the system. Pickers stood idle, shipments missed carrier appointment windows, and retail orders were cancelled.</p>
+<h3 id="3-master-data-pollution-cascaded-into-physical-gridlock">3. Master data pollution cascaded into physical gridlock</h3>
+<p>In Target Canada, over 70% of SKU records loaded into the SAP system contained inaccurate master data: incorrect dimensions, mismatched weights, and erroneous vendor barcodes.</p>
+<p>WMS slotting algorithms rejected pallets because recorded physical dimensions exceeded racking clearances. Automated replenishment logic repeatedly ordered out-of-stock items because inventory in the distribution center yard had not been receipted into the system. As analyzed in <a href="../../insights/master-data-failures-present-as-erp-implementation-breakdowns.html">master-data failures present as ERP implementation breakdowns</a>, the failure presented as an ERP software crash but originated entirely in physical master-data corruption.</p>
+<h2 id="why-the-mechanisms-are-harder-to-fix-than-they-look">Why the mechanisms are harder to fix than they look</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Monolithic ERP implementations do not cure billing errors; they amplify them. If upstream receiving scans or electronic data interchanges carry errors, the ERP generates thousands of automated dispute holds per day, freezing receivables and disrupting vendor settlement.</li>
+<li><strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong>: Enterprise ERP suites assume clean, unified carrier and vendor master files can be established via database mapping. In reality, entity resolution requires operational reconciliation of operating authorities, insurance policies, and billing terms.</li>
+</ul>
+<h2 id="what-the-sector-learned">What the sector learned</h2>
+<ol>
+<li><strong>Never replace operational execution with financial ledgers</strong>: Warehouse execution systems (WMS) and yard systems must be loosely coupled to central financial ERPs via asynchronous APIs.</li>
+<li><strong>Composable architecture beats the monolithic suite</strong>: Operators deploy modular, specialized applications around core legacy databases rather than attempting multi-year "big bang" migrations.</li>
+</ol>
+<h2 id="how-a-credible-adviser-opens-a-conversation">How a credible adviser opens a conversation</h2>
+<p>Never pitch "digital transformation" or "ERP system modernization."</p>
+<p>Open on physical execution metrics and master data integrity:
+- "What is your dock-to-stock cycle time from trailer gate arrival to physical pick availability?"
+- "What percentage of your active SKU master records carry unverified weights and cubing dimensions?"
+- "How many pick lines per day fail due to system-physical inventory count discrepancies?"</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

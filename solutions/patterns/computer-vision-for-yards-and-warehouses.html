@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computer vision for yards and warehouses · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Computer vision for yards and warehouses</h1>
+    <p class="def">Deploying optical character recognition (OCR) gantries, fixed gate cameras, and computer-vision models to automate equipment identification, gate check-in, and inventory tracking.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Deploying optical character recognition (OCR) gantries, fixed gate cameras, and computer-vision models to automate equipment identification, gate check-in, and inventory tracking</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Deploying optical character recognition (OCR) gantries, fixed gate cameras, and computer-vision models to automate equipment identification, gate check-in, and inventory tracking.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Computer vision replaces manual clipboard audits and gate clerk inspections with automated optical identification and damage inspection.</p>
+<p>Commercial trucks enter facility gates through multi-angle optical scanning portals at 10 to 15 mph. High-speed cameras capture tractor license plates, chassis numbers, ISO container codes, and hazardous material placards.</p>
+<p>Deep neural networks execute optical character recognition (OCR) to parse alphanumeric markings and calculate ISO 6346 check digits. Vision models simultaneously inspect equipment surfaces to flag structural damage, tire wear, and missing security seals.</p>
+<p>The engine queries the terminal operating system (TOS) or yard management system (YMS) via API to validate driver appointments and customs clearance status.</p>
+<p>When credentials match, the system opens automated gate arms, issues digital gate tickets, and directs drivers to designated yard slots or dock doors.</p>
+<p>In warehouse operations, overhead fixed cameras or mast-mounted forklift cameras scan pallet license plate numbers (LPNs) and rack barcodes during transit, automatically updating storage bin coordinates without manual RF barcode scans.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Applied across high-throughput distribution centers. Cameras monitor dock staging areas to verify pallet LPNs during forklift loading, preventing misdirected pallets from boarding incorrect linehaul trailers.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: Fleet maintenance terminals inspect returning tractors and trailers. Automated vision portals flag body damage, tire tread degradation, missing mud flaps, and unauthorized equipment swaps between fleet drivers.</li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Rail ramp gates scan 53-foot domestic containers and chassis equipment. The system validates equipment interchange receipts (EIR) automatically, eliminating manual walk-around inspections by rail ramp personnel.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<p>Read what follows as a lens applied to the mechanisms above, not as a mechanism this pattern arrests: Misplaced trailers, unrecorded damage, and staging errors force yard spotters and warehouse supervisors to conduct manual yard hunts. Computer vision maintains real-time slotting records and captures contemporaneous visual condition proof, eliminating physical search labor.
+- <strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span></strong>: Manual gate inspections create 45 to 90-minute truck queues, choking terminal throughput and reducing landside evacuation velocity. Automated optical portals reduce gate processing times to seconds, clearing landside bottlenecks and preventing container rehandles caused by misplaced yard stacks.</p>
+<blockquote>
+<p>[!NOTE]
+<strong>Mechanism backing, by model.</strong> This pattern is backed by a named mechanism for model <strong>6</strong>. For models <strong>3, 4, 7</strong> it is asserted without one: the library holds no entry for road-fleet and warehouse asset and labour productivity — deadhead miles, vehicle utilisation, driver administration and equipment downtime in models 3, 4 and 5. That gap is recorded in mechanism library under Gaps.</p>
+<p>The <code>models</code> field is left wide because narrowing it would strip the pattern's own subject. <strong>Read the unbacked models as a description of what is done, not a diagnosis of a failure</strong>, and do not argue them in a room as though the library supported them.</p>
+</blockquote>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the gate transaction, scanned container move, or audited pallet location.</p>
+<p>Manual gate check-in and visual safety inspection by gate clerks costs $4.50 to $9.00 per truck turn, requiring 3 to 6 minutes per vehicle. Manual yard checks by spotter trucks cost $15 to $28 per audited lane. </p>
+<p>Automated OCR portal scanning lowers transaction processing cost to $0.40 to $0.95 per vehicle, completing inspections in under 30 seconds. </p>
+<p>Multi-angle camera portals achieve 98.5% to 99.4% read accuracy on clean ISO container markings and 95% to 97% on dirty or weathered chassis vinyl. </p>
+<p>Fixed optical gate gantries require capital investments of $120,000 to $250,000 per lane. Annual software maintenance, camera calibration, and lens cleaning consume 12% to 15% of hardware capital cost. </p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Optical gate and yard vision systems fail without dedicated civil and operational preparation:</p>
+<ol>
+<li><strong>Civil gantry and lighting infrastructure</strong>: Facilities must construct rigid steel gantries, concrete vehicle guide curbs, dedicated fiber networking, and high-intensity, flicker-free LED lighting to eliminate shadows and solar glare.</li>
+<li><strong>Pre-advised master booking data</strong>: Carrier pre-gate appointments, driver identification, and container booking lists must be pre-populated in the TOS or YMS; cameras cannot validate vehicles that lack underlying database records.</li>
+<li><strong>Dedicated bypass lane engineering</strong>: Yards must maintain physical trouble lanes where vehicles with damaged markings or invalid appointments can be diverted without blocking inbound gate flow.</li>
+<li><strong>Sub-second TOS/YMS API responsiveness</strong>: The host operating system must return appointment validation responses within 500 milliseconds to prevent physical vehicle queuing.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed price diagnostic then build</span></strong>: Initial site optical geometry assessment, lighting engineering, and gantry civil construction ($80,000 to $180,000 per facility) followed by phased hardware deployment. </li>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Software subscription charged per camera lane ($600 to $1,500 monthly per gate) covering OCR algorithm updates, model retraining, and portal uptime monitoring. </li>
+<li><strong><span class="term" data-term="solution:forward-deployed-engineer-embedded" data-href="../structures/forward-deployed-engineer-embedded.html" tabindex="0">Forward-deployed engineer embedded</span></strong>: Embedded systems engineers ($25,000 to $45,000 monthly) over 3 to 6 months to integrate custom TOS endpoints and tune camera exposure against local weather. </li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Standalone autonomous inspection rovers and aerial inventory drones failed completely in commercial operation.</p>
+<p>As documented in <span class="term" data-term="solution:computer-vision-autonomous-inventory-auditing" data-href="../failures/computer-vision-autonomous-inventory-auditing.html" tabindex="0">computer vision autonomous inventory auditing</span>, Walmart deployed 500 Bossa Nova aisle-scanning robots before terminating the contract in November 2020. The robots detected out-of-stock items but could not replenish shelves; direct labor was unchanged while robot hardware maintenance inflated operating expense.</p>
+<p>Similarly, warehouse inventory drones failed across commercial 3PLs due to 15-minute battery flight limits, propeller wash blowing paper tags off boxes, and radio-frequency dead zones in high-bay metal racking.</p>
+<p>Computer vision succeeds when mounted on fixed portal infrastructure or integrated into active material-handling equipment, not as roving standalone inspection platforms.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch promises zero-touch visual facility tracking. The physical reality presents severe environmental friction:</p>
+<ul>
+<li>Snow, heavy rain, thick fog, mud splatter, and low-angle sun glare blind optical lenses, degrading OCR accuracy by 15% to 30%. </li>
+<li>Rusted ISO container corner castings, scratched chassis VIN plates, handwritten chalk notes, and bent bumper bars defeat standard computer-vision character segmentation.</li>
+<li>Diesel soot, road grime, and extreme vibration from heavy trucks coat camera lenses and misalign optical focal lengths, requiring weekly manual cleaning.</li>
+</ul>
+<p>Managing physical camera maintenance and optical edge cases dominates long-term operating costs.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: High gate clerk and yard spotter wages ($24 to $42 per hour) combined with mandatory chassis roadability inspections create strong economics, yielding payback in 9 to 14 months. </li>
+<li><strong>UK and Europe</strong>: High terminal labor costs (EUR 30 to EUR 50 per hour) and strict EU truck turnaround regulations accelerate portal deployment across major gateway ports (Rotterdam, Antwerp, Hamburg).</li>
+<li><strong>Australia</strong>: Elevated stevedoring labor rates (AUD 45 to AUD 65 per hour) support rapid adoption. Vehicle Booking System (1-Stop VBS) financial penalties for gate delays mandate fast truck processing.</li>
+<li><strong>Southeast Asia</strong>: In Singapore (PSA), massive transshipment throughput justifies extensive gate automation. In secondary regional ports (Indonesia, Philippines, Vietnam), low clerk wages ($3.00 to $5.50 per hour) make high-capex gantries uneconomic for smaller terminals. </li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/06-ports-terminals.html">Ports &amp; Terminals</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>, <a href="../../systems/global-systems-integrators-and-big-4.html">Global SIs and Big 4 T&amp;L practices</a>, <a href="../../systems/hubtran.html">HubTran (now TriumphPay)</a>, <a href="../../systems/kalmar.html">Kalmar</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

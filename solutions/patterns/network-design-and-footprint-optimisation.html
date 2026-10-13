@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network design and footprint optimisation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Network design and footprint optimisation</h1>
+    <p class="def">Strategic terminal, cross-dock, and warehouse location modeling, hub-and-spoke vs point-to-point density trade-offs, and relay network engineering.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Strategic terminal, cross-dock, and warehouse location modeling, hub-and-spoke vs point-to-point density trade-offs, and relay network engineering</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Strategic terminal, cross-dock, and warehouse location modeling, hub-and-spoke vs point-to-point density trade-offs, and relay network engineering.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Transportation networks naturally drift into sub-optimal configurations over time. Mergers add redundant service centers, customer shipping origins migrate, highway congestion intensifies, and industrial real estate lease rates fluctuate. An LTL or contract logistics network designed five years ago carries obsolete terminal locations that add millions in circuitous stem miles and redundant cross-dock handling.</p>
+<p>This pattern executes rigorous mathematical network design and footprint optimization across logistics nodes and freight lanes.</p>
+<p>First, engineers extract comprehensive shipment origin-destination flow matrices, weighing, dimensions, transit time service commitments, and facility handling costs over a trailing twelve-month horizon.</p>
+<p>Second, using advanced mixed-integer linear programming (MILP) solvers (such as Coupa Supply Chain Guru, Optilogic, or custom Gurobi engines), teams model complex multi-echelon network trade-offs: the balance between facility fixed leasing costs, cross-dock handling expenses, linehaul transport costs, and final-mile delivery stem miles.</p>
+<p>Third, the model evaluates structural topology options: opening, closing, or consolidating terminals; converting direct linehaul lanes into relay networks; establishing regional breakbulk hubs; and optimizing cross-dock door configurations to match directional freight density.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Optimizes distribution center (DC) site selection against customer delivery radii (e.g. 1-day vs 2-day ground delivery coverage), balancing inventory holding costs across multi-node networks against inbound freight transport costs.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Truckload)</a></strong>: Designs driver relay networks and drop-yard locations. Optimizes terminal spacing to 450-500 mile intervals (matching a single driver's daily 11-hour driving window under Hours of Service rules), enabling relay drivers to sleep at home while tractors maintain continuous rolling asset utilization.</li>
+<li><strong><a href="../../sectors/index.html">Model 5 (LTL Network)</a></strong>: The primary domain for footprint optimization. Models breakbulk terminal locations, end-of-line (EOL) terminal density, and direct-loading bypass thresholds. Closing redundant service centers while establishing strategic breakbulks eliminates intermediate freight handling and cuts empty linehaul miles.</li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Models container depot and drayage terminal locations relative to Class I railroad intermodal ramps, minimizing drayage bobtail miles and chassis repositioning expenses.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span> (Uncontrolled purchased input behaving as fixed cost)</strong>: Directly tackles rigid terminal real estate commitments. Identifies underutilized facilities, models lease termination trade-offs, and consolidates volume into high-density regional hubs.</li>
+<li><strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong>: Re-engineers transport network paths to bypass congested transit nodes, reducing linehaul cost-to-serve on fixed-price customer freight.</li>
+<li><strong><span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span></strong>: Alleviates severe congestion at urban cross-dock yards by redirecting freight flows to peripheral suburban relay facilities.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<strong>Scope narrowed 2026-09-16.</strong> This file claimed models <strong>3, 4, 5, 7</strong>. The mechanisms it cites (<span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span>, <span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span>, <span class="term" data-term="mech:berth-yard-and-landside-constraints-turn-terminal-density-into-delay" tabindex="0">berth, yard and landside constraints turn terminal density into delay</span>) reach only models <strong>3, 4, 7</strong>, so the <code>models</code> field was cut to that. <strong>Model 5 were dropped</strong>, not because the work is impossible there but because nothing in the library evidences the failure it would be fixing.</p>
+<p>To claim a dropped model back, open a mechanism for it and evidence it. Do not widen an existing mechanism's scope to fit this pattern.</p>
+</blockquote>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<ul>
+<li><strong>Unit of work</strong>: Network facility node (service center, breakbulk, warehouse) or optimized linehaul lane corridor.</li>
+<li><strong>Advisory and modeling economics</strong>: Strategic network footprint optimization studies cost $180,000 to $550,000 over a 3 to 6-month modeling timeline. </li>
+<li><strong>Total transport savings</strong>: Network rationalization typically cuts total network transportation and facility operating costs by 5% to 11%.</li>
+<li><strong>Linehaul cost reduction</strong>: Eliminating redundant breakbulk handling and increasing direct-load lane density reduces LTL linehaul costs by $0.08 to $0.15 per mile across consolidated corridors. </li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Network footprint modeling fails when executed on flawed baseline operational data:</p>
+<ol>
+<li><strong>Complete geospatial shipment audit</strong>: Geocoding twelve months of origin and destination coordinates, shipment weights, cube volumes, and actual transit timestamps.</li>
+<li><strong>Facility cost and capacity profiles</strong>: Detailed operational cost models for every terminal, including lease liabilities, dock door counts, hostling costs, and local labor wage rates.</li>
+<li><strong>Customer service level constraints</strong>: Explicit mapping of customer transit time commitments (guaranteed next-day, second-day delivery windows) that restrict mathematical node consolidation.</li>
+</ol>
+<p>Data geocoding, lease contract discovery, and service SLA cataloging consume 70% of network design effort. </p>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li>Network modeling, scenario analysis, and footprint recommendation delivery utilize <span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">fixed-price-diagnostic-then-build</span>.</li>
+<li>Supply chain network design software platforms license via <span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">subscription-saas</span> (e.g. Coupa, Optilogic, AnyLogistix).</li>
+<li>Multi-year terminal rationalization PMO and facility transition management utilize <span class="term" data-term="solution:time-and-materials" data-href="../structures/time-and-materials.html" tabindex="0">time-and-materials</span>.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Logistics history contains numerous examples of network redesigns that created theoretical spreadsheet savings but failed disastrously upon physical execution.</p>
+<p>The classic failure mode is the "pure cost minimization model" that ignores physical capacity and customer transit SLAs. Mathematical solvers frequently recommend closing smaller regional terminals and routing all freight through a massive central breakbulk to minimize facility lease costs. When implemented, the central facility suffers severe dock gridlock, trailers wait 18 hours in yards to be unloaded, transit times deteriorate by two days, and high-value shippers defect to competitors. Footprint design must model dynamic dock capacity and congestion curves, not merely static lease expenses.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The vendor pitch promises instant network optimization from solver algorithms that output perfect facility maps.</p>
+<p>The operational reality is real estate lease rigidity and driver labor friction. Terminals are held under long-term 10 to 15-year non-cancelable commercial leases with significant remaining liabilities. Furthermore, closing or relocating a service center triggers contractual driver union grievances, severance obligations, and mass driver resignations. Finding qualified truck drivers in the new terminal location is frequently far harder than the mathematical model assumes.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>US</strong>: Dominated by long-haul interstate corridors (I-80, I-10, I-40) where terminal spacing is governed by FMCSA 11-hour driver HOS limits. High warehouse industrial real estate lease rates in coastal port markets (Inland Empire, New Jersey) force inland hub migration.</li>
+<li><strong>UK/Europe</strong>: Shorter transit distances and dense urban centers; footprint optimization is heavily constrained by municipal emissions zones (LEZs), nighttime delivery noise restrictions, and national cabotage boundaries.</li>
+<li><strong>Southeast Asia &amp; Australia</strong>: Australia features massive distances between capital cities along coastal highways with near-zero intermediate population centers, requiring specialized road-train interchange hubs. In Indonesia and the Philippines, archipelagic geography requires multi-modal roll-on/roll-off (Ro-Ro) ferry and coastal feeder synchronization.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/global-systems-integrators-and-big-4.html">Global SIs and Big 4 T&amp;L practices</a>, <a href="../../systems/kalmar.html">Kalmar</a>, <a href="../../systems/manhattan-associates.html">Manhattan Associates</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

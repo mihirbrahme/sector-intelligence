@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixed-price diagnostic then build · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Commercial structure</div>
+    <h1>Fixed-price diagnostic then build</h1>
+    <p class="def">A two-phase commercial engagement that uncouples operational and data discovery from technology delivery, establishing an audited baseline before scoping the implementation build.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#how-it-works-mechanically">How it works mechanically</a><a href="#what-it-suits">What it suits</a><a href="#risk-allocation">Risk allocation</a><a href="#what-has-to-be-measurable">What has to be measurable</a><a href="#where-it-fails">Where it fails</a><a href="#buyer-size-and-maturity">Buyer size and maturity</a><a href="#does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</a><a href="#boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>A two-phase commercial engagement that uncouples operational and data discovery from technology delivery, establishing an audited baseline before scoping the implementation build</p></dd></div></dl></section>
+<h2 id="how-it-works-mechanically">How it works mechanically</h2>
+<p>The engagement splits into two legally separate statements of work (SOW).</p>
+<p>Phase 1 is a time-boxed, fixed-fee diagnostic (typically 3 to 4 weeks, priced between $35,000 and $60,000).</p>
+<p>The provider audits transaction ledgers, profiles database tables, shadows operational desks, and maps exception queues.</p>
+<p>Phase 1 produces three deliverables:
+1. An empirical baseline of unit-of-work economics (e.g., cost per load, touches per shipment file, exception rates).
+2. A data hygiene audit profiling master data errors (duplicate carrier records, missing tariff tables, HTS classification gaps).
+3. A fixed-scope, fixed-price or capped-T&amp;M proposal for Phase 2 (the build), with data cleansing explicitly scoped.</p>
+<p>The client holds no obligation to proceed to Phase 2.</p>
+<p>If the client proceeds, a portion of the diagnostic fee (e.g., 50%) is frequently credited against Phase 2 development milestones.</p>
+<h2 id="what-it-suits">What it suits</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0"><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0">Carrier and customer master data consolidation</span></span></strong> addressing <strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong>.</li>
+<li><strong><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../patterns/freight-audit-and-payment-automation.html" tabindex="0"><span class="term" data-term="solution:freight-audit-and-payment-automation" data-href="../patterns/freight-audit-and-payment-automation.html" tabindex="0">Freight audit and payment automation</span></span></strong> addressing <strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong> and <strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>.</li>
+<li><strong><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0"><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0">Quote-to-book workflow automation</span></span></strong> addressing <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>.</li>
+<li><strong><span class="term" data-term="solution:warehouse-labour-productivity-instrumentation" data-href="../patterns/warehouse-labour-productivity-instrumentation.html" tabindex="0"><span class="term" data-term="solution:warehouse-labour-productivity-instrumentation" data-href="../patterns/warehouse-labour-productivity-instrumentation.html" tabindex="0">Warehouse labour productivity instrumentation</span></span></strong> addressing <strong><span class="term" data-term="mech:contract-vintage-margin-decay" tabindex="0">contract vintage margin decay</span></strong>.</li>
+</ul>
+<h2 id="risk-allocation">Risk allocation</h2>
+<ul>
+<li><strong>Buyer risk: Low.</strong> The client commits minimal capital ($35k–$60k) to validate provider capability without committing to an open-ended multi-million dollar software project.</li>
+<li><strong>Provider risk: Low to Moderate.</strong> The provider avoids committing to a fixed-price build contract over dirty client data. The risk is limited to the provider failing to convert the diagnostic into a build contract.</li>
+</ul>
+<h2 id="what-has-to-be-measurable">What has to be measurable</h2>
+<p>Phase 1 requires read-only SQL access to production database replicas or comprehensive CSV exports:
+- Transaction volume counts (loads, orders, or shipment files).
+- Operational personnel headcount allocated to the workflow.
+- Historical dispute rates and accessorial fee ledgers.</p>
+<p>If the buyer refuses database access and offers only executive interviews, the diagnostic cannot establish an empirical baseline.</p>
+<h2 id="where-it-fails">Where it fails</h2>
+<ol>
+<li><strong>The RFP handoff</strong>: The buyer accepts the diagnostic report, acknowledges the findings, and uses the provider's architecture roadmap to issue a competitive tender to lower-cost commodity offshore developers.</li>
+<li><strong>Slide-deck syndrome</strong>: The diagnostic delivers high-level strategy slides rather than data profiling and technical prototypes, alienating frontline operations leaders.</li>
+</ol>
+<h2 id="buyer-size-and-maturity">Buyer size and maturity</h2>
+<ul>
+<li><strong>Best fit</strong>: Mid-market operators ($100M to $750M revenue) with legacy systems, high operational skepticism, and lack of internal enterprise architecture teams.</li>
+<li><strong>Poor fit</strong>: Early-stage venture brokerages (require immediate sprint capacity) and global mega-enterprises (procurement rules prohibit multi-phase sole-source awards).</li>
+</ul>
+<h2 id="does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</h2>
+<p><strong>Yes. This is the primary structure that solves the precondition trap.</strong></p>
+<p>As established in <a href="../../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>, data hygiene and contract standardization represent the majority of implementation effort.</p>
+<p>In a single monolithic build contract, buyers reject paying for data cleansing because it produces no visible features.</p>
+<p>The diagnostic structure solves this by exposing the dirty data in Phase 1:
+- The provider proves that 40% of carrier records are duplicated or that 60% of tariff contracts sit in un-digitized PDFs.
+- The provider prices "Master Data Cleansing and Tariff Digitization" as Milestone 1 of the Phase 2 build.
+- The buyer approves the data work because Phase 1 proved the automation software cannot launch without it.</p>
+<h2 id="boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</h2>
+<p>A boutique consulting firm can systematically out-maneuver Tier 1 systems integrators (Accenture, Big 4) on commercial structure:</p>
+<ul>
+<li><strong>Signing authority arbitrage</strong>: Tier 1 discovery engagements require $150,000 to $300,000 minimum fees to cover partner overhead, triggering formal corporate procurement, legal review, and multi-vendor tenders. A boutique prices Phase 1 at $45,000—deliberately sitting under typical VP signing limits ($50,000). The VP can sign the SOW on corporate credit card or discretionary budget in 48 hours without procurement interference.</li>
+<li><strong>Hands-on database profiling vs interview slides</strong>: Tier 1 firms staff diagnostics with junior analysts conducting stakeholder interviews. A boutique deploys a senior technical architect who extracts database schemas and runs SQL data-profiling scripts in week one, delivering concrete data proof that builds operational trust.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

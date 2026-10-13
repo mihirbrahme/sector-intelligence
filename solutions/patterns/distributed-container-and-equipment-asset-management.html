@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distributed container and equipment asset management · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Distributed container and equipment asset management</h1>
+    <p class="def">Tracking, forecasting, and matching intermodal containers, chassis, and gensets across depots to reduce empty repositioning expense and eliminate detention leakage.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Tracking, forecasting, and matching intermodal containers, chassis, and gensets across depots to reduce empty repositioning expense and eliminate detention leakage</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Tracking, forecasting, and matching intermodal containers, chassis, and gensets across depots to reduce empty repositioning expense and eliminate detention leakage.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The pattern centralises equipment lifecycle management for containers, chassis, and gensets. It ingests EDI 322 gate events, EDI 301 bookings, depot OCR scans, and GPS telematics.</p>
+<p>The engine reconciles physical container statuses against free-time limits. It identifies containers approaching free-time expiry and matches them with export bookings for street turns, avoiding drayage to congested marine terminals.</p>
+<p>Depot modules forecast regional box deficits. Predictive algorithms schedule empty repositioning on liner backhaul voyages or rail repo trains before inland depots stock out.</p>
+<p>Equipment controllers stop managing inventory on disconnected spreadsheets. Automated workflows trigger depot off-hire returns when equipment reaches contract milestones.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 10 (Liner)</a></strong>: Manages global box imbalances. Repositioning empty boxes from import deficits to Asian hubs represents 12% to 20%+ of operating costs. </li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Governs owned 53-ft containers (such as J.B. Hunt's 115k boxes). Prioritises <span class="term" data-term="metric:container-turns-per-year-intermodal" data-href="../../reference/metrics.html#container-turns-per-year-intermodal" tabindex="0">container turns per year</span> (target 18-22 turns) over rail lines.</li>
+<li><strong><a href="../../sectors/index.html">Model 2 (Forwarding)</a></strong>: Non-asset NVOCCs track equipment free-time calendars and interchange receipts (EIR) to prevent carrier per-diem penalties.</li>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: Focuses on chassis street turns, appointment availability, and roadworthiness inspections under UIIA rules.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Margins leak when containers dwell past free-time. Automated tracking generates verified interchange logs, disputing invalid per-diem invoices under OSRA 22.</li>
+<li><strong><span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span> (Uncontrolled purchased input)</strong>: Intermodal carriers face rising chassis pool fees. Asset optimization maximises owned chassis utilisation, minimising third-party lease expenses.</li>
+<li><strong><span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span> (Off-hire downtime)</strong>: Damaged containers sit idle in depot yards. Digitising IICL damage surveys accelerates repair approvals and returns boxes to revenue service.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<strong>Scope narrowed 2026-09-16.</strong> This file claimed models <strong>2, 4, 7, 10</strong>. The mechanisms it cites (<span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span>, <span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span>, <span class="term" data-term="mech:off-hire-and-technical-downtime-convert-owned-fleet-into-idle-capital" tabindex="0">off-hire and technical downtime convert owned fleet into idle capital</span>) reach only models <strong>2, 7</strong>, so the <code>models</code> field was cut to that. <strong>Models 4, 10 were dropped</strong>, not because the work is impossible there but because nothing in the library evidences the failure it would be fixing.</p>
+<p>To claim a dropped model back, open a mechanism for it and evidence it. Do not widen an existing mechanism's scope to fit this pattern.</p>
+</blockquote>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the equipment-day (container-day, chassis-day) or empty repositioning move.</p>
+<p>Empty container repositioning costs $150 to $450 per TEU moved (Drewry 2025). Third-party chassis rentals run $30 to $45 per day in US ports. Newbuild container capex averages $2,000 to $3,200 per forty-foot box (FEU). </p>
+<p>Executing street turns saves $200 to $500 per container by avoiding dual empty drayage moves and terminal gate fees. </p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Distributed equipment asset management requires four critical prerequisites:</p>
+<ol>
+<li><strong>Depot EDI standardization</strong>: Connecting inland depots via CEDEX and EDI 322 messaging.</li>
+<li><strong>Standardised M&amp;R</strong>: Implementing digital IICL inspection workflows at depot gates.</li>
+<li><strong>Automated gate integration</strong>: Connecting carrier systems to terminal booking portals.</li>
+<li><strong>Master equipment reconciliation</strong>: Reconciling container numbers against physical yard inventories.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Monthly fees per managed container or chassis asset ($0.50 to $1.50 per TEU/month). </li>
+<li><strong><span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0"><span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0">Per-transaction managed service or BPO</span></span></strong>: Fees for auditing interchange receipts and repair estimates ($5 to $15 per file). </li>
+<li><strong><span class="term" data-term="solution:recovery-fee-contingency" data-href="../structures/recovery-fee-contingency.html" tabindex="0">Recovery fee contingency</span></strong>: Contingency fees (15% to 25%) tied to disputed per-diem charge recovery. </li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Consortium blockchain trade platforms failed to solve equipment positioning.</p>
+<p>As analyzed in <span class="term" data-term="solution:consortium-blockchain-trade-documentation" data-href="../failures/consortium-blockchain-trade-documentation.html" tabindex="0">consortium blockchain trade documentation</span>, TradeLens attempted to track global container assets using distributed ledgers. The project failed because carriers refused to share proprietary asset data with competitors.</p>
+<p>Similarly, <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span> proved that displaying container GPS dots without street-turn matching logic does nothing to reduce empty repositioning expenses.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The pitch promises automated global container balance.</p>
+<p>The operational difficulty lies in structural trade deficits:
+- Macroeconomic trade imbalances cannot be coded away; Transpacific headhaul volumes structurally outnumber backhaul cargo by nearly two to one.
+- Ocean carriers hoard empty containers in export regions during market rallies, refusing to release boxes for domestic street turns.
+- Drayage drivers resist off-dock depot returns when depot hours are shorter than main terminal gates.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: Chassis rules (UIIA) and FMC Rules (46 CFR Part 541) make automated timestamps essential.</li>
+<li><strong>UK/Europe</strong>: Dominated by merchant haulage; equipment tracking focuses on inland dry-port dwell.</li>
+<li><strong>Singapore</strong>: Central transhipment hub; high box turnover demands tight lease off-hire execution in free-trade zones.</li>
+<li><strong>Malaysia</strong>: Port Klang and PTP serve as empty storage yards for regional feeder strings.</li>
+<li><strong>Indonesia</strong>: Cabotage laws mandate domestic equipment; inter-island imbalances create empty box accumulation in outports.</li>
+<li><strong>Australia</strong>: Long interstate rail corridors create container balance challenges between eastern cities and Perth.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/abs-nautical-systems.html">ABS Nautical Systems (ABS Wavesight)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/danaos.html">Danaos Management Consultants (Danaos Software)</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
