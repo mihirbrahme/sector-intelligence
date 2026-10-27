@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrier settlement and purchased transportation payment · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Carrier settlement and purchased transportation payment</h1>
+    <p class="def">Managed operational desk handling carrier freight audit, rate confirmation reconciliation, accessorial validation, quick-pay discounting, and accounts payable settlement.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Managed operational desk handling carrier freight audit, rate confirmation reconciliation, accessorial validation, quick-pay discounting, and accounts payable settlement</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Managed operational desk handling carrier freight audit, rate confirmation reconciliation, accessorial validation, quick-pay discounting, and accounts payable settlement.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The service manages the accounts payable lifecycle for purchased transportation across motor carriers, draymen, and rail providers.</p>
+<p>The workflow executes across five operational stages:</p>
+<ol>
+<li><strong>Invoice and POD ingestion</strong>: Captures invoices and delivery receipts via EDI 210 feeds, portals, and document extraction engines.</li>
+<li><strong>Three-way matching</strong>: Matches invoiced linehaul against rate confirmations, contracted fuel schedules, and delivery timestamps.</li>
+<li><strong>Accessorial verification</strong>: Validates detention against geofence logs, verifies layovers, and checks fuel surcharge indices.</li>
+<li><strong>Tolerance clearing</strong>: Auto-clears minor rate variances within pre-authorized thresholds, routing unauthorized charges to dispute queues.</li>
+<li><strong>Settlement</strong>: Issues payment batches via automated clearing house schedules, offering quick-pay fee discounts for accelerated settlement.</li>
+</ol>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<p>In <a href="../../sectors/index.html">Model 1</a>, the desk balances cash flow between carrier payment terms and shipper collections, monetizing quick-pay discounting.</p>
+<p>In <a href="../../sectors/index.html">Model 2</a>, the desk audits multi-leg invoices across ocean liners, container draymen, and cartage vendors. It reconciles foreign currencies and port demurrage.</p>
+<p>In <a href="../../sectors/index.html">Model 4</a>, the service settles partner linehaul, owner-operator trip leases, and interline settlements.</p>
+<p>In <a href="../../sectors/index.html">Model 7</a>, the desk executes three-way matching across railroad linehaul bills, chassis pool charges, and ramp drayage settlements.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: Audits accessorial charges against GPS dwell records, stopping duplicate billing and unauthorized detention.
+Read what follows as a lens applied to the mechanisms above, not as a mechanism this pattern arrests: Automates standard invoice rate matching, eliminating manual dispute emails from frontline dispatchers.</li>
+<li><strong><span class="term" data-term="mech:avoidable-working-capital-float-drag-and-carrier-settlement-financing-penalty" tabindex="0">avoidable working capital float drag and carrier settlement financing penalty</span> (Working capital gap)</strong>: Manages Days Payable Outstanding against shipper collections, capturing quick-pay liquidity discounts to bridge cash deficits.</li>
+<li><strong><span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span></strong>: Reconciles unvouchered carrier liabilities monthly, eliminating unbilled linehaul balance sheet accrual gaps.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the <strong>processed carrier freight bill</strong> or the <strong>settled load transaction</strong>.</p>
+<p>Processing costs range from $1.50 to $3.50 per invoice offshore, compared to $6.00 to $12.00 onshore. </p>
+<p>Offshore BPO FTEs in India or the Philippines cost $2,000 to $3,200 monthly, compared to $6,000 to $8,500 onshore. </p>
+<p>Pre-payment audit recovers 2.0% to 5.0% of gross freight spend in duplicate or invalid charges. Quick-pay discount programs generate 1.5% to 2.5% margin on settled purchased transportation.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Automated carrier settlement requires four prerequisites:</p>
+<ol>
+<li><strong>Digitized rate confirmations</strong>: Every load must possess a structured electronic rate confirmation before pickup.</li>
+<li><strong>Proof of delivery capture</strong>: Carriers must submit legible, signed delivery receipts before invoice settlement vouchers can generate.</li>
+<li><strong>Tolerance matrices</strong>: Finance must approve formal tolerance rules ($15 to $25) for automated dispute clearance. </li>
+<li><strong>Ledger integration</strong>: Direct API integration between dispatch software and enterprise ledgers must synchronize check runs.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0">Per-transaction BPO</span></strong>: Fixed fee of $1.75 to $2.50 per audited and settled carrier invoice. </li>
+<li><strong><span class="term" data-term="solution:build-operate-transfer" data-href="../structures/build-operate-transfer.html" tabindex="0">Build-operate-transfer (BOT)</span></strong>: External providers design the settlement center offshore, transferring operations to the client after 24 months.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Offshore BPO freight settlement lift-and-shift initiatives failed when implemented without process redesign. Brokers shifted invoice matching offshore without automated rate tools.</p>
+<p>Offshore clerks approved unverified carrier detention bills lacking delivery timestamps. Unvouchered freight liabilities accumulated in spreadsheet queues.</p>
+<p>Quarterly audits revealed multi-million dollar unaccrued deficits under <span class="term" data-term="mech:purchased-transportation-accrual-failure" tabindex="0">purchased-transportation accrual failure</span>. As documented in <span class="term" data-term="solution:monolithic-erp-and-wms-rip-and-replace" data-href="../failures/monolithic-erp-and-wms-rip-and-replace.html" tabindex="0">monolithic ERP and WMS rip-and-replace</span>, accounts payable lift-and-shift moves broken workflows overseas without reducing cost.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch describes automated three-way invoice matching. Operational friction sits in verbal dispatch commitments and documentation defects.</p>
+<p>Carriers submit illegible photos of delivery receipts. Dispatchers promise verbal detention approvals without updating electronic rate confirmations in systems.</p>
+<p>When invoices arrive above agreed amounts, desks halt processing, chasing dispatchers for approvals while carriers demand funding.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>In the <strong>United States</strong>, settlement relies on EDI 210 standards, national fuel indices, and sophisticated carrier quick-pay programs.</p>
+<p>In the <strong>United Kingdom and Europe</strong>, desks navigate value-added tax rules across European Union borders, reverse-charge accounting, and multi-currency transactions.</p>
+<p>In <strong>Southeast Asia</strong>, motor carriage depends on tax invoices like Indonesian e-Faktur. Cash advances and withholding taxes require regional operations desks in Jakarta, Bangkok, or Manila.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

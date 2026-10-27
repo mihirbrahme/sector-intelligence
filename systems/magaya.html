@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magaya · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Magaya</h1>
+    <p class="def">All-in-one logistics execution platform combining freight forwarding, customs clearance, and warehouse management for mid-market operators.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>All-in-one logistics execution platform combining freight forwarding, customs clearance, and warehouse management for mid-market operators</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:magaya" data-href="magaya.html" tabindex="0">Magaya</span> executes operations against the international shipment file, warehouse cargo receipt, freight dimension record, bill of lading, and customs declaration.</p>
+<p>The platform provides a unified operational database spanning forwarding and warehousing:
+- <strong>Freight Forwarding</strong>: Produces master and house ocean bills of lading (B/L), air waybills (AWB), and cargo manifests.
+- <strong>Bonded Warehousing &amp; CFS</strong>: Manages cargo receiving, dimensioning, barcode labeling, pallet storage, and container freight station (CFS) consolidation.
+- <strong>Customs Brokerage</strong>: Direct electronic filing with US Customs and Border Protection (CBP ACE) through its integrated customs engine.
+- <strong>Rate Management</strong>: Ingests carrier ocean and air contracts, providing spot quoting and margin markup calculations.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 2 (Freight Forwarding / NVOCC)</a> and <a href="../sectors/index.html">Model 3 (Contract Logistics / Warehousing)</a>.</li>
+<li><strong>Sub-sectors</strong>: Mid-market air and ocean freight forwarders, container consolidators (NVOCCs), customs brokers, and cross-border logistics operators.</li>
+<li><strong>Geographic stronghold</strong>: Dominant in the South Florida / Miami air and ocean trade gateway, Latin American corridors, and the Caribbean.</li>
+<li><strong>Commercial model</strong>: Subscription SaaS model based on user seats and transaction volume tiers, with implementation and training fees.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p><span class="term" data-term="system:magaya" data-href="magaya.html" tabindex="0">Magaya</span> is the primary mid-market alternative to <span class="term" data-term="system:cargowise-wisetech-global" data-href="cargowise-wisetech-global.html" tabindex="0">CargoWise</span> for independent forwarders operating across the Americas.</p>
+<ul>
+<li><strong>Market position</strong>: Installed across more than 2,000 logistics companies globally.</li>
+<li><strong>Customer profile</strong>: Mid-market freight forwarders and bonded warehouse operators generating between $5 million and $150 million in gross revenue.</li>
+<li><strong>Sweet spot</strong>: Forwarders operating physical cross-dock or bonded warehouse facilities at air/ocean gateways, where forwarding and warehouse inventory must share a single database.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Magaya encounters structural limits when competing against Tier 1 enterprise platforms:
+1. <strong>Limited global multi-branch consolidation</strong>: Magaya struggles with the multi-entity, multi-currency corporate consolidation required by global forwarders with hundreds of branches across Asia and Europe.
+2. <strong>Custom reporting rigidity</strong>: Advanced data extraction and business intelligence reporting require complex custom query setups.
+3. <strong>Advanced warehouse automation limits</strong>: The integrated WMS is engineered for pallet and carton cross-docking; it cannot direct complex automated distribution centers (AS/RS, autonomous mobile robots) like <span class="term" data-term="system:manhattan-associates" data-href="manhattan-associates.html" tabindex="0">Manhattan Active WM</span>.
+4. <strong>Implementation stalls on tariff digitization</strong>: Deployments stall when forwarders attempt to load decades of non-standard air and ocean carrier rate contracts into the rate engine.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<ul>
+<li><strong>Architecture</strong>: Hosted cloud SaaS infrastructure and hybrid private-cloud deployments accessed via desktop clients and web browsers.</li>
+<li><strong>Unified data structure</strong>: Cargo dimensions, weights, and warehouse locations recorded at initial warehouse receiving automatically populate downstream master bills of lading and customs entries.</li>
+<li><strong>Integrations</strong>: Direct connections to ocean carrier portals (INTTRA, CargoSmart), air cargo networks (Champ, GLN), and US CBP ACE.</li>
+<li><strong>APIs</strong>: Provides RESTful APIs and webhooks for integration with external customer portals, eCommerce platforms (Shopify), and accounting systems.</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2001 in Miami, Florida by Jesus David Rodriguez, Gabriel Ruz, and Jesus Cruz.</li>
+<li>Acquired in 2019 by private equity firm <strong>Apax Digital</strong> (growth equity arm of Apax Partners).</li>
+<li>Expanded through acquisitions: Catapult International (ocean freight rate management) in 2020 and ACELynk (cloud customs compliance software) in 2021.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong>: In air and ocean forwarding, forwarders leak margin when warehouse handling fees, storage dwell, and cargo re-weight charges are not billed to the final invoice. Magaya automatically binds warehouse receiving scales and dimensioners to the shipment file billing tab.</li>
+<li><strong><span class="term" data-term="mech:forwarding-cost-pass-through-lag-on-the-open-shipment-file" tabindex="0">forwarding cost pass-through lag on the open shipment file</span> (Forwarding cost pass-through lag on open file)</strong>: Magaya tracks open shipment files against carrier invoices. If terminal cartage or ocean accessorials arrive late, the system alerts billing coordinators before file closure.</li>
+<li><strong><span class="term" data-term="mech:forwarding-operations-establishment-fixed-against-falling-file-count" tabindex="0">forwarding operations establishment fixed against falling file count</span></strong>: Mid-market forwarders suffer margin compression when file counts drop while headcount remains fixed. Magaya's unified document generation reduces clerical <span class="term" data-term="metric:touches-per-file" data-href="../reference/metrics.html#touches-per-file" tabindex="0">touches per file</span>, helping operators maintain file throughput per FTE.</li>
+<li><strong><span class="term" data-term="mech:unhedged-currency-exposure-inside-file-margin" tabindex="0">unhedged currency exposure inside file margin</span></strong>: In cross-border Latin American forwarding, Magaya tracks buy rates in foreign currencies against USD sales invoices, highlighting FX margin slippage.</li>
+</ul>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Magaya claims to automate 80% of logistics workflows, provide total end-to-end supply chain control, and deliver 10x ROI.</li>
+<li>Trade press and market analysis: Software reviews in FreightWaves and Logistics Management identify Magaya as the most cost-effective integrated WMS/forwarding solution for Americas-focused forwarders, while confirming that global multinational forwarders consistently graduate to CargoWise.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/anomaly-detection-in-freight-settlement.html">Anomaly detection in freight settlement</a>, <a href="../solutions/patterns/carrier-and-customer-master-data-consolidation.html">Carrier and customer master data consolidation</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

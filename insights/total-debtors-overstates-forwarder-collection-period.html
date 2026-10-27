@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Total debtors overstates forwarder collection period · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="../systems/index.html">Systems</a><a href="../companies/index.html">Companies</a><a href="index.html" class="on">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Craft Insight</div>
+    <h1>Total debtors overstates forwarder collection period</h1>
+    <p class="def">Computing debtor days from total balance-sheet debtors heavily overstates the collection period for customs-active freight forwarders.</p>
+    <div class="unit"><span>Unit of work</span><b>the shipment file</b></div>
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#the-trap">The trap</a><a href="#where-it-was-observed">Where it was observed</a><a href="#how-to-spot-it">How to spot it</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>Core takeaway</dt><dd><p>Computing debtor days from total balance-sheet debtors heavily overstates the collection period for customs-active freight forwarders.</p></dd></div><div><dt>Operating models affected</dt><dd><p><a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a></p></dd></div><div><dt>Where observed</dt><dd><p>cargo-overseas</p></dd></div></dl></section>
+<h2 id="the-trap">The trap</h2>
+<p>Standard financial screeners compute <a href="../reference/metrics.html">debtor days</a> by dividing total balance-sheet debtors by turnover and multiplying by 365.</p>
+<p>In UK and statutory accounts, the <code>Debtors</code> line is a consolidated total. It aggregates trade receivables, prepayments, accrued income, intercompany balances, and duty and VAT advanced on behalf of shippers.</p>
+<p>For customs-active operators in <a href="../sectors/index.html">operating model 2</a>, duty and VAT disbursements are substantial. These disbursements inflate the balance-sheet asset without generating matching revenue in the denominator. The numerator expands while the denominator reflects only forwarding fees and freight charges, corrupting the collection day calculation.</p>
+<h2 id="where-it-was-observed">Where it was observed</h2>
+<p>At <a href="../companies/cargo-overseas.html">Cargo Overseas Limited</a> in FY2024, balance-sheet debtors produced a computed debtor-day figure of 105.9 days.</p>
+<p>In the same annual filing, the company's directors reported an actual trade receivable collection period of 55 days as an internal KPI (32 days in FY2023, 55 days in FY2024, 55 days in FY2025). The computed metric overstated actual customer credit terms by nearly 51 days.</p>
+<p>Similar distortions appeared at <a href="../companies/supreme-freight-services.html">Supreme Freight Services Limited</a> (computed 97 days on ex-duty revenue versus 56 days statutory) and <a href="../companies/scan-global-logistics-uk.html">Scan Global Logistics (UK) Ltd</a> (183.5 computed days in FY2023 driven by balance-sheet composition shifts rather than collections distress).</p>
+<h2 id="how-to-spot-it">How to spot it</h2>
+<p>Never rank freight forwarders using standard screener debtor days.</p>
+<p>Review the balance sheet notes to isolate pure trade receivables from prepayments, group balances, and tax disbursements. Where companies publish director-stated receivable KPIs, use the stated figure. When reading balance-sheet totals, track directional changes over time rather than absolute day levels, or evaluate <span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span> <span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span> through interest expense trends.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>This insight governs operational analysis under <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>.</p><p>Back to the full directory of <a href="index.html">craft insights</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
