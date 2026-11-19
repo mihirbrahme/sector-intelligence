@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate and market data providers · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Rate and market data providers</h1>
+    <p class="def">Information services and data consortia that aggregate freight transaction records and load board activity to publish rate benchmarks, spot indices, and capacity metrics.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#work-it-carries">Work it carries</a><a href="#models-and-geographies">Models and geographies</a><a href="#where-it-is-weak">Where it is weak</a><a href="#who-owns-the-preparation">Who owns the preparation</a><a href="#who-it-displaces">Who it displaces</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Information services and data consortia that aggregate freight transaction records and load board activity to publish rate benchmarks, spot indices, and capacity metrics</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p><span class="term" data-term="system:rate-and-market-data-providers" data-href="rate-and-market-data-providers.html" tabindex="0">Rate and market data providers</span> process the historical freight transaction, load tender confirmation, container spot booking, and load board posting.</p>
+<p>The provider ingests transactional freight invoices, rate confirmations, and electronic load postings from participating shippers, brokers, and carriers.</p>
+<p>Statistical engines clean raw transaction feeds, filter statistical outliers, and aggregate freight costs across geographic lanes and equipment types.</p>
+<p>The output is a published benchmark. Examples include a median rate per mile, a container spot index, or a load-to-truck ratio.</p>
+<p>The market separates into two geographic and modal categories:</p>
+<ul>
+<li><strong>North American Road Freight</strong>: DAT One / DAT iQ (Roper Technologies), Truckstop.com, FreightWaves SONAR. These platforms dominate domestic truckload spot pricing, contract rate analytics, and capacity balances.</li>
+<li><strong>Global Ocean and Air Freight</strong>: Xeneta, Freightos (Baltic Index - FBX), Drewry Shipping Consultants, Transport Intelligence (Ti Insight). Xeneta operates a benchmarking consortium crowdsourcing container rates. Freightos calculates spot indices from marketplace transactions. Drewry and Ti provide market assessments and macroeconomic forecasts.</li>
+</ul>
+<h2 id="work-it-carries">Work it carries</h2>
+<ul>
+<li><span class="term" data-term="solution:dynamic-pricing-and-buy-rate-guidance" data-href="../solutions/patterns/dynamic-pricing-and-buy-rate-guidance.html" tabindex="0">Dynamic pricing and buy rate guidance</span>: Injecting lane rate benchmarks directly into broker quoting screens and shipper procurement workflows.</li>
+<li><span class="term" data-term="solution:benchmarking-data-consortium" data-href="../solutions/structures/benchmarking-data-consortium.html" tabindex="0">Benchmarking data consortium</span>: Providing anonymized peer rate comparisons in exchange for contributed transactional freight data.</li>
+</ul>
+<h2 id="models-and-geographies">Models and geographies</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Brokerage)</a>, <a href="../sectors/index.html">Model 2 (Forwarding)</a>, <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Geographies</strong>:</li>
+<li>North America: DAT Solutions and Truckstop dominate domestic road freight. DAT is the universal operational currency for US truckload spot trading.</li>
+<li>Global Ocean &amp; Air: Xeneta and Drewry lead international container shipping benchmarks. Freightos provides public indices for spot container movements.</li>
+<li>Strategic Macro: Ti Insight and Drewry provide international logistics market sizing and contract logistics benchmarking.</li>
+<li><strong>Commercial model</strong>: Annual <span class="term" data-term="solution:subscription-saas" data-href="../solutions/structures/subscription-saas.html" tabindex="0">subscription SaaS</span> licenses based on user seats, lane lookup volume, or API query calls. Consortia platforms (Xeneta) offer tiered discounts to shippers who contribute continuous freight spend data feeds.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Market data platforms provide historical averages rather than forward-looking guarantees. In sudden market dislocations (severe weather or port strikes), published indices lag real carrier asking rates by days or weeks.</p>
+<p>Aggregated benchmarks obscure micro-level operational variables. A published rate per mile cannot capture excessive facility dwell time, poor shipper dock reputation, or difficult accessorial requirements.</p>
+<p>Consortium data exhibits inherent selection bias. Shippers contributing high freight volumes secure lower baseline rates than smaller spot shippers, distorting index medians for mid-market users.</p>
+<p>When procurement teams blindly enforce index averages during capacity squeezes, carriers reject load tenders, driving freight into expensive spot auctions.</p>
+<h2 id="who-owns-the-preparation">Who owns the preparation</h2>
+<p>Rate data providers refuse customer data cleansing and lane mapping.</p>
+<p>The data vendor requires the client to map its internal shipment origins, destination postal codes, and equipment types to the vendor's standard geographic hierarchy.</p>
+<p>Vendors run automated outlier filters, but they do not investigate whether a customer's low-rate outliers reflect dedicated fleet backhauls or non-standard freight.</p>
+<p>Shippers must independently clean historical freight audit records to extract actionable lane benchmarks.</p>
+<p>This precondition dynamic matches <a href="../insights/logistics-automation-preconditions-are-data-and-contract-alignment.html">logistics automation preconditions are data and contract alignment</a>.</p>
+<h2 id="who-it-displaces">Who it displaces</h2>
+<table>
+<thead>
+<tr>
+<th>Market segment</th>
+<th>Dominant rate &amp; market data providers</th>
+<th>Consumption model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>North American Truckload Brokers</td>
+<td>DAT One / DAT iQ, Truckstop.com</td>
+<td>TMS integrated rating APIs &amp; web portals</td>
+</tr>
+<tr>
+<td>North American Enterprise Shippers</td>
+<td>DAT iQ, FreightWaves SONAR, Breakthrough Fuel</td>
+<td>Procurement analytics &amp; annual RFP benchmarks</td>
+</tr>
+<tr>
+<td>Global Container Shippers &amp; Forwarders</td>
+<td>Xeneta, Drewry, Freightos</td>
+<td>Executive dashboards &amp; tender index-linking</td>
+</tr>
+<tr>
+<td>Logistics Corporate Strategy Teams</td>
+<td>Ti Insight, Drewry, Armstrong &amp; Associates</td>
+<td>Annual research subscriptions &amp; market sizing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Vendors claim 5% to 12% freight procurement savings through market intelligence and rate transparency.</li>
+<li>Regulatory dockets: Federal Maritime Commission (FMC) fact-finding hearings on maritime container indices documented that public spot indices reflect volatile broker markups during peak shipping disruptions rather than actual long-term carrier billing.</li>
+<li>Financial disclosures: Roper Technologies (NYSE: ROP) financial reports confirm DAT generates high software operating margins with strong recurring subscription revenue, demonstrating operational lock-in across North American freight brokerage.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-and-vendor-management-service.html">Carrier and vendor management service</a>, <a href="../solutions/patterns/dynamic-pricing-and-buy-rate-guidance.html">Dynamic pricing and buy-rate guidance</a>, <a href="../solutions/patterns/legacy-logistics-system-modernisation.html">Legacy logistics system modernisation</a>, <a href="../solutions/patterns/logistics-application-development.html">Logistics application development</a>, <a href="../solutions/patterns/logistics-application-management-and-support.html">Logistics application management and support</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

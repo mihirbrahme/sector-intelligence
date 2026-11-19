@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turvo · Sector Intelligence</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../sectors/index.html">Sectors</a><a href="../markets/index.html">Markets</a><a href="../solutions/index.html">Solutions</a><a href="index.html" class="on">Systems</a><a href="../companies/index.html">Companies</a><a href="../insights/index.html">Insights</a><a href="../briefs/index.html">Briefs</a><a href="../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">System</div>
+    <h1>Turvo</h1>
+    <p class="def">Cloud-native multi-enterprise collaborative transportation management system (TMS) connecting shippers, logistics providers, and motor carriers.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-it-does-against-the-unit-of-work">What it does against the unit of work</a><a href="#models-and-sub-sectors">Models and sub-sectors</a><a href="#market-position-and-customer-profile">Market position and customer profile</a><a href="#where-it-is-weak">Where it is weak</a><a href="#data-model-and-integration">Data model and integration</a><a href="#ownership-and-consolidation">Ownership and consolidation</a><a href="#what-tends-to-go-wrong">What tends to go wrong</a><a href="#what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it does</dt><dd><p>Cloud-native multi-enterprise collaborative transportation management system (TMS) connecting shippers, logistics providers, and motor carriers</p></dd></div><div><dt>Where it is used</dt><dd><p><a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a></p></dd></div></dl></section>
+<h2 id="what-it-does-against-the-unit-of-work">What it does against the unit of work</h2>
+<p>Turvo executes operations against the shared shipment record, contextual message thread, digital proof of delivery (ePOD), driver tracking geofence, and billing packet.</p>
+<p>Its core thesis is "collaborative logistics." Instead of siloed databases emailing updates back and forth, all supply chain participants view and interact with the same digital shipment record:
+- <strong>Collaborative Network</strong>: Shippers, brokers, carriers, and drivers share real-time visibility, chat messages, and documents in a single contextual feed.
+- <strong>Automated Exception Management</strong>: Geofencing and predictive telematics trigger automated alerts when drivers encounter transit delays or extended loading dwell.
+- <strong>Digital Document Ingestion</strong>: Mobile driver app captures digital signatures and photo PODs at delivery, immediately indexing them to the settlement record.
+- <strong>Order-to-Cash Workflow</strong>: Automates load booking, carrier dispatch, tracking check-calls, and customer billing.</p>
+<h2 id="models-and-sub-sectors">Models and sub-sectors</h2>
+<ul>
+<li><strong>Operating models</strong>: <a href="../sectors/index.html">Model 1 (Truckload Brokerage)</a>, <a href="../sectors/index.html">Model 3 (Contract Logistics)</a>, and <strong>shipper / BCO in-house transportation management</strong> — a buyer type, not one of the 13 operating models.</li>
+<li><strong>Sub-sectors</strong>: Temperature-controlled freight (cold chain), food and beverage distribution, CPG, and collaborative 3PL/brokerage networks.</li>
+<li><strong>Commercial model</strong>: Subscription SaaS model based on annual shipment volume or freight spend tiers, with professional onboarding fees.</li>
+</ul>
+<h2 id="market-position-and-customer-profile">Market position and customer profile</h2>
+<p>Turvo is viewed as one of the most technologically advanced and design-forward cloud TMS platforms in North America.</p>
+<ul>
+<li><strong>Market position</strong>: Leading collaborative TMS challenger, winning market share among mid-market and enterprise 3PLs looking to replace legacy systems.</li>
+<li><strong>Customer profile</strong>: 3PLs and freight brokerages managing $50 million to over $1 billion in freight spend, cold chain logistics operators, and enterprise shippers (Lineage Logistics, Ryder, Oberman, Port X Logistics).</li>
+<li><strong>Flagship backer</strong>: Anchored by parent company Lineage, the world's largest temperature-controlled warehousing and logistics REIT.</li>
+</ul>
+<h2 id="where-it-is-weak">Where it is weak</h2>
+<p>Turvo's collaboration model hits friction when external counterparties refuse to adopt its workflows:
+1. <strong>Counterparty portal resistance</strong>: The collaboration promise degrades when small motor carriers and independent owner-operators refuse to download the Turvo mobile app or log into carrier portals, forcing coordinators back to phone calls and emails.
+2. <strong>Premium software pricing</strong>: Software subscription pricing is positioned at a premium compared to legacy systems, requiring strong executive justification on coordinator labor savings.
+3. <strong>Not built for asset fleet maintenance</strong>: Lacks heavy mechanical shop maintenance modules, parts inventory tracking, and complex driver mileage payroll engines found in <span class="term" data-term="system:mcleod-loadmaster" data-href="mcleod-loadmaster.html" tabindex="0">McLeod</span> or <span class="term" data-term="system:trimble-tmw" data-href="trimble-tmw.html" tabindex="0">Trimble</span>.
+4. <strong>Integration maturity with legacy ERPs</strong>: While modern API integration is clean, connecting Turvo to legacy on-premise ERPs (AS/400, older SAP releases) requires custom middleware development.</p>
+<h2 id="data-model-and-integration">Data model and integration</h2>
+<p>Turvo was built from inception as a cloud-native, API-first microservices platform.</p>
+<ul>
+<li><strong>Architecture</strong>: Multi-tenant cloud application running on Amazon Web Services (AWS) with modern web interfaces and native iOS/Android mobile apps.</li>
+<li><strong>API &amp; Webhooks</strong>: Comprehensive RESTful and GraphQL APIs with real-time webhooks broadcasting shipment milestones and tracking telemetry.</li>
+<li><strong>EDI engine</strong>: Pre-built integration with standard logistics EDI transaction sets (204, 990, 214, 210).</li>
+<li><strong>Partner ecosystem</strong>: Direct pre-configured connectors to digital freight matching platforms, telematics providers (Samsara, Omnitracs), visibility aggregators (<span class="term" data-term="system:project44" data-href="project44.html" tabindex="0"><span class="term" data-term="system:project44" data-href="project44.html" tabindex="0">project44</span></span>, FourKites), and payment clearinghouses (<span class="term" data-term="system:triumphpay" data-href="triumphpay.html" tabindex="0">TriumphPay</span>).</li>
+</ul>
+<h2 id="ownership-and-consolidation">Ownership and consolidation</h2>
+<ul>
+<li>Founded in 2014 by Eric Fuller, Matt Ramsey, Sai Warang, and Jeff Graan in Sunnyvale, California.</li>
+<li>Raised approximately $85 million in venture capital from Activant Capital, Next47 (Siemens), and Mubadala Capital.</li>
+<li>Acquired in June 2022 by <strong>Lineage Logistics</strong> (now Lineage, Inc.) for an estimated enterprise valuation exceeding $200 million.</li>
+<li>Continues to operate as an independent commercial software business unit within Lineage.</li>
+</ul>
+<h2 id="what-tends-to-go-wrong">What tends to go wrong</h2>
+<p>By consolidating tracking check-calls, transit delays, and status queries into an automated, shared activity feed, it reduces coordinator phone and email touches per load.
+- <strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Turvo uses automated mobile geofencing to log precise driver arrival and departure timestamps at shipper and receiver docks, establishing incontrovertible audit records for detention billing.
+- <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Provides collaborative customer portal booking, reducing manual re-keying of spot tenders into the execution engine.</p>
+<h2 id="what-is-claimed-and-what-is-corroborated">What is claimed, and what is corroborated</h2>
+<ul>
+<li>Vendor claims: Turvo claims up to 70% reduction in manual check-calls, 40% improvement in operational productivity, and 100% supply chain transparency.</li>
+<li>Trade press and acquisition coverage: Reporting in FreightWaves and The Wall Street Journal surrounding Lineage's acquisition highlights Turvo's exceptional UI/UX and collaborative architecture, while noting the industry-wide challenge of driving independent motor carrier app compliance.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It appears in the systems layer of <a href="../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../sectors/08-inland-liquid-bulk-marine-tank-barge.html">Inland liquid-bulk marine / tank barge</a>.</p><p>The work it carries is described under <a href="../solutions/patterns/agentic-workflow-automation.html">Agentic workflow automation</a>, <a href="../solutions/patterns/capacity-and-shipper-digital-acquisition.html">Capacity and shipper digital acquisition</a>, <a href="../solutions/patterns/carrier-settlement-and-purchased-transportation-payment.html">Carrier settlement and purchased transportation payment</a>, <a href="../solutions/patterns/claims-processing-and-recovery.html">Claims processing and recovery</a>, <a href="../solutions/patterns/computer-vision-for-yards-and-warehouses.html">Computer vision for yards and warehouses</a>, <a href="../solutions/patterns/control-tower-as-a-service.html">Control tower as a service</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../";window.SI_INDEX="../search-index.json";</script>
+<script src="../assets/glossary.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

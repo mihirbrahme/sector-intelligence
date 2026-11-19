@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passenger rail timetable and rolling stock energy optimisation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Passenger rail timetable and rolling stock energy optimisation</h1>
+    <p class="def">Algorithmic timetable (dia) headway optimization, substation regenerative braking synchronization, and condition-based maintenance (CBM) for urban and commuter passenger rail networks.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Algorithmic timetable (dia) headway optimization, substation regenerative braking synchronization, and condition-based maintenance (CBM) for urban and commuter passenger rail networks</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/19-urban-commuter-passenger-rail-and-transit-oriented-network.html">Urban &amp; Commuter Passenger Rail and Transit-Oriented Network</a></p></dd></div></dl></section>
+<p>Algorithmic timetable (<code>dia</code>) headway optimization, substation regenerative braking synchronization, and condition-based maintenance (CBM) for urban and commuter passenger rail networks.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Passenger rail operators carry 80% to 85% fixed operating costs inside the annual timetable cycle. Static peak timetables waste traction power and accelerate rolling stock wear when commuting patterns shift or electricity tariffs spike.</p>
+<p>This pattern optimizes supplied capacity and traction energy across three operational layers:</p>
+<ol>
+<li><strong>Algorithmic timetable (<code>dia</code>) and consist-length optimization</strong>: Ingests fare-gate tap matrices and car weight-sensor loads to recalibrate headways, express-to-local stop ratios, and car counts across peak and off-peak windows.</li>
+<li><strong>CBTC/ATO coasting and regenerative braking synchronization</strong>: Coordinates train acceleration and braking profiles across adjacent trains within the same direct-current (DC) traction substation feeding zone. Kinetic energy from a braking train transfers directly to an accelerating train nearby rather than dissipating as heat.</li>
+<li><strong>Rolling stock condition-based maintenance (CBM) and inverter renewal</strong>: Replaces legacy rheostatic DC motor controls with silicon-carbide (SiC) Variable-Voltage Variable-Frequency (VVVF) traction inverters. Onboard sensors monitor bogies, pantographs, and door actuators to shift depot overhauls from fixed calendar intervals to measured wear thresholds.</li>
+</ol>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 19 (Urban &amp; Commuter Passenger Rail and Transit-Oriented Network)</a></strong>:</li>
+<li><em>Underground metro networks</em>: High-frequency subway operators like <a href="../../companies/tokyo-metro.html">Tokyo Metro Co., Ltd.</a> deploy Communications-Based Train Control (CBTC) and VVVF rolling stock (17000/18000 series) to maximize <span class="term" data-term="metric:car-kilometer-productivity-and-load-factor-passenger-rail" data-href="../../reference/metrics.html#car-kilometer-productivity-and-load-factor-passenger-rail" tabindex="0">car-kilometre productivity and load factor</span>.</li>
+<li><em>Suburban commuter and through-running corridors</em>: Operators like <a href="../../companies/odakyu-electric-railway.html">Odakyu Electric Railway Co., Ltd.</a>, <a href="../../companies/seibu-holdings.html">Seibu Holdings Inc.</a>, <a href="../../companies/keikyu.html">Keikyu Corporation</a>, <a href="../../companies/sotetsu-holdings.html">Sotetsu Holdings, Inc.</a>, and <a href="../../companies/kyushu-railway.html">Kyushu Railway Company</a> adjust express patterns and reserved-seat liners to raise yield and cut empty off-peak car-kilometres.</li>
+<li><em>Concession and O&amp;M elevated mass transit</em>: Operators such as <a href="../../companies/bts-group-holdings.html">BTS Group Holdings Public Company Limited</a> manage 3-car to 4-car consist allocations and traction power draw across metro and monorail concessions. This discipline protects <span class="term" data-term="metric:farebox-operating-recovery-ratio-passenger-rail" data-href="../../reference/metrics.html#farebox-operating-recovery-ratio-passenger-rail" tabindex="0"><span class="term" data-term="metric:farebox-operating-recovery-ratio-passenger-rail" data-href="../../reference/metrics.html#farebox-operating-recovery-ratio-passenger-rail" tabindex="0">farebox operating recovery ratio</span></span>.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:escalator-and-surcharge-recovery-lag-under-input-inflation" tabindex="0">escalator and surcharge recovery lag under input inflation</span></strong>: Regulated passenger rail fare revisions lag utility electricity price spikes by 12 to 36 months. Cutting kilowatt-hours consumed per revenue car-kilometre protects railway segment operating margin while tariff applications await regulator approval.</li>
+<li><strong><span class="term" data-term="mech:fleet-age-capex-cliff-raises-maintenance-before-replacement-is-funded" tabindex="0">fleet age capex cliff raises maintenance before replacement is funded</span></strong>: Electric multiple unit (EMU) fleets operate on 25-to-35-year replacement cycles. Inter-operator transfers of refurbished VVVF trainsets and onboard CBM telemetry extend car life and defer newbuild capex cliffs.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the revenue car-kilometre (or train-kilometre) and the traction kilowatt-hour (kWh) consumed per car-kilometre.</p>
+<ul>
+<li>Signalling vendors and rail engineering papers state that synchronized ATO coasting and substation storage cut traction electricity per car-kilometre by 8% to 15%.</li>
+<li><a href="../../companies/seibu-holdings.html">Seibu Holdings Inc.</a> discloses that replacing legacy DC-motor cars with refurbished VVVF "Sustaina Vehicles" from <a href="../../companies/odakyu-electric-railway.html">Odakyu Electric Railway Co., Ltd.</a> and Tokyu cuts traction power by roughly 50%.</li>
+<li>Enterprise timetable optimization software and traction energy simulation suites cost $800,000 to $2.5M for network-wide deployment across a multi-line commuter operator. </li>
+<li>Full-line CBTC signalling and wayside energy storage retrofits represent major infrastructure capital programmes costing $4M to $12M per route-kilometre. </li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<p>Timetable and traction energy optimization require four technical and regulatory foundations:</p>
+<ol>
+<li><strong>Origin-destination AFC passenger flow matrices</strong>: Gate tap-in and tap-out records must link to car weight sensors (<code>ouka</code> load data) to measure car-by-car passenger density every 15 minutes.</li>
+<li><strong>Reciprocal through-running (<code>Sogo Chokutsu Unten</code>) timetable coordination</strong>: On interconnected networks where <a href="../../companies/tokyo-metro.html">Tokyo Metro Co., Ltd.</a>, <a href="../../companies/odakyu-electric-railway.html">Odakyu Electric Railway Co., Ltd.</a>, <a href="../../companies/seibu-holdings.html">Seibu Holdings Inc.</a>, and <a href="../../companies/sotetsu-holdings.html">Sotetsu Holdings, Inc.</a> share tracks, timetable revisions require multi-operator synchronization months before annual <code>dia</code> cutover.</li>
+<li><strong>Receptive DC substation architecture</strong>: Regenerative braking savings require adjacent accelerating trains or wayside energy storage and reversible inverters at substations to absorb returned current.</li>
+<li><strong>Standardized onboard ethernet/CAN telemetry</strong>: Rolling stock must carry digital Train Information Management Systems (TIMS/TCMS) to log brake pressures, motor currents, and door cycle durations.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0"><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed-price diagnostic then build</span></span></strong>: Timetable simulation, substation load-flow modeling, and fleet CBM diagnostic engagements ($250,000 to $650,000 over 4 to 6 months). </li>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Algorithmic timetable planning, crew rostering, and rolling stock CBM analytics platforms licensed per operated car or route-kilometre ($15,000 to $45,000 monthly). </li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Isolated timetable cuts that reduce train frequency without matching passenger origin-destination peaks erode corridor competitiveness and trigger regulatory intervention.</p>
+<p>When commuter operators cut peak trainsets too aggressively to save power and crew hours, car congestion exceeds 150% to 180% of rated capacity. Boarding dwell lengthens at transfer stations, causing cascading late arrivals that force manual headway recovery and erase planned coasting savings.</p>
+<p>Similarly, installing wayside battery storage without updating train regenerative braking voltage thresholds leaves batteries idle while trains dump energy into onboard resistor grids.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>Optimizing a passenger railway timetable is constrained by physical junction geometry and reciprocal interline commitments:</p>
+<ul>
+<li>Seven of <a href="../../companies/tokyo-metro.html">Tokyo Metro Co., Ltd.</a>'s nine subway lines run reciprocal through-services with suburban operators including <a href="../../companies/odakyu-electric-railway.html">Odakyu Electric Railway Co., Ltd.</a>, <a href="../../companies/seibu-holdings.html">Seibu Holdings Inc.</a>, and <a href="../../companies/sotetsu-holdings.html">Sotetsu Holdings, Inc.</a>. A delay or headway change on one suburban branch propagates across three separate corporate control centres.</li>
+<li>Union crew roster agreements require minimum rest intervals and home-depot sign-off locations. A mathematically optimal train diagram frequently fails because train drivers and conductors cannot be legally positioned at terminal stations.</li>
+<li>Regulatory authorities (such as Japan's MLIT and Thailand's MRTA) scrutinize service frequency reductions on regulated corridors.</li>
+</ul>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>Japan (Greater Tokyo, Kansai, Kyushu)</strong>: World's highest-density private and listed passenger rail market. Operators including <a href="../../companies/tokyo-metro.html">Tokyo Metro Co., Ltd.</a>, <a href="../../companies/seibu-holdings.html">Seibu Holdings Inc.</a>, <a href="../../companies/odakyu-electric-railway.html">Odakyu Electric Railway Co., Ltd.</a>, <a href="../../companies/keikyu.html">Keikyu Corporation</a>, <a href="../../companies/sotetsu-holdings.html">Sotetsu Holdings, Inc.</a>, and <a href="../../companies/kyushu-railway.html">Kyushu Railway Company</a> combine annual <code>dia</code> recalibration with VVVF fleet renewal and CBTC rollouts.</li>
+<li><strong>Southeast Asia (Thailand, Singapore, Malaysia)</strong>: Expanding urban rail networks like <a href="../../companies/bts-group-holdings.html">BTS Group Holdings Public Company Limited</a> in Bangkok, where air-conditioning accounts for up to 35% of train auxiliary electricity consumption.</li>
+<li><strong>UK and Europe</strong>: High adoption of Driver Advisory Systems (DAS) and automatic train operation over ETCS to reduce traction electricity charges billed by infrastructure managers.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/19-urban-commuter-passenger-rail-and-transit-oriented-network.html">Urban &amp; Commuter Passenger Rail and Transit-Oriented Network</a>.</p><p>Systems implementing this include <a href="../../systems/abs-nautical-systems.html">ABS Nautical Systems (ABS Wavesight)</a>, <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/danaos.html">Danaos Management Consultants (Danaos Software)</a>, <a href="../../systems/kalmar.html">Kalmar</a>, <a href="../../systems/mercurygate.html">MercuryGate (Infios / Körber Supply Chain Software)</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

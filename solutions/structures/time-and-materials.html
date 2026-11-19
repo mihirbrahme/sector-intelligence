@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time and materials · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Commercial structure</div>
+    <h1>Time and materials</h1>
+    <p class="def">A flexible engagement structure where the buyer pays for professional engineering and advisory hours worked at agreed rate cards, typically structured in two-week sprints with budget caps.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#how-it-works-mechanically">How it works mechanically</a><a href="#what-it-suits">What it suits</a><a href="#risk-allocation">Risk allocation</a><a href="#what-has-to-be-measurable">What has to be measurable</a><a href="#where-it-fails">Where it fails</a><a href="#buyer-size-and-maturity">Buyer size and maturity</a><a href="#does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</a><a href="#boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>A flexible engagement structure where the buyer pays for professional engineering and advisory hours worked at agreed rate cards, typically structured in two-week sprints with budget caps</p></dd></div></dl></section>
+<h2 id="how-it-works-mechanically">How it works mechanically</h2>
+<p>The provider bills for actual labor hours expended by designated roles (solution architect, data engineer, integration developer) against an agreed rate schedule.</p>
+<p>Work is organized into iterative agile sprints (typically two-week cadences).</p>
+<p>Each sprint opens with sprint planning to estimate backlog story points and closes with a sprint review demonstrating completed code or data pipelines.</p>
+<p>In enterprise logistics contracts, T&amp;M engagements typically carry a "Not-to-Exceed" (NTE) monthly budget cap or milestone ceiling.</p>
+<p>The client retains the right to pause or terminate the engagement upon 14 to 30 days written notice.</p>
+<h2 id="what-it-suits">What it suits</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0"><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0">Quote-to-book workflow automation</span></span></strong> addressing <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Adapting custom APIs to unique legacy shipper TMS interfaces.</li>
+<li><strong><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0"><span class="term" data-term="solution:carrier-and-customer-master-data-consolidation" data-href="../patterns/carrier-and-customer-master-data-consolidation.html" tabindex="0">Carrier and customer master data consolidation</span></span></strong> addressing <strong><span class="term" data-term="mech:fragmented-carrier-master-after-acquisition" tabindex="0">fragmented carrier master after acquisition</span></strong>: Cleaning unpredictable legacy entity records.</li>
+<li><strong><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../patterns/event-driven-visibility-data-pipeline.html" tabindex="0"><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../patterns/event-driven-visibility-data-pipeline.html" tabindex="0">Event-driven visibility data pipeline</span></span></strong> addressing <strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong> and <strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Building bespoke webhook connectors across non-standard carrier telematics.</li>
+</ul>
+<h2 id="risk-allocation">Risk allocation</h2>
+<ul>
+<li><strong>Buyer risk: High.</strong> The client absorbs all delivery and budget risk. If technical integration takes twice as long as anticipated due to legacy software debt, the buyer pays for all additional hours.</li>
+<li><strong>Provider risk: Low.</strong> The provider is guaranteed payment for time expended, regardless of whether the client's operational metrics improve or the software reaches production.</li>
+</ul>
+<h2 id="what-has-to-be-measurable">What has to be measurable</h2>
+<ul>
+<li>Detailed timesheet tracking logged against specific sprint user stories.</li>
+<li>Weekly sprint velocity (story points completed versus planned).</li>
+<li>Real-time budget burn reports against the monthly authorization cap.</li>
+</ul>
+<p>T&amp;M does not require baseline operational measurability (such as cost per file), which makes it easy to contract and dangerous to manage.</p>
+<h2 id="where-it-fails">Where it fails</h2>
+<ol>
+<li><strong>The "Runaway Meter" dispute</strong>: The provider bills hundreds of hours investigating obscure legacy EDI quirks or bad data schemas without producing a working feature. Executive leadership cancels the contract in frustration.</li>
+<li><strong>Lack of internal client product management</strong>: Without a decisive client product owner prioritizing the backlog, engineering teams build low-value features or drift into endless technical refactoring.</li>
+</ol>
+<h2 id="buyer-size-and-maturity">Buyer size and maturity</h2>
+<ul>
+<li><strong>Best fit</strong>: Technology-mature logistics operators ($500M+ revenue) with experienced internal technical leadership who need specialized capacity augmentation.</li>
+<li><strong>Poor fit</strong>: Traditional non-technical mid-market 3PLs and freight forwarders who expect vendors to take full responsibility for business outcomes.</li>
+</ul>
+<h2 id="does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</h2>
+<p><strong>Yes, mechanically, but with severe client friction.</strong></p>
+<p>Under T&amp;M, the provider can bill every hour spent manually reconciling duplicate carrier records or writing one-off tariff parsers.</p>
+<p>However, clients suffer "precondition shock":
+- After six weeks and $120,000 in billings, the client asks to see the new automation interface.
+- The provider explains that all billable hours were consumed cleaning carrier tax IDs and mapping EDI schemas.
+- The buyer feels misled, believing they paid for software development rather than data entry.</p>
+<p>T&amp;M allows the provider to get paid for preconditions, but frequently burns commercial trust in the process.</p>
+<h2 id="boutique-positioning-against-tier-1-sis">Boutique positioning against Tier 1 SIs</h2>
+<p>Boutique firms use structured T&amp;M to dismantle Tier 1 staffing pyramids:</p>
+<ul>
+<li><strong>Senior technical delivery vs junior billable armies</strong>: Tier 1 firms sell a "pyramid" model (one partner, one manager, and five junior offshore analysts logging 200 hours a week to learn the client's business). A boutique fields a "needle team" of two principal engineers who write production SQL and API code from day one.</li>
+<li><strong>Sprint-level termination rights</strong>: Boutiques offer no-fault sprint-level cancellation (client can stop at the end of any two-week sprint). This de-risks the T&amp;M contract for the buyer compared to Tier 1 minimum commitments of six months.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

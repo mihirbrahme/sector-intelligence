@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipper and consignee service desk · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Shipper and consignee service desk</h1>
+    <p class="def">Managed operational desk handling customer inquiries, delivery appointment scheduling, exception communication, accessorial authorizations, and proof-of-delivery retrieval.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Managed operational desk handling customer inquiries, delivery appointment scheduling, exception communication, accessorial authorizations, and proof-of-delivery retrieval</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Managed operational desk handling customer inquiries, delivery appointment scheduling, exception communication, accessorial authorizations, and proof-of-delivery retrieval.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>The service manages the customer support lifecycle for shippers, consignees, and third-party logistics accounts.</p>
+<p>Five core workflows execute across operations:</p>
+<ol>
+<li><strong>Appointment coordination</strong>: Secures delivery appointments with consignee facilities via scheduling portals or phone.</li>
+<li><strong>Exception communication</strong>: Proactively alerts shippers regarding transit delays and equipment breakdowns before service failure.</li>
+<li><strong>Accessorial pre-authorization</strong>: Logs arrival timestamps and obtains written customer authorization before detention clocks trigger.</li>
+<li><strong>Inbound inquiry triage</strong>: Answers shipment status requests, tracking questions, and rate quote verifications.</li>
+<li><strong>Document fulfillment</strong>: Retrieves signed proofs of delivery, customs releases, and warehouse inspection certificates.</li>
+</ol>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<p>In <a href="../../sectors/index.html">Model 1</a>, the desk deflects inquiries, securing detention approvals before driver dwell penalties activate.</p>
+<p>In <a href="../../sectors/index.html">Model 2</a>, the desk notifies cargo owners of container groundings, customs holds, and terminal demurrage last-free-days.</p>
+<p>In <a href="../../sectors/index.html">Model 3</a>, the desk schedules receiving dock appointments, preventing facility delivery rejections.</p>
+<p>In <a href="../../sectors/index.html">Model 4</a>, the desk coordinates receiver delivery slots when drivers exhaust duty hours, minimizing tractor idle time.</p>
+<p>In <a href="../../sectors/index.html">Model 5</a>, the desk schedules liftgate deliveries and secures shipper authorizations for re-delivery accessorials.</p>
+<p>In <a href="../../sectors/index.html">Model 7</a>, the desk tracks rail well-car groundings, coordinating drayage appointments before rail terminal storage fees accrue.</p>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span> (Accessorial slippage)</strong>: Obtains customer pre-authorization for detention while the driver is on site, preventing unbilled write-offs.</li>
+<li><strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Resolves rate discrepancies and order changes with shippers before load tendering, avoiding margin erosion.
+Read what follows as a lens applied to the mechanisms above, not as a mechanism this pattern arrests: Offloads routine status inquiries and appointment rescheduling from senior brokers, reducing hidden overhead.</li>
+</ul>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the <strong>resolved customer ticket</strong> or <strong>managed shipment transaction</strong>.</p>
+<p>Interaction processing costs range from $3.50 to $7.50 per ticket offshore, compared to $18.00 to $32.00 in onshore operations. </p>
+<p>Offshore FTE seats in Manila or Bogota cost $2,400 to $3,800 monthly, compared to $6,000 to $8,500 onshore. </p>
+<p>Deflecting inquiries reduces broker clerical expense by 250 to 400 basis points of net revenue.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Deploying a customer service desk requires four core elements:</p>
+<ol>
+<li><strong>Bidirectional ticketing integration</strong>: Ticketing software must synchronize notes directly with the primary transport management system.</li>
+<li><strong>Documented financial delegation</strong>: Support staff must operate under clear approval matrices for accessorial fee acceptances.</li>
+<li><strong>Facility appointment rules</strong>: Operational guides must codify scheduling protocols across consignee receiving locations.</li>
+<li><strong>Real-time telemetry feeds</strong>: Tracking systems must feed active status updates into the ticket queue automatically.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:per-transaction-managed-service-or-bpo" data-href="../structures/per-transaction-managed-service-or-bpo.html" tabindex="0">Per-transaction BPO</span></strong>: Fixed fee of $3.50 to $6.00 per resolved customer ticket with defined service levels. </li>
+<li><strong>Dedicated FTE monthly model</strong>: Fixed fee of $2,600 to $3,900 per full-time equivalent desk agent. </li>
+<li><strong>Hybrid base plus surge fee</strong>: Fixed monthly platform baseline covering core volume, with variable per-ticket fees during surges.</li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Offshore lift-and-shift of logistics service desks to generic call center BPOs without TMS write access causes operational collapse.</p>
+<p>Frustrated shippers bypass the offshore desk, calling onshore account managers directly on mobile phones.</p>
+<p>Carriers pay external BPO invoices while onshore brokers spend days firefighting exceptions.</p>
+<p>As analyzed in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility and control towers</span>, reporting delay status without operational authority to execute fixes destroys commercial value.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>Operational difficulty sits in multi-party operational dependencies and agent attrition.</p>
+<p>A single missed delivery appointment involves carrier dispatchers, warehouse receivers, shipper sales reps, and customer dock managers.</p>
+<p>Offshore freight desks suffer 35% to 50% annual staff turnover. High turnover constantly erodes account-specific operational knowledge and facility nuances. </p>
+<h2 id="where-it-applies">Where it applies</h2>
+<p>In the <strong>United States</strong>, service desks navigate retail compliance portals (Retail Link, Capstone) and require English/Spanish support.</p>
+<p>In the <strong>United Kingdom and Europe</strong>, desks manage communications across English, German, and French, adhering to EU driver rest rules.</p>
+<p>In <strong>Southeast Asia</strong>, desks operate via messaging platforms (WhatsApp, WeChat) and coordinate complex cross-border documentation clearance.</p>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/01-truckload-brokerage.html">Truckload Brokerage</a>, <a href="../../sectors/02-freight-forwarding-nvocc.html">Freight Forwarding / NVOCC</a>, <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

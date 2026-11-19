@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route and load optimisation · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Solution domain</div>
+    <h1>Route and load optimisation</h1>
+    <p class="def">Applying mathematical constraint programming and combinatorial optimization algorithms to sequence delivery stops, consolidate less-than-truckload shipments, and assign vehicles to minimize empty miles, fuel consumption, and transit time.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#what-the-work-is">What the work is</a><a href="#how-it-differs-by-model">How it differs by model</a><a href="#what-it-is-aimed-at">What it is aimed at</a><a href="#unit-of-work-and-its-economics">Unit of work and its economics</a><a href="#preconditions">Preconditions</a><a href="#commercial-structures">Commercial structures</a><a href="#what-has-already-failed-here">What has already failed here</a><a href="#where-the-hard-part-sits">Where the hard part sits</a><a href="#where-it-applies">Where it applies</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>Applying mathematical constraint programming and combinatorial optimization algorithms to sequence delivery stops, consolidate less-than-truckload shipments, and assign vehicles to minimize empty miles, fuel consumption, and transit time</p></dd></div><div><dt>Where it applies</dt><dd><p><a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a></p></dd></div></dl></section>
+<p>Applying mathematical constraint programming and combinatorial optimization algorithms to sequence delivery stops, consolidate less-than-truckload shipments, and assign vehicles to minimize empty miles, fuel consumption, and transit time.</p>
+<h2 id="what-the-work-is">What the work is</h2>
+<p>Route and load optimization replaces manual dispatcher spreadsheet sequencing with algorithmic constraint solving.</p>
+<p>The ingestion engine captures orders from the transportation management system (TMS) or enterprise resource planning (ERP) platform, extracting geographic coordinates, delivery windows, pallet counts, cargo weight, and equipment specifications.</p>
+<p>A constraint compiler aggregates operational boundaries: tractor and trailer availability, driver Hours of Service (HOS) clocks, vehicle weight limits (such as 80,000 lbs gross weight in the United States), bridge height restrictions, and road toll tariffs.</p>
+<p>Mixed-integer linear programming (MILP) solvers and metaheuristics evaluate permutations to construct schedules:
+- Multi-stop truckload delivery sequences minimizing total transit mileage and toll costs.
+- Less-than-truckload (LTL) pick-up and delivery (P&amp;D) route runs balanced against driver shift limits.
+- Consolidation of regional freight into multi-stop truckloads and paired backhaul moves.</p>
+<p>The system dispatches turn-by-turn routes and stop sequences directly to in-cab driver electronic logging devices (ELDs) and mobile applications.</p>
+<p>Telematics feeds track transit progress in real time. When loading delays or traffic gridlock occur, the solver dynamically recalculates downstream stop sequences.</p>
+<h2 id="how-it-differs-by-model">How it differs by model</h2>
+<ul>
+<li><strong><a href="../../sectors/index.html">Model 4 (Asset Carriage)</a></strong>: In irregular-route truckload carriage, optimization focuses on driver-to-load matching and multi-day tour planning. Solvers balance driver home-time requirements against empty repositioning miles, pairing outbound linehaul moves with revenue-generating return freight.</li>
+<li><strong><a href="../../sectors/index.html">Model 5 (LTL)</a></strong>: LTL networks balance local P&amp;D operations with linehaul terminal transfers. Solvers sequence 15 to 25 daily urban delivery stops under tight morning receiving curfews, while linehaul optimizers consolidate cross-dock freight to maximize 28-foot trailer cubic utilization.</li>
+<li><strong><a href="../../sectors/index.html">Model 7 (Domestic Intermodal)</a></strong>: Focuses on regional drayage dispatch at rail ramp hubs. Optimizers match inbound import containers directly to outbound export shippers for street turns, avoiding uncompensated empty chassis trips back to congested rail yards.</li>
+<li><strong><a href="../../sectors/index.html">Model 3 (Contract Logistics)</a></strong>: Dedicated retail distribution fleets manage multi-stop store deliveries. Solvers sequence store deliveries under strict municipal noise curfews while scheduling backhaul sweeps of empty pallets, plastic totes, and cardboard balers.</li>
+</ul>
+<h2 id="what-it-is-aimed-at">What it is aimed at</h2>
+<ul>
+<li><strong><span class="term" data-term="mech:uncontrolled-purchased-input-behaving-as-a-fixed-cost" tabindex="0">uncontrolled purchased input behaving as a fixed cost</span></strong>: In intermodal drayage and dedicated linehaul networks, empty repositioning moves commit operators to fixed purchased linehaul costs with zero offsetting revenue. Algorithmic load matching pairs equipment with contracted backhauls, converting empty asset miles into revenue-generating moves.
+Read what follows as a lens applied to the mechanisms above, not as a mechanism this pattern arrests: Unoptimized delivery routes regularly miss tight receiving appointments, triggering expensive driver detention fees, missed delivery fines, and costly emergency redeliveries. Real-time dynamic route sequencing adjusts appointments proactively, preventing cascade delays across downstream delivery stops.</li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<strong>Mechanism backing, by model.</strong> This pattern is backed by a named mechanism for model <strong>7</strong>. For models <strong>3, 4, 5</strong> it is asserted without one: the library holds no entry for road-fleet and warehouse asset and labour productivity — deadhead miles, vehicle utilisation, driver administration and equipment downtime in models 3, 4 and 5. That gap is recorded in mechanism library under Gaps.</p>
+<p>The <code>models</code> field is left wide because narrowing it would strip the pattern's own subject. <strong>Read the unbacked models as a description of what is done, not a diagnosis of a failure</strong>, and do not argue them in a room as though the library supported them.</p>
+</blockquote>
+<h2 id="unit-of-work-and-its-economics">Unit of work and its economics</h2>
+<p>The unit of work is the dispatched route, multi-stop truckload, or consolidated shipment manifest.</p>
+<p>Manual dispatch planning requires one dispatcher per 25 to 35 tractors, consuming 3 to 5 hours daily manually sequencing stops and building loads.</p>
+<p>Algorithmic optimization expands dispatcher span of control to 60 to 80 tractors, reducing dispatch administrative labor expense by 40% to 55%. </p>
+<p>Fleet route optimization reduces total miles driven by 6% to 12% and shrinks empty deadhead miles from 14% to between 8% and 10%. </p>
+<p>On a 500-truck fleet averaging 100,000 miles per tractor annually, a 4% reduction in total miles avoids 2,000,000 miles, yielding over $1,200,000 in annual diesel fuel and maintenance savings. </p>
+<p>In LTL networks, algorithmic trailer pack optimization improves trailer cubic capacity utilization by 4 to 7 percentage points, reducing linehaul trailer dispatches between breakbulk hubs.</p>
+<h2 id="preconditions">Preconditions</h2>
+<p>Mathematical route optimization engines fail without rigorous physical master data:</p>
+<ol>
+<li><strong>Precision geocoded commercial facility master</strong>: Shippers and receivers must be mapped to physical commercial truck gates rather than postal street addresses; directing an 80,000-pound combination truck to a residential car entrance causes immediate failure.</li>
+<li><strong>Historical dock dwell calibrations</strong>: Solvers must incorporate historical facility dock turn times (e.g. 2.5 hours at grocery distribution centers vs 30 minutes at industrial cross-docks) rather than assuming static stop durations.</li>
+<li><strong>Commercial truck road network attributes</strong>: Routing engines must use truck-specific road networks containing bridge height clearances, hazmat restrictions, gross weight ratings, and legal turn radii.</li>
+<li><strong>Real-time ELD and Hours of Service integration</strong>: The solver must continuously query driver ELD clocks to verify that proposed route sequences do not violate FMCSA 11-hour driving or 14-hour on-duty rules.</li>
+</ol>
+<h2 id="commercial-structures">Commercial structures</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:subscription-saas" data-href="../structures/subscription-saas.html" tabindex="0">Subscription SaaS</span></strong>: Software subscription priced per active power unit ($30 to $75 per vehicle monthly) or per generated route ($0.75 to $2.00 per route). </li>
+<li><strong><span class="term" data-term="solution:outcome-based-and-gainshare" data-href="../structures/outcome-based-and-gainshare.html" tabindex="0">Outcome-based and gainshare</span></strong>: Gainshare contracts structured around verified reductions in total fleet fuel consumption or empty deadhead percentage verified against telematics baselines.</li>
+<li><strong><span class="term" data-term="solution:fixed-price-diagnostic-then-build" data-href="../structures/fixed-price-diagnostic-then-build.html" tabindex="0">Fixed price diagnostic then build</span></strong>: Initial route topology audit ($40,000 to $90,000) running historical shipment archives through solver engines to demonstrate achievable mileage reductions prior to full rollout. </li>
+</ul>
+<h2 id="what-has-already-failed-here">What has already failed here</h2>
+<p>Algorithmic route optimization engines that treat dock handling and driver schedules as static parameters are systematically rejected by frontline dispatchers.</p>
+<p>As analyzed in <span class="term" data-term="solution:autonomous-long-haul-trucking-commercialisation" data-href="../failures/autonomous-long-haul-trucking-commercialisation.html" tabindex="0">autonomous long-haul trucking commercialisation</span>, mathematical models routinely generate multi-stop routes that collapse upon physical contact with customer docks. Receiving warehouses impose unpredictable 2 to 4-hour detention delays, burning driver Hours of Service clocks and rendering downstream delivery appointments impossible.</p>
+<p>Dispatchers learn that executing theoretical sequences leads to missed appointments and customer service failures. They override the algorithm and revert to manual dispatching, turning multi-million-dollar software into shelfware.</p>
+<h2 id="where-the-hard-part-sits">Where the hard part sits</h2>
+<p>The marketing pitch presents automated algorithmic route efficiency. The operational reality presents harsh physical constraints:</p>
+<ul>
+<li>Uncontrolled customer dock detention shatters mathematical schedules; a two-hour loading delay on stop one invalidates stops two through six.</li>
+<li>Professional drivers frequently reject algorithmic routes that ignore real-world road conditions, difficult parking lots, or preferred rest stops, choosing manual detours.</li>
+<li>Vehicle routing problems with time windows (VRPTW) are NP-hard. Generating usable routes across thousands of daily orders inside 30-minute morning dispatch cutoffs requires heuristic compromises that sacrifice mathematical optimality.</li>
+</ul>
+<p>Operational success depends on capturing realistic dock dwell times rather than optimizing raw highway miles.</p>
+<h2 id="where-it-applies">Where it applies</h2>
+<ul>
+<li><strong>North America</strong>: Long linehaul distances, high driver compensation, and strict FMCSA ELD enforcement. Driver wages plus benefits run <strong>$1.028 per mile</strong> — $0.818 wages, $0.210 benefits — against an all-in truck operating cost of <strong>$2.336 per mile</strong>, so driver pay is 44% of the cost base. <strong>This file previously said "$0.70 to $0.90 per mile fully loaded" with no source; that was wrong — it sits below ATRI's wages-only line, let alone the loaded figure.</strong> Any payback claim built on the old range understated the prize.</li>
+<li><strong>UK and Europe</strong>: Severe urban road congestion, medieval street grids, and municipal Clean Air Zones (such as London ULEZ) make route and vehicle weight planning critical. Diesel taxes double fuel costs relative to North America, magnifying the value of mileage reduction.</li>
+<li><strong>Australia</strong>: Massive linehaul distances across regional highways and strict National Heavy Vehicle Regulator (NHVR) fatigue laws require rigorous multi-day scheduling for B-double and road train configurations.</li>
+<li><strong>Southeast Asia</strong>: Lower driver wages ($8 to $18 per day) diminish direct labor savings. However, extreme urban gridlock (Bangkok, Jakarta, Manila) and motorcycle micro-distribution require dynamic real-time traffic routing to achieve delivery completion. </li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>It applies directly to <a href="../../sectors/03-contract-logistics-3pl-warehousing.html">Contract Logistics / 3PL Warehousing</a>, <a href="../../sectors/04-asset-carriage-truckload-fleet.html">Asset Carriage / Truckload Fleet</a>, <a href="../../sectors/05-ltl.html">LTL</a>, <a href="../../sectors/07-domestic-intermodal.html">Domestic Intermodal</a>.</p><p>Systems implementing this include <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/forwarding-platforms.html">Forwarding platforms</a>, <a href="../../systems/global-systems-integrators-and-big-4.html">Global SIs and Big 4 T&amp;L practices</a>, <a href="../../systems/hubtran.html">HubTran (now TriumphPay)</a>, <a href="../../systems/manhattan-associates.html">Manhattan Associates</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

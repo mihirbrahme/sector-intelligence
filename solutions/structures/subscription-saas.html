@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription SaaS commercial models · Sector Intelligence</title>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="wordmark" href="../../index.html"><span>Sector Intelligence</span><em>Transport &amp; Logistics</em></a>
+  <nav><a href="../../sectors/index.html">Sectors</a><a href="../../markets/index.html">Markets</a><a href="../index.html" class="on">Solutions</a><a href="../../systems/index.html">Systems</a><a href="../../companies/index.html">Companies</a><a href="../../insights/index.html">Insights</a><a href="../../briefs/index.html">Briefs</a><a href="../../reference/index.html">Reference</a></nav>
+  <div class="find">
+    <input type="search" id="q" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search">
+    <span class="shortcut-hint">/</span>
+    <div id="results" hidden></div>
+  </div>
+</header>
+<div class="masthead">
+  <div class="inner">
+    <div class="kicker">Commercial structure</div>
+    <h1>Subscription SaaS commercial models</h1>
+    <p class="def">A software delivery model charging fixed recurring annual or monthly subscription fees, frequently combined with consumption tiers based on load volume or active user seats.</p>
+    
+  </div>
+</div>
+<div class="layout railed">
+<aside class="rail"><nav><a href="#in-90-seconds">In 90 seconds</a><a href="#how-it-works-mechanically">How it works mechanically</a><a href="#what-it-suits">What it suits</a><a href="#risk-allocation">Risk allocation</a><a href="#what-has-to-be-measurable">What has to be measurable</a><a href="#where-it-fails-the-shelfware-trap">Where it fails: the shelfware trap</a><a href="#buyer-size-and-maturity">Buyer size and maturity</a><a href="#does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</a><a href="#boutique-positioning-against-tier-1-sis-and-pure-saas">Boutique positioning against Tier 1 SIs and pure SaaS</a><a href="#where-this-appears-elsewhere">Where this appears elsewhere</a></nav></aside>
+<main>
+<section class="orient"><h2 id="in-90-seconds">In 90 seconds</h2><dl><div><dt>What it is</dt><dd><p>A software delivery model charging fixed recurring annual or monthly subscription fees, frequently combined with consumption tiers based on load volume or active user seats</p></dd></div></dl></section>
+<h2 id="how-it-works-mechanically">How it works mechanically</h2>
+<p>The buyer licenses access to a multi-tenant cloud software application.</p>
+<p>The commercial agreement typically combines two fee components:
+1. An Annual Recurring Revenue (ARR) base subscription license ($30,000 to $250,000 annually).
+2. A consumption or volume fee (e.g., $3.50 to $7.00 per tracked shipment, or $150 per active user seat per month).</p>
+<p>The buyer signs a multi-year term (typically 24 to 36 months) with annual payments in advance.</p>
+<p>The vendor provides software hosting, continuous updates, and standard customer support.</p>
+<p>Implementation and onboarding are typically sold as a separate, one-time professional services fee ($15,000 to $75,000).</p>
+<h2 id="what-it-suits">What it suits</h2>
+<ul>
+<li><strong><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0"><span class="term" data-term="solution:quote-to-book-workflow-automation" data-href="../patterns/quote-to-book-workflow-automation.html" tabindex="0">Quote-to-book workflow automation</span></span></strong> addressing <strong><span class="term" data-term="mech:quote-to-book-manual-handoff" tabindex="0">quote-to-book manual handoff</span></strong>: Core transactional TMS software.</li>
+<li><strong><span class="term" data-term="solution:dynamic-pricing-and-buy-rate-guidance" data-href="../patterns/dynamic-pricing-and-buy-rate-guidance.html" tabindex="0"><span class="term" data-term="solution:dynamic-pricing-and-buy-rate-guidance" data-href="../patterns/dynamic-pricing-and-buy-rate-guidance.html" tabindex="0">Dynamic pricing and buy-rate guidance</span></span></strong> addressing <strong><span class="term" data-term="mech:manual-carrier-sourcing-under-rate-volatility" tabindex="0">manual carrier sourcing under rate volatility</span></strong>: Algorithmic rate intelligence feeds.</li>
+<li><strong><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../patterns/event-driven-visibility-data-pipeline.html" tabindex="0"><span class="term" data-term="solution:event-driven-visibility-data-pipeline" data-href="../patterns/event-driven-visibility-data-pipeline.html" tabindex="0">Event-driven visibility data pipeline</span></span></strong> addressing <strong><span class="term" data-term="mech:billing-exception-leakage" tabindex="0">billing exception leakage</span></strong> and <strong><span class="term" data-term="mech:detention-and-demurrage-under-recovery" tabindex="0">detention and demurrage under-recovery</span></strong>: Real-time tracking platforms.</li>
+</ul>
+<h2 id="risk-allocation">Risk allocation</h2>
+<ul>
+<li><strong>Buyer risk: Extreme.</strong> The buyer commits capital and ongoing OPEX under a multi-year binding contract. If internal data is dirty, if carriers refuse to connect, or if staff fail to adopt the tool, the buyer remains contractually obligated to pay the full multi-year subscription.</li>
+<li><strong>Provider risk: Minimal.</strong> The SaaS vendor secures contracted ARR with legal collection enforcement, regardless of whether the software delivers operational value.</li>
+</ul>
+<h2 id="what-has-to-be-measurable">What has to be measurable</h2>
+<ul>
+<li>Subscription seat counts and API transaction volumes.</li>
+<li>Platform service availability (uptime SLAs, typically 99.5%+).</li>
+</ul>
+<p>SaaS metrics measure platform consumption, not client business health or operational unit costs.</p>
+<h2 id="where-it-fails-the-shelfware-trap">Where it fails: the shelfware trap</h2>
+<ol>
+<li><strong>The Integration Impasse</strong>: The buyer signs the SaaS contract, but the vendor's standard REST APIs cannot connect to the buyer's on-premise, 20-year-old AS/400 TMS. The project stalls in IT integration for 18 months while monthly subscription fees burn.</li>
+<li><strong>The "Garbage In, Garbage Out" Abandonment</strong>: As documented in <span class="term" data-term="solution:passive-visibility-and-control-towers" data-href="../failures/passive-visibility-and-control-towers.html" tabindex="0">passive visibility control towers</span>, dirty upstream telemetry generates thousands of erroneous alerts. Operations staff abandon the dashboard, and the software becomes "shelfware" until cancelled at contract expiry.</li>
+</ol>
+<h2 id="buyer-size-and-maturity">Buyer size and maturity</h2>
+<ul>
+<li><strong>Best fit</strong>: Technology-mature operators with modern cloud infrastructure, dedicated IT integration teams, and pre-cleansed master databases.</li>
+<li><strong>Poor fit</strong>: Traditional mid-market logistics operators with fragmented, acquired branch TMS instances.</li>
+</ul>
+<h2 id="does-this-structure-pay-for-precondition-work">Does this structure pay for precondition work?</h2>
+<p><strong>No. The pure SaaS model is the structural cause of most logistics technology failures.</strong></p>
+<p>Pure-play SaaS vendors are valued on software gross margins (75% to 85%).</p>
+<p>Their business models strictly penalize manual services:
+- SaaS vendors actively refuse to perform manual master data cleansing, carrier phone outreach, or custom EDI mapping because services revenue dilutes Wall Street software valuations.
+- The vendor treats dirty data as the "client's responsibility" under the contract.
+- The client lacks the internal engineering staff to clean the data.
+- The implementation stalls, the software sits empty, and the client churns at year three.</p>
+<p>Pure SaaS cannot solve problems whose primary bottleneck sits in master data hygiene or counterparty operational alignment.</p>
+<h2 id="boutique-positioning-against-tier-1-sis-and-pure-saas">Boutique positioning against Tier 1 SIs and pure SaaS</h2>
+<p>A boutique captures market share by packaging software into a "Tech-Enabled Service":</p>
+<ul>
+<li><strong>Bundled Data Onboarding</strong>: While pure SaaS vendors hand the client an API manual, a boutique bundles the first six months of master data cleansing into the implementation SOW, guaranteeing that the software ingests verified, production-ready data.</li>
+<li><strong>Usage-Gated Subscriptions</strong>: A boutique structures the SaaS fee to activate only after verified operational milestones are achieved (e.g., subscription billing starts only when carrier tracking compliance clears 75%), aligning provider incentives with operational adoption.</li>
+</ul>
+<section class="elsewhere"><h2 id="where-this-appears-elsewhere">Where this appears elsewhere</h2><p>Systems implementing this include <a href="../../systems/blue-yonder.html">Blue Yonder (formerly JDA Software / Manugistics)</a>, <a href="../../systems/boutiques-and-specialist-advisories.html">Boutiques and specialist advisories</a>, <a href="../../systems/cargowise-wisetech-global.html">CargoWise (WiseTech Global)</a>, <a href="../../systems/cass-information-systems.html">Cass Information Systems</a>, <a href="../../systems/denim.html">Denim (formerly Axle Payments)</a>, <a href="../../systems/descartes-systems-group.html">Descartes Systems Group</a>.</p></section>
+</main>
+</div>
+
+<script>window.SI_BASE="../../";window.SI_INDEX="../../search-index.json";</script>
+<script src="../../assets/glossary.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
